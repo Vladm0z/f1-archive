@@ -1,1 +1,18 @@
-
+[
+  {
+    "id": "monaco-1988",
+    "season": 1988,
+    "round": 5,
+    "name": "Monaco Grand Prix",
+    "circuit": "Circuit de Monaco",
+    "locality": "Monte Carlo",
+    "country": "Monaco",
+    "date": "1988-05-15",
+    "winner_driver_id": "alain-prost",
+    "winning_team": "McLaren-Honda",
+    "pole_driver_id": "ayrton-senna",
+    "fastest_lap_driver_id": "ayrton-senna",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/1988_Monaco_Grand_Prix",
+    "results": []
+  }
+]
