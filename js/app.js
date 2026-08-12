@@ -73,8 +73,11 @@ function route() {
   } else if (path.startsWith("race/")) {
     const raceId = path.split("/")[1] || "";
     page = renderRacePage(data, raceId, params);
-  } else if (path === "articles") {
+    } else if (path === "articles") {
     page = renderArticles(data, params);
+  } else if (path.startsWith("article/")) {
+    const articleId = path.split("/")[1] || "";
+    page = renderArticlePage(data, articleId);
   } else {
     page = {
       html: `<div class="empty">Page not found.</div>`
@@ -226,6 +229,12 @@ function articleCardHtml(data, article) {
     .filter(Boolean);
 
   const links = [];
+
+  if (getArticleContentFiles(article).length) {
+    links.push(`
+      <a href="#/article/${esc(article.id)}">Open article</a>
+    `);
+  }
 
   if (article.url) {
     links.push(`
@@ -884,5 +893,308 @@ function renderArticles(data, params) {
   return {
     html,
     afterRender: () => attachEntityFilters("articles", params)
+  };
+}
+
+function getArticleContentFiles(article) {
+  if (Array.isArray(article.content_files) && article.content_files.length) {
+    return article.content_files;
+  }
+
+  if (article.content) {
+    return [article.content];
+  }
+
+  return [];
+}
+
+async function checkTextResponse(response) {
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status} for ${response.url}`);
+  }
+
+  return response.text();
+}
+
+function renderMarkdown(markdown) {
+  if (window.marked) {
+    const html = marked.parse(markdown);
+
+    if (window.DOMPurify) {
+      return DOMPurify.sanitize(html);
+    }
+
+    return html;
+  }
+
+  return `<pre class="article-text">${esc(markdown)}</pre>`;
+}
+
+async function loadArticleContentFile(article, file) {
+  const container = document.getElementById("article-content");
+
+  if (!container) {
+    return;
+  }
+
+  if (!file) {
+    container.innerHTML = emptyHtml("No content file selected.");
+    return;
+  }
+
+  container.innerHTML = `<div class="empty">Loading content…</div>`;
+
+  try {
+    if (file.type === "text") {
+      const text = await fetch(file.src).then(checkTextResponse);
+
+      container.innerHTML = `
+        <pre class="article-text">${esc(text)}</pre>
+      `;
+    } else if (file.type === "markdown") {
+      const markdown = await fetch(file.src).then(checkTextResponse);
+
+      container.innerHTML = renderMarkdown(markdown);
+    } else if (file.type === "html") {
+      const html = await fetch(file.src).then(checkTextResponse);
+
+      container.innerHTML = window.DOMPurify
+        ? DOMPurify.sanitize(html)
+        : html;
+    } else if (file.type === "pdf") {
+      container.innerHTML = `
+        <div class="pdf-wrap">
+          <iframe
+            src="${esc(file.src)}"
+            title="${esc(article.title || article.id)}"
+          ></iframe>
+
+          <p>
+            <a href="${esc(file.src)}" target="_blank" rel="noopener">
+              Open PDF in new tab
+            </a>
+          </p>
+        </div>
+      `;
+    } else if (file.type === "scan") {
+      const pages = file.pages || [];
+
+      if (!pages.length) {
+        throw new Error("Scan content has no pages.");
+      }
+
+      container.innerHTML = `
+        <div class="scan-pages">
+          ${
+            pages.map((src, index) => `
+              <figure class="scan-page">
+                <img
+                  loading="lazy"
+                  src="${esc(src)}"
+                  alt="Page ${index + 1} of ${esc(article.title || article.id)}"
+                >
+                <figcaption>Page ${index + 1}</figcaption>
+              </figure>
+            `).join("")
+          }
+        </div>
+      `;
+    } else if (file.type === "inline_text") {
+      container.innerHTML = `
+        <pre class="article-text">${esc(file.body || "")}</pre>
+      `;
+    } else if (file.type === "inline_markdown") {
+      container.innerHTML = renderMarkdown(file.body || "");
+    } else {
+      container.innerHTML = emptyHtml(`Unsupported content type: ${file.type}`);
+    }
+  } catch (error) {
+    console.error(error);
+
+    container.innerHTML = emptyHtml(
+      "Could not load article content. Check the file path and JSON data."
+    );
+  }
+}
+
+function renderArticlePage(data, articleId) {
+  const article = data.articles.find(item => item.id === articleId);
+
+  if (!article) {
+    return {
+      html: emptyHtml("Article not found.")
+    };
+  }
+
+  const files = getArticleContentFiles(article);
+
+  const driverLinks = (article.driver_ids || []).map(id => {
+    const driver = data.driversById[id];
+
+    if (!driver) {
+      return esc(id);
+    }
+
+    return `
+      <a href="#/driver/${esc(driver.id)}">
+        ${esc(driver.name)}
+      </a>
+    `;
+  });
+
+  const raceLinks = (article.race_ids || []).map(id => {
+    const race = data.racesById[id];
+
+    if (!race) {
+      return esc(id);
+    }
+
+    return `
+      <a href="#/race/${esc(race.id)}">
+        ${esc(race.name)} ${race.season || ""}
+      </a>
+    `;
+  });
+
+  const fileSelectorHtml = files.length > 1
+    ? `
+      <div class="toolbar">
+        <div class="filters">
+          <span class="filters-label">View:</span>
+
+          <select id="article-file-select" class="sort-filter">
+            ${
+              files.map((file, index) => `
+                <option value="${index}">
+                  ${esc(file.label || file.type || `File ${index + 1}`)}
+                </option>
+              `).join("")
+            }
+          </select>
+        </div>
+      </div>
+    `
+    : "";
+
+  const html = `
+    <section class="page-head">
+      <p>
+        <a href="#/articles">← All articles</a>
+      </p>
+
+      <h1>${esc(article.title || article.id)}</h1>
+
+      <p class="muted">
+        ${esc(article.article_type || "article")}
+        ${article.language ? ` • ${esc(languageLabel(data, article.language))}` : ""}
+        ${article.published_display || article.published_sort
+          ? ` • ${esc(article.published_display || article.published_sort)}`
+          : ""}
+      </p>
+    </section>
+
+    <div class="layout">
+      <div class="main-col">
+        ${fileSelectorHtml}
+
+        <div class="card">
+          <div id="article-content" class="article-content">
+            ${
+              files.length
+                ? `<div class="empty">Loading content…</div>`
+                : emptyHtml("No full content stored for this article yet.")
+            }
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h2>Article info</h2>
+
+          <dl>
+            <dt>Publication</dt>
+            <dd>${esc(article.source_publication || "—")}</dd>
+
+            <dt>Source kind</dt>
+            <dd>${esc(article.source_kind || "—")}</dd>
+
+            <dt>Article type</dt>
+            <dd>${esc(article.article_type || "—")}</dd>
+
+            <dt>Language</dt>
+            <dd>
+              ${article.language ? esc(languageLabel(data, article.language)) : "—"}
+            </dd>
+
+            <dt>Published</dt>
+            <dd>${esc(article.published_display || article.published_sort || "—")}</dd>
+
+            <dt>Pages</dt>
+            <dd>${esc(article.pages || "—")}</dd>
+
+            <dt>Drivers</dt>
+            <dd>${driverLinks.length ? driverLinks.join(", ") : "—"}</dd>
+
+            <dt>Races</dt>
+            <dd>${raceLinks.length ? raceLinks.join(", ") : "—"}</dd>
+          </dl>
+
+          ${
+            article.citation
+              ? `<p class="muted">${esc(article.citation)}</p>`
+              : ""
+          }
+
+          ${
+            article.url
+              ? `
+                <p>
+                  <a href="${esc(article.url)}" target="_blank" rel="noopener">
+                    Original URL
+                  </a>
+                </p>
+              `
+              : ""
+          }
+
+          ${
+            article.archive_url
+              ? `
+                <p>
+                  <a href="${esc(article.archive_url)}" target="_blank" rel="noopener">
+                    Archive URL
+                  </a>
+                </p>
+              `
+              : ""
+          }
+        </div>
+      </aside>
+    </div>
+  `;
+
+  function afterRender() {
+    const select = document.getElementById("article-file-select");
+
+    async function loadSelectedFile() {
+      const index = select ? Number(select.value) : 0;
+      const file = files[index];
+
+      await loadArticleContentFile(article, file);
+    }
+
+    if (select) {
+      select.addEventListener("change", loadSelectedFile);
+    }
+
+    if (files.length) {
+      loadSelectedFile();
+    }
+  }
+
+  return {
+    html,
+    afterRender
   };
 }
