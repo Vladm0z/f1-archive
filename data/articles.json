@@ -1,1 +1,18 @@
-
+[
+  {
+    "id": "monaco-1988-test",
+    "title": "TEST",
+    "article_type": "interview",
+    "source_publication": "Test",
+    "source_kind": "magazine",
+    "published_display": "18 May 1988",
+    "published_sort": "1988-05-18",
+    "language": "en",
+    "race_ids": ["monaco-1988"],
+    "driver_ids": ["ayrton-senna"],
+    "pages": "2-5",
+    "citation": "Test, May 1988, pp. 12-15",
+    "tags": ["monaco", "qualifying"],
+    "added_at": "2026-08-12"
+  }
+]
