@@ -11,6 +11,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Porsche",
       "Team Lotus"
     ],
@@ -283,6 +284,7 @@
     "teams": [
       "Larrousse",
       "Ligier",
+      "Lola",
       "McLaren",
       "RAM"
     ],
@@ -302,7 +304,9 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "ERA",
       "Ferrari",
+      "Lotus",
       "Maserati",
       "Team Lotus"
     ],
@@ -344,7 +348,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Brabham"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -379,7 +385,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Epperly"
+      "Epperly",
+      "Kurtis Kraft"
     ],
     "championships": 0,
     "active_years": "1960\u20131960",
@@ -399,6 +406,7 @@
     "teams": [
       "Amon",
       "BRM",
+      "Brabham",
       "Cooper",
       "Ensign",
       "Ferrari",
@@ -466,6 +474,7 @@
     "teams": [
       "Alfa Romeo",
       "Ferrari",
+      "Lotus",
       "March",
       "Parnelli",
       "Team Lotus",
@@ -653,6 +662,7 @@
     "fastest_laps": 0,
     "podiums": 17,
     "teams": [
+      "ERA",
       "Ferrari",
       "Lancia",
       "Maserati"
@@ -692,6 +702,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
+      "Brabham",
       "Hesketh",
       "Token",
       "Williams"
@@ -713,6 +724,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -750,6 +762,7 @@
     "podiums": 1,
     "teams": [
       "BRM",
+      "Brabham",
       "Cooper",
       "Lotus",
       "Team Lotus"
@@ -815,6 +828,7 @@
       "BRM",
       "Brabham",
       "Ferrari",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -872,7 +886,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Schroeder"
+      "Schroeder",
+      "Stevens"
     ],
     "championships": 0,
     "active_years": "1951\u20131951",
@@ -928,6 +943,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Lesovsky",
       "Maserati",
       "Moore"
@@ -1096,7 +1112,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Veritas"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -1188,7 +1206,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "BMW"
+      "BMW",
+      "ENB"
     ],
     "championships": 0,
     "active_years": "1952\u20131952",
@@ -1223,6 +1242,8 @@
     "podiums": 9,
     "teams": [
       "BRM",
+      "Behra-Porsche",
+      "ERA",
       "Ferrari",
       "Gordini",
       "Maserati"
@@ -1302,7 +1323,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Iso Marlboro"
+      "Boro",
+      "Iso Marlboro",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1974\u20131974",
@@ -1455,7 +1478,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Coloni"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -1472,6 +1497,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "ATS",
       "Deidt",
       "Epperly",
       "Kurtis Kraft",
@@ -1533,7 +1559,9 @@
       "BRM",
       "Cooper",
       "ENB",
+      "Emeryson",
       "Lola",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -1552,6 +1580,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -1570,9 +1599,11 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Ensign",
       "Penske",
       "Surtees",
+      "Williams",
       "Wolf"
     ],
     "championships": 0,
@@ -1610,6 +1641,7 @@
     "podiums": 0,
     "teams": [
       "Connaught",
+      "ERA",
       "Gordini",
       "Maserati",
       "Simca"
@@ -1630,6 +1662,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Gordini",
       "Simca"
     ],
     "championships": 0,
@@ -1647,7 +1680,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Kuzma"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -1682,7 +1717,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS"
+      "ATS",
+      "March"
     ],
     "championships": 0,
     "active_years": "1978\u20131978",
@@ -1814,6 +1850,7 @@
     "podiums": 2,
     "teams": [
       "Alfa Romeo",
+      "ERA",
       "Maserati",
       "Milano"
     ],
@@ -1836,7 +1873,9 @@
       "BRM",
       "Brabham",
       "Cooper",
+      "ERA",
       "Honda",
+      "Lotus",
       "Maserati",
       "McLaren",
       "Porsche",
@@ -1876,6 +1915,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -2084,6 +2124,8 @@
     "teams": [
       "Brabham",
       "Cooper",
+      "ERA",
+      "Lotus",
       "Maserati",
       "Team Lotus"
     ],
@@ -2104,6 +2146,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -2121,7 +2164,10 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Cooper",
+      "Ferrari"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -2158,6 +2204,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -2358,6 +2405,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Williams",
       "Wolf"
     ],
     "championships": 0,
@@ -2474,6 +2522,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Gordini",
       "Maserati"
     ],
@@ -2513,6 +2562,7 @@
     "teams": [
       "Connaught",
       "Cooper",
+      "ERA",
       "Maserati",
       "Team Lotus"
     ],
@@ -2569,6 +2619,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "Lotus",
       "Scirocco",
       "Team Lotus"
     ],
@@ -2688,7 +2739,9 @@
     "podiums": 0,
     "teams": [
       "Cooper",
-      "Maserati"
+      "ERA",
+      "Maserati",
+      "OSCA"
     ],
     "championships": 0,
     "active_years": "1958\u20131960",
@@ -2725,6 +2778,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -2821,6 +2875,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -2959,6 +3014,7 @@
     "podiums": 13,
     "teams": [
       "March",
+      "Tecno",
       "Tyrrell"
     ],
     "championships": 0,
@@ -2995,6 +3051,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -3051,6 +3108,7 @@
     "podiums": 0,
     "teams": [
       "Brabham",
+      "Lotus",
       "McLaren",
       "Team Lotus"
     ],
@@ -3069,7 +3127,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Coloni"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -3112,6 +3172,7 @@
       "Lola",
       "Osella",
       "Renault",
+      "Theodore",
       "Tyrrell"
     ],
     "championships": 0,
@@ -3166,6 +3227,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -3184,6 +3246,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "ERA",
       "Lancia",
       "Maserati",
       "OSCA",
@@ -3242,6 +3305,7 @@
     "podiums": 0,
     "teams": [
       "Connaught",
+      "ERA",
       "Ferrari",
       "Gordini",
       "HWM",
@@ -3301,7 +3365,10 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Tyrrell",
+      "Williams"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -3337,6 +3404,7 @@
     "fastest_laps": 0,
     "podiums": 9,
     "teams": [
+      "ERA",
       "Ferrari",
       "HWM",
       "Maserati",
@@ -3359,6 +3427,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -3376,7 +3445,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Merzario"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -3412,6 +3483,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati"
     ],
@@ -3597,7 +3669,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "ERA"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -3614,6 +3688,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -3723,6 +3798,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Lotus F1",
       "Virgin"
     ],
@@ -3742,6 +3818,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati",
       "Tec-Mec"
     ],
@@ -3779,6 +3856,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Gordini",
       "Maserati"
     ],
@@ -3818,7 +3896,8 @@
     "podiums": 0,
     "teams": [
       "AGS",
-      "Larrousse"
+      "Larrousse",
+      "Lola"
     ],
     "championships": 0,
     "active_years": "1987\u20131994",
@@ -3837,6 +3916,7 @@
     "podiums": 0,
     "teams": [
       "Ensign",
+      "Hesketh",
       "March",
       "Theodore",
       "Tyrrell",
@@ -3879,6 +3959,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -4017,6 +4098,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Maserati",
       "Porsche"
     ],
@@ -4078,7 +4160,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "March"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -4095,6 +4179,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -4114,6 +4199,7 @@
     "podiums": 0,
     "teams": [
       "Alfa Romeo",
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -4208,6 +4294,7 @@
     "podiums": 0,
     "teams": [
       "Ferrari",
+      "Gordini",
       "Simca"
     ],
     "championships": 0,
@@ -4263,7 +4350,10 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "McLaren"
+      "March",
+      "McLaren",
+      "RAM",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1977\u20131977",
@@ -4545,6 +4635,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -4649,7 +4740,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Schroeder"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -4808,6 +4901,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
       "Stevens",
       "Watson"
@@ -4828,6 +4922,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Connaught",
       "Emeryson"
     ],
     "championships": 0,
@@ -4901,6 +4996,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Ensign",
       "Hesketh"
     ],
@@ -4921,6 +5017,7 @@
     "podiums": 0,
     "teams": [
       "De Tomaso",
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -5015,7 +5112,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Brabham"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -5073,6 +5172,7 @@
     "podiums": 35,
     "teams": [
       "Alfa Romeo",
+      "ERA",
       "Ferrari",
       "Maserati",
       "Mercedes"
@@ -5094,7 +5194,8 @@
     "podiums": 20,
     "teams": [
       "Alfa Romeo",
-      "Ferrari"
+      "Ferrari",
+      "Lancia"
     ],
     "championships": 1,
     "active_years": "1950\u20131955",
@@ -5149,6 +5250,7 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "ENB",
       "Ferrari"
     ],
     "championships": 0,
@@ -5209,6 +5311,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "HWM",
       "Maserati"
     ],
@@ -5248,6 +5351,7 @@
     "podiums": 35,
     "teams": [
       "Fittipaldi",
+      "Lotus",
       "McLaren",
       "Team Lotus"
     ],
@@ -5304,7 +5408,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "AFM"
+      "AFM",
+      "ENB"
     ],
     "championships": 0,
     "active_years": "1953\u20131953",
@@ -5322,7 +5427,9 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
+      "Kuzma",
       "Watson"
     ],
     "championships": 0,
@@ -5341,6 +5448,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -5362,6 +5470,7 @@
       "BRM",
       "Connaught",
       "Cooper",
+      "ERA",
       "Maserati",
       "Team Lotus"
     ],
@@ -5400,6 +5509,7 @@
     "podiums": 0,
     "teams": [
       "Brabham",
+      "Euro Brun",
       "Onyx"
     ],
     "championships": 0,
@@ -5472,6 +5582,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -5560,6 +5671,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -5612,7 +5724,10 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Brabham",
+      "Osella"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -5629,6 +5744,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
       "Phillips"
     ],
@@ -5688,6 +5804,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -5761,7 +5878,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Osella"
+      "Osella",
+      "Surtees"
     ],
     "championships": 0,
     "active_years": "1981\u20131981",
@@ -5779,6 +5897,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Coloni",
       "Jordan",
       "Larrousse",
       "Onyx",
@@ -5817,7 +5936,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Hesketh"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -5837,7 +5958,8 @@
       "Ferrari",
       "Iso Marlboro",
       "March",
-      "Tecno"
+      "Tecno",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1971\u20131973",
@@ -5874,8 +5996,11 @@
     "podiums": 0,
     "teams": [
       "BRM",
+      "Boro",
       "Iso Marlboro",
-      "March"
+      "Maki",
+      "March",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1971\u20131974",
@@ -5990,6 +6115,7 @@
       "Cooper",
       "Emeryson",
       "Ferrari",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -6026,7 +6152,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Kurtis Kraft"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -6062,6 +6190,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -6239,6 +6368,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -6294,6 +6424,7 @@
     "fastest_laps": 0,
     "podiums": 15,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati",
       "Talbot-Lago",
@@ -6315,6 +6446,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -6352,6 +6484,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -6409,6 +6542,7 @@
     "teams": [
       "Cooper",
       "Gilby",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -6430,6 +6564,7 @@
       "BRM",
       "Behra-Porsche",
       "Cooper",
+      "ERA",
       "Lola",
       "Lotus",
       "Maserati",
@@ -6508,6 +6643,7 @@
     "podiums": 10,
     "teams": [
       "Haas F1 Team",
+      "Lotus",
       "Lotus F1",
       "Renault"
     ],
@@ -6682,6 +6818,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -6718,7 +6855,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lola"
+      "BMW",
+      "Lola",
+      "Matra"
     ],
     "championships": 0,
     "active_years": "1967\u20131968",
@@ -6759,6 +6898,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Maserati",
       "Team Lotus"
     ],
@@ -6836,6 +6976,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -6874,6 +7015,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -6985,7 +7127,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia"
+      "Manor Marussia",
+      "Marussia"
     ],
     "championships": 0,
     "active_years": "2016\u20132016",
@@ -7020,7 +7163,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Coloni"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -7038,6 +7183,7 @@
     "podiums": 0,
     "teams": [
       "Brabham",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -7058,6 +7204,7 @@
     "teams": [
       "BRM",
       "Cooper",
+      "ERA",
       "Ferrari",
       "Maserati",
       "Vanwall"
@@ -7079,6 +7226,7 @@
     "podiums": 0,
     "teams": [
       "AFM",
+      "ENB",
       "Veritas"
     ],
     "championships": 0,
@@ -7205,6 +7353,7 @@
     "podiums": 0,
     "teams": [
       "Dunn",
+      "Ewing",
       "Kurtis Kraft"
     ],
     "championships": 0,
@@ -7224,7 +7373,10 @@
     "podiums": 1,
     "teams": [
       "BRM",
+      "Brabham",
       "Cooper",
+      "ERA",
+      "Lotus",
       "Maserati",
       "Mercedes",
       "Porsche",
@@ -7281,7 +7433,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Penske"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -7321,6 +7475,7 @@
     "teams": [
       "BRM",
       "Brabham",
+      "Embassy Hill",
       "Lola",
       "Lotus",
       "Shadow",
@@ -7344,9 +7499,12 @@
     "teams": [
       "ATS",
       "Cooper",
+      "ERA",
       "Ferrari",
       "Lotus",
-      "Maserati"
+      "Maserati",
+      "McLaren",
+      "Porsche"
     ],
     "championships": 1,
     "active_years": "1958\u20131964",
@@ -7420,6 +7578,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -7532,7 +7691,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Kurtis Kraft"
+      "Kurtis Kraft",
+      "Stevens"
     ],
     "championships": 0,
     "active_years": "1950\u20131954",
@@ -7675,9 +7835,11 @@
       "Ferrari",
       "Iso Marlboro",
       "Ligier",
+      "Lotus",
       "Matra",
       "McLaren",
       "Team Lotus",
+      "Williams",
       "Wolf"
     ],
     "championships": 0,
@@ -7828,8 +7990,10 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "Boro",
       "Ligier",
       "Renault",
+      "Surtees",
       "Tyrrell"
     ],
     "championships": 0,
@@ -7866,6 +8030,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Kurtis Kraft"
     ],
     "championships": 0,
@@ -7884,6 +8049,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -7904,6 +8070,7 @@
     "teams": [
       "ATS",
       "Ligier",
+      "Lotus",
       "March",
       "Osella",
       "Penske",
@@ -7950,6 +8117,7 @@
       "Ligier",
       "McLaren",
       "Onyx",
+      "Shadow",
       "Spirit",
       "Toleman",
       "Tyrrell"
@@ -8066,6 +8234,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -8161,7 +8330,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "ERA"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -8254,7 +8425,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Shadow"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -8271,7 +8444,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham"
+      "Brabham",
+      "RAM"
     ],
     "championships": 0,
     "active_years": "1976\u20131976",
@@ -8288,7 +8462,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Connaught"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -8451,6 +8627,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Brabham",
       "Surtees"
     ],
     "championships": 0,
@@ -8490,7 +8667,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "March"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -8546,6 +8725,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -8681,6 +8861,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati"
     ],
@@ -8700,6 +8881,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati",
       "Mercedes"
     ],
@@ -8812,6 +8994,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
       "Watson"
     ],
@@ -8983,6 +9166,7 @@
     "podiums": 0,
     "teams": [
       "Tyrrell",
+      "Williams",
       "Wolf"
     ],
     "championships": 0,
@@ -9001,6 +9185,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -9059,7 +9244,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Ensign"
+      "Ensign",
+      "Surtees"
     ],
     "championships": 0,
     "active_years": "1978\u20131978",
@@ -9206,7 +9392,9 @@
     "podiums": 0,
     "teams": [
       "Kurtis Kraft",
-      "Sherman"
+      "Schroeder",
+      "Sherman",
+      "Stevens"
     ],
     "championships": 0,
     "active_years": "1951\u20131957",
@@ -9223,7 +9411,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "De Tomaso"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -9298,7 +9488,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Veritas"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -9353,6 +9545,7 @@
     "teams": [
       "Brabham",
       "Cooper",
+      "Lotus",
       "March",
       "Surtees",
       "Team Lotus"
@@ -9374,6 +9567,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -9521,7 +9715,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hall"
+      "Hall",
+      "Stevens"
     ],
     "championships": 0,
     "active_years": "1951\u20131951",
@@ -9539,6 +9734,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "HWM",
       "Maserati"
     ],
@@ -9558,6 +9754,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Brabham",
       "Williams"
     ],
     "championships": 0,
@@ -9616,6 +9813,7 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati",
       "Porsche"
@@ -9694,6 +9892,7 @@
     "podiums": 1,
     "teams": [
       "Ferrari",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -9712,6 +9911,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "Lotus",
       "Lotus F1",
       "Williams"
     ],
@@ -9752,6 +9952,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -9808,6 +10009,7 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -9882,6 +10084,7 @@
     "teams": [
       "BRM",
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -9995,6 +10198,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -10141,6 +10345,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Kurtis Kraft"
     ],
     "championships": 0,
@@ -10269,6 +10474,7 @@
     "podiums": 1,
     "teams": [
       "Cooper",
+      "ERA",
       "Gordini",
       "Maserati"
     ],
@@ -10288,7 +10494,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia"
+      "Manor Marussia",
+      "Marussia"
     ],
     "championships": 0,
     "active_years": "2015\u20132015",
@@ -10306,6 +10513,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Boro",
       "Ferrari",
       "Fittipaldi",
       "Iso Marlboro",
@@ -10331,6 +10539,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Gordini",
       "Maserati"
     ],
@@ -10372,6 +10581,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -10390,6 +10600,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -10444,6 +10655,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "BMW",
+      "Brabham",
+      "Lotus",
       "Porsche",
       "Team Lotus"
     ],
@@ -10484,6 +10698,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -10522,6 +10737,7 @@
     "teams": [
       "Jordan",
       "MF1",
+      "Spyker",
       "Spyker MF1"
     ],
     "championships": 0,
@@ -10703,6 +10919,7 @@
       "ERA",
       "Ferguson",
       "HWM",
+      "Lotus",
       "Maserati",
       "Mercedes",
       "Team Lotus",
@@ -10725,6 +10942,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -10744,6 +10962,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -10762,6 +10981,7 @@
     "fastest_laps": 0,
     "podiums": 7,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati"
     ],
@@ -10910,7 +11130,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Cooper"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -11035,7 +11257,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "AFM"
+      "AFM",
+      "ENB"
     ],
     "championships": 0,
     "active_years": "1952\u20131952",
@@ -11053,6 +11276,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -11071,6 +11295,7 @@
     "fastest_laps": 0,
     "podiums": 4,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -11145,7 +11370,8 @@
     "teams": [
       "Brabham",
       "Ensign",
-      "March"
+      "March",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1976\u20131977",
@@ -11163,6 +11389,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Gordini",
       "Simca"
     ],
     "championships": 0,
@@ -11219,6 +11446,7 @@
       "Force India",
       "Haas F1 Team",
       "Manor Marussia",
+      "Marussia",
       "Renault"
     ],
     "championships": 0,
@@ -11238,6 +11466,7 @@
     "podiums": 2,
     "teams": [
       "BRM",
+      "Lotus",
       "McLaren",
       "Shadow",
       "Team Lotus"
@@ -11259,7 +11488,8 @@
     "podiums": 0,
     "teams": [
       "Ensign",
-      "Penske"
+      "Penske",
+      "Shadow"
     ],
     "championships": 0,
     "active_years": "1977\u20131978",
@@ -11334,6 +11564,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -11505,6 +11736,7 @@
       "Alfa Romeo",
       "BRM",
       "Cooper",
+      "ERA",
       "Ferrari",
       "Maserati"
     ],
@@ -11524,6 +11756,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -11602,6 +11835,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -11620,6 +11854,7 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati"
     ],
@@ -11639,6 +11874,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Amon",
       "BRM",
       "Boro",
       "Brabham",
@@ -11665,7 +11901,8 @@
       "March",
       "Matra",
       "Politoys",
-      "Surtees"
+      "Surtees",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1968\u20131976",
@@ -11719,6 +11956,7 @@
     "fastest_laps": 0,
     "podiums": 26,
     "teams": [
+      "Lotus",
       "March",
       "Team Lotus",
       "Tyrrell"
@@ -11813,6 +12051,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -11832,6 +12071,7 @@
     "podiums": 0,
     "teams": [
       "Alfa Romeo",
+      "ERA",
       "Maserati",
       "Veritas"
     ],
@@ -11854,6 +12094,7 @@
       "Connaught",
       "Ferrari",
       "Gordini",
+      "Lotus",
       "Scirocco",
       "Talbot-Lago"
     ],
@@ -11892,7 +12133,9 @@
     "podiums": 0,
     "teams": [
       "Arzani-Volpini",
-      "Maserati"
+      "ERA",
+      "Maserati",
+      "OSCA"
     ],
     "championships": 0,
     "active_years": "1955\u20131957",
@@ -11928,6 +12171,8 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "Brabham",
+      "Protos",
       "Renault"
     ],
     "championships": 0,
@@ -12045,6 +12290,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -12154,7 +12400,9 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "Iso Marlboro"
+      "Iso Marlboro",
+      "LDS",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1968\u20131973",
@@ -12171,7 +12419,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Lotus"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -12246,8 +12496,10 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "LEC",
-      "March"
+      "March",
+      "Token"
     ],
     "championships": 0,
     "active_years": "1973\u20131977",
@@ -12264,7 +12516,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Lotus"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -12321,6 +12575,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "BMW",
       "Surtees"
     ],
     "championships": 0,
@@ -12394,6 +12649,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
       "Watson"
     ],
@@ -12413,6 +12669,7 @@
     "fastest_laps": 0,
     "podiums": 4,
     "teams": [
+      "ATS",
       "Epperly",
       "Kurtis Kraft",
       "Watson",
@@ -12454,6 +12711,7 @@
     "teams": [
       "Brabham",
       "Hesketh",
+      "Lotus",
       "Rebaque",
       "Team Lotus"
     ],
@@ -12475,6 +12733,8 @@
     "teams": [
       "BRM",
       "Cooper",
+      "De Tomaso",
+      "Lola",
       "McLaren",
       "Shadow",
       "Surtees"
@@ -12495,6 +12755,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
       "Lesovsky",
       "Pankratz",
@@ -12577,6 +12838,7 @@
     "teams": [
       "Brabham",
       "Ferrari",
+      "Lotus",
       "Team Lotus",
       "Williams"
     ],
@@ -12655,6 +12917,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Fittipaldi",
       "Hesketh",
       "March"
     ],
@@ -12734,6 +12997,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Watson"
     ],
     "championships": 0,
@@ -12754,6 +13018,7 @@
     "teams": [
       "Brabham",
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 1,
@@ -12790,7 +13055,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham"
+      "Brabham",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1974\u20131974",
@@ -12848,6 +13114,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati",
       "OSCA"
     ],
@@ -12866,7 +13133,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Cooper"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -12980,6 +13249,7 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "ERA",
       "Ferrari",
       "Maserati",
       "Talbot-Lago"
@@ -13019,7 +13289,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia"
+      "Manor Marussia",
+      "Marussia"
     ],
     "championships": 0,
     "active_years": "2015\u20132015",
@@ -13057,6 +13328,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
+      "Lotus",
       "Team Lotus",
       "Watson"
     ],
@@ -13114,6 +13387,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Brabham",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -13151,6 +13426,8 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
+      "ATS",
+      "ERA",
       "Kurtis Kraft",
       "Kuzma",
       "Lesovsky",
@@ -13173,6 +13450,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -13193,6 +13471,7 @@
     "teams": [
       "Alfa Romeo",
       "Ferrari",
+      "Lotus",
       "Lotus F1",
       "McLaren",
       "Sauber"
@@ -13320,6 +13599,7 @@
       "Aston Martin",
       "Connaught",
       "Cooper",
+      "ERA",
       "Ferrari",
       "Lola",
       "Maserati",
@@ -13455,6 +13735,7 @@
     "teams": [
       "Cooper",
       "De Tomaso",
+      "ERA",
       "Ferrari",
       "Maserati"
     ],
@@ -13474,6 +13755,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Hesketh",
       "March",
       "Team Lotus",
       "Tyrrell",
@@ -13518,6 +13800,7 @@
     "teams": [
       "BRM",
       "Cooper",
+      "ERA",
       "Ferrari",
       "Gordini",
       "Maserati",
@@ -13545,7 +13828,8 @@
       "Iso Marlboro",
       "Surtees",
       "Team Lotus",
-      "Trojan"
+      "Trojan",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1970\u20131974",
@@ -13638,6 +13922,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "RAM",
       "Williams"
     ],
     "championships": 0,
@@ -13712,6 +13997,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -13827,6 +14113,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Bromme",
       "Kurtis Kraft",
       "Stevens"
     ],
@@ -13865,6 +14152,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Emeryson",
       "Lotus",
       "Maserati",
@@ -14042,7 +14330,8 @@
     "teams": [
       "Brabham",
       "Cooper",
-      "Lotus"
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131964",
@@ -14080,6 +14369,7 @@
     "podiums": 0,
     "teams": [
       "Aston Martin",
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -14098,6 +14388,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -14155,6 +14446,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Ferrari",
       "Gordini",
       "Maserati",
@@ -14287,7 +14579,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "McLaren"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -14397,7 +14691,8 @@
     "podiums": 0,
     "teams": [
       "Caterham",
-      "Manor Marussia"
+      "Manor Marussia",
+      "Marussia"
     ],
     "championships": 0,
     "active_years": "2014\u20132015",
@@ -14415,6 +14710,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Kurtis Kraft",
       "Kuzma",
       "Marchese",
@@ -14516,6 +14812,7 @@
       "Embassy Hill",
       "Hesketh",
       "Lola",
+      "Lotus",
       "March",
       "Surtees"
     ],
@@ -14578,8 +14875,11 @@
     "teams": [
       "ATS",
       "Brabham",
+      "ENB",
+      "Ferrari",
       "March",
-      "Shadow"
+      "Shadow",
+      "Theodore"
     ],
     "championships": 0,
     "active_years": "1974\u20131979",
@@ -14679,7 +14979,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "March"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -14716,6 +15018,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
+      "Kurtis Kraft",
+      "Lesovsky",
       "Watson"
     ],
     "championships": 0,
@@ -14738,7 +15043,8 @@
       "Jordan",
       "Larrousse",
       "Ligier",
-      "Lola"
+      "Lola",
+      "Zakspeed"
     ],
     "championships": 0,
     "active_years": "1988\u20131995",
@@ -14874,6 +15180,7 @@
       "Lola",
       "McLaren",
       "Renault",
+      "Surtees",
       "Theodore"
     ],
     "championships": 0,
@@ -14931,6 +15238,7 @@
     "podiums": 5,
     "teams": [
       "Alfa Romeo",
+      "ERA",
       "Ferrari",
       "Mercedes",
       "Vanwall"
@@ -14968,6 +15276,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -15081,7 +15390,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "ERA"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -15098,6 +15409,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Arrows",
       "RAM",
       "Tyrrell"
     ],
@@ -15155,7 +15467,8 @@
     "teams": [
       "Kurtis Kraft",
       "Kuzma",
-      "Lesovsky"
+      "Lesovsky",
+      "Nichels"
     ],
     "championships": 0,
     "active_years": "1953\u20131960",
@@ -15211,6 +15524,7 @@
     "teams": [
       "Brabham",
       "LDS",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -15265,7 +15579,11 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Maki",
+      "McLaren",
+      "Surtees"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -15286,9 +15604,11 @@
       "BRM",
       "Bugatti",
       "Cooper",
+      "ERA",
       "Ferrari",
       "Gordini",
       "Lola",
+      "Lotus",
       "Maserati",
       "Simca",
       "Team Lotus",
@@ -15444,7 +15764,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Kurtis Kraft"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -15461,6 +15783,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -15481,6 +15804,7 @@
     "teams": [
       "De Tomaso",
       "Ferrari",
+      "Lotus",
       "Porsche",
       "Team Lotus"
     ],
@@ -15556,6 +15880,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -15576,7 +15901,8 @@
     "teams": [
       "Ensign",
       "Iso Marlboro",
-      "Surtees"
+      "Surtees",
+      "Williams"
     ],
     "championships": 0,
     "active_years": "1971\u20131975",
@@ -15788,6 +16114,7 @@
     "teams": [
       "BAR",
       "BMW Sauber",
+      "RAM",
       "Renault",
       "Sauber",
       "Williams"
@@ -15808,6 +16135,7 @@
     "fastest_laps": 0,
     "podiums": 8,
     "teams": [
+      "ERA",
       "Ferrari",
       "Lancia",
       "Maserati"
@@ -15828,6 +16156,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati"
     ],
     "championships": 0,
@@ -15958,6 +16287,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -16034,11 +16364,13 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
+      "ATS",
       "Bromme",
       "Kurtis Kraft",
       "Kuzma",
       "Lesovsky",
       "Lotus",
+      "Pawl",
       "Watson"
     ],
     "championships": 0,
@@ -16103,6 +16435,8 @@
     "podiums": 0,
     "teams": [
       "Bromme",
+      "ERA",
+      "Kurtis Kraft",
       "Maserati"
     ],
     "championships": 0,
@@ -16143,6 +16477,7 @@
     "podiums": 0,
     "teams": [
       "Manor Marussia",
+      "Marussia",
       "Sauber"
     ],
     "championships": 0,
@@ -16216,7 +16551,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Brabham"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -16254,6 +16591,7 @@
     "podiums": 0,
     "teams": [
       "Cooper",
+      "ERA",
       "Frazer Nash",
       "Maserati",
       "Vanwall"
@@ -16365,6 +16703,7 @@
     "podiums": 0,
     "teams": [
       "Brabham",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -16384,7 +16723,8 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Ensign"
+      "Ensign",
+      "March"
     ],
     "championships": 0,
     "active_years": "1974\u20131975",
@@ -16438,6 +16778,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "Kurtis Kraft",
       "Kuzma"
     ],
     "championships": 0,
@@ -16455,7 +16796,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Williams"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -16527,6 +16870,7 @@
     "podiums": 0,
     "teams": [
       "ATS",
+      "Arrows",
       "Brabham",
       "RAM"
     ],
@@ -16565,6 +16909,7 @@
     "podiums": 1,
     "teams": [
       "BRM",
+      "Lotus",
       "March",
       "Team Lotus"
     ],
@@ -16680,7 +17025,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Williams"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": null
@@ -16774,6 +17121,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ERA",
       "Maserati",
       "Talbot-Lago"
     ],
