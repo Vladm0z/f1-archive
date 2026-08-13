@@ -862,9 +862,6 @@ function renderRacePage(data, raceId, params) {
 					<dt>Circuit</dt>
 					<dd>${esc(race.circuit || "—")}</dd>
 
-					<dt>Locality</dt>
-					<dd>${esc(race.locality || "—")}</dd>
-
 					<dt>Country</dt>
 					<dd>${esc(race.country || "—")}</dd>
 
