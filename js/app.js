@@ -132,7 +132,6 @@ function route() {
 	} else if (path.startsWith("team/")) {
 		const teamId = path.split("/")[1] || "";
 		page = renderTeamPage(data, teamId, params);
-	}
 	} else if (path === "articles") {
 		page = renderArticles(data, params);
 	} else if (path.startsWith("article/")) {
@@ -223,7 +222,7 @@ function esc(value) {
 			"&": "&amp;",
 			"<": "&lt;",
 			">": "&gt;",
-			"\"": "&quot;",
+			'"': "&quot;",
 			"'": "&#39;"
 		};
 
