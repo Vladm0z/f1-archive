@@ -736,3 +736,38 @@ dd {
 .scroll-list span {
 	color: var(--muted);
 }
+
+/* Wikipedia intro card */
+.wiki-intro {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	margin-bottom: 1rem;
+}
+
+.wiki-intro-image {
+	flex: 0 0 110px;
+	max-width: 110px;
+	height: auto;
+	border-radius: 10px;
+	border: 1px solid var(--line);
+	background: #fff;
+}
+
+.wiki-intro-text p {
+	margin: 0 0 0.5rem;
+}
+
+.wiki-intro-source {
+	font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+	.wiki-intro {
+		flex-direction: column;
+	}
+
+	.wiki-intro-image {
+		max-width: 160px;
+	}
+}

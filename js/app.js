@@ -500,125 +500,223 @@ function attachEntityFilters(pathKey, params) {
 	}
 }
 
+const wikiSummaryCache = {};
+
+function wikiTitleFromUrl(url) {
+	if (!url) return null;
+
+	const match = String(url).trim().match(/\/wiki\/([^?#]+)/);
+	if (!match) return null;
+
+	const title = match[1].trim();
+	return title || null;
+}
+
+async function fetchWikiSummary(title) {
+	if (!title) return null;
+	if (wikiSummaryCache[title]) return wikiSummaryCache[title];
+
+	const storageKey = "wiki-summary:" + title;
+
+	// localStorage cache (7 days)
+	try {
+		const stored = localStorage.getItem(storageKey);
+
+		if (stored) {
+			const parsed = JSON.parse(stored);
+
+			if (parsed && parsed.timestamp && Date.now() - parsed.timestamp < 7 * 24 * 60 * 60 * 1000) {
+				wikiSummaryCache[title] = parsed.data;
+				return parsed.data;
+			}
+		}
+	} catch (error) {
+		// localStorage unavailable (private mode etc.) – ignore
+	}
+
+	try {
+		const res = await fetch(
+			"https://en.wikipedia.org/api/rest_v1/page/summary/" + title
+		);
+
+		if (!res.ok) return null;
+
+		const data = await res.json();
+
+		if (!data || data.type === "disambiguation") return null;
+
+		const summary = {
+			extract: data.extract || "",
+			image: data.thumbnail ? data.thumbnail.source : ""
+		};
+
+		wikiSummaryCache[title] = summary;
+
+		try {
+			localStorage.setItem(
+				storageKey,
+				JSON.stringify({ timestamp: Date.now(), data: summary })
+			);
+		} catch (error) {
+			// ignore
+		}
+
+		return summary;
+	} catch (error) {
+		return null;
+	}
+}
+
+async function loadWikiIntro(wikipediaUrl, altText) {
+	const container = document.getElementById("wiki-intro");
+	if (!container || !wikipediaUrl) return;
+
+	const title = wikiTitleFromUrl(wikipediaUrl);
+	if (!title) return;
+
+	const summary = await fetchWikiSummary(title);
+	if (!summary || (!summary.extract && !summary.image)) return;
+
+	container.innerHTML = `
+		<div class="wiki-intro card">
+			${
+				summary.image
+					? `<img class="wiki-intro-image" src="${esc(summary.image)}" alt="${esc(altText || "")}">`
+					: ""
+			}
+			<div class="wiki-intro-text">
+				${summary.extract ? `<p>${esc(summary.extract)}</p>` : ""}
+				<p class="muted wiki-intro-source">
+					From
+					<a href="${esc(String(wikipediaUrl).trim())}" target="_blank" rel="noopener">
+						Wikipedia
+					</a>
+					(CC BY-SA)
+				</p>
+			</div>
+		</div>
+	`;
+}
+
 function randomSample(items, count) {
-  const arr = [...items];
+	const arr = [...items];
 
-  for (let i = arr.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
+	for (let i = arr.length - 1; i > 0; i -= 1) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[arr[i], arr[j]] = [arr[j], arr[i]];
+	}
 
-  return arr.slice(0, count);
+	return arr.slice(0, count);
 }
 
 function renderHome(data) {
-  const recentArticles = [...data.articles]
-    .sort((a, b) => {
-      return String(b.added_at || "").localeCompare(String(a.added_at || ""));
-    })
-    .slice(0, 6);
+	const recentArticles = [...data.articles]
+		.sort((a, b) => {
+			return String(b.added_at || "").localeCompare(String(a.added_at || ""));
+		})
+		.slice(0, 6);
 
-  const featuredDrivers = randomSample(data.drivers, 4);
+	const featuredDrivers = randomSample(data.drivers, 4);
 
-  const today = new Date().toISOString().slice(0, 10);
+	const today = new Date().toISOString().slice(0, 10);
 
-  // Prefer races that already happened.
-  // If there are no dated past races, fall back to all races.
-  const pastRaces = data.races.filter((race) => {
-    return race.date && race.date <= today;
-  });
+	// Prefer races that already happened.
+	// If there are no dated past races, fall back to all races.
+	const pastRaces = data.races.filter((race) => {
+		return race.date && race.date <= today;
+	});
 
-  const latestRaces = (pastRaces.length ? pastRaces : data.races)
-    .sort((a, b) => {
-      return (
-        String(b.date || "").localeCompare(String(a.date || "")) ||
-        (b.season || 0) - (a.season || 0) ||
-        (b.round || 0) - (a.round || 0)
-      );
-    })
-    .slice(0, 4);
+	const latestRaces = (pastRaces.length ? pastRaces : data.races)
+		.sort((a, b) => {
+			return (
+				String(b.date || "").localeCompare(String(a.date || "")) ||
+				(b.season || 0) - (a.season || 0) ||
+				(b.round || 0) - (a.round || 0)
+			);
+		})
+		.slice(0, 4);
 
-  const html = `
-    <section class="hero">
-      <h1>F1 interview & print archive</h1>
+	const html = `
+		<section class="hero">
+			<h1>F1 interview & print archive</h1>
 
-      <p>
-        Browse interviews, race reports, profiles and other printed sources
-        by driver, race, team, language and date.
-      </p>
+			<p>
+				Browse interviews, race reports, profiles and other printed sources
+				by driver, race, team, language and date.
+			</p>
 
-      <div class="hero-actions">
-        <a class="button" href="#/drivers">Browse drivers</a>
-        <a class="button secondary" href="#/teams">Browse teams</a>
-        <a class="button secondary" href="#/races">Browse races</a>
-        <a class="button secondary" href="#/articles">All articles</a>
-      </div>
-    </section>
+			<div class="hero-actions">
+				<a class="button" href="#/drivers">Browse drivers</a>
+				<a class="button secondary" href="#/teams">Browse teams</a>
+				<a class="button secondary" href="#/races">Browse races</a>
+				<a class="button secondary" href="#/articles">All articles</a>
+			</div>
+		</section>
 
-    <section>
-      <div class="section-head">
-        <h2>Recently added articles</h2>
-        <a href="#/articles">View all articles</a>
-      </div>
+		<section>
+			<div class="section-head">
+				<h2>Recently added articles</h2>
+				<a href="#/articles">View all articles</a>
+			</div>
 
-      <div class="stack">
-        ${
-          recentArticles.length
-            ? recentArticles
-                .map((article) => articleCardHtml(data, article))
-                .join("")
-            : emptyHtml("No articles yet.")
-        }
-      </div>
-    </section>
+			<div class="stack">
+				${
+					recentArticles.length
+						? recentArticles
+								.map((article) => articleCardHtml(data, article))
+								.join("")
+						: emptyHtml("No articles yet.")
+				}
+			</div>
+		</section>
 
-    <section class="two-columns home-panels">
-      <div class="card">
-        <h2>Featured drivers</h2>
+		<section class="two-columns home-panels">
+			<div class="card">
+				<h2>Featured drivers</h2>
 
-        <div class="list">
-          ${
-            featuredDrivers.length
-              ? featuredDrivers
-                  .map((driver) => `
-                    <a class="list-item" href="#/driver/${esc(driver.id)}">
-                      <span>${esc(driver.name)}</span>
-                      <span class="muted">${esc(driver.nationality || "")}</span>
-                    </a>
-                  `)
-                  .join("")
-              : emptyHtml("No drivers yet.")
-          }
-        </div>
-      </div>
+				<div class="list">
+					${
+						featuredDrivers.length
+							? featuredDrivers
+									.map((driver) => `
+										<a class="list-item" href="#/driver/${esc(driver.id)}">
+											<span>${esc(driver.name)}</span>
+											<span class="muted">${esc(driver.nationality || "")}</span>
+										</a>
+									`)
+									.join("")
+							: emptyHtml("No drivers yet.")
+					}
+				</div>
+			</div>
 
-      <div class="card">
-        <h2>Latest races</h2>
+			<div class="card">
+				<h2>Latest races</h2>
 
-        <div class="list">
-          ${
-            latestRaces.length
-              ? latestRaces
-                  .map((race) => `
-                    <a class="list-item" href="#/race/${esc(race.id)}">
-                      <span>${esc(race.name)} ${race.season || ""}</span>
-                      <span class="muted">
-                        ${esc(race.country || "")}
-                        ${race.date ? ` • ${esc(race.date)}` : ""}
-                      </span>
-                    </a>
-                  `)
-                  .join("")
-              : emptyHtml("No races yet.")
-          }
-        </div>
-      </div>
-    </section>
-  `;
+				<div class="list">
+					${
+						latestRaces.length
+							? latestRaces
+									.map((race) => `
+										<a class="list-item" href="#/race/${esc(race.id)}">
+											<span>${esc(race.name)} ${race.season || ""}</span>
+											<span class="muted">
+												${esc(race.country || "")}
+												${race.date ? ` • ${esc(race.date)}` : ""}
+											</span>
+										</a>
+									`)
+									.join("")
+							: emptyHtml("No races yet.")
+					}
+				</div>
+			</div>
+		</section>
+	`;
 
-  return {
-    html
-  };
+	return {
+		html
+	};
 }
 
 function renderDrivers(data) {
@@ -908,6 +1006,7 @@ function renderDriverPage(data, driverId, params) {
 
 		<div class="layout">
 			<div class="main-col">
+				<div id="wiki-intro"></div>
 				<div class="toolbar">
 					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
 					${sortFilterHtml(sort)}
@@ -924,7 +1023,10 @@ function renderDriverPage(data, driverId, params) {
 
 	return {
 		html,
-		afterRender: () => attachEntityFilters(`driver/${driver.id}`, params)
+		afterRender: () => {
+			attachEntityFilters(`driver/${driver.id}`, params);
+			loadWikiIntro(driver.wikipedia_url, driver.name);
+		}
 	};
 }
 
@@ -2079,6 +2181,7 @@ function renderTeamPage(data, teamId, params) {
 
 		<div class="layout">
 			<div class="main-col">
+				<div id="wiki-intro"></div>
 				<div class="toolbar">
 					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
 					${sortFilterHtml(sort)}
@@ -2095,6 +2198,9 @@ function renderTeamPage(data, teamId, params) {
 
 	return {
 		html,
-		afterRender: () => attachEntityFilters(`team/${team.id}`, params)
+		afterRender: () => {
+			attachEntityFilters(`team/${team.id}`, params);
+			loadWikiIntro(team.wikipedia_url, team.name);
+		}
 	};
 }
