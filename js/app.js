@@ -607,57 +607,91 @@ function renderRaces(data) {
 				<section class="page-head">
 					<h1>Races</h1>
 				</section>
-
 				${emptyHtml("No races yet.")}
 			`
 		};
 	}
 
-	const seasons = [...new Set(data.races.map((race) => race.season))]
-		.sort((a, b) => b - a);
+	// Group races by decade
+	const decades = {};
+	data.races.forEach(race => {
+		const decade = Math.floor(race.season / 10) * 10;
+		const decadeLabel = `${decade}s`;
+		if (!decades[decade]) decades[decade] = { label: decadeLabel, years: {} };
+		if (!decades[decade].years[race.season]) {
+			decades[decade].years[race.season] = [];
+		}
+		decades[decade].years[race.season].push(race);
+	});
 
-	const seasonBlocks = seasons
-		.map((season) => {
-			const seasonRaces = data.races
-				.filter((race) => race.season === season)
-				.sort((a, b) => (a.round || 999) - (b.round || 999));
+	// Sort decades descending (2020s, 2010s, etc.)
+	const sortedDecades = Object.keys(decades).sort((a, b) => b - a);
+	let decadesHtml = "";
 
-			const raceItems = seasonRaces
-				.map((race) => `
-					<a class="list-item" href="#/race/${esc(race.id)}">
-						<span>${esc(race.name)} ${race.season || ""}</span>
-						<span class="muted">${esc(race.date || "")}</span>
+	sortedDecades.forEach(decadeKey => {
+		const decade = decades[decadeKey];
+		const sortedYears = Object.keys(decade.years).sort((a, b) => b - a);
+		
+		let yearsHtml = "";
+		sortedYears.forEach((year, yearIndex) => {
+			const races = decade.years[year].sort((a, b) => a.round - b.round);
+			const racesHtml = races.map(race => `
+				<li class="race-item">
+					<a href="#/race/${esc(race.id)}">
+						<span class="race-name">
+							<span class="race-round">R${esc(String(race.round).padStart(2, '0'))}</span>
+							${esc(race.name)}
+						</span>
+						<span class="muted race-meta">${esc(race.country || "")} • ${esc(race.date || "")}</span>
 					</a>
-				`)
-				.join("");
-
-			return `
-				<section class="season-block">
-					<h2 class="season-title">${esc(season)}</h2>
-
-					<div class="list">
-						${raceItems}
-					</div>
-				</section>
+				</li>
+			`).join("");
+			
+			// Open the most recent year of the most recent decade by default
+			const isOpen = (yearIndex === 0 && decadeKey === sortedDecades[0]);
+			
+			yearsHtml += `
+				<details class="year-group" ${isOpen ? 'open' : ''}>
+					<summary class="year-summary">
+						<span>${esc(year)} Season</span>
+						<span class="muted" style="font-size:0.85rem; margin-right:1rem;">${races.length} races</span>
+					</summary>
+					<ul class="races-list">
+						${racesHtml}
+					</ul>
+				</details>
 			`;
-		})
-		.join("");
+		});
+
+		const isDecadeOpen = decadeKey === sortedDecades[0];
+		
+		decadesHtml += `
+			<details class="decade-group" ${isDecadeOpen ? 'open' : ''}>
+				<summary class="decade-summary">
+					<span>${esc(decade.label)}</span>
+					<span style="font-size:0.85rem; font-weight:normal; opacity:0.8;">${Object.keys(decade.years).length} seasons</span>
+				</summary>
+				<div class="years-container">
+					${yearsHtml}
+				</div>
+			</details>
+		`;
+	});
 
 	const html = `
 		<section class="page-head">
 			<h1>Races</h1>
-
 			<p class="muted">
-				Races grouped by season.
+				Races grouped by decade and season.
 			</p>
 		</section>
 
-		${seasonBlocks}
+		<div class="races-accordion">
+			${decadesHtml}
+		</div>
 	`;
 
-	return {
-		html
-	};
+	return { html };
 }
 
 function renderDriverPage(data, driverId, params) {

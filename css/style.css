@@ -1,4 +1,4 @@
-/* 1. Variables & base styles */
+/* Variables & base styles */
 
 :root {
 	--bg: #f7f8fa;
@@ -35,7 +35,7 @@ a {
 	color: var(--accent);
 }
 
-/* 2. Layout containers */
+/* Layout containers */
 
 .container {
 	width: min(1200px, calc(100% - 2rem));
@@ -76,7 +76,7 @@ main.container {
 	margin-top: 1.5rem;
 }
 
-/* 3. Header & footer */
+/* Header & footer */
 
 .site-header {
 	position: sticky;
@@ -125,7 +125,7 @@ main.container {
 	color: var(--muted);
 }
 
-/* 4. Hero & buttons */
+/* Hero & buttons */
 
 .hero {
 	background: linear-gradient(135deg, var(--accent-dark), var(--accent));
@@ -173,7 +173,7 @@ main.container {
 	border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* 5. Page sections & headings */
+/* Page sections & headings */
 
 .section-head {
 	display: flex;
@@ -203,7 +203,7 @@ main.container {
 	margin: 0.4rem 0 0.8rem;
 }
 
-/* 6. Cards, badges & text helpers */
+/* Cards, badges & text helpers */
 
 .card {
 	background: var(--panel);
@@ -273,7 +273,7 @@ main.container {
 	background: #fff;
 }
 
-/* 7. Lists & grids */
+/* Lists & grids */
 
 .stack {
 	display: grid;
@@ -321,7 +321,7 @@ main.container {
 	transform: translateY(-1px);
 }
 
-/* 8. Forms, filters & toolbar */
+/* Forms, filters & toolbar */
 
 .toolbar {
 	display: grid;
@@ -375,7 +375,7 @@ main.container {
 	width: min(480px, 100%);
 }
 
-/* 9. Tables & definition lists */
+/* Tables & definition lists */
 
 .table-wrap {
 	overflow: auto;
@@ -416,7 +416,7 @@ dd {
 	color: var(--muted);
 }
 
-/* 10. Tabs & position deltas (race results) */
+/* Tabs & position deltas (race results) */
 
 .tabs {
 	display: flex;
@@ -494,7 +494,7 @@ dd {
 	color: var(--muted);
 }
 
-/* 11. Article content (transcripts, scans, PDFs) */
+/* Article content (transcripts, scans, PDFs) */
 
 .article-content {
 	line-height: 1.7;
@@ -586,4 +586,132 @@ dd {
 	.two-columns {
 		grid-template-columns: 1fr;
 	}
+}
+
+/* Races Accordion (Decades -> Years -> Races) */
+
+.races-accordion {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.decade-group,
+.year-group {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+}
+
+.decade-summary,
+.year-summary {
+	padding: 1rem 1.25rem;
+	font-weight: 700;
+	font-size: 1.05rem;
+	cursor: pointer;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none; /* Remove default marker */
+	transition: background 0.15s ease;
+}
+
+.decade-summary::-webkit-details-marker,
+.year-summary::-webkit-details-marker {
+	display: none;
+}
+
+.decade-summary::after,
+.year-summary::after {
+	content: "＋";
+	font-size: 1.2rem;
+	color: var(--accent);
+	transition: transform 0.2s ease;
+}
+
+.decade-group[open] > .decade-summary::after,
+.year-group[open] > .year-summary::after {
+	content: "－";
+}
+
+.decade-summary:hover,
+.year-summary:hover {
+	background: #f8f9fb;
+}
+
+.decade-summary {
+	background: var(--accent-dark);
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.decade-summary::after {
+	color: #fff;
+}
+
+.decade-summary:hover {
+	background: #1a2538;
+}
+
+.years-container {
+	padding: 0.5rem 1rem 1rem;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.year-summary {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text);
+	background: #f8f9fb;
+	border-bottom: 1px solid var(--line);
+}
+
+.races-list {
+	list-style: none;
+	margin: 0.5rem 0 0;
+	padding: 0;
+	display: grid;
+	gap: 0.35rem;
+}
+
+.race-item a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.65rem 0.85rem;
+	text-decoration: none;
+	color: var(--text);
+	border-radius: 8px;
+	transition: background 0.15s ease, color 0.15s ease;
+	gap: 1rem;
+}
+
+.race-item a:hover {
+	background: #e9eef8;
+	color: var(--accent);
+}
+
+.race-name {
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.race-round {
+	background: var(--accent);
+	color: #fff;
+	padding: 0.15rem 0.45rem;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-weight: 700;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.race-meta {
+	font-size: 0.85rem;
+	white-space: nowrap;
 }
