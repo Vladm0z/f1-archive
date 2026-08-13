@@ -1,1202 +1,1612 @@
 const app = document.getElementById("app");
+
 const state = {
-  data: null
+	data: null
 };
 
 init();
 
 async function init() {
-  try {
-    state.data = await loadData();
-    window.addEventListener("hashchange", route);
-    route();
-  } catch (error) {
-    console.error(error);
-    app.innerHTML = `
-      <div class="empty">
-        Could not load data. Check the browser console and make sure all JSON files are valid.
-      </div>
-    `;
-  }
+	try {
+		state.data = await loadData();
+		window.addEventListener("hashchange", route);
+		route();
+	} catch (error) {
+		console.error(error);
+		app.innerHTML = `
+			<div class="empty">
+				Could not load data. Check the browser console and make sure all JSON files are valid.
+			</div>
+		`;
+	}
 }
 
 async function loadData() {
-  const [languages, drivers, races, articles] = await Promise.all([
-    fetch("data/languages.json").then(checkResponse),
-    fetch("data/drivers.json").then(checkResponse),
-    fetch("data/races.json").then(checkResponse),
-    fetch("data/articles.json").then(checkResponse)
-  ]);
+	const [languages, drivers, races, articles] = await Promise.all([
+		fetch("data/languages.json").then(checkResponse),
+		fetch("data/drivers.json").then(checkResponse),
+		fetch("data/races.json").then(checkResponse),
+		fetch("data/articles.json").then(checkResponse)
+	]);
 
-  return {
-    languages,
-    drivers: sortDrivers(drivers),
-    races,
-    articles,
-    driversById: makeById(drivers),
-    racesById: makeById(races)
-  };
+	return {
+		languages,
+		drivers: sortDrivers(drivers),
+		races,
+		articles,
+		driversById: makeById(drivers),
+		racesById: makeById(races)
+	};
 }
 
 async function checkResponse(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} for ${response.url}`);
-  }
-  return response.json();
+	if (!response.ok) {
+		throw new Error(`HTTP ${response.status} for ${response.url}`);
+	}
+
+	return response.json();
 }
 
 function makeById(items) {
-  return Object.fromEntries(items.map(item => [item.id, item]));
+	return Object.fromEntries(items.map((item) => [item.id, item]));
 }
 
 function sortDrivers(drivers) {
-  return [...drivers].sort((a, b) => {
-    return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
-  });
+	return [...drivers].sort((a, b) => {
+		return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
+	});
 }
 
 function route() {
-  const data = state.data;
-  const { path, params } = parseHash();
+	const data = state.data;
+	const { path, params } = parseHash();
 
-  let page;
+	let page;
 
-  if (path === "") {
-    page = renderHome(data);
-  } else if (path === "drivers") {
-    page = renderDrivers(data);
-  } else if (path.startsWith("driver/")) {
-    const driverId = path.split("/")[1] || "";
-    page = renderDriverPage(data, driverId, params);
-  } else if (path === "races") {
-    page = renderRaces(data);
-  } else if (path.startsWith("race/")) {
-    const raceId = path.split("/")[1] || "";
-    page = renderRacePage(data, raceId, params);
-    } else if (path === "articles") {
-    page = renderArticles(data, params);
-  } else if (path.startsWith("article/")) {
-    const articleId = path.split("/")[1] || "";
-    page = renderArticlePage(data, articleId);
-  } else {
-    page = {
-      html: `<div class="empty">Page not found.</div>`
-    };
-  }
+	if (path === "") {
+		page = renderHome(data);
+	} else if (path === "drivers") {
+		page = renderDrivers(data);
+	} else if (path.startsWith("driver/")) {
+		const driverId = path.split("/")[1] || "";
+		page = renderDriverPage(data, driverId, params);
+	} else if (path === "races") {
+		page = renderRaces(data);
+	} else if (path.startsWith("race/")) {
+		const raceId = path.split("/")[1] || "";
+		page = renderRacePage(data, raceId, params);
+	} else if (path === "articles") {
+		page = renderArticles(data, params);
+	} else if (path.startsWith("article/")) {
+		const articleId = path.split("/")[1] || "";
+		page = renderArticlePage(data, articleId);
+	} else {
+		page = {
+			html: `
+				<div class="empty">
+					Page not found.
+				</div>
+			`
+		};
+	}
 
-  app.innerHTML = page.html;
+	app.innerHTML = page.html;
 
-  if (page.afterRender) {
-    page.afterRender();
-  }
+	if (page.afterRender) {
+		page.afterRender();
+	}
 
-  window.scrollTo({
-    top: 0,
-    behavior: "auto"
-  });
+	window.scrollTo({
+		top: 0,
+		behavior: "auto"
+	});
 }
 
 function parseHash() {
-  const raw = window.location.hash.replace(/^#/, "");
-  const normalized = raw.startsWith("/") ? raw : `/${raw}`;
-  const [pathPart, queryPart = ""] = normalized.split("?");
-  const path = pathPart.replace(/^\/+|\/+$/g, "");
-  const params = new URLSearchParams(queryPart);
+	const raw = window.location.hash.replace(/^#/, "");
+	const normalized = raw.startsWith("/") ? raw : `/${raw}`;
+	const [pathPart, queryPart = ""] = normalized.split("?");
+	const path = pathPart.replace(/^\/+|\/+$/g, "");
+	const params = new URLSearchParams(queryPart);
 
-  return {
-    path,
-    params
-  };
+	return {
+		path,
+		params
+	};
 }
 
 function getSelectedLanguages(params) {
-  return (params.get("lang") || "")
-    .split(",")
-    .map(value => value.trim())
-    .filter(Boolean);
+	return (params.get("lang") || "")
+		.split(",")
+		.map((value) => value.trim())
+		.filter(Boolean);
 }
 
 function getSort(params) {
-  return params.get("sort") === "desc" ? "desc" : "asc";
+	return params.get("sort") === "desc" ? "desc" : "asc";
 }
 
 function buildHash(path, params) {
-  const queryString = params.toString();
-  return `#/${path}${queryString ? `?${queryString}` : ""}`;
+	const queryString = params.toString();
+	return `#/${path}${queryString ? `?${queryString}` : ""}`;
 }
 
 function updateParams(params, changes) {
-  const next = new URLSearchParams(params);
+	const next = new URLSearchParams(params);
 
-  for (const [key, value] of Object.entries(changes)) {
-    if (
-      value === null ||
-      value === undefined ||
-      value === "" ||
-      (Array.isArray(value) && value.length === 0)
-    ) {
-      next.delete(key);
-    } else if (Array.isArray(value)) {
-      next.set(key, value.join(","));
-    } else {
-      next.set(key, value);
-    }
-  }
+	for (const [key, value] of Object.entries(changes)) {
+		if (
+			value === null ||
+			value === undefined ||
+			value === "" ||
+			(Array.isArray(value) && value.length === 0)
+		) {
+			next.delete(key);
+		} else if (Array.isArray(value)) {
+			next.set(key, value.join(","));
+		} else {
+			next.set(key, value);
+		}
+	}
 
-  return next;
+	return next;
 }
 
 function normalizeString(value) {
-  return String(value ?? "")
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+	return String(value ?? "")
+		.toLowerCase()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "");
 }
 
 function esc(value) {
-  return String(value ?? "").replace(/[&<>"']/g, character => {
-    return {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    }[character];
-  });
+	return String(value ?? "").replace(/[&<>"']/g, (character) => {
+		const entities = {
+			"&": "&amp;",
+			"<": "&lt;",
+			">": "&gt;",
+			"\"": "&quot;",
+			"'": "&#39;"
+		};
+
+		return entities[character];
+	});
 }
 
 function languageLabel(data, code) {
-  const language = data.languages.find(item => item.code === code);
-  return language ? language.label : code.toUpperCase();
+	const language = data.languages.find((item) => item.code === code);
+
+	if (language) {
+		return language.label;
+	}
+
+	return code ? String(code).toUpperCase() : "—";
 }
 
 function driverName(data, driverId) {
-  return data.driversById[driverId]?.name || "—";
+	return data.driversById[driverId]?.name || "—";
 }
 
 function raceLabel(data, raceId) {
-  const race = data.racesById[raceId];
-  if (!race) return raceId;
-  return `${race.name} ${race.season || ""}`.trim();
+	const race = data.racesById[raceId];
+
+	if (!race) {
+		return raceId;
+	}
+
+	return `${race.name} ${race.season || ""}`.trim();
 }
 
 function emptyHtml(message) {
-  return `<div class="empty">${esc(message)}</div>`;
+	return `
+		<div class="empty">
+			${esc(message)}
+		</div>
+	`;
 }
 
 function filterByLanguages(articles, selectedLanguages) {
-  if (!selectedLanguages.length) {
-    return articles;
-  }
+	if (!selectedLanguages.length) {
+		return articles;
+	}
 
-  return articles.filter(article => selectedLanguages.includes(article.language));
+	return articles.filter((article) => selectedLanguages.includes(article.language));
 }
 
 function sortArticles(articles, sortDirection) {
-  return [...articles].sort((a, b) => {
-    const aDate = a.published_sort || "";
-    const bDate = b.published_sort || "";
+	return [...articles].sort((a, b) => {
+		const aDate = a.published_sort || "";
+		const bDate = b.published_sort || "";
 
-    if (sortDirection === "desc") {
-      return bDate.localeCompare(aDate);
-    }
+		if (sortDirection === "desc") {
+			return bDate.localeCompare(aDate);
+		}
 
-    return aDate.localeCompare(bDate);
-  });
+		return aDate.localeCompare(bDate);
+	});
 }
 
 function getEntityArticles(data, { driverId, raceId }) {
-  return data.articles.filter(article => {
-    const matchesDriver = driverId
-      ? (article.driver_ids || []).includes(driverId)
-      : true;
+	return data.articles.filter((article) => {
+		const matchesDriver = driverId
+			? (article.driver_ids || []).includes(driverId)
+			: true;
 
-    const matchesRace = raceId
-      ? (article.race_ids || []).includes(raceId)
-      : true;
+		const matchesRace = raceId
+			? (article.race_ids || []).includes(raceId)
+			: true;
 
-    return matchesDriver && matchesRace;
-  });
+		return matchesDriver && matchesRace;
+	});
 }
 
 function articleCardHtml(data, article) {
-  const driverNames = (article.driver_ids || [])
-    .map(id => data.driversById[id]?.name)
-    .filter(Boolean);
+	const driverNames = (article.driver_ids || [])
+		.map((id) => data.driversById[id]?.name)
+		.filter(Boolean);
 
-  const raceNames = (article.race_ids || [])
-    .map(id => raceLabel(data, id))
-    .filter(Boolean);
+	const raceNames = (article.race_ids || [])
+		.map((id) => raceLabel(data, id))
+		.filter(Boolean);
 
-  const links = [];
+	const links = [];
 
-  if (getArticleContentFiles(article).length) {
-    links.push(`
-      <a href="#/article/${esc(article.id)}">Open article</a>
-    `);
-  }
+	if (getArticleContentFiles(article).length) {
+		links.push(`
+			<a href="#/article/${esc(article.id)}">Open article</a>
+		`);
+	}
 
-  if (article.url) {
-    links.push(`
-      <a href="${esc(article.url)}" target="_blank" rel="noopener">Read</a>
-    `);
-  }
+	if (article.url) {
+		links.push(`
+			<a href="${esc(article.url)}" target="_blank" rel="noopener">Read</a>
+		`);
+	}
 
-  if (article.archive_url) {
-    links.push(`
-      <a href="${esc(article.archive_url)}" target="_blank" rel="noopener">Archive</a>
-    `);
-  }
+	if (article.archive_url) {
+		links.push(`
+			<a href="${esc(article.archive_url)}" target="_blank" rel="noopener">Archive</a>
+		`);
+	}
 
-  return `
-    <article class="card">
-      <div class="card-top">
-        <span class="badge">${esc(article.article_type || "article")}</span>
-        <span class="badge badge-soft">${esc(languageLabel(data, article.language))}</span>
-        <span class="muted">${esc(article.published_display || article.published_sort || "")}</span>
-      </div>
+	return `
+		<article class="card">
+			<div class="card-top">
+				<span class="badge">
+					${esc(article.article_type || "article")}
+				</span>
 
-      <h3>${esc(article.title || article.id)}</h3>
+				<span class="badge badge-soft">
+					${esc(languageLabel(data, article.language))}
+				</span>
 
-      ${
-        article.source_publication
-          ? `<p class="muted">
-              ${esc(article.source_publication)}
-              ${article.pages ? ` • pp. ${esc(article.pages)}` : ""}
-             </p>`
-          : ""
-      }
+				<span class="muted">
+					${esc(article.published_display || article.published_sort || "")}
+				</span>
+			</div>
 
-      ${
-        driverNames.length
-          ? `<p><strong>Drivers:</strong> ${esc(driverNames.join(", "))}</p>`
-          : ""
-      }
+			<h3>${esc(article.title || article.id)}</h3>
 
-      ${
-        raceNames.length
-          ? `<p><strong>Races:</strong> ${esc(raceNames.join(", "))}</p>`
-          : ""
-      }
+			${
+				article.source_publication
+					? `
+						<p class="muted">
+							${esc(article.source_publication)}
+							${article.pages ? ` • pp. ${esc(article.pages)}` : ""}
+						</p>
+					`
+					: ""
+			}
 
-      ${
-        article.citation
-          ? `<p class="muted">${esc(article.citation)}</p>`
-          : ""
-      }
+			${
+				driverNames.length
+					? `
+						<p>
+							<strong>Drivers:</strong>
+							${esc(driverNames.join(", "))}
+						</p>
+					`
+					: ""
+			}
 
-      ${
-        links.length
-          ? `<div class="links">${links.join("")}</div>`
-          : ""
-      }
-    </article>
-  `;
+			${
+				raceNames.length
+					? `
+						<p>
+							<strong>Races:</strong>
+							${esc(raceNames.join(", "))}
+						</p>
+					`
+					: ""
+			}
+
+			${
+				article.citation
+					? `
+						<p class="muted">
+							${esc(article.citation)}
+						</p>
+					`
+					: ""
+			}
+
+			${
+				links.length
+					? `
+						<div class="links">
+							${links.join("")}
+						</div>
+					`
+					: ""
+			}
+		</article>
+	`;
 }
 
 function languageFilterHtml(data, availableLanguages, selectedLanguages) {
-  if (!availableLanguages.length) {
-    return "";
-  }
+	if (!availableLanguages.length) {
+		return "";
+	}
 
-  const checkboxes = availableLanguages.map(code => {
-    const checked = selectedLanguages.includes(code) ? "checked" : "";
+	const checkboxes = availableLanguages
+		.map((code) => {
+			const checked = selectedLanguages.includes(code) ? "checked" : "";
 
-    return `
-      <label class="check">
-        <input
-          type="checkbox"
-          class="language-filter"
-          value="${esc(code)}"
-          ${checked}
-        >
-        ${esc(languageLabel(data, code))}
-      </label>
-    `;
-  }).join("");
+			return `
+				<label class="check">
+					<input
+						type="checkbox"
+						class="language-filter"
+						value="${esc(code)}"
+						${checked}
+					>
+					${esc(languageLabel(data, code))}
+				</label>
+			`;
+		})
+		.join("");
 
-  return `
-    <div class="filters">
-      <span class="filters-label">Language:</span>
-      <div class="check-group">
-        ${checkboxes}
-      </div>
-    </div>
-  `;
+	return `
+		<div class="filters">
+			<span class="filters-label">Language:</span>
+
+			<div class="check-group">
+				${checkboxes}
+			</div>
+		</div>
+	`;
 }
 
 function sortFilterHtml(currentSort) {
-  return `
-    <div class="filters">
-      <span class="filters-label">Sort:</span>
-      <select class="sort-filter">
-        <option value="asc" ${currentSort === "asc" ? "selected" : ""}>
-          Oldest first
-        </option>
-        <option value="desc" ${currentSort === "desc" ? "selected" : ""}>
-          Newest first
-        </option>
-      </select>
-    </div>
-  `;
+	return `
+		<div class="filters">
+			<span class="filters-label">Sort:</span>
+
+			<select class="sort-filter">
+				<option value="asc" ${currentSort === "asc" ? "selected" : ""}>
+					Oldest first
+				</option>
+
+				<option value="desc" ${currentSort === "desc" ? "selected" : ""}>
+					Newest first
+				</option>
+			</select>
+		</div>
+	`;
 }
 
 function attachEntityFilters(pathKey, params) {
-  const languageBoxes = [...document.querySelectorAll(".language-filter")];
-  const sortSelect = document.querySelector(".sort-filter");
+	const languageBoxes = [...document.querySelectorAll(".language-filter")];
+	const sortSelect = document.querySelector(".sort-filter");
 
-  function applyChanges(changes) {
-    const nextParams = updateParams(params, changes);
-    window.location.hash = buildHash(pathKey, nextParams);
-  }
+	function applyChanges(changes) {
+		const nextParams = updateParams(params, changes);
+		window.location.hash = buildHash(pathKey, nextParams);
+	}
 
-  languageBoxes.forEach(box => {
-    box.addEventListener("change", () => {
-      const checked = languageBoxes
-        .filter(item => item.checked)
-        .map(item => item.value);
+	languageBoxes.forEach((box) => {
+		box.addEventListener("change", () => {
+			const checked = languageBoxes
+				.filter((item) => item.checked)
+				.map((item) => item.value);
 
-      applyChanges({
-        lang: checked
-      });
-    });
-  });
+			applyChanges({
+				lang: checked
+			});
+		});
+	});
 
-  if (sortSelect) {
-    sortSelect.addEventListener("change", () => {
-      applyChanges({
-        sort: sortSelect.value === "asc" ? null : sortSelect.value
-      });
-    });
-  }
+	if (sortSelect) {
+		sortSelect.addEventListener("change", () => {
+			applyChanges({
+				sort: sortSelect.value === "asc" ? null : sortSelect.value
+			});
+		});
+	}
 }
 
 function renderHome(data) {
-  const recentArticles = [...data.articles]
-    .sort((a, b) => {
-      return String(b.added_at || "").localeCompare(String(a.added_at || ""));
-    })
-    .slice(0, 6);
+	const recentArticles = [...data.articles]
+		.sort((a, b) => {
+			return String(b.added_at || "").localeCompare(String(a.added_at || ""));
+		})
+		.slice(0, 6);
 
-  const topDrivers = data.drivers.slice(0, 8);
+	const topDrivers = data.drivers.slice(0, 8);
 
-  const topRaces = [...data.races]
-    .sort((a, b) => {
-      return (b.season || 0) - (a.season || 0) || (a.round || 999) - (b.round || 999);
-    })
-    .slice(0, 8);
+	const topRaces = [...data.races]
+		.sort((a, b) => {
+			return (b.season || 0) - (a.season || 0) || (a.round || 999) - (b.round || 999);
+		})
+		.slice(0, 8);
 
-  const html = `
-    <section class="hero">
-      <h1>F1 interview & print archive</h1>
-      <p>
-        Browse interviews, race reports, profiles and other printed sources
-        by driver, race, language and date.
-      </p>
+	const html = `
+		<section class="hero">
+			<h1>F1 interview & print archive</h1>
 
-      <div class="hero-actions">
-        <a class="button" href="#/drivers">Browse drivers</a>
-        <a class="button secondary" href="#/races">Browse races</a>
-        <a class="button secondary" href="#/articles">All articles</a>
-      </div>
-    </section>
+			<p>
+				Browse interviews, race reports, profiles and other printed sources
+				by driver, race, language and date.
+			</p>
 
-    <section>
-      <div class="section-head">
-        <h2>Recently added articles</h2>
-        <a href="#/articles">View all articles</a>
-      </div>
+			<div class="hero-actions">
+				<a class="button" href="#/drivers">Browse drivers</a>
+				<a class="button secondary" href="#/races">Browse races</a>
+				<a class="button secondary" href="#/articles">All articles</a>
+			</div>
+		</section>
 
-      <div class="stack">
-        ${
-          recentArticles.length
-            ? recentArticles.map(article => articleCardHtml(data, article)).join("")
-            : emptyHtml("No articles yet.")
-        }
-      </div>
-    </section>
+		<section>
+			<div class="section-head">
+				<h2>Recently added articles</h2>
+				<a href="#/articles">View all articles</a>
+			</div>
 
-    <section class="two-columns home-panels">
-      <div class="card">
-        <h2>Drivers</h2>
-        <div class="list">
-          ${
-            topDrivers.length
-              ? topDrivers.map(driver => `
-                  <a class="list-item" href="#/driver/${esc(driver.id)}">
-                    <span>${esc(driver.name)}</span>
-                    <span class="muted">${esc(driver.nationality || "")}</span>
-                  </a>
-                `).join("")
-              : emptyHtml("No drivers yet.")
-          }
-        </div>
-      </div>
+			<div class="stack">
+				${
+					recentArticles.length
+						? recentArticles.map((article) => articleCardHtml(data, article)).join("")
+						: emptyHtml("No articles yet.")
+				}
+			</div>
+		</section>
 
-      <div class="card">
-        <h2>Races</h2>
-        <div class="list">
-          ${
-            topRaces.length
-              ? topRaces.map(race => `
-                  <a class="list-item" href="#/race/${esc(race.id)}">
-                    <span>${esc(race.name)} ${race.season || ""}</span>
-                    <span class="muted">${esc(race.country || "")}</span>
-                  </a>
-                `).join("")
-              : emptyHtml("No races yet.")
-          }
-        </div>
-      </div>
-    </section>
-  `;
+		<section class="two-columns home-panels">
+			<div class="card">
+				<h2>Drivers</h2>
 
-  return {
-    html
-  };
+				<div class="list">
+					${
+						topDrivers.length
+							? topDrivers
+									.map((driver) => `
+										<a class="list-item" href="#/driver/${esc(driver.id)}">
+											<span>${esc(driver.name)}</span>
+											<span class="muted">${esc(driver.nationality || "")}</span>
+										</a>
+									`)
+									.join("")
+							: emptyHtml("No drivers yet.")
+					}
+				</div>
+			</div>
+
+			<div class="card">
+				<h2>Races</h2>
+
+				<div class="list">
+					${
+						topRaces.length
+							? topRaces
+									.map((race) => `
+										<a class="list-item" href="#/race/${esc(race.id)}">
+											<span>${esc(race.name)} ${race.season || ""}</span>
+											<span class="muted">${esc(race.country || "")}</span>
+										</a>
+									`)
+									.join("")
+							: emptyHtml("No races yet.")
+					}
+				</div>
+			</div>
+		</section>
+	`;
+
+	return {
+		html
+	};
 }
 
 function renderDrivers(data) {
-  const html = `
-    <section class="page-head">
-      <h1>Drivers</h1>
-      <p class="muted">
-        Search by name, nationality or alias.
-      </p>
-    </section>
+	const html = `
+		<section class="page-head">
+			<h1>Drivers</h1>
 
-    <input
-      id="driver-search"
-      class="input"
-      type="search"
-      placeholder="Search drivers..."
-      autocomplete="off"
-    >
+			<p class="muted">
+				Search by name, nationality or alias.
+			</p>
+		</section>
 
-    <div id="driver-list" class="driver-grid">
-      ${driverCardsHtml(data, data.drivers)}
-    </div>
-  `;
+		<input
+			id="driver-search"
+			class="input"
+			type="search"
+			placeholder="Search drivers..."
+			autocomplete="off"
+		>
 
-  function afterRender() {
-    const input = document.getElementById("driver-search");
-    const list = document.getElementById("driver-list");
+		<div id="driver-list" class="driver-grid">
+			${driverCardsHtml(data, data.drivers)}
+		</div>
+	`;
 
-    input.addEventListener("input", () => {
-      const filtered = filterDrivers(data.drivers, input.value);
-      list.innerHTML = driverCardsHtml(data, filtered);
-    });
-  }
+	function afterRender() {
+		const input = document.getElementById("driver-search");
+		const list = document.getElementById("driver-list");
 
-  return {
-    html,
-    afterRender
-  };
+		input.addEventListener("input", () => {
+			const filtered = filterDrivers(data.drivers, input.value);
+			list.innerHTML = driverCardsHtml(data, filtered);
+		});
+	}
+
+	return {
+		html,
+		afterRender
+	};
 }
 
 function filterDrivers(drivers, query) {
-  const q = normalizeString(query);
+	const q = normalizeString(query);
 
-  if (!q) {
-    return drivers;
-  }
+	if (!q) {
+		return drivers;
+	}
 
-  return drivers.filter(driver => {
-    const parts = [
-      driver.name,
-      driver.sort_name,
-      driver.first_name,
-      driver.last_name,
-      driver.nationality,
-      ...(driver.aliases || [])
-    ];
+	return drivers
+		.filter((driver) => {
+			const parts = [
+				driver.name,
+				driver.sort_name,
+				driver.first_name,
+				driver.last_name,
+				driver.nationality,
+				...(driver.aliases || [])
+			].filter(Boolean);
 
-    return normalizeString(parts.join(" ")).includes(q);
-  }).sort((a, b) => {
-    return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
-  });
+			return normalizeString(parts.join(" ")).includes(q);
+		})
+		.sort((a, b) => {
+			return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
+		});
 }
 
 function driverCardsHtml(data, drivers) {
-  if (!drivers.length) {
-    return emptyHtml("No drivers found.");
-  }
+	if (!drivers.length) {
+		return emptyHtml("No drivers found.");
+	}
 
-  return drivers.map(driver => `
-    <a class="card driver-card" href="#/driver/${esc(driver.id)}">
-      <h3>${esc(driver.name)}</h3>
-      <p class="muted">
-        ${esc(driver.nationality || "")}
-        ${driver.active_years ? ` • ${esc(driver.active_years)}` : ""}
-      </p>
-    </a>
-  `).join("");
+	return drivers
+		.map((driver) => `
+			<a class="card driver-card" href="#/driver/${esc(driver.id)}">
+				<h3>${esc(driver.name)}</h3>
+
+				<p class="muted">
+					${esc(driver.nationality || "")}
+					${driver.active_years ? ` • ${esc(driver.active_years)}` : ""}
+				</p>
+			</a>
+		`)
+		.join("");
 }
 
 function renderRaces(data) {
-  if (!data.races.length) {
-    return {
-      html: `
-        <section class="page-head">
-          <h1>Races</h1>
-        </section>
-        ${emptyHtml("No races yet.")}
-      `
-    };
-  }
+	if (!data.races.length) {
+		return {
+			html: `
+				<section class="page-head">
+					<h1>Races</h1>
+				</section>
 
-  const seasons = [...new Set(data.races.map(race => race.season))]
-    .sort((a, b) => b - a);
+				${emptyHtml("No races yet.")}
+			`
+		};
+	}
 
-  const seasonBlocks = seasons.map(season => {
-    const seasonRaces = data.races
-      .filter(race => race.season === season)
-      .sort((a, b) => (a.round || 999) - (b.round || 999));
+	const seasons = [...new Set(data.races.map((race) => race.season))]
+		.sort((a, b) => b - a);
 
-    const raceItems = seasonRaces.map(race => `
-      <a class="list-item" href="#/race/${esc(race.id)}">
-        <span>${esc(race.name)} ${race.season || ""}</span>
-        <span class="muted">${esc(race.date || "")}</span>
-      </a>
-    `).join("");
+	const seasonBlocks = seasons
+		.map((season) => {
+			const seasonRaces = data.races
+				.filter((race) => race.season === season)
+				.sort((a, b) => (a.round || 999) - (b.round || 999));
 
-    return `
-      <section class="season-block">
-        <h2 class="season-title">${esc(season)}</h2>
-        <div class="list">
-          ${raceItems}
-        </div>
-      </section>
-    `;
-  }).join("");
+			const raceItems = seasonRaces
+				.map((race) => `
+					<a class="list-item" href="#/race/${esc(race.id)}">
+						<span>${esc(race.name)} ${race.season || ""}</span>
+						<span class="muted">${esc(race.date || "")}</span>
+					</a>
+				`)
+				.join("");
 
-  const html = `
-    <section class="page-head">
-      <h1>Races</h1>
-      <p class="muted">
-        Races grouped by season.
-      </p>
-    </section>
+			return `
+				<section class="season-block">
+					<h2 class="season-title">${esc(season)}</h2>
 
-    ${seasonBlocks}
-  `;
+					<div class="list">
+						${raceItems}
+					</div>
+				</section>
+			`;
+		})
+		.join("");
 
-  return {
-    html
-  };
+	const html = `
+		<section class="page-head">
+			<h1>Races</h1>
+
+			<p class="muted">
+				Races grouped by season.
+			</p>
+		</section>
+
+		${seasonBlocks}
+	`;
+
+	return {
+		html
+	};
 }
 
 function renderDriverPage(data, driverId, params) {
-  const driver = data.driversById[driverId];
+	const driver = data.driversById[driverId];
 
-  if (!driver) {
-    return {
-      html: emptyHtml("Driver not found.")
-    };
-  }
+	if (!driver) {
+		return {
+			html: emptyHtml("Driver not found.")
+		};
+	}
 
-  const entityArticles = getEntityArticles(data, { driverId });
-  const selectedLanguages = getSelectedLanguages(params);
-  const sort = getSort(params);
+	const entityArticles = getEntityArticles(data, { driverId });
+	const selectedLanguages = getSelectedLanguages(params);
+	const sort = getSort(params);
 
-  const availableLanguages = [...new Set(
-    entityArticles
-      .map(article => article.language)
-      .filter(Boolean)
-  )].sort();
+	const availableLanguages = [...new Set(
+		entityArticles
+			.map((article) => article.language)
+			.filter(Boolean)
+	)].sort();
 
-  const filteredArticles = sortArticles(
-    filterByLanguages(entityArticles, selectedLanguages),
-    sort
-  );
+	const filteredArticles = sortArticles(
+		filterByLanguages(entityArticles, selectedLanguages),
+		sort
+	);
 
-  const articlesHtml = filteredArticles.length
-    ? filteredArticles.map(article => articleCardHtml(data, article)).join("")
-    : emptyHtml("No articles match these filters.");
+	const articlesHtml = filteredArticles.length
+		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
+		: emptyHtml("No articles match these filters.");
 
-  const sidebar = `
-    <aside class="sidebar">
-      <div class="card">
-        <h2>Driver info</h2>
+	const sidebar = `
+		<aside class="sidebar">
+			<div class="card">
+				<h2>Driver info</h2>
 
-        <dl>
-          <dt>Nationality</dt>
-          <dd>${esc(driver.nationality || "—")}</dd>
+				<dl>
+					<dt>Nationality</dt>
+					<dd>${esc(driver.nationality || "—")}</dd>
 
-          <dt>Born</dt>
-          <dd>${esc(driver.date_of_birth || "—")}</dd>
+					<dt>Born</dt>
+					<dd>${esc(driver.date_of_birth || "—")}</dd>
 
-          ${
-            driver.date_of_death
-              ? `
-                <dt>Died</dt>
-                <dd>${esc(driver.date_of_death)}</dd>
-              `
-              : ""
-          }
+					${
+						driver.date_of_death
+							? `
+								<dt>Died</dt>
+								<dd>${esc(driver.date_of_death)}</dd>
+							`
+							: ""
+					}
 
-          <dt>Active years</dt>
-          <dd>${esc(driver.active_years || "—")}</dd>
+					<dt>Active years</dt>
+					<dd>${esc(driver.active_years || "—")}</dd>
 
-          <dt>Teams</dt>
-          <dd>${esc((driver.teams || []).join(", ") || "—")}</dd>
+					<dt>Teams</dt>
+					<dd>${esc((driver.teams || []).join(", ") || "—")}</dd>
 
-          <dt>Championships</dt>
-          <dd>${driver.championships ?? 0}</dd>
+					<dt>Championships</dt>
+					<dd>${driver.championships ?? 0}</dd>
 
-          <dt>Podiums</dt>
-          <dd>${driver.podiums ?? 0}</dd>
-          <dt>Wins</dt>
-          <dd>${driver.wins ?? "—"}</dd>
+					<dt>Wins</dt>
+					<dd>${driver.wins ?? 0}</dd>
 
-          <dt>Pole positions</dt>
-          <dd>${driver.pole_positions ?? "—"}</dd>
-        </dl>
+					<dt>Podiums</dt>
+					<dd>${driver.podiums ?? 0}</dd>
 
-        ${
-          driver.wikipedia_url
-            ? `
-              <p>
-                <a href="${esc(driver.wikipedia_url)}" target="_blank" rel="noopener">
-                  Wikipedia
-                </a>
-              </p>
-            `
-            : ""
-        }
-      </div>
+					<dt>Pole positions</dt>
+					<dd>${driver.pole_positions ?? 0}</dd>
 
-      <div class="card">
-        <h2>Articles</h2>
-        <p class="muted">
-          ${filteredArticles.length} shown / ${entityArticles.length} total
-        </p>
-      </div>
-    </aside>
-  `;
+					<dt>Fastest laps</dt>
+					<dd>${driver.fastest_laps ?? 0}</dd>
+				</dl>
 
-  const html = `
-    <section class="page-head">
-      <h1>${esc(driver.name)}</h1>
-      <p class="muted">
-        ${esc(driver.nationality || "")}
-        ${driver.active_years ? ` • ${esc(driver.active_years)}` : ""}
-      </p>
-    </section>
+				${
+					driver.wikipedia_url
+						? `
+							<p>
+								<a href="${esc(driver.wikipedia_url)}" target="_blank" rel="noopener">
+									Wikipedia
+								</a>
+							</p>
+						`
+						: ""
+				}
+			</div>
 
-    <div class="layout">
-      <div class="main-col">
-        <div class="toolbar">
-          ${languageFilterHtml(data, availableLanguages, selectedLanguages)}
-          ${sortFilterHtml(sort)}
-        </div>
+			<div class="card">
+				<h2>Articles</h2>
 
-        <div class="stack">
-          ${articlesHtml}
-        </div>
-      </div>
+				<p class="muted">
+					${filteredArticles.length} shown / ${entityArticles.length} total
+				</p>
+			</div>
+		</aside>
+	`;
 
-      ${sidebar}
-    </div>
-  `;
+	const html = `
+		<section class="page-head">
+			<h1>${esc(driver.name)}</h1>
 
-  return {
-    html,
-    afterRender: () => attachEntityFilters(`driver/${driver.id}`, params)
-  };
+			<p class="muted">
+				${esc(driver.nationality || "")}
+				${driver.active_years ? ` • ${esc(driver.active_years)}` : ""}
+			</p>
+		</section>
+
+		<div class="layout">
+			<div class="main-col">
+				<div class="toolbar">
+					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
+					${sortFilterHtml(sort)}
+				</div>
+
+				<div class="stack">
+					${articlesHtml}
+				</div>
+			</div>
+
+			${sidebar}
+		</div>
+	`;
+
+	return {
+		html,
+		afterRender: () => attachEntityFilters(`driver/${driver.id}`, params)
+	};
 }
 
 function renderRacePage(data, raceId, params) {
-  const race = data.racesById[raceId];
+	const race = data.racesById[raceId];
 
-  if (!race) {
-    return {
-      html: emptyHtml("Race not found.")
-    };
-  }
+	if (!race) {
+		return {
+			html: emptyHtml("Race not found.")
+		};
+	}
 
-  const entityArticles = getEntityArticles(data, { raceId });
-  const selectedLanguages = getSelectedLanguages(params);
-  const sort = getSort(params);
+	const entityArticles = getEntityArticles(data, { raceId });
+	const selectedLanguages = getSelectedLanguages(params);
+	const sort = getSort(params);
 
-  const availableLanguages = [...new Set(
-    entityArticles
-      .map(article => article.language)
-      .filter(Boolean)
-  )].sort();
+	const availableLanguages = [...new Set(
+		entityArticles
+			.map((article) => article.language)
+			.filter(Boolean)
+	)].sort();
 
-  const filteredArticles = sortArticles(
-    filterByLanguages(entityArticles, selectedLanguages),
-    sort
-  );
+	const filteredArticles = sortArticles(
+		filterByLanguages(entityArticles, selectedLanguages),
+		sort
+	);
 
-  const articlesHtml = filteredArticles.length
-    ? filteredArticles.map(article => articleCardHtml(data, article)).join("")
-    : emptyHtml("No articles match these filters.");
+	const articlesHtml = filteredArticles.length
+		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
+		: emptyHtml("No articles match these filters.");
 
-  const resultsHtml = race.results && race.results.length
-    ? `
-      <div class="card">
-        <h2>Results</h2>
+	const resultsHtml = raceTabsHtml(data, race);
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Pos</th>
-                <th>Driver</th>
-                <th>Team</th>
-                <th>Time/Status</th>
-              </tr>
-            </thead>
+	const sidebar = `
+		<aside class="sidebar">
+			<div class="card">
+				<h2>Race info</h2>
 
-            <tbody>
-              ${
-                race.results.map(result => `
-                  <tr>
-                    <td>${esc(result.position)}</td>
-                    <td>${esc(driverName(data, result.driver_id))}</td>
-                    <td>${esc(result.team || "")}</td>
-                    <td>${esc(result.time_or_status || "")}</td>
-                  </tr>
-                `).join("")
-              }
-            </tbody>
-          </table>
-        </div>
-      </div>
-    `
-    : `
-      <div class="card">
-        <h2>Results</h2>
-        <div class="empty">
-          No results stored yet.
-        </div>
-      </div>
-    `;
+				<dl>
+					<dt>Date</dt>
+					<dd>${esc(race.date || "—")}</dd>
 
-  const sidebar = `
-    <aside class="sidebar">
-      <div class="card">
-        <h2>Race info</h2>
+					<dt>Circuit</dt>
+					<dd>${esc(race.circuit || "—")}</dd>
 
-        <dl>
-          <dt>Date</dt>
-          <dd>${esc(race.date || "—")}</dd>
+					<dt>Locality</dt>
+					<dd>${esc(race.locality || "—")}</dd>
 
-          <dt>Circuit</dt>
-          <dd>${esc(race.circuit || "—")}</dd>
+					<dt>Country</dt>
+					<dd>${esc(race.country || "—")}</dd>
 
-          <dt>Locality</dt>
-          <dd>${esc(race.locality || "—")}</dd>
+					<dt>Winner</dt>
+					<dd>${esc(driverName(data, race.winner_driver_id))}</dd>
 
-          <dt>Country</dt>
-          <dd>${esc(race.country || "—")}</dd>
+					<dt>Winning team</dt>
+					<dd>${esc(race.winning_team || "—")}</dd>
 
-          <dt>Winner</dt>
-          <dd>${esc(driverName(data, race.winner_driver_id))}</dd>
+					<dt>Pole position</dt>
+					<dd>${esc(driverName(data, race.pole_driver_id))}</dd>
 
-          <dt>Winning team</dt>
-          <dd>${esc(race.winning_team || "—")}</dd>
+					<dt>Fastest lap</dt>
+					<dd>${esc(driverName(data, race.fastest_lap_driver_id))}</dd>
+				</dl>
 
-          <dt>Pole position</dt>
-          <dd>${esc(driverName(data, race.pole_driver_id))}</dd>
+				${
+					race.wikipedia_url
+						? `
+							<p>
+								<a href="${esc(race.wikipedia_url)}" target="_blank" rel="noopener">
+									Wikipedia
+								</a>
+							</p>
+						`
+						: ""
+				}
+			</div>
 
-          <dt>Fastest lap</dt>
-          <dd>${esc(driverName(data, race.fastest_lap_driver_id))}</dd>
-        </dl>
+			${resultsHtml}
+		</aside>
+	`;
 
-        ${
-          race.wikipedia_url
-            ? `
-              <p>
-                <a href="${esc(race.wikipedia_url)}" target="_blank" rel="noopener">
-                  Wikipedia
-                </a>
-              </p>
-            `
-            : ""
-        }
-      </div>
+	const html = `
+		<section class="page-head">
+			<h1>${esc(race.season || "")} ${esc(race.name)}</h1>
 
-      ${resultsHtml}
-    </aside>
-  `;
+			<p class="muted">
+				${esc(race.circuit || "")}
+				${race.country ? ` • ${esc(race.country)}` : ""}
+			</p>
+		</section>
 
-  const html = `
-    <section class="page-head">
-      <h1>${esc(race.season || "")} ${esc(race.name)}</h1>
-      <p class="muted">
-        ${esc(race.circuit || "")}
-        ${race.country ? ` • ${esc(race.country)}` : ""}
-      </p>
-    </section>
+		<div class="layout">
+			<div class="main-col">
+				<div class="toolbar">
+					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
+					${sortFilterHtml(sort)}
+				</div>
 
-    <div class="layout">
-      <div class="main-col">
-        <div class="toolbar">
-          ${languageFilterHtml(data, availableLanguages, selectedLanguages)}
-          ${sortFilterHtml(sort)}
-        </div>
+				<div class="stack">
+					${articlesHtml}
+				</div>
+			</div>
 
-        <div class="stack">
-          ${articlesHtml}
-        </div>
-      </div>
+			${sidebar}
+		</div>
+	`;
 
-      ${sidebar}
-    </div>
-  `;
-
-  return {
-    html,
-    afterRender: () => attachEntityFilters(`race/${race.id}`, params)
-  };
+	return {
+		html,
+		afterRender: () => {
+			attachEntityFilters(`race/${race.id}`, params);
+			attachRaceTabs();
+		}
+	};
 }
 
 function renderArticles(data, params) {
-  const allArticles = data.articles;
-  const selectedLanguages = getSelectedLanguages(params);
-  const sort = getSort(params);
+	const allArticles = data.articles;
+	const selectedLanguages = getSelectedLanguages(params);
+	const sort = getSort(params);
 
-  const availableLanguages = [...new Set(
-    allArticles
-      .map(article => article.language)
-      .filter(Boolean)
-  )].sort();
+	const availableLanguages = [...new Set(
+		allArticles
+			.map((article) => article.language)
+			.filter(Boolean)
+	)].sort();
 
-  const filteredArticles = sortArticles(
-    filterByLanguages(allArticles, selectedLanguages),
-    sort
-  );
+	const filteredArticles = sortArticles(
+		filterByLanguages(allArticles, selectedLanguages),
+		sort
+	);
 
-  const articlesHtml = filteredArticles.length
-    ? filteredArticles.map(article => articleCardHtml(data, article)).join("")
-    : emptyHtml("No articles match these filters.");
+	const articlesHtml = filteredArticles.length
+		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
+		: emptyHtml("No articles match these filters.");
 
-  const html = `
-    <section class="page-head">
-      <h1>All articles</h1>
-      <p class="muted">
-        All stored interviews, reports and printed sources.
-      </p>
-    </section>
+	const html = `
+		<section class="page-head">
+			<h1>All articles</h1>
 
-    <div class="toolbar">
-      ${languageFilterHtml(data, availableLanguages, selectedLanguages)}
-      ${sortFilterHtml(sort)}
-    </div>
+			<p class="muted">
+				All stored interviews, reports and printed sources.
+			</p>
+		</section>
 
-    <div class="stack">
-      ${articlesHtml}
-    </div>
-  `;
+		<div class="toolbar">
+			${languageFilterHtml(data, availableLanguages, selectedLanguages)}
+			${sortFilterHtml(sort)}
+		</div>
 
-  return {
-    html,
-    afterRender: () => attachEntityFilters("articles", params)
-  };
+		<div class="stack">
+			${articlesHtml}
+		</div>
+	`;
+
+	return {
+		html,
+		afterRender: () => attachEntityFilters("articles", params)
+	};
 }
 
 function getArticleContentFiles(article) {
-  if (Array.isArray(article.content_files) && article.content_files.length) {
-    return article.content_files;
-  }
+	if (Array.isArray(article.content_files) && article.content_files.length) {
+		return article.content_files;
+	}
 
-  if (article.content) {
-    return [article.content];
-  }
+	if (article.content) {
+		return [article.content];
+	}
 
-  return [];
+	return [];
 }
 
 async function checkTextResponse(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} for ${response.url}`);
-  }
+	if (!response.ok) {
+		throw new Error(`HTTP ${response.status} for ${response.url}`);
+	}
 
-  return response.text();
+	return response.text();
 }
 
 function renderMarkdown(markdown) {
-  if (window.marked) {
-    const html = marked.parse(markdown);
+	if (window.marked) {
+		const html = marked.parse(markdown);
 
-    if (window.DOMPurify) {
-      return DOMPurify.sanitize(html);
-    }
+		if (window.DOMPurify) {
+			return DOMPurify.sanitize(html);
+		}
 
-    return html;
-  }
+		return html;
+	}
 
-  return `<pre class="article-text">${esc(markdown)}</pre>`;
+	return `
+		<pre class="article-text">${esc(markdown)}</pre>
+	`;
 }
 
 async function loadArticleContentFile(article, file) {
-  const container = document.getElementById("article-content");
+	const container = document.getElementById("article-content");
 
-  if (!container) {
-    return;
-  }
+	if (!container) {
+		return;
+	}
 
-  if (!file) {
-    container.innerHTML = emptyHtml("No content file selected.");
-    return;
-  }
+	if (!file) {
+		container.innerHTML = emptyHtml("No content file selected.");
+		return;
+	}
 
-  container.innerHTML = `<div class="empty">Loading content…</div>`;
+	container.innerHTML = `
+		<div class="empty">
+			Loading content…
+		</div>
+	`;
 
-  try {
-    if (file.type === "text") {
-      const text = await fetch(file.src).then(checkTextResponse);
+	try {
+		if (file.type === "text") {
+			const text = await fetch(file.src).then(checkTextResponse);
 
-      container.innerHTML = `
-        <pre class="article-text">${esc(text)}</pre>
-      `;
-    } else if (file.type === "markdown") {
-      const markdown = await fetch(file.src).then(checkTextResponse);
+			container.innerHTML = `
+				<pre class="article-text">${esc(text)}</pre>
+			`;
+		} else if (file.type === "markdown") {
+			const markdown = await fetch(file.src).then(checkTextResponse);
+			container.innerHTML = renderMarkdown(markdown);
+		} else if (file.type === "html") {
+			const html = await fetch(file.src).then(checkTextResponse);
 
-      container.innerHTML = renderMarkdown(markdown);
-    } else if (file.type === "html") {
-      const html = await fetch(file.src).then(checkTextResponse);
+			container.innerHTML = window.DOMPurify
+				? DOMPurify.sanitize(html)
+				: html;
+		} else if (file.type === "pdf") {
+			container.innerHTML = `
+				<div class="pdf-wrap">
+					<iframe
+						src="${esc(file.src)}"
+						title="${esc(article.title || article.id)}"
+					></iframe>
 
-      container.innerHTML = window.DOMPurify
-        ? DOMPurify.sanitize(html)
-        : html;
-    } else if (file.type === "pdf") {
-      container.innerHTML = `
-        <div class="pdf-wrap">
-          <iframe
-            src="${esc(file.src)}"
-            title="${esc(article.title || article.id)}"
-          ></iframe>
+					<p>
+						<a href="${esc(file.src)}" target="_blank" rel="noopener">
+							Open PDF in new tab
+						</a>
+					</p>
+				</div>
+			`;
+		} else if (file.type === "scan") {
+			const pages = file.pages || [];
 
-          <p>
-            <a href="${esc(file.src)}" target="_blank" rel="noopener">
-              Open PDF in new tab
-            </a>
-          </p>
-        </div>
-      `;
-    } else if (file.type === "scan") {
-      const pages = file.pages || [];
+			if (!pages.length) {
+				throw new Error("Scan content has no pages.");
+			}
 
-      if (!pages.length) {
-        throw new Error("Scan content has no pages.");
-      }
+			container.innerHTML = `
+				<div class="scan-pages">
+					${
+						pages
+							.map((src, index) => `
+								<figure class="scan-page">
+									<img
+										loading="lazy"
+										src="${esc(src)}"
+										alt="Page ${index + 1} of ${esc(article.title || article.id)}"
+									>
+									<figcaption>Page ${index + 1}</figcaption>
+								</figure>
+							`)
+							.join("")
+					}
+				</div>
+			`;
+		} else if (file.type === "inline_text") {
+			container.innerHTML = `
+				<pre class="article-text">${esc(file.body || "")}</pre>
+			`;
+		} else if (file.type === "inline_markdown") {
+			container.innerHTML = renderMarkdown(file.body || "");
+		} else {
+			container.innerHTML = emptyHtml(`Unsupported content type: ${file.type}`);
+		}
+	} catch (error) {
+		console.error(error);
 
-      container.innerHTML = `
-        <div class="scan-pages">
-          ${
-            pages.map((src, index) => `
-              <figure class="scan-page">
-                <img
-                  loading="lazy"
-                  src="${esc(src)}"
-                  alt="Page ${index + 1} of ${esc(article.title || article.id)}"
-                >
-                <figcaption>Page ${index + 1}</figcaption>
-              </figure>
-            `).join("")
-          }
-        </div>
-      `;
-    } else if (file.type === "inline_text") {
-      container.innerHTML = `
-        <pre class="article-text">${esc(file.body || "")}</pre>
-      `;
-    } else if (file.type === "inline_markdown") {
-      container.innerHTML = renderMarkdown(file.body || "");
-    } else {
-      container.innerHTML = emptyHtml(`Unsupported content type: ${file.type}`);
-    }
-  } catch (error) {
-    console.error(error);
-
-    container.innerHTML = emptyHtml(
-      "Could not load article content. Check the file path and JSON data."
-    );
-  }
+		container.innerHTML = emptyHtml(
+			"Could not load article content. Check the file path and JSON data."
+		);
+	}
 }
 
 function renderArticlePage(data, articleId) {
-  const article = data.articles.find(item => item.id === articleId);
+	const article = data.articles.find((item) => item.id === articleId);
 
-  if (!article) {
-    return {
-      html: emptyHtml("Article not found.")
-    };
-  }
+	if (!article) {
+		return {
+			html: emptyHtml("Article not found.")
+		};
+	}
 
-  const files = getArticleContentFiles(article);
+	const files = getArticleContentFiles(article);
 
-  const driverLinks = (article.driver_ids || []).map(id => {
-    const driver = data.driversById[id];
+	const driverLinks = (article.driver_ids || [])
+		.map((id) => {
+			const driver = data.driversById[id];
 
-    if (!driver) {
-      return esc(id);
-    }
+			if (!driver) {
+				return esc(id);
+			}
 
-    return `
-      <a href="#/driver/${esc(driver.id)}">
-        ${esc(driver.name)}
-      </a>
-    `;
-  });
+			return `
+				<a href="#/driver/${esc(driver.id)}">
+					${esc(driver.name)}
+				</a>
+			`;
+		});
 
-  const raceLinks = (article.race_ids || []).map(id => {
-    const race = data.racesById[id];
+	const raceLinks = (article.race_ids || [])
+		.map((id) => {
+			const race = data.racesById[id];
 
-    if (!race) {
-      return esc(id);
-    }
+			if (!race) {
+				return esc(id);
+			}
 
-    return `
-      <a href="#/race/${esc(race.id)}">
-        ${esc(race.name)} ${race.season || ""}
-      </a>
-    `;
-  });
+			return `
+				<a href="#/race/${esc(race.id)}">
+					${esc(race.name)} ${race.season || ""}
+				</a>
+			`;
+		});
 
-  const fileSelectorHtml = files.length > 1
-    ? `
-      <div class="toolbar">
-        <div class="filters">
-          <span class="filters-label">View:</span>
+	const fileSelectorHtml = files.length > 1
+		? `
+			<div class="toolbar">
+				<div class="filters">
+					<span class="filters-label">View:</span>
 
-          <select id="article-file-select" class="sort-filter">
-            ${
-              files.map((file, index) => `
-                <option value="${index}">
-                  ${esc(file.label || file.type || `File ${index + 1}`)}
-                </option>
-              `).join("")
-            }
-          </select>
-        </div>
-      </div>
-    `
-    : "";
+					<select id="article-file-select" class="sort-filter">
+						${
+							files
+								.map((file, index) => `
+									<option value="${index}">
+										${esc(file.label || file.type || `File ${index + 1}`)}
+									</option>
+								`)
+								.join("")
+						}
+					</select>
+				</div>
+			</div>
+		`
+		: "";
 
-  const html = `
-    <section class="page-head">
-      <p>
-        <a href="#/articles">← All articles</a>
-      </p>
+	const html = `
+		<section class="page-head">
+			<p>
+				<a href="#/articles">← All articles</a>
+			</p>
 
-      <h1>${esc(article.title || article.id)}</h1>
+			<h1>${esc(article.title || article.id)}</h1>
 
-      <p class="muted">
-        ${esc(article.article_type || "article")}
-        ${article.language ? ` • ${esc(languageLabel(data, article.language))}` : ""}
-        ${article.published_display || article.published_sort
-          ? ` • ${esc(article.published_display || article.published_sort)}`
-          : ""}
-      </p>
-    </section>
+			<p class="muted">
+				${esc(article.article_type || "article")}
+				${article.language ? ` • ${esc(languageLabel(data, article.language))}` : ""}
+				${
+					article.published_display || article.published_sort
+						? ` • ${esc(article.published_display || article.published_sort)}`
+						: ""
+				}
+			</p>
+		</section>
 
-    <div class="layout">
-      <div class="main-col">
-        ${fileSelectorHtml}
+		<div class="layout">
+			<div class="main-col">
+				${fileSelectorHtml}
 
-        <div class="card">
-          <div id="article-content" class="article-content">
-            ${
-              files.length
-                ? `<div class="empty">Loading content…</div>`
-                : emptyHtml("No full content stored for this article yet.")
-            }
-          </div>
-        </div>
-      </div>
+				<div class="card">
+					<div id="article-content" class="article-content">
+						${
+							files.length
+								? `
+									<div class="empty">
+										Loading content…
+									</div>
+								`
+								: emptyHtml("No full content stored for this article yet.")
+						}
+					</div>
+				</div>
+			</div>
 
-      <aside class="sidebar">
-        <div class="card">
-          <h2>Article info</h2>
+			<aside class="sidebar">
+				<div class="card">
+					<h2>Article info</h2>
 
-          <dl>
-            <dt>Publication</dt>
-            <dd>${esc(article.source_publication || "—")}</dd>
+					<dl>
+						<dt>Publication</dt>
+						<dd>${esc(article.source_publication || "—")}</dd>
 
-            <dt>Source kind</dt>
-            <dd>${esc(article.source_kind || "—")}</dd>
+						<dt>Source kind</dt>
+						<dd>${esc(article.source_kind || "—")}</dd>
 
-            <dt>Article type</dt>
-            <dd>${esc(article.article_type || "—")}</dd>
+						<dt>Article type</dt>
+						<dd>${esc(article.article_type || "—")}</dd>
 
-            <dt>Language</dt>
-            <dd>
-              ${article.language ? esc(languageLabel(data, article.language)) : "—"}
-            </dd>
+						<dt>Language</dt>
+						<dd>
+							${article.language ? esc(languageLabel(data, article.language)) : "—"}
+						</dd>
 
-            <dt>Published</dt>
-            <dd>${esc(article.published_display || article.published_sort || "—")}</dd>
+						<dt>Published</dt>
+						<dd>${esc(article.published_display || article.published_sort || "—")}</dd>
 
-            <dt>Pages</dt>
-            <dd>${esc(article.pages || "—")}</dd>
+						<dt>Pages</dt>
+						<dd>${esc(article.pages || "—")}</dd>
 
-            <dt>Drivers</dt>
-            <dd>${driverLinks.length ? driverLinks.join(", ") : "—"}</dd>
+						<dt>Drivers</dt>
+						<dd>${driverLinks.length ? driverLinks.join(", ") : "—"}</dd>
 
-            <dt>Races</dt>
-            <dd>${raceLinks.length ? raceLinks.join(", ") : "—"}</dd>
-          </dl>
+						<dt>Races</dt>
+						<dd>${raceLinks.length ? raceLinks.join(", ") : "—"}</dd>
+					</dl>
 
-          ${
-            article.citation
-              ? `<p class="muted">${esc(article.citation)}</p>`
-              : ""
-          }
+					${
+						article.citation
+							? `
+								<p class="muted">
+									${esc(article.citation)}
+								</p>
+							`
+							: ""
+					}
 
-          ${
-            article.url
-              ? `
-                <p>
-                  <a href="${esc(article.url)}" target="_blank" rel="noopener">
-                    Original URL
-                  </a>
-                </p>
-              `
-              : ""
-          }
+					${
+						article.url
+							? `
+								<p>
+									<a href="${esc(article.url)}" target="_blank" rel="noopener">
+										Original URL
+									</a>
+								</p>
+							`
+							: ""
+					}
 
-          ${
-            article.archive_url
-              ? `
-                <p>
-                  <a href="${esc(article.archive_url)}" target="_blank" rel="noopener">
-                    Archive URL
-                  </a>
-                </p>
-              `
-              : ""
-          }
-        </div>
-      </aside>
-    </div>
-  `;
+					${
+						article.archive_url
+							? `
+								<p>
+									<a href="${esc(article.archive_url)}" target="_blank" rel="noopener">
+										Archive URL
+									</a>
+								</p>
+							`
+							: ""
+					}
+				</div>
+			</aside>
+		</div>
+	`;
 
-  function afterRender() {
-    const select = document.getElementById("article-file-select");
+	function afterRender() {
+		const select = document.getElementById("article-file-select");
 
-    async function loadSelectedFile() {
-      const index = select ? Number(select.value) : 0;
-      const file = files[index];
+		async function loadSelectedFile() {
+			const index = select ? Number(select.value) : 0;
+			const file = files[index];
 
-      await loadArticleContentFile(article, file);
-    }
+			await loadArticleContentFile(article, file);
+		}
 
-    if (select) {
-      select.addEventListener("change", loadSelectedFile);
-    }
+		if (select) {
+			select.addEventListener("change", loadSelectedFile);
+		}
 
-    if (files.length) {
-      loadSelectedFile();
-    }
-  }
+		if (files.length) {
+			loadSelectedFile();
+		}
+	}
 
-  return {
-    html,
-    afterRender
-  };
+	return {
+		html,
+		afterRender
+	};
+}
+
+function getStartingGridRows(race) {
+	const rows = [];
+
+	if (Array.isArray(race.starting_grid) && race.starting_grid.length) {
+		rows.push(...race.starting_grid);
+	} else if (Array.isArray(race.results) && race.results.length) {
+		for (const result of race.results) {
+			const grid = parseInt(result.grid, 10);
+
+			if (!Number.isNaN(grid) && grid >= 0) {
+				rows.push({
+					grid: grid,
+					driver_id: result.driver_id,
+					team: result.team || ""
+				});
+			}
+		}
+	}
+
+	return rows.sort((a, b) => {
+		const aGrid = Number(a.grid);
+		const bGrid = Number(b.grid);
+
+		const aSort = aGrid === 0 ? 9999 : aGrid;
+		const bSort = bGrid === 0 ? 9999 : bGrid;
+
+		return aSort - bSort;
+	});
+}
+
+function positionDeltaHtml(result) {
+	const pos = parseInt(result.position, 10);
+	const grid = parseInt(result.grid, 10);
+
+	// Only compare if the driver has a real finishing position
+	// and a real starting grid position.
+	if (Number.isNaN(pos) || pos <= 0 || Number.isNaN(grid) || grid <= 0) {
+		return `
+			<span class="delta delta-none">—</span>
+		`;
+	}
+
+	const gained = grid - pos;
+
+	if (gained > 0) {
+		return `
+			<span class="delta delta-up" title="Gained ${gained} place(s)">
+				▲ ${gained}
+			</span>
+		`;
+	}
+
+	if (gained < 0) {
+		return `
+			<span class="delta delta-down" title="Lost ${Math.abs(gained)} place(s)">
+				▼ ${Math.abs(gained)}
+			</span>
+		`;
+	}
+
+	return `
+		<span class="delta delta-same" title="Finished where they started">
+			0
+		</span>
+	`;
+}
+
+function raceResultsTableHtml(data, race) {
+	if (!Array.isArray(race.results) || !race.results.length) {
+		return emptyHtml("No results stored yet.");
+	}
+
+	const rows = [...race.results]
+		.sort((a, b) => {
+			const aPos = parseInt(a.position, 10);
+			const bPos = parseInt(b.position, 10);
+
+			const aSort = Number.isNaN(aPos) ? 9999 : aPos;
+			const bSort = Number.isNaN(bPos) ? 9999 : bPos;
+
+			return aSort - bSort;
+		})
+		.map((result) => {
+			const driver = data.driversById[result.driver_id];
+
+			const driverHtml = driver
+				? `
+					<a href="#/driver/${esc(driver.id)}">
+						${esc(driver.name)}
+					</a>
+				`
+				: esc(result.driver_name || result.driver_id || "—");
+
+			const posNumber = parseInt(result.position, 10);
+
+			const posDisplay = !Number.isNaN(posNumber) && posNumber > 0
+				? String(posNumber)
+				: (result.positionText || "—");
+
+			return `
+				<tr>
+					<td>${esc(posDisplay)}</td>
+					<td>${positionDeltaHtml(result)}</td>
+					<td>${driverHtml}</td>
+					<td>${esc(result.team || "")}</td>
+					<td>${esc(result.time_or_status || "")}</td>
+				</tr>
+			`;
+		})
+		.join("");
+
+	return `
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Pos</th>
+						<th title="Change compared to starting grid">Δ</th>
+						<th>Driver</th>
+						<th>Team</th>
+						<th>Time/Status</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					${rows}
+				</tbody>
+			</table>
+		</div>
+	`;
+}
+
+function raceQualifyingTableHtml(data, race) {
+	if (!Array.isArray(race.qualifying) || !race.qualifying.length) {
+		return emptyHtml("No qualifying data stored yet.");
+	}
+
+	const rows = [...race.qualifying]
+		.sort((a, b) => {
+			const aPos = parseInt(a.position, 10);
+			const bPos = parseInt(b.position, 10);
+
+			const aSort = Number.isNaN(aPos) ? 9999 : aPos;
+			const bSort = Number.isNaN(bPos) ? 9999 : bPos;
+
+			return aSort - bSort;
+		})
+		.map((q) => {
+			const driver = data.driversById[q.driver_id];
+
+			const driverHtml = driver
+				? `
+					<a href="#/driver/${esc(driver.id)}">
+						${esc(driver.name)}
+					</a>
+				`
+				: esc(q.driver_id || "—");
+
+			return `
+				<tr>
+					<td>${esc(q.position || "—")}</td>
+					<td>${driverHtml}</td>
+					<td>${esc(q.team || "")}</td>
+					<td>${esc(q.q1 || "—")}</td>
+					<td>${esc(q.q2 || "—")}</td>
+					<td>${esc(q.q3 || "—")}</td>
+				</tr>
+			`;
+		})
+		.join("");
+
+	return `
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Pos</th>
+						<th>Driver</th>
+						<th>Team</th>
+						<th>Q1</th>
+						<th>Q2</th>
+						<th>Q3</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					${rows}
+				</tbody>
+			</table>
+		</div>
+	`;
+}
+
+function raceStartingGridTableHtml(data, race) {
+	const gridRows = getStartingGridRows(race);
+
+	if (!gridRows.length) {
+		return emptyHtml("No starting grid stored yet.");
+	}
+
+	const rows = gridRows
+		.map((row) => {
+			const driver = data.driversById[row.driver_id];
+
+			const driverHtml = driver
+				? `
+					<a href="#/driver/${esc(driver.id)}">
+						${esc(driver.name)}
+					</a>
+				`
+				: esc(row.driver_id || "—");
+
+			const gridValue = Number(row.grid);
+
+			const gridDisplay = Number.isNaN(gridValue)
+				? "—"
+				: gridValue === 0
+					? "PL"
+					: esc(gridValue);
+
+			return `
+				<tr>
+					<td>${gridDisplay}</td>
+					<td>${driverHtml}</td>
+					<td>${esc(row.team || "")}</td>
+				</tr>
+			`;
+		})
+		.join("");
+
+	return `
+		<div class="table-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th>Grid</th>
+						<th>Driver</th>
+						<th>Team</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					${rows}
+				</tbody>
+			</table>
+		</div>
+	`;
+}
+
+function raceTabsHtml(data, race) {
+	const hasResults = Array.isArray(race.results) && race.results.length > 0;
+	const hasQualifying = Array.isArray(race.qualifying) && race.qualifying.length > 0;
+	const hasGrid = getStartingGridRows(race).length > 0;
+
+	if (!hasResults && !hasQualifying && !hasGrid) {
+		return `
+			<div class="card">
+				<h2>Race data</h2>
+
+				<div class="empty">
+					No results stored yet.
+				</div>
+			</div>
+		`;
+	}
+
+	return `
+		<div class="card race-tabs-card">
+			<div class="tabs">
+				<button
+					type="button"
+					class="tab-button active"
+					data-race-tab="results"
+				>
+					Results
+				</button>
+
+				<button
+					type="button"
+					class="tab-button"
+					data-race-tab="qualifying"
+					${hasQualifying ? "" : "disabled"}
+				>
+					Qualifying
+				</button>
+
+				<button
+					type="button"
+					class="tab-button"
+					data-race-tab="grid"
+					${hasGrid ? "" : "disabled"}
+				>
+					Starting grid
+				</button>
+			</div>
+
+			<div class="tab-panel" data-race-tab-panel="results">
+				${raceResultsTableHtml(data, race)}
+			</div>
+
+			<div class="tab-panel hidden" data-race-tab-panel="qualifying">
+				${
+					hasQualifying
+						? raceQualifyingTableHtml(data, race)
+						: emptyHtml("No qualifying data stored yet.")
+				}
+			</div>
+
+			<div class="tab-panel hidden" data-race-tab-panel="grid">
+				${
+					hasGrid
+						? raceStartingGridTableHtml(data, race)
+						: emptyHtml("No starting grid stored yet.")
+				}
+			</div>
+		</div>
+	`;
+}
+
+function attachRaceTabs() {
+	const buttons = document.querySelectorAll(".race-tabs-card [data-race-tab]");
+
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const card = button.closest(".race-tabs-card");
+
+			if (!card) {
+				return;
+			}
+
+			const target = button.dataset.raceTab;
+
+			card.querySelectorAll("[data-race-tab]").forEach((tabButton) => {
+				tabButton.classList.toggle("active", tabButton === button);
+			});
+
+			card.querySelectorAll("[data-race-tab-panel]").forEach((panel) => {
+				panel.classList.toggle("hidden", panel.dataset.raceTabPanel !== target);
+			});
+		});
+	});
 }
