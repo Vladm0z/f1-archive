@@ -1793,8 +1793,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Eagle-Climax",
-      "Eagle-Weslake",
+      "Eagle",
       "Ferrari",
       "Lotus"
     ],
@@ -6642,8 +6641,7 @@
     "teams": [
       "BRM",
       "Brabham",
-      "Eagle-Climax",
-      "Eagle-Weslake",
+      "Eagle",
       "Ferrari",
       "Lotus",
       "McLaren",
@@ -10196,7 +10194,7 @@
     "podiums": 27,
     "teams": [
       "Cooper",
-      "Eagle-Weslake",
+      "Eagle",
       "McLaren"
     ],
     "championships": 0,
@@ -11585,7 +11583,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Eagle-Climax"
+      "Eagle"
     ],
     "championships": 0,
     "active_years": "1967\u20131969",
@@ -13436,7 +13434,7 @@
     "podiums": 1,
     "teams": [
       "Cooper",
-      "Eagle-Weslake",
+      "Eagle",
       "Ferrari"
     ],
     "championships": 0,

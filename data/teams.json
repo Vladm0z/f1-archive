@@ -1410,43 +1410,22 @@
     "driver_championships": []
   },
   {
-    "id": "eagle-climax",
-    "name": "Eagle-Climax",
+    "id": "eagle",
+    "name": "Eagle",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/All_American_Racers",
     "active_years": "1966\u20131969",
     "seasons": [
       1966,
       1967,
+      1968,
       1969
     ],
     "driver_ids": [
       "bondurant",
       "gurney",
-      "pease"
-    ],
-    "wins": 0,
-    "podiums": 0,
-    "pole_positions": 0,
-    "fastest_laps": 0,
-    "constructor_championships": [],
-    "driver_championships": []
-  },
-  {
-    "id": "eagle-weslake",
-    "name": "Eagle-Weslake",
-    "nationality": "American",
-    "wikipedia_url": "https://en.wikipedia.org/wiki/All_American_Racers",
-    "active_years": "1966\u20131968",
-    "seasons": [
-      1966,
-      1967,
-      1968
-    ],
-    "driver_ids": [
-      "bondurant",
-      "gurney",
       "mclaren",
+      "pease",
       "scarfiotti"
     ],
     "wins": 1,
