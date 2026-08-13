@@ -715,3 +715,24 @@ dd {
 	font-size: 0.85rem;
 	white-space: nowrap;
 }
+
+.scroll-list {
+	max-height: 220px;
+	overflow: auto;
+	display: grid;
+	gap: 0.35rem;
+	padding-right: 0.25rem;
+}
+
+.scroll-list a {
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.scroll-list a:hover {
+	text-decoration: underline;
+}
+
+.scroll-list span {
+	color: var(--muted);
+}

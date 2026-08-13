@@ -22,21 +22,58 @@ async function init() {
 }
 
 async function loadData() {
-	const [languages, drivers, races, articles] = await Promise.all([
+	const [languages, drivers, races, articles, teamsRaw] = await Promise.all([
 		fetch("data/languages.json").then(checkResponse),
 		fetch("data/drivers.json").then(checkResponse),
 		fetch("data/races.json").then(checkResponse),
-		fetch("data/articles.json").then(checkResponse)
+		fetch("data/articles.json").then(checkResponse),
+		fetchOptionalJson("data/teams.json")
 	]);
+
+	const teams = Array.isArray(teamsRaw) ? teamsRaw : [];
 
 	return {
 		languages,
 		drivers: sortDrivers(drivers),
 		races,
 		articles,
+		teams: sortTeams(teams),
 		driversById: makeById(drivers),
-		racesById: makeById(races)
+		racesById: makeById(races),
+		teamsById: makeById(teams),
+		teamsByName: makeTeamsByName(teams)
 	};
+}
+
+function sortTeams(teams) {
+	return [...teams].sort((a, b) => {
+		return (a.name || "").localeCompare(b.name || "");
+	});
+}
+
+function normalizeTeamKey(value) {
+	let text = String(value ?? "");
+
+	text = text.replace(/\s*\(.*?\)\s*/g, " ");
+	text = normalizeString(text);
+	text = text.replace(/[^\w\s-]/g, "");
+	text = text.replace(/\s+/g, " ").trim();
+
+	return text;
+}
+
+function makeTeamsByName(teams) {
+	const map = {};
+
+	teams.forEach((team) => {
+		const key = normalizeTeamKey(team.name);
+
+		if (key) {
+			map[key] = team.id;
+		}
+	});
+
+	return map;
 }
 
 async function checkResponse(response) {
@@ -45,6 +82,21 @@ async function checkResponse(response) {
 	}
 
 	return response.json();
+}
+
+async function fetchOptionalJson(path) {
+	try {
+		const response = await fetch(path);
+
+		if (!response.ok) {
+			return [];
+		}
+
+		return await response.json();
+	} catch (error) {
+		console.warn(`Optional file not loaded: ${path}`);
+		return [];
+	}
 }
 
 function makeById(items) {
@@ -75,6 +127,12 @@ function route() {
 	} else if (path.startsWith("race/")) {
 		const raceId = path.split("/")[1] || "";
 		page = renderRacePage(data, raceId, params);
+	} else if (path === "teams") {
+		page = renderTeams(data);
+	} else if (path.startsWith("team/")) {
+		const teamId = path.split("/")[1] || "";
+		page = renderTeamPage(data, teamId, params);
+	}
 	} else if (path === "articles") {
 		page = renderArticles(data, params);
 	} else if (path.startsWith("article/")) {
@@ -226,7 +284,7 @@ function sortArticles(articles, sortDirection) {
 	});
 }
 
-function getEntityArticles(data, { driverId, raceId }) {
+function getEntityArticles(data, { driverId, raceId, teamId }) {
 	return data.articles.filter((article) => {
 		const matchesDriver = driverId
 			? (article.driver_ids || []).includes(driverId)
@@ -236,7 +294,11 @@ function getEntityArticles(data, { driverId, raceId }) {
 			? (article.race_ids || []).includes(raceId)
 			: true;
 
-		return matchesDriver && matchesRace;
+		const matchesTeam = teamId
+			? (article.team_ids || []).includes(teamId)
+			: true;
+
+		return matchesDriver && matchesRace && matchesTeam;
 	});
 }
 
@@ -247,6 +309,10 @@ function articleCardHtml(data, article) {
 
 	const raceNames = (article.race_ids || [])
 		.map((id) => raceLabel(data, id))
+		.filter(Boolean);
+
+	const teamNames = (article.team_ids || [])
+		.map((id) => data.teamsById[id]?.name)
 		.filter(Boolean);
 
 	const links = [];
@@ -317,6 +383,16 @@ function articleCardHtml(data, article) {
 							${esc(raceNames.join(", "))}
 						</p>
 					`
+					: ""
+			}
+
+			${
+				teamNames.length
+					? `
+						<p>
+							<strong>Teams:</strong>
+							${esc(teamNames.join(", "))}
+						</p>`
 					: ""
 			}
 
@@ -1128,6 +1204,21 @@ function renderArticlePage(data, articleId) {
 				</a>
 			`;
 		});
+		
+	const teamLinks = (article.team_ids || [])
+		.map((id) => {
+			const team = data.teamsById[id];
+
+			if (!team) {
+				return esc(id);
+			}
+
+			return `
+				<a href="#/team/${esc(team.id)}">
+					${esc(team.name)}
+				</a>
+			`;
+		});
 
 	const raceLinks = (article.race_ids || [])
 		.map((id) => {
@@ -1234,6 +1325,9 @@ function renderArticlePage(data, articleId) {
 
 						<dt>Races</dt>
 						<dd>${raceLinks.length ? raceLinks.join(", ") : "—"}</dd>
+						
+						<dt>Teams</dt>
+						<dd>${teamLinks.length ? teamLinks.join(", ") : "—"}</dd>
 					</dl>
 
 					${
@@ -1403,7 +1497,7 @@ function raceResultsTableHtml(data, race) {
 					<td>${esc(posDisplay)}</td>
 					<td>${positionDeltaHtml(result)}</td>
 					<td>${driverHtml}</td>
-					<td>${esc(result.team || "")}</td>
+					<td>${teamLinkHtml(data, result.team)}</td>
 					<td>${esc(result.time_or_status || "")}</td>
 				</tr>
 			`;
@@ -1461,7 +1555,7 @@ function raceQualifyingTableHtml(data, race) {
 				<tr>
 					<td>${esc(q.position || "—")}</td>
 					<td>${driverHtml}</td>
-					<td>${esc(q.team || "")}</td>
+					<td>${teamLinkHtml(data, q.team)}</td>
 					<td>${esc(q.q1 || "—")}</td>
 					<td>${esc(q.q2 || "—")}</td>
 					<td>${esc(q.q3 || "—")}</td>
@@ -1523,7 +1617,7 @@ function raceStartingGridTableHtml(data, race) {
 				<tr>
 					<td>${gridDisplay}</td>
 					<td>${driverHtml}</td>
-					<td>${esc(row.team || "")}</td>
+					<td>${teamLinkHtml(data, row.team)}</td>
 				</tr>
 			`;
 		})
@@ -1640,4 +1734,335 @@ function attachRaceTabs() {
 			});
 		});
 	});
+}
+
+function findTeamIdByName(data, teamName) {
+	if (!teamName || !data.teamsByName) {
+		return null;
+	}
+
+	const norm = normalizeTeamKey(teamName);
+
+	if (!norm || norm === "—") {
+		return null;
+	}
+
+	// Exact match
+	if (data.teamsByName[norm]) {
+		return data.teamsByName[norm];
+	}
+
+	// Try parts before hyphen:
+	// "Kurtis Kraft-Offenhauser" -> "Kurtis Kraft"
+	const parts = norm
+		.split(/[-–—/]/)
+		.map((part) => part.trim())
+		.filter(Boolean);
+
+	for (const part of parts) {
+		if (data.teamsByName[part]) {
+			return data.teamsByName[part];
+		}
+	}
+
+	// Longest known team name contained inside the given team name
+	let bestId = null;
+	let bestLength = 0;
+
+	for (const [name, id] of Object.entries(data.teamsByName)) {
+		if (name.length >= 3 && norm.includes(name) && name.length > bestLength) {
+			bestLength = name.length;
+			bestId = id;
+		}
+	}
+
+	return bestId;
+}
+
+function teamLinkHtml(data, teamName) {
+	if (!teamName) {
+		return "—";
+	}
+
+	const teamId = findTeamIdByName(data, teamName);
+
+	if (!teamId) {
+		return esc(teamName);
+	}
+
+	return `
+		<a href="#/team/${esc(teamId)}">
+			${esc(teamName)}
+		</a>
+	`;
+}
+
+function filterTeams(teams, query) {
+	const q = normalizeString(query);
+
+	if (!q) {
+		return teams;
+	}
+
+	return teams
+		.filter((team) => {
+			const parts = [
+				team.name,
+				team.nationality
+			].filter(Boolean);
+
+			return normalizeString(parts.join(" ")).includes(q);
+		})
+		.sort((a, b) => {
+			return (a.name || "").localeCompare(b.name || "");
+		});
+}
+
+function teamCardsHtml(data, teams) {
+	if (!teams.length) {
+		return emptyHtml("No teams found.");
+	}
+
+	return teams
+		.map((team) => `
+			<a class="card driver-card" href="#/team/${esc(team.id)}">
+				<h3>${esc(team.name)}</h3>
+
+				<p class="muted">
+					${esc(team.nationality || "")}
+					${team.active_years ? ` • ${esc(team.active_years)}` : ""}
+				</p>
+
+				<p class="muted">
+					${team.wins ?? 0} wins • ${team.pole_positions ?? 0} poles
+				</p>
+			</a>
+		`)
+		.join("");
+}
+
+function renderTeams(data) {
+	const html = `
+		<section class="page-head">
+			<h1>Teams</h1>
+
+			<p class="muted">
+				Search by name or nationality.
+			</p>
+		</section>
+
+		<input
+			id="team-search"
+			class="input"
+			type="search"
+			placeholder="Search teams..."
+			autocomplete="off"
+		>
+
+		<div id="team-list" class="driver-grid">
+			${teamCardsHtml(data, data.teams)}
+		</div>
+	`;
+
+	function afterRender() {
+		const input = document.getElementById("team-search");
+		const list = document.getElementById("team-list");
+
+		input.addEventListener("input", () => {
+			const filtered = filterTeams(data.teams, input.value);
+			list.innerHTML = teamCardsHtml(data, filtered);
+		});
+	}
+
+	return {
+		html,
+		afterRender
+	};
+}
+
+function renderTeamPage(data, teamId, params) {
+	const team = data.teamsById[teamId];
+
+	if (!team) {
+		return {
+			html: emptyHtml("Team not found.")
+		};
+	}
+
+	const entityArticles = getEntityArticles(data, { teamId });
+	const selectedLanguages = getSelectedLanguages(params);
+	const sort = getSort(params);
+
+	const availableLanguages = [...new Set(
+		entityArticles
+			.map((article) => article.language)
+			.filter(Boolean)
+	)].sort();
+
+	const filteredArticles = sortArticles(
+		filterByLanguages(entityArticles, selectedLanguages),
+		sort
+	);
+
+	const articlesHtml = filteredArticles.length
+		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
+		: emptyHtml("No articles match these filters.");
+
+	const teamDrivers = (team.driver_ids || [])
+		.map((id) => data.driversById[id])
+		.filter(Boolean)
+		.sort((a, b) => {
+			return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
+		});
+
+	const driversHtml = teamDrivers.length
+		? `
+			<div class="scroll-list">
+				${
+					teamDrivers
+						.map((driver) => `
+							<a href="#/driver/${esc(driver.id)}">
+								${esc(driver.name)}
+							</a>
+						`)
+						.join("")
+				}
+			</div>
+		`
+		: "—";
+
+	const seasons = team.seasons || [];
+
+	const seasonsHtml = seasons.length
+		? `
+			<div class="scroll-list">
+				${seasons.map((year) => `<span>${esc(year)}</span>`).join("")}
+			</div>
+		`
+		: "—";
+
+	const constructorChamps = team.constructor_championships || [];
+
+	const constructorChampsHtml = constructorChamps.length
+		? `
+			<div class="scroll-list">
+				${constructorChamps.map((year) => `<span>${esc(year)}</span>`).join("")}
+			</div>
+		`
+		: "—";
+
+	const driverChamps = team.driver_championships || [];
+
+	const driverChampsHtml = driverChamps.length
+		? `
+			<div class="scroll-list">
+				${
+					driverChamps
+						.map((item) => {
+							if (item && typeof item === "object") {
+								const driverText = item.driver_id
+									? ` — ${esc(driverName(data, item.driver_id))}`
+									: "";
+
+								return `<span>${esc(item.year)}${driverText}</span>`;
+							}
+
+							return `<span>${esc(item)}</span>`;
+						})
+						.join("")
+				}
+			</div>
+		`
+		: "—";
+
+	const sidebar = `
+		<aside class="sidebar">
+			<div class="card">
+				<h2>Team info</h2>
+
+				<dl>
+					<dt>Nationality</dt>
+					<dd>${esc(team.nationality || "—")}</dd>
+
+					<dt>Active years</dt>
+					<dd>${esc(team.active_years || "—")}</dd>
+
+					<dt>Seasons</dt>
+					<dd>${seasonsHtml}</dd>
+
+					<dt>Wins</dt>
+					<dd>${team.wins ?? 0}</dd>
+
+					<dt>Podiums</dt>
+					<dd>${team.podiums ?? 0}</dd>
+
+					<dt>Pole positions</dt>
+					<dd>${team.pole_positions ?? 0}</dd>
+
+					<dt>Fastest laps</dt>
+					<dd>${team.fastest_laps ?? 0}</dd>
+
+					<dt>Constructor titles</dt>
+					<dd>${constructorChampsHtml}</dd>
+
+					<dt>Driver titles</dt>
+					<dd>${driverChampsHtml}</dd>
+
+					<dt>Drivers</dt>
+					<dd>${driversHtml}</dd>
+				</dl>
+
+				${
+					team.wikipedia_url
+						? `
+							<p>
+								<a href="${esc(team.wikipedia_url)}" target="_blank" rel="noopener">
+									Wikipedia
+								</a>
+							</p>
+						`
+						: ""
+				}
+			</div>
+
+			<div class="card">
+				<h2>Articles</h2>
+
+				<p class="muted">
+					${filteredArticles.length} shown / ${entityArticles.length} total
+				</p>
+			</div>
+		</aside>
+	`;
+
+	const html = `
+		<section class="page-head">
+			<h1>${esc(team.name)}</h1>
+
+			<p class="muted">
+				${esc(team.nationality || "")}
+				${team.active_years ? ` • ${esc(team.active_years)}` : ""}
+			</p>
+		</section>
+
+		<div class="layout">
+			<div class="main-col">
+				<div class="toolbar">
+					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
+					${sortFilterHtml(sort)}
+				</div>
+
+				<div class="stack">
+					${articlesHtml}
+				</div>
+			</div>
+
+			${sidebar}
+		</div>
+	`;
+
+	return {
+		html,
+		afterRender: () => attachEntityFilters(`team/${team.id}`, params)
+	};
 }

@@ -1,0 +1,6570 @@
+[
+  {
+    "id": "adams",
+    "name": "Adams",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Adams_(constructor)",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "cantrell",
+      "levrett"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "afm",
+    "name": "AFM",
+    "nationality": "German",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Alex_von_Falkenhausen_Motorenbau",
+    "active_years": "1952\u20131953",
+    "seasons": [
+      1952,
+      1953
+    ],
+    "driver_ids": [
+      "fitzau",
+      "heeks",
+      "niedermayr",
+      "hans_stuck"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ags",
+    "name": "AGS",
+    "nationality": "French",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Automobiles_Gonfaronnaises_Sportives",
+    "active_years": "1986\u20131991",
+    "seasons": [
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991
+    ],
+    "driver_ids": [
+      "capelli",
+      "dalmas",
+      "fabre",
+      "moreno",
+      "streiff",
+      "tarquini"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "alfa",
+    "name": "Alfa Romeo",
+    "nationality": "Swiss",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
+    "active_years": "1950\u20132023",
+    "seasons": [
+      1950,
+      1951,
+      1963,
+      1965,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "driver_ids": [
+      "mario_andretti",
+      "baldi",
+      "bonetto",
+      "bottas",
+      "brambilla",
+      "cheever",
+      "depailler",
+      "fagioli",
+      "fangio",
+      "farina",
+      "giacomelli",
+      "giovinazzi",
+      "kubica",
+      "reg_parnell",
+      "patrese",
+      "pietsch",
+      "raikkonen",
+      "sanesi",
+      "taruffi",
+      "zhou",
+      "cesaris",
+      "graffenried",
+      "klerk"
+    ],
+    "wins": 11,
+    "podiums": 28,
+    "pole_positions": 13,
+    "fastest_laps": 2,
+    "constructor_championships": [],
+    "driver_championships": [
+      {
+        "year": 1950,
+        "driver_id": "farina"
+      },
+      {
+        "year": 1951,
+        "driver_id": "fangio"
+      }
+    ]
+  },
+  {
+    "id": "alphatauri",
+    "name": "AlphaTauri",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_AlphaTauri",
+    "active_years": "2020\u20132023",
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "driver_ids": [
+      "gasly",
+      "kvyat",
+      "lawson",
+      "ricciardo",
+      "tsunoda",
+      "de_vries"
+    ],
+    "wins": 1,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 2,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "alpine",
+    "name": "Alpine F1 Team",
+    "nationality": "French",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Alpine_F1_Team",
+    "active_years": "2021\u20132025",
+    "seasons": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "alonso",
+      "colapinto",
+      "doohan",
+      "gasly",
+      "ocon"
+    ],
+    "wins": 1,
+    "podiums": 6,
+    "pole_positions": 0,
+    "fastest_laps": 1,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "alta",
+    "name": "Alta",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Alta_Car_and_Engineering_Company",
+    "active_years": "1950\u20131952",
+    "seasons": [
+      1950,
+      1951,
+      1952
+    ],
+    "driver_ids": [
+      "crossley",
+      "kelly",
+      "graham_whitehead",
+      "whitehead"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "amon",
+    "name": "Amon",
+    "nationality": "New Zealander",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Amon_Racing",
+    "active_years": "1974\u20131974",
+    "seasons": [
+      1974
+    ],
+    "driver_ids": [
+      "amon"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "andrea-moda",
+    "name": "Andrea Moda",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1992\u20131992",
+    "seasons": [
+      1992
+    ],
+    "driver_ids": [
+      "mccarthy",
+      "moreno"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "arrows",
+    "name": "Arrows",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Arrows_Grand_Prix_International",
+    "active_years": "1978\u20132002",
+    "seasons": [
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002
+    ],
+    "driver_ids": [
+      "alboreto",
+      "baldi",
+      "berger",
+      "bernoldi",
+      "boutsen",
+      "caffi",
+      "cheever",
+      "danner",
+      "diniz",
+      "donnelly",
+      "frentzen",
+      "henton",
+      "damon_hill",
+      "jones",
+      "mass",
+      "patrese",
+      "salo",
+      "schneider",
+      "serra",
+      "stohr",
+      "stommelen",
+      "surer",
+      "takagi",
+      "verstappen",
+      "warwick",
+      "rosa"
+    ],
+    "wins": 0,
+    "podiums": 8,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "arzani-volpini",
+    "name": "Arzani-Volpini",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Arzani-Volpini",
+    "active_years": "1955\u20131955",
+    "seasons": [
+      1955
+    ],
+    "driver_ids": [
+      "piotti"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "butterworth",
+    "name": "Aston Butterworth",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aston_Butterworth",
+    "active_years": "1952\u20131952",
+    "seasons": [
+      1952
+    ],
+    "driver_ids": [
+      "aston",
+      "charrington"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "aston_martin",
+    "name": "Aston Martin",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One",
+    "active_years": "1959\u20132025",
+    "seasons": [
+      1959,
+      1960,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "alonso",
+      "hulkenberg",
+      "salvadori",
+      "shelby",
+      "stroll",
+      "trintignant",
+      "vettel"
+    ],
+    "wins": 0,
+    "podiums": 9,
+    "pole_positions": 0,
+    "fastest_laps": 3,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ats",
+    "name": "ATS",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/ATS_Wheels",
+    "active_years": "1952\u20131984",
+    "seasons": [
+      1952,
+      1956,
+      1958,
+      1959,
+      1960,
+      1963,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984
+    ],
+    "driver_ids": [
+      "baghetti",
+      "berger",
+      "bettenhausen",
+      "bleekemolen",
+      "borgudd",
+      "elisian",
+      "flaherty",
+      "phil_hill",
+      "jarier",
+      "lammers",
+      "larson",
+      "mass",
+      "dick_rathmann",
+      "rathmann",
+      "reece",
+      "rigsby",
+      "keke_rosberg",
+      "ruby",
+      "ruttman",
+      "salazar",
+      "stevenson",
+      "stuck",
+      "surer",
+      "sutton",
+      "ward",
+      "manfred_winkelhock"
+    ],
+    "wins": 3,
+    "podiums": 5,
+    "pole_positions": 2,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "bar",
+    "name": "BAR",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/British_American_Racing",
+    "active_years": "1999\u20132005",
+    "seasons": [
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "driver_ids": [
+      "button",
+      "davidson",
+      "panis",
+      "salo",
+      "sato",
+      "villeneuve",
+      "zonta"
+    ],
+    "wins": 0,
+    "podiums": 14,
+    "pole_positions": 2,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "behra-porsche",
+    "name": "Behra-Porsche",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Behra-Porsche",
+    "active_years": "1960\u20131960",
+    "seasons": [
+      1960
+    ],
+    "driver_ids": [
+      "gamble",
+      "gregory"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "bellasi",
+    "name": "Bellasi",
+    "nationality": "Swiss",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bellasi",
+    "active_years": "1970\u20131971",
+    "seasons": [
+      1970,
+      1971
+    ],
+    "driver_ids": [
+      "moser"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "benetton",
+    "name": "Benetton",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Benetton_Formula",
+    "active_years": "1986\u20132001",
+    "seasons": [
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001
+    ],
+    "driver_ids": [
+      "alesi",
+      "berger",
+      "boutsen",
+      "brundle",
+      "button",
+      "fabi",
+      "fisichella",
+      "herbert",
+      "lehto",
+      "moreno",
+      "nannini",
+      "patrese",
+      "piquet",
+      "pirro",
+      "michael_schumacher",
+      "verstappen",
+      "wurz"
+    ],
+    "wins": 27,
+    "podiums": 102,
+    "pole_positions": 15,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1995
+    ],
+    "driver_championships": [
+      {
+        "year": 1994,
+        "driver_id": "michael_schumacher"
+      },
+      {
+        "year": 1995,
+        "driver_id": "michael_schumacher"
+      }
+    ]
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "nationality": "German",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/BMW",
+    "active_years": "1952\u20131953",
+    "seasons": [
+      1952,
+      1953
+    ],
+    "driver_ids": [
+      "balsa",
+      "bechem",
+      "klodwig",
+      "krause"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "bmw_sauber",
+    "name": "BMW Sauber",
+    "nationality": "German",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_in_Formula_One",
+    "active_years": "2006\u20132009",
+    "seasons": [
+      2006,
+      2007,
+      2008,
+      2009
+    ],
+    "driver_ids": [
+      "heidfeld",
+      "kubica",
+      "vettel",
+      "villeneuve"
+    ],
+    "wins": 1,
+    "podiums": 17,
+    "pole_positions": 1,
+    "fastest_laps": 2,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "boro",
+    "name": "Boro",
+    "nationality": "Dutch",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Boro_(Formula_One)",
+    "active_years": "1976\u20131977",
+    "seasons": [
+      1976,
+      1977
+    ],
+    "driver_ids": [
+      "henton",
+      "perkins"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "brabham",
+    "name": "Brabham",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
+    "active_years": "1962\u20131992",
+    "seasons": [
+      1962,
+      1963,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1977,
+      1978,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1989,
+      1990,
+      1991,
+      1992
+    ],
+    "driver_ids": [
+      "bell",
+      "blundell",
+      "brabham",
+      "jack_brabham",
+      "brundle",
+      "charlton",
+      "craft",
+      "corrado_fabi",
+      "fabi",
+      "wilson_fittipaldi",
+      "foitek",
+      "gurney",
+      "hesnault",
+      "damon_hill",
+      "hill",
+      "hutchison",
+      "larrousse",
+      "lauda",
+      "modena",
+      "pace",
+      "patrese",
+      "pilette",
+      "piquet",
+      "pretorius",
+      "prophet",
+      "rebaque",
+      "reutemann",
+      "robarts",
+      "schenken",
+      "stommelen",
+      "stuck",
+      "surer",
+      "warwick",
+      "watson",
+      "wietzes",
+      "manfred_winkelhock",
+      "zunino",
+      "adamich",
+      "angelis",
+      "cesaris",
+      "klerk",
+      "poele",
+      "opel"
+    ],
+    "wins": 23,
+    "podiums": 78,
+    "pole_positions": 26,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": [
+      {
+        "year": 1981,
+        "driver_id": "piquet"
+      },
+      {
+        "year": 1983,
+        "driver_id": "piquet"
+      }
+    ]
+  },
+  {
+    "id": "brabham-alfa_romeo",
+    "name": "Brabham-Alfa Romeo",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
+    "active_years": "1976\u20131979",
+    "seasons": [
+      1976,
+      1979
+    ],
+    "driver_ids": [
+      "lauda",
+      "pace",
+      "perkins",
+      "piquet",
+      "reutemann",
+      "stommelen"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "brabham-brm",
+    "name": "Brabham-BRM",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
+    "active_years": "1964\u20131966",
+    "seasons": [
+      1964,
+      1965,
+      1966
+    ],
+    "driver_ids": [
+      "bonnier",
+      "gardner",
+      "raby",
+      "rindt",
+      "sharp",
+      "siffert",
+      "taylor"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "brabham-climax",
+    "name": "Brabham-Climax",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
+    "active_years": "1964\u20131969",
+    "seasons": [
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969
+    ],
+    "driver_ids": [
+      "anderson",
+      "baghetti",
+      "bonnier",
+      "botha",
+      "jack_brabham",
+      "charlton",
+      "cordts",
+      "gurney",
+      "hulme",
+      "irwin",
+      "pretorius",
+      "siffert"
+    ],
+    "wins": 2,
+    "podiums": 11,
+    "pole_positions": 2,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "brabham-ford",
+    "name": "Brabham-Ford",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
+    "active_years": "1964\u20131979",
+    "seasons": [
+      1964,
+      1965,
+      1967,
+      1969,
+      1976,
+      1979
+    ],
+    "driver_ids": [
+      "jack_brabham",
+      "courage",
+      "evans",
+      "gardner",
+      "hawkins",
+      "ickx",
+      "kessel",
+      "lauda",
+      "lombardi",
+      "moser",
+      "neve",
+      "piquet",
+      "prophet",
+      "rees",
+      "zunino"
+    ],
+    "wins": 2,
+    "podiums": 9,
+    "pole_positions": 4,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "brabham-repco",
+    "name": "Brabham-Repco",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
+    "active_years": "1966\u20131969",
+    "seasons": [
+      1966,
+      1967,
+      1968,
+      1969
+    ],
+    "driver_ids": [
+      "ahrens",
+      "jack_brabham",
+      "charlton",
+      "gurney",
+      "hulme",
+      "ligier",
+      "love",
+      "moser",
+      "rindt",
+      "tingle",
+      "klerk"
+    ],
+    "wins": 8,
+    "podiums": 25,
+    "pole_positions": 7,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1966,
+      1967
+    ],
+    "driver_championships": [
+      {
+        "year": 1966,
+        "driver_id": "jack_brabham"
+      },
+      {
+        "year": 1967,
+        "driver_id": "hulme"
+      }
+    ]
+  },
+  {
+    "id": "brawn",
+    "name": "Brawn",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brawn_GP",
+    "active_years": "2009\u20132009",
+    "seasons": [
+      2009
+    ],
+    "driver_ids": [
+      "barrichello",
+      "button"
+    ],
+    "wins": 8,
+    "podiums": 15,
+    "pole_positions": 5,
+    "fastest_laps": 4,
+    "constructor_championships": [
+      2009
+    ],
+    "driver_championships": [
+      {
+        "year": 2009,
+        "driver_id": "button"
+      }
+    ]
+  },
+  {
+    "id": "brm",
+    "name": "BRM",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Motors",
+    "active_years": "1951\u20131977",
+    "seasons": [
+      1951,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977
+    ],
+    "driver_ids": [
+      "amon",
+      "arundell",
+      "ashley",
+      "ashmore",
+      "attwood",
+      "baghetti",
+      "bandini",
+      "bassi",
+      "behra",
+      "beltoise",
+      "bianchi",
+      "bondurant",
+      "bonnier",
+      "brack",
+      "brooks",
+      "bussinello",
+      "campbell-jones",
+      "Cannoc",
+      "clark",
+      "courage",
+      "driver",
+      "eaton",
+      "elford",
+      "evans",
+      "fairman",
+      "fisher",
+      "flockhart",
+      "ganley",
+      "gethin",
+      "ginther",
+      "gregory",
+      "gurney",
+      "hailwood",
+      "hall",
+      "hawthorn",
+      "herrmann",
+      "hill",
+      "phil_hill",
+      "hobbs",
+      "hulme",
+      "ireland",
+      "irwin",
+      "johnstone",
+      "lauda",
+      "leston",
+      "lewis",
+      "mackay-fraser",
+      "maggs",
+      "marko",
+      "marsh",
+      "mclaren",
+      "migault",
+      "moss",
+      "oliver",
+      "reg_parnell",
+      "perkins",
+      "pescarolo",
+      "redman",
+      "regazzoni",
+      "revson",
+      "richardson",
+      "rodriguez",
+      "schell",
+      "schiller",
+      "seidel",
+      "seiffert",
+      "sharp",
+      "siffert",
+      "solana",
+      "roig",
+      "spence",
+      "stewart",
+      "surtees",
+      "trevor_taylor",
+      "trintignant",
+      "unser",
+      "peter_walker",
+      "ward",
+      "wilds",
+      "vic_wilson",
+      "wisell"
+    ],
+    "wins": 18,
+    "podiums": 63,
+    "pole_positions": 11,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1962
+    ],
+    "driver_championships": [
+      {
+        "year": 1962,
+        "driver_id": "hill"
+      }
+    ]
+  },
+  {
+    "id": "brm-ford",
+    "name": "BRM-Ford",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Motors",
+    "active_years": "1969\u20131969",
+    "seasons": [
+      1969
+    ],
+    "driver_ids": [
+      "oliver"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "bromme",
+    "name": "Bromme",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bromme",
+    "active_years": "1951\u20131952",
+    "seasons": [
+      1951,
+      1952
+    ],
+    "driver_ids": [
+      "ward",
+      "webb"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "brp",
+    "name": "BRP",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Partnership",
+    "active_years": "1963\u20131964",
+    "seasons": [
+      1963,
+      1964
+    ],
+    "driver_ids": [
+      "ireland",
+      "trevor_taylor"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "bugatti",
+    "name": "Bugatti",
+    "nationality": "French",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bugatti",
+    "active_years": "1956\u20131956",
+    "seasons": [
+      1956
+    ],
+    "driver_ids": [
+      "trintignant"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "caterham",
+    "name": "Caterham",
+    "nationality": "Malaysian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Caterham_F1",
+    "active_years": "2012\u20132014",
+    "seasons": [
+      2012,
+      2013,
+      2014
+    ],
+    "driver_ids": [
+      "ericsson",
+      "kobayashi",
+      "kovalainen",
+      "lotterer",
+      "petrov",
+      "pic",
+      "stevens",
+      "garde"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "christensen",
+    "name": "Christensen",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1959\u20131960",
+    "seasons": [
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "hurtubise",
+      "turner"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "coloni",
+    "name": "Coloni",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Coloni",
+    "active_years": "1987\u20131989",
+    "seasons": [
+      1987,
+      1988,
+      1989
+    ],
+    "driver_ids": [
+      "larini",
+      "moreno",
+      "raphanel",
+      "tarquini"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "connaught",
+    "name": "Connaught",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Connaught_Engineering",
+    "active_years": "1952\u20131959",
+    "seasons": [
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959
+    ],
+    "driver_ids": [
+      "beauman",
+      "bira",
+      "bueb",
+      "claes",
+      "downing",
+      "fairman",
+      "flockhart",
+      "leston",
+      "lewis-evans",
+      "marr",
+      "mcalpine",
+      "moss",
+      "andre_pilette",
+      "poore",
+      "riseley_prichard",
+      "rolt",
+      "said",
+      "salvadori",
+      "scott_Brown",
+      "scotti",
+      "ian_stewart",
+      "thompson",
+      "thorne",
+      "titterington",
+      "peter_walker",
+      "whitehouse"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "connew",
+    "name": "Connew",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Connew",
+    "active_years": "1972\u20131972",
+    "seasons": [
+      1972
+    ],
+    "driver_ids": [
+      "migault"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper",
+    "name": "Cooper",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1950\u20131962",
+    "seasons": [
+      1950,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1962
+    ],
+    "driver_ids": [
+      "john_barber",
+      "jack_brabham",
+      "brandon",
+      "bridger",
+      "alan_brown",
+      "burgess",
+      "crook",
+      "cruz",
+      "england",
+      "fairman",
+      "gerard",
+      "gibson",
+      "goethals",
+      "gould",
+      "guelfi",
+      "hawthorn",
+      "la_caze",
+      "lewis",
+      "macdowel",
+      "marsh",
+      "mclaren",
+      "moss",
+      "murray",
+      "naylor",
+      "nuckey",
+      "reg_parnell",
+      "picard",
+      "salvadori",
+      "schell",
+      "seidel",
+      "jimmy_stewart",
+      "trintignant",
+      "wharton",
+      "whitehead"
+    ],
+    "wins": 2,
+    "podiums": 6,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-alfa_romeo",
+    "name": "Cooper-Alfa Romeo",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1962\u20131962",
+    "seasons": [
+      1962
+    ],
+    "driver_ids": [
+      "harris"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-ats",
+    "name": "Cooper-ATS",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1967\u20131967",
+    "seasons": [
+      1967
+    ],
+    "driver_ids": [
+      "moser"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-borgward",
+    "name": "Cooper-Borgward",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1959\u20131959",
+    "seasons": [
+      1959
+    ],
+    "driver_ids": [
+      "bristow",
+      "bueb",
+      "constantine"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-brm",
+    "name": "Cooper-BRM",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1968\u20131968",
+    "seasons": [
+      1968
+    ],
+    "driver_ids": [
+      "bianchi",
+      "elford",
+      "redman",
+      "scarfiotti",
+      "gavin",
+      "widdows"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-castellotti",
+    "name": "Cooper-Castellotti",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1960\u20131960",
+    "seasons": [
+      1960
+    ],
+    "driver_ids": [
+      "cabianca",
+      "lovely",
+      "munaron"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-climax",
+    "name": "Cooper-Climax",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1959\u20131968",
+    "seasons": [
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1967,
+      1968
+    ],
+    "driver_ids": [
+      "ashdown",
+      "barth",
+      "bianchi",
+      "blignaut",
+      "bonnier",
+      "jack_brabham",
+      "bristow",
+      "brooks",
+      "burgess",
+      "cabral",
+      "collomb",
+      "daigh",
+      "dochnal",
+      "drogo",
+      "fairman",
+      "flockhart",
+      "gendebien",
+      "gregory",
+      "halford",
+      "hansgen",
+      "phil_hill",
+      "lewis",
+      "love",
+      "maggs",
+      "mayer",
+      "mclaren",
+      "moss",
+      "owen",
+      "penske",
+      "reventlow",
+      "rhodes",
+      "rindt",
+      "salvadori",
+      "scarlatti",
+      "schell",
+      "seidel",
+      "sharp",
+      "surtees",
+      "henry_taylor",
+      "taylor",
+      "mike_taylor",
+      "trintignant",
+      "vic_wilson",
+      "beaufort",
+      "rooyen"
+    ],
+    "wins": 12,
+    "podiums": 44,
+    "pole_positions": 10,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1959,
+      1960
+    ],
+    "driver_championships": [
+      {
+        "year": 1959,
+        "driver_id": "jack_brabham"
+      },
+      {
+        "year": 1960,
+        "driver_id": "jack_brabham"
+      }
+    ]
+  },
+  {
+    "id": "cooper-ferrari",
+    "name": "Cooper-Ferrari",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1966\u20131966",
+    "seasons": [
+      1966
+    ],
+    "driver_ids": [
+      "lawrence"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-maserati",
+    "name": "Cooper-Maserati",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1959\u20131969",
+    "seasons": [
+      1959,
+      1960,
+      1961,
+      1963,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969
+    ],
+    "driver_ids": [
+      "amon",
+      "attwood",
+      "bandini",
+      "blokdyk",
+      "bonnier",
+      "bonomi",
+      "burgess",
+      "cabral",
+      "clapham",
+      "davis",
+      "elford",
+      "fairman",
+      "ginther",
+      "greene",
+      "gregory",
+      "herrmann",
+      "ickx",
+      "ligier",
+      "menditeguy",
+      "naylor",
+      "pirocchi",
+      "redman",
+      "rees",
+      "rindt",
+      "rodriguez",
+      "salvadori",
+      "scarlatti",
+      "siffert",
+      "solana",
+      "surtees",
+      "thiele",
+      "trintignant",
+      "trips"
+    ],
+    "wins": 2,
+    "podiums": 7,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "cooper-osca",
+    "name": "Cooper-OSCA",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
+    "active_years": "1959\u20131959",
+    "seasons": [
+      1959
+    ],
+    "driver_ids": [
+      "tomaso"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "dallara",
+    "name": "Dallara",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dallara",
+    "active_years": "1988\u20131992",
+    "seasons": [
+      1988,
+      1989,
+      1990,
+      1991,
+      1992
+    ],
+    "driver_ids": [
+      "caffi",
+      "lehto",
+      "martini",
+      "morbidelli",
+      "pirro",
+      "cesaris"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "de-tomaso",
+    "name": "De Tomaso",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1963\u20131970",
+    "seasons": [
+      1963,
+      1970
+    ],
+    "driver_ids": [
+      "courage",
+      "estefano",
+      "schenken"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "de_tomaso-alfa_romeo",
+    "name": "De Tomaso-Alfa Romeo",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/De_Tomaso",
+    "active_years": "1961\u20131962",
+    "seasons": [
+      1961,
+      1962
+    ],
+    "driver_ids": [
+      "bussinello",
+      "vaccarella"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "de_tomaso-osca",
+    "name": "De Tomaso-Osca",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/De_Tomaso",
+    "active_years": "1961\u20131961",
+    "seasons": [
+      1961
+    ],
+    "driver_ids": [
+      "scarlatti"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "deidt",
+    "name": "Deidt",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Emil_Diedt",
+    "active_years": "1950\u20131952",
+    "seasons": [
+      1950,
+      1951,
+      1952
+    ],
+    "driver_ids": [
+      "bettenhausen",
+      "darter",
+      "holland",
+      "rose"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "derrington",
+    "name": "Derrington",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Derrington-Francis",
+    "active_years": "1964\u20131964",
+    "seasons": [
+      1964
+    ],
+    "driver_ids": [
+      "cabral"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "dunn",
+    "name": "Dunn",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dunn_Engineering",
+    "active_years": "1957\u20131959",
+    "seasons": [
+      1957,
+      1958,
+      1959
+    ],
+    "driver_ids": [
+      "herman",
+      "weyant"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "eagle-climax",
+    "name": "Eagle-Climax",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/All_American_Racers",
+    "active_years": "1966\u20131969",
+    "seasons": [
+      1966,
+      1967,
+      1969
+    ],
+    "driver_ids": [
+      "bondurant",
+      "gurney",
+      "pease"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "eagle-weslake",
+    "name": "Eagle-Weslake",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/All_American_Racers",
+    "active_years": "1966\u20131968",
+    "seasons": [
+      1966,
+      1967,
+      1968
+    ],
+    "driver_ids": [
+      "bondurant",
+      "gurney",
+      "mclaren",
+      "scarfiotti"
+    ],
+    "wins": 1,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "elder",
+    "name": "Elder",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Edgar_Elder",
+    "active_years": "1959\u20131959",
+    "seasons": [
+      1959
+    ],
+    "driver_ids": [
+      "ray_crawford"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "hill",
+    "name": "Embassy Hill",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Embassy_Hill",
+    "active_years": "1975\u20131975",
+    "seasons": [
+      1975
+    ],
+    "driver_ids": [
+      "brise",
+      "jones",
+      "migault",
+      "schuppan",
+      "stommelen"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "emeryson",
+    "name": "Emeryson",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Emeryson",
+    "active_years": "1956\u20131962",
+    "seasons": [
+      1956,
+      1961,
+      1962
+    ],
+    "driver_ids": [
+      "campbell-jones",
+      "emery",
+      "gendebien",
+      "seidel",
+      "settember"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "emw",
+    "name": "EMW",
+    "nationality": "East German",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eisenacher_Motorenwerk",
+    "active_years": "1953\u20131953",
+    "seasons": [
+      1953
+    ],
+    "driver_ids": [
+      "barth"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "enb",
+    "name": "ENB",
+    "nationality": "Belgian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/\u00c9curie_Nationale_Belge",
+    "active_years": "1962\u20131962",
+    "seasons": [
+      1962
+    ],
+    "driver_ids": [
+      "bianchi"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ensign",
+    "name": "Ensign",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ensign_Racing",
+    "active_years": "1973\u20131982",
+    "seasons": [
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982
+    ],
+    "driver_ids": [
+      "amon",
+      "binder",
+      "daly",
+      "ertl",
+      "gaillard",
+      "guerrero",
+      "ickx",
+      "lammers",
+      "lees",
+      "leoni",
+      "londono",
+      "lunger",
+      "needell",
+      "neve",
+      "ongais",
+      "piquet",
+      "regazzoni",
+      "salazar",
+      "schuppan",
+      "surer",
+      "tambay",
+      "wilds",
+      "wunderink",
+      "lennep",
+      "opel"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "epperly",
+    "name": "Epperly",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Epperly",
+    "active_years": "1955\u20131960",
+    "seasons": [
+      1955,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "george_amick",
+      "amick",
+      "bettenhausen",
+      "boyd",
+      "bryan",
+      "goldsmith",
+      "hanks",
+      "mcwithey",
+      "rathmann",
+      "weiler"
+    ],
+    "wins": 2,
+    "podiums": 5,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "era",
+    "name": "ERA",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/English_Racing_Automobiles",
+    "active_years": "1950\u20131963",
+    "seasons": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1963
+    ],
+    "driver_ids": [
+      "allison",
+      "ascari",
+      "banks",
+      "behra",
+      "bianco",
+      "bira",
+      "bonetto",
+      "bonnier",
+      "jack_brabham",
+      "branca",
+      "bucci",
+      "bueb",
+      "cabianca",
+      "cade",
+      "cantoni",
+      "chimeri",
+      "chiron",
+      "claes",
+      "collins",
+      "comotti",
+      "creus",
+      "daponte",
+      "drake",
+      "estefano",
+      "fangio",
+      "fitch",
+      "flinterman",
+      "flockhart",
+      "fontes",
+      "parker",
+      "fry",
+      "gerard",
+      "gerini",
+      "godia",
+      "gonzalez",
+      "oscar_gonzalez",
+      "gould",
+      "gregory",
+      "galvez",
+      "halford",
+      "hampshire",
+      "harrison",
+      "hawthorn",
+      "herrmann",
+      "phil_hill",
+      "john_james",
+      "leslie_johnson",
+      "jover",
+      "landi",
+      "lang",
+      "macklin",
+      "maglioli",
+      "mantovani",
+      "marimon",
+      "menditeguy",
+      "mieres",
+      "moss",
+      "munaron",
+      "murray",
+      "musso",
+      "pagani",
+      "reg_parnell",
+      "perdisa",
+      "pietsch",
+      "piotti",
+      "pian",
+      "rol",
+      "rolt",
+      "rosier",
+      "ruttman",
+      "salvadori",
+      "scarlatti",
+      "schell",
+      "seidel",
+      "shawe_taylor",
+      "shelby",
+      "simon",
+      "starrabba",
+      "trintignant",
+      "uria",
+      "villoresi",
+      "volonterio",
+      "peter_walker",
+      "webb",
+      "wharton",
+      "orey",
+      "ramos",
+      "beaufort",
+      "filippis",
+      "graffenried",
+      "etancelin"
+    ],
+    "wins": 9,
+    "podiums": 40,
+    "pole_positions": 11,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": [
+      {
+        "year": 1954,
+        "driver_id": "fangio"
+      },
+      {
+        "year": 1957,
+        "driver_id": "fangio"
+      }
+    ]
+  },
+  {
+    "id": "eurobrun",
+    "name": "Euro Brun",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/EuroBrun",
+    "active_years": "1988\u20131990",
+    "seasons": [
+      1988,
+      1990
+    ],
+    "driver_ids": [
+      "larrauri",
+      "modena",
+      "moreno"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ewing",
+    "name": "Ewing",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Wayne_Ewing",
+    "active_years": "1950\u20131960",
+    "seasons": [
+      1950,
+      1960
+    ],
+    "driver_ids": [
+      "davies",
+      "sachs"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ferguson",
+    "name": "Ferguson",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ferguson_Research",
+    "active_years": "1961\u20131961",
+    "seasons": [
+      1961
+    ],
+    "driver_ids": [
+      "fairman",
+      "moss"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
+    "active_years": "1950\u20132025",
+    "seasons": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "adolff",
+      "alboreto",
+      "alesi",
+      "allison",
+      "alonso",
+      "amon",
+      "mario_andretti",
+      "arnoux",
+      "ascari",
+      "badoer",
+      "baghetti",
+      "bandini",
+      "barrichello",
+      "bearman",
+      "behra",
+      "bell",
+      "berger",
+      "biondetti",
+      "bondurant",
+      "brooks",
+      "capelli",
+      "carini",
+      "castellotti",
+      "claes",
+      "collins",
+      "comotti",
+      "fangio",
+      "farina",
+      "fischer",
+      "fisichella",
+      "frere",
+      "galli",
+      "gendebien",
+      "ginther",
+      "giunti",
+      "gonzalez",
+      "gurney",
+      "hamilton",
+      "hawthorn",
+      "phil_hill",
+      "hirt",
+      "ickx",
+      "irvine",
+      "johansson",
+      "landi",
+      "larini",
+      "lauda",
+      "laurent",
+      "leclerc",
+      "maglioli",
+      "mairesse",
+      "mansell",
+      "manzon",
+      "massa",
+      "merzario",
+      "morbidelli",
+      "musso",
+      "parkes",
+      "reg_parnell",
+      "perdisa",
+      "andre_pilette",
+      "pironi",
+      "prost",
+      "regazzoni",
+      "reutemann",
+      "rodriguez",
+      "ricardo_rodriguez",
+      "rosier",
+      "raikkonen",
+      "sainz",
+      "salo",
+      "salvadori",
+      "scarfiotti",
+      "scarlatti",
+      "scheckter",
+      "schell",
+      "schoeller",
+      "michael_schumacher",
+      "serafini",
+      "simon",
+      "sommer",
+      "surtees",
+      "swaters",
+      "tambay",
+      "taruffi",
+      "trintignant",
+      "vaccarella",
+      "vettel",
+      "gilles_villeneuve",
+      "villoresi",
+      "whitehead",
+      "williams",
+      "adamich",
+      "portago",
+      "terra",
+      "tomaso",
+      "tornaco",
+      "trips"
+    ],
+    "wins": 248,
+    "podiums": 846,
+    "pole_positions": 257,
+    "fastest_laps": 97,
+    "constructor_championships": [
+      1961,
+      1964,
+      1975,
+      1976,
+      1977,
+      1979,
+      1982,
+      1983,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2007,
+      2008
+    ],
+    "driver_championships": [
+      {
+        "year": 1952,
+        "driver_id": "ascari"
+      },
+      {
+        "year": 1953,
+        "driver_id": "ascari"
+      },
+      {
+        "year": 1956,
+        "driver_id": "fangio"
+      },
+      {
+        "year": 1958,
+        "driver_id": "hawthorn"
+      },
+      {
+        "year": 1961,
+        "driver_id": "phil_hill"
+      },
+      {
+        "year": 1964,
+        "driver_id": "surtees"
+      },
+      {
+        "year": 1975,
+        "driver_id": "lauda"
+      },
+      {
+        "year": 1977,
+        "driver_id": "lauda"
+      },
+      {
+        "year": 1979,
+        "driver_id": "scheckter"
+      },
+      {
+        "year": 2000,
+        "driver_id": "michael_schumacher"
+      },
+      {
+        "year": 2001,
+        "driver_id": "michael_schumacher"
+      },
+      {
+        "year": 2002,
+        "driver_id": "michael_schumacher"
+      },
+      {
+        "year": 2003,
+        "driver_id": "michael_schumacher"
+      },
+      {
+        "year": 2004,
+        "driver_id": "michael_schumacher"
+      },
+      {
+        "year": 2007,
+        "driver_id": "raikkonen"
+      }
+    ]
+  },
+  {
+    "id": "fittipaldi",
+    "name": "Fittipaldi",
+    "nationality": "Brazilian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Fittipaldi_Automotive",
+    "active_years": "1975\u20131982",
+    "seasons": [
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982
+    ],
+    "driver_ids": [
+      "emerson_fittipaldi",
+      "wilson_fittipaldi",
+      "hoffmann",
+      "merzario",
+      "keke_rosberg",
+      "serra"
+    ],
+    "wins": 0,
+    "podiums": 3,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "fondmetal",
+    "name": "Fondmetal",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Fondmetal",
+    "active_years": "1991\u20131992",
+    "seasons": [
+      1991,
+      1992
+    ],
+    "driver_ids": [
+      "chiesa",
+      "grouillard",
+      "tarquini",
+      "poele"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "footwork",
+    "name": "Footwork",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_Arrows",
+    "active_years": "1991\u20131996",
+    "seasons": [
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996
+    ],
+    "driver_ids": [
+      "alboreto",
+      "caffi",
+      "fittipaldi",
+      "inoue",
+      "johansson",
+      "morbidelli",
+      "papis",
+      "rosset",
+      "suzuki",
+      "verstappen",
+      "warwick"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "force_india",
+    "name": "Force India",
+    "nationality": "Indian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Racing_Point_Force_India",
+    "active_years": "2008\u20132018",
+    "seasons": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "driver_ids": [
+      "fisichella",
+      "hulkenberg",
+      "liuzzi",
+      "ocon",
+      "perez",
+      "sutil",
+      "resta"
+    ],
+    "wins": 0,
+    "podiums": 6,
+    "pole_positions": 1,
+    "fastest_laps": 5,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "forti",
+    "name": "Forti",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Forti",
+    "active_years": "1995\u20131996",
+    "seasons": [
+      1995,
+      1996
+    ],
+    "driver_ids": [
+      "badoer",
+      "diniz",
+      "montermini",
+      "moreno"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "frazer_nash",
+    "name": "Frazer Nash",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Frazer_Nash",
+    "active_years": "1952\u20131952",
+    "seasons": [
+      1952
+    ],
+    "driver_ids": [
+      "crook",
+      "wharton"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "gilby",
+    "name": "Gilby",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gilby",
+    "active_years": "1961\u20131963",
+    "seasons": [
+      1961,
+      1962,
+      1963
+    ],
+    "driver_ids": [
+      "greene",
+      "raby"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "gordini",
+    "name": "Gordini",
+    "nationality": "French",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gordini",
+    "active_years": "1952\u20131956",
+    "seasons": [
+      1952,
+      1953,
+      1954,
+      1955,
+      1956
+    ],
+    "driver_ids": [
+      "bayol",
+      "behra",
+      "georges_berger",
+      "bira",
+      "bucci",
+      "claes",
+      "frere",
+      "iglesias",
+      "loyer",
+      "lucas",
+      "manzon",
+      "menditeguy",
+      "mieres",
+      "milhoux",
+      "andre_pilette",
+      "pollet",
+      "schell",
+      "simon",
+      "sparken",
+      "trintignant",
+      "wacker",
+      "ramos"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "haas",
+    "name": "Haas F1 Team",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Haas_F1_Team",
+    "active_years": "2016\u20132025",
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "bearman",
+      "pietro_fittipaldi",
+      "grosjean",
+      "gutierrez",
+      "hulkenberg",
+      "kevin_magnussen",
+      "mazepin",
+      "ocon",
+      "mick_schumacher"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 3,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "hall",
+    "name": "Hall",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hall_(constructor)",
+    "active_years": "1951\u20131951",
+    "seasons": [
+      1951
+    ],
+    "driver_ids": [
+      "mackey"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "hesketh",
+    "name": "Hesketh",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hesketh_Racing",
+    "active_years": "1974\u20131978",
+    "seasons": [
+      1974,
+      1975,
+      1976,
+      1977,
+      1978
+    ],
+    "driver_ids": [
+      "ashley",
+      "cheever",
+      "edwards",
+      "ertl",
+      "hunt",
+      "jones",
+      "keegan",
+      "lunger",
+      "palm",
+      "rebaque",
+      "ribeiro",
+      "stommelen"
+    ],
+    "wins": 1,
+    "podiums": 7,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "honda",
+    "name": "Honda",
+    "nationality": "Japanese",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Honda_in_Formula_One",
+    "active_years": "1964\u20132008",
+    "seasons": [
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      2006,
+      2007,
+      2008
+    ],
+    "driver_ids": [
+      "barrichello",
+      "bonnier",
+      "bucknum",
+      "button",
+      "ginther",
+      "hobbs",
+      "jo_schlesser",
+      "surtees"
+    ],
+    "wins": 3,
+    "podiums": 9,
+    "pole_positions": 2,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "hrt",
+    "name": "HRT",
+    "nationality": "Spanish",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/HRT_Formula_1_Team",
+    "active_years": "2010\u20132012",
+    "seasons": [
+      2010,
+      2011,
+      2012
+    ],
+    "driver_ids": [
+      "chandhok",
+      "karthikeyan",
+      "klien",
+      "liuzzi",
+      "ricciardo",
+      "bruno_senna",
+      "yamamoto",
+      "rosa"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "hwm",
+    "name": "HWM",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hersham_and_Walton_Motors",
+    "active_years": "1951\u20131954",
+    "seasons": [
+      1951,
+      1952,
+      1953,
+      1954
+    ],
+    "driver_ids": [
+      "abecassis",
+      "cabantous",
+      "claes",
+      "collins",
+      "fairman",
+      "fitch",
+      "frere",
+      "gaze",
+      "duncan_hamilton",
+      "laurent",
+      "macklin",
+      "moss",
+      "scherrer",
+      "lof"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "iso_marlboro",
+    "name": "Iso Marlboro",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Frank_Williams_Racing_Cars",
+    "active_years": "1973\u20131974",
+    "seasons": [
+      1973,
+      1974
+    ],
+    "driver_ids": [
+      "belso",
+      "galli",
+      "ganley",
+      "ickx",
+      "laffite",
+      "mcrae",
+      "merzario",
+      "pescarolo",
+      "pretorius",
+      "schenken",
+      "lennep"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "jaguar",
+    "name": "Jaguar",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jaguar_Racing",
+    "active_years": "2000\u20132004",
+    "seasons": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004
+    ],
+    "driver_ids": [
+      "burti",
+      "herbert",
+      "irvine",
+      "klien",
+      "pizzonia",
+      "webber",
+      "wilson",
+      "rosa"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "jbw",
+    "name": "JBW",
+    "nationality": "British",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/JBW",
+    "active_years": "1959\u20131961",
+    "seasons": [
+      1959,
+      1960,
+      1961
+    ],
+    "driver_ids": [
+      "naylor"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "jordan",
+    "name": "Jordan",
+    "nationality": "Irish",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix",
+    "active_years": "1991\u20132005",
+    "seasons": [
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "driver_ids": [
+      "alesi",
+      "apicella",
+      "barrichello",
+      "baumgartner",
+      "boutsen",
+      "brundle",
+      "capelli",
+      "firman",
+      "fisichella",
+      "frentzen",
+      "gachot",
+      "glock",
+      "gugelmin",
+      "heidfeld",
+      "damon_hill",
+      "irvine",
+      "karthikeyan",
+      "modena",
+      "monteiro",
+      "moreno",
+      "naspetti",
+      "pantano",
+      "sato",
+      "michael_schumacher",
+      "ralf_schumacher",
+      "suzuki",
+      "trulli",
+      "zanardi",
+      "zonta",
+      "cesaris"
+    ],
+    "wins": 4,
+    "podiums": 19,
+    "pole_positions": 2,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "klenk",
+    "name": "Klenk",
+    "nationality": "German",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Klenk",
+    "active_years": "1954\u20131954",
+    "seasons": [
+      1954
+    ],
+    "driver_ids": [
+      "helfrich"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "kojima",
+    "name": "Kojima",
+    "nationality": "Japanese",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Kojima_Engineering",
+    "active_years": "1976\u20131977",
+    "seasons": [
+      1976,
+      1977
+    ],
+    "driver_ids": [
+      "hasemi",
+      "hoshino",
+      "takahara"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "kurtis_kraft",
+    "name": "Kurtis Kraft",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Kurtis_Kraft",
+    "active_years": "1950\u20131960",
+    "seasons": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "agabashian",
+      "andrews",
+      "armi",
+      "arnold",
+      "ayulo",
+      "bettenhausen",
+      "boyd",
+      "walt_brown",
+      "bryan",
+      "darter",
+      "cheesbourg",
+      "chitwood",
+      "christie",
+      "george_connor",
+      "ray_crawford",
+      "crockett",
+      "cross",
+      "davies",
+      "daywalt",
+      "dinsmore",
+      "edmunds",
+      "elisian",
+      "faulkner",
+      "flaherty",
+      "forberg",
+      "force",
+      "foyt",
+      "freeland",
+      "garrett",
+      "goldsmith",
+      "green",
+      "griffith",
+      "grim",
+      "hanks",
+      "hartley",
+      "hellings",
+      "herman",
+      "holland",
+      "holmes",
+      "homeier",
+      "hoyt",
+      "jackson",
+      "james",
+      "johnson",
+      "keller",
+      "larson",
+      "linden",
+      "magill",
+      "mantz",
+      "mccoy",
+      "mcdowell",
+      "mcgrath",
+      "mcwithey",
+      "miller",
+      "nalon",
+      "nazaruk",
+      "niday",
+      "connor",
+      "parsons",
+      "dick_rathmann",
+      "rathmann",
+      "reece",
+      "russo",
+      "paul_russo",
+      "ruttman",
+      "scarborough",
+      "schindler",
+      "bob_scott",
+      "stevenson",
+      "sweikert",
+      "teague",
+      "templeman",
+      "thomson",
+      "tolan",
+      "turner",
+      "veith",
+      "vukovich",
+      "wallard",
+      "ward",
+      "weyant"
+    ],
+    "wins": 5,
+    "podiums": 19,
+    "pole_positions": 6,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "kuzma",
+    "name": "Kuzma",
+    "nationality": "American",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eddie_Kuzma",
+    "active_years": "1951\u20131960",
+    "seasons": [
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "ayulo",
+      "bettenhausen",
+      "bryan",
+      "darter",
+      "cheesbourg",
+      "faulkner",
+      "foyt",
+      "garrett",
+      "hartley",
+      "homeier",
+      "johnson",
+      "keller",
+      "ruttman",
+      "sachs",
+      "stevenson",
+      "sweikert",
+      "thomson",
+      "tolan",
+      "ward",
+      "weyant",
+      "dempsey_wilson"
+    ],
+    "wins": 1,
+    "podiums": 3,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lambo",
+    "name": "Lambo",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Modena_(racing_team)",
+    "active_years": "1991\u20131991",
+    "seasons": [
+      1991
+    ],
+    "driver_ids": [
+      "larini",
+      "poele"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lancia",
+    "name": "Lancia",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1954\u20131955",
+    "seasons": [
+      1954,
+      1955
+    ],
+    "driver_ids": [
+      "ascari",
+      "castellotti",
+      "chiron",
+      "villoresi"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 2,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "langley",
+    "name": "Langley",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "hartley"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "larrousse",
+    "name": "Larrousse",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1987\u20131994",
+    "seasons": [
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994
+    ],
+    "driver_ids": [
+      "alboreto",
+      "alliot",
+      "beretta",
+      "bernard",
+      "comas",
+      "dalmas",
+      "deletraz",
+      "gachot",
+      "katayama",
+      "noda",
+      "suzuki",
+      "toshio_suzuki"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lds",
+    "name": "LDS",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1962\u20131968",
+    "seasons": [
+      1962,
+      1963,
+      1965,
+      1967,
+      1968
+    ],
+    "driver_ids": [
+      "serrurier",
+      "tingle"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lec",
+    "name": "LEC",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1977\u20131977",
+    "seasons": [
+      1977
+    ],
+    "driver_ids": [
+      "purley"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lesovsky",
+    "name": "Lesovsky",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131960",
+    "seasons": [
+      1950,
+      1952,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "ayulo",
+      "banks",
+      "darter",
+      "george_connor",
+      "hartley",
+      "reece",
+      "ruttman",
+      "thomson",
+      "turner",
+      "ward"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "leyton-house",
+    "name": "Leyton House",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1990\u20131991",
+    "seasons": [
+      1990,
+      1991
+    ],
+    "driver_ids": [
+      "capelli",
+      "gugelmin",
+      "wendlinger"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ligier",
+    "name": "Ligier",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1976\u20131996",
+    "seasons": [
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996
+    ],
+    "driver_ids": [
+      "alliot",
+      "arnoux",
+      "bernard",
+      "blundell",
+      "boesel",
+      "boutsen",
+      "brundle",
+      "cheever",
+      "comas",
+      "depailler",
+      "diniz",
+      "ghinzani",
+      "grouillard",
+      "herbert",
+      "hesnault",
+      "ickx",
+      "jabouille",
+      "jarier",
+      "johansson",
+      "laffite",
+      "lagorce",
+      "larini",
+      "panis",
+      "pironi",
+      "streiff",
+      "suzuki",
+      "tambay",
+      "cesaris"
+    ],
+    "wins": 9,
+    "podiums": 50,
+    "pole_positions": 9,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lola",
+    "name": "Lola",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1962\u20131993",
+    "seasons": [
+      1962,
+      1963,
+      1967,
+      1968,
+      1974,
+      1975,
+      1985,
+      1986,
+      1991,
+      1993
+    ],
+    "driver_ids": [
+      "alboreto",
+      "amon",
+      "anderson",
+      "badoer",
+      "bernard",
+      "bianchi",
+      "campbell-jones",
+      "cheever",
+      "edwards",
+      "gethin",
+      "gregory",
+      "hahne",
+      "hailwood",
+      "hill",
+      "hobbs",
+      "jones",
+      "migault",
+      "salvadori",
+      "stommelen",
+      "surtees",
+      "suzuki",
+      "tambay",
+      "trintignant"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lotus",
+    "name": "Lotus",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2010\u20132015",
+    "seasons": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "driver_ids": [
+      "chandhok",
+      "grosjean",
+      "kovalainen",
+      "maldonado",
+      "raikkonen",
+      "trulli",
+      "ambrosio"
+    ],
+    "wins": 2,
+    "podiums": 25,
+    "pole_positions": 0,
+    "fastest_laps": 5,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lotus-borgward",
+    "name": "Lotus-Borgward",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1962\u20131962",
+    "seasons": [
+      1962
+    ],
+    "driver_ids": [
+      "kuhnke"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lotus-climax",
+    "name": "Lotus-Climax",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1961\u20131967",
+    "seasons": [
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967
+    ],
+    "driver_ids": [
+      "abate",
+      "allison",
+      "amon",
+      "arundell",
+      "ashmore",
+      "bianchi",
+      "bordeu",
+      "jack_brabham",
+      "burgess",
+      "campbell-jones",
+      "chamberlain",
+      "clark",
+      "collomb",
+      "gendebien",
+      "greene",
+      "gregory",
+      "hailwood",
+      "hall",
+      "hansgen",
+      "hawkins",
+      "hocking",
+      "ireland",
+      "lederle",
+      "maggs",
+      "mairesse",
+      "marsh",
+      "may",
+      "ken_miles",
+      "mitter",
+      "monarch",
+      "moss",
+      "parnell",
+      "penske",
+      "pieterse",
+      "revson",
+      "rodriguez",
+      "ruby",
+      "geki",
+      "ryan",
+      "schroeder",
+      "seidel",
+      "shelly",
+      "siffert",
+      "solana",
+      "spence",
+      "henry_taylor",
+      "trevor_taylor",
+      "tingle",
+      "trintignant",
+      "vaccarella",
+      "vyver"
+    ],
+    "wins": 22,
+    "podiums": 31,
+    "pole_positions": 29,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1963,
+      1965
+    ],
+    "driver_championships": [
+      {
+        "year": 1963,
+        "driver_id": "clark"
+      },
+      {
+        "year": 1965,
+        "driver_id": "clark"
+      }
+    ]
+  },
+  {
+    "id": "lotus-ford",
+    "name": "Lotus-Ford",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1963\u20131971",
+    "seasons": [
+      1963,
+      1967,
+      1968,
+      1969,
+      1971
+    ],
+    "driver_ids": [
+      "mario_andretti",
+      "attwood",
+      "baghetti",
+      "bonnier",
+      "brack",
+      "charlton",
+      "clark",
+      "emerson_fittipaldi",
+      "hill",
+      "love",
+      "lovely",
+      "miles",
+      "niemann",
+      "oliver",
+      "rindt",
+      "siffert",
+      "solana",
+      "wietzes",
+      "wisell"
+    ],
+    "wins": 11,
+    "podiums": 25,
+    "pole_positions": 19,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1968
+    ],
+    "driver_championships": [
+      {
+        "year": 1968,
+        "driver_id": "hill"
+      }
+    ]
+  },
+  {
+    "id": "lotus-pratt-amp-whitney",
+    "name": "Lotus-Pratt &amp; Whitney",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1971\u20131971",
+    "seasons": [
+      1971
+    ],
+    "driver_ids": [
+      "emerson_fittipaldi",
+      "walker",
+      "wisell"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lyncar",
+    "name": "Lyncar",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1975\u20131975",
+    "seasons": [
+      1975
+    ],
+    "driver_ids": [
+      "nicholson"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "maki",
+    "name": "Maki",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1975\u20131975",
+    "seasons": [
+      1975
+    ],
+    "driver_ids": [
+      "fushida"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "march",
+    "name": "March",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1970\u20131992",
+    "seasons": [
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1981,
+      1982,
+      1987,
+      1988,
+      1989,
+      1992
+    ],
+    "driver_ids": [
+      "amon",
+      "mario_andretti",
+      "barber",
+      "belmondo",
+      "beuttler",
+      "boesel",
+      "brambilla",
+      "capelli",
+      "cevert",
+      "daly",
+      "donohue",
+      "galli",
+      "ganley",
+      "gugelmin",
+      "henton",
+      "hunt",
+      "jarier",
+      "jean",
+      "keegan",
+      "lammers",
+      "lauda",
+      "lombardi",
+      "love",
+      "hayje",
+      "lunger",
+      "mass",
+      "mazet",
+      "merzario",
+      "naspetti",
+      "neve",
+      "pace",
+      "pescarolo",
+      "peterson",
+      "purley",
+      "ribeiro",
+      "salazar",
+      "ian_scheckter",
+      "gavin",
+      "siffert",
+      "roig",
+      "stewart",
+      "stommelen",
+      "stuck",
+      "wendlinger",
+      "williamson",
+      "wisell",
+      "adamich"
+    ],
+    "wins": 3,
+    "podiums": 21,
+    "pole_positions": 5,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "marchese",
+    "name": "Marchese",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131951",
+    "seasons": [
+      1950,
+      1951
+    ],
+    "driver_ids": [
+      "fohr",
+      "stevenson"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "martini",
+    "name": "Martini",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1978\u20131978",
+    "seasons": [
+      1978
+    ],
+    "driver_ids": [
+      "arnoux"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "marussia",
+    "name": "Marussia",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2012\u20132016",
+    "seasons": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ],
+    "driver_ids": [
+      "jules_bianchi",
+      "chilton",
+      "glock",
+      "haryanto",
+      "merhi",
+      "ocon",
+      "pic",
+      "rossi",
+      "stevens",
+      "wehrlein"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "matra",
+    "name": "Matra",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1967\u20131972",
+    "seasons": [
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972
+    ],
+    "driver_ids": [
+      "amon",
+      "beltoise",
+      "ickx",
+      "pescarolo",
+      "jo_schlesser",
+      "gavin",
+      "stewart"
+    ],
+    "wins": 9,
+    "podiums": 21,
+    "pole_positions": 4,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1969
+    ],
+    "driver_championships": [
+      {
+        "year": 1969,
+        "driver_id": "stewart"
+      }
+    ]
+  },
+  {
+    "id": "mbm",
+    "name": "MBM",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1961\u20131961",
+    "seasons": [
+      1961
+    ],
+    "driver_ids": [
+      "monteverdi"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "mclaren",
+    "name": "McLaren",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1968\u20132025",
+    "seasons": [
+      1968,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "alliot",
+      "alonso",
+      "andretti",
+      "berger",
+      "blundell",
+      "bonnier",
+      "brundle",
+      "button",
+      "charlton",
+      "coulthard",
+      "donohue",
+      "emerson_fittipaldi",
+      "gethin",
+      "giacomelli",
+      "hailwood",
+      "hamilton",
+      "hobbs",
+      "hulme",
+      "hunt",
+      "hakkinen",
+      "ickx",
+      "johansson",
+      "kovalainen",
+      "lauda",
+      "lunger",
+      "magnussen",
+      "kevin_magnussen",
+      "mansell",
+      "mass",
+      "mclaren",
+      "norris",
+      "oliver",
+      "montoya",
+      "piastri",
+      "piquet",
+      "prost",
+      "perez",
+      "redman",
+      "revson",
+      "ricciardo",
+      "keke_rosberg",
+      "raikkonen",
+      "sainz",
+      "scheckter",
+      "senna",
+      "tambay",
+      "vandoorne",
+      "gilles_villeneuve",
+      "watson",
+      "wurz",
+      "adamich",
+      "cesaris",
+      "villota",
+      "rosa"
+    ],
+    "wins": 199,
+    "podiums": 541,
+    "pole_positions": 177,
+    "fastest_laps": 72,
+    "constructor_championships": [
+      1974,
+      1984,
+      1985,
+      1988,
+      1989,
+      1990,
+      1991,
+      1998,
+      2024,
+      2025
+    ],
+    "driver_championships": [
+      {
+        "year": 1974,
+        "driver_id": "emerson_fittipaldi"
+      },
+      {
+        "year": 1976,
+        "driver_id": "hunt"
+      },
+      {
+        "year": 1984,
+        "driver_id": "lauda"
+      },
+      {
+        "year": 1985,
+        "driver_id": "prost"
+      },
+      {
+        "year": 1986,
+        "driver_id": "prost"
+      },
+      {
+        "year": 1988,
+        "driver_id": "senna"
+      },
+      {
+        "year": 1989,
+        "driver_id": "prost"
+      },
+      {
+        "year": 1990,
+        "driver_id": "senna"
+      },
+      {
+        "year": 1991,
+        "driver_id": "senna"
+      },
+      {
+        "year": 1998,
+        "driver_id": "hakkinen"
+      },
+      {
+        "year": 1999,
+        "driver_id": "hakkinen"
+      },
+      {
+        "year": 2008,
+        "driver_id": "hamilton"
+      },
+      {
+        "year": 2025,
+        "driver_id": "norris"
+      }
+    ]
+  },
+  {
+    "id": "mclaren-ford",
+    "name": "McLaren-Ford",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1966\u20131970",
+    "seasons": [
+      1966,
+      1967,
+      1968,
+      1969,
+      1970
+    ],
+    "driver_ids": [
+      "bell",
+      "beltoise",
+      "bonnier",
+      "elford",
+      "gethin",
+      "gurney",
+      "hulme",
+      "mclaren",
+      "surtees",
+      "rooyen"
+    ],
+    "wins": 4,
+    "podiums": 16,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "mclaren-serenissima",
+    "name": "McLaren-Serenissima",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1966\u20131966",
+    "seasons": [
+      1966
+    ],
+    "driver_ids": [
+      "mclaren"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "mercedes",
+    "name": "Mercedes",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1954\u20132025",
+    "seasons": [
+      1954,
+      1955,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "antonelli",
+      "bottas",
+      "fangio",
+      "hamilton",
+      "herrmann",
+      "kling",
+      "lang",
+      "moss",
+      "rosberg",
+      "russell",
+      "michael_schumacher",
+      "simon",
+      "taruffi"
+    ],
+    "wins": 131,
+    "podiums": 310,
+    "pole_positions": 144,
+    "fastest_laps": 106,
+    "constructor_championships": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "driver_championships": [
+      {
+        "year": 1954,
+        "driver_id": "fangio"
+      },
+      {
+        "year": 1955,
+        "driver_id": "fangio"
+      },
+      {
+        "year": 2014,
+        "driver_id": "hamilton"
+      },
+      {
+        "year": 2015,
+        "driver_id": "hamilton"
+      },
+      {
+        "year": 2016,
+        "driver_id": "rosberg"
+      },
+      {
+        "year": 2017,
+        "driver_id": "hamilton"
+      },
+      {
+        "year": 2018,
+        "driver_id": "hamilton"
+      },
+      {
+        "year": 2019,
+        "driver_id": "hamilton"
+      },
+      {
+        "year": 2020,
+        "driver_id": "hamilton"
+      }
+    ]
+  },
+  {
+    "id": "merzario",
+    "name": "Merzario",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1978\u20131979",
+    "seasons": [
+      1978,
+      1979
+    ],
+    "driver_ids": [
+      "merzario"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "meskowski",
+    "name": "Meskowski",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1960\u20131960",
+    "seasons": [
+      1960
+    ],
+    "driver_ids": [
+      "grim",
+      "veith"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "mf1",
+    "name": "MF1",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2006\u20132006",
+    "seasons": [
+      2006
+    ],
+    "driver_ids": [
+      "albers",
+      "monteiro"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "milano",
+    "name": "Milano",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "bonetto"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "minardi",
+    "name": "Minardi",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1985\u20132005",
+    "seasons": [
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "driver_ids": [
+      "albers",
+      "alboreto",
+      "alonso",
+      "badoer",
+      "barbazza",
+      "barilla",
+      "baumgartner",
+      "bruni",
+      "campos",
+      "davidson",
+      "doornbos",
+      "fisichella",
+      "fittipaldi",
+      "friesacher",
+      "gene",
+      "gounon",
+      "katayama",
+      "kiesa",
+      "lamy",
+      "lavaggi",
+      "marques",
+      "martini",
+      "mazzacane",
+      "morbidelli",
+      "moreno",
+      "nakano",
+      "nannini",
+      "sala",
+      "sarrazin",
+      "trulli",
+      "tuero",
+      "verstappen",
+      "webber",
+      "wilson",
+      "yoong",
+      "zanardi",
+      "cesaris"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "moore",
+    "name": "Moore",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131959",
+    "seasons": [
+      1950,
+      1951,
+      1959
+    ],
+    "driver_ids": [
+      "banks",
+      "veith",
+      "wallard"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "nichels",
+    "name": "Nichels",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "paul_russo"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "olson",
+    "name": "Olson",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "holmes"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "onyx",
+    "name": "Onyx",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1989\u20131990",
+    "seasons": [
+      1989,
+      1990
+    ],
+    "driver_ids": [
+      "foitek",
+      "gachot",
+      "johansson",
+      "lehto"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "osca",
+    "name": "OSCA",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1951\u20131953",
+    "seasons": [
+      1951,
+      1952,
+      1953
+    ],
+    "driver_ids": [
+      "bayol",
+      "chiron",
+      "rol"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "osella",
+    "name": "Osella",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1980\u20131990",
+    "seasons": [
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990
+    ],
+    "driver_ids": [
+      "berg",
+      "caffi",
+      "cheever",
+      "danner",
+      "corrado_fabi",
+      "forini",
+      "gabbiani",
+      "gartner",
+      "ghinzani",
+      "grouillard",
+      "guerra",
+      "jarier",
+      "larini",
+      "paletti",
+      "rothengatter",
+      "tarquini"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "pacific",
+    "name": "Pacific",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1994\u20131995",
+    "seasons": [
+      1994,
+      1995
+    ],
+    "driver_ids": [
+      "belmondo",
+      "deletraz",
+      "gachot",
+      "lavaggi",
+      "montermini"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "pankratz",
+    "name": "Pankratz",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1954\u20131954",
+    "seasons": [
+      1954
+    ],
+    "driver_ids": [
+      "reece"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "parnelli",
+    "name": "Parnelli",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1974\u20131976",
+    "seasons": [
+      1974,
+      1975,
+      1976
+    ],
+    "driver_ids": [
+      "mario_andretti"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "pawl",
+    "name": "Pawl",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1951\u20131955",
+    "seasons": [
+      1951,
+      1955
+    ],
+    "driver_ids": [
+      "davies",
+      "russo"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "penske",
+    "name": "Penske",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1974\u20131977",
+    "seasons": [
+      1974,
+      1975,
+      1976,
+      1977
+    ],
+    "driver_ids": [
+      "binder",
+      "donohue",
+      "jarier",
+      "hayje",
+      "ongais",
+      "watson"
+    ],
+    "wins": 1,
+    "podiums": 3,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "phillips",
+    "name": "Phillips",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1954\u20131960",
+    "seasons": [
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "branson",
+      "freeland",
+      "veith"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "politoys",
+    "name": "Politoys",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1972\u20131972",
+    "seasons": [
+      1972
+    ],
+    "driver_ids": [
+      "pescarolo"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "porsche",
+    "name": "Porsche",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1957\u20131964",
+    "seasons": [
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964
+    ],
+    "driver_ids": [
+      "abate",
+      "barth",
+      "blanchard",
+      "bonnier",
+      "davis",
+      "gurney",
+      "herrmann",
+      "maglioli",
+      "mitter",
+      "pon",
+      "schiller",
+      "slotemaker",
+      "vaccarella",
+      "walter",
+      "beaufort",
+      "trips"
+    ],
+    "wins": 1,
+    "podiums": 5,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "prost",
+    "name": "Prost",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1997\u20132001",
+    "seasons": [
+      1997,
+      1998,
+      1999,
+      2000,
+      2001
+    ],
+    "driver_ids": [
+      "alesi",
+      "burti",
+      "enge",
+      "frentzen",
+      "heidfeld",
+      "mazzacane",
+      "nakano",
+      "panis",
+      "trulli"
+    ],
+    "wins": 0,
+    "podiums": 3,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "protos",
+    "name": "Protos",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1967\u20131967",
+    "seasons": [
+      1967
+    ],
+    "driver_ids": [
+      "ahrens",
+      "hart"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "racing-point",
+    "name": "Racing Point",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2019\u20132020",
+    "seasons": [
+      2019,
+      2020
+    ],
+    "driver_ids": [
+      "hulkenberg",
+      "perez",
+      "stroll"
+    ],
+    "wins": 1,
+    "podiums": 4,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "rae",
+    "name": "Rae",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "ader"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "ram",
+    "name": "RAM",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1983\u20131985",
+    "seasons": [
+      1983,
+      1984,
+      1985
+    ],
+    "driver_ids": [
+      "acheson",
+      "alliot",
+      "palmer",
+      "salazar",
+      "thackwell",
+      "manfred_winkelhock"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "rb-f1-team",
+    "name": "RB F1 Team",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2024\u20132025",
+    "seasons": [
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "hadjar",
+      "lawson",
+      "ricciardo",
+      "tsunoda"
+    ],
+    "wins": 0,
+    "podiums": 1,
+    "pole_positions": 0,
+    "fastest_laps": 1,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "re",
+    "name": "RE",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1965\u20131965",
+    "seasons": [
+      1965
+    ],
+    "driver_ids": [
+      "reed"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "rebaque",
+    "name": "Rebaque",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1979\u20131979",
+    "seasons": [
+      1979
+    ],
+    "driver_ids": [
+      "rebaque"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "red-bull",
+    "name": "Red Bull",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2005\u20132025",
+    "seasons": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "albon",
+      "coulthard",
+      "doornbos",
+      "gasly",
+      "klien",
+      "kvyat",
+      "lawson",
+      "liuzzi",
+      "perez",
+      "ricciardo",
+      "tsunoda",
+      "max_verstappen",
+      "vettel",
+      "webber"
+    ],
+    "wins": 130,
+    "podiums": 297,
+    "pole_positions": 111,
+    "fastest_laps": 102,
+    "constructor_championships": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2022,
+      2023
+    ],
+    "driver_championships": [
+      {
+        "year": 2010,
+        "driver_id": "vettel"
+      },
+      {
+        "year": 2011,
+        "driver_id": "vettel"
+      },
+      {
+        "year": 2012,
+        "driver_id": "vettel"
+      },
+      {
+        "year": 2013,
+        "driver_id": "vettel"
+      },
+      {
+        "year": 2021,
+        "driver_id": "max_verstappen"
+      },
+      {
+        "year": 2022,
+        "driver_id": "max_verstappen"
+      },
+      {
+        "year": 2023,
+        "driver_id": "max_verstappen"
+      },
+      {
+        "year": 2024,
+        "driver_id": "max_verstappen"
+      }
+    ]
+  },
+  {
+    "id": "renault",
+    "name": "Renault",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1977\u20132020",
+    "seasons": [
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "driver_ids": [
+      "alonso",
+      "arnoux",
+      "button",
+      "cheever",
+      "fisichella",
+      "grosjean",
+      "heidfeld",
+      "hesnault",
+      "hulkenberg",
+      "jabouille",
+      "kovalainen",
+      "kubica",
+      "kevin_magnussen",
+      "ocon",
+      "jolyon_palmer",
+      "petrov",
+      "piquet_jr",
+      "prost",
+      "ricciardo",
+      "sainz",
+      "bruno_senna",
+      "streiff",
+      "tambay",
+      "trulli",
+      "villeneuve",
+      "warwick"
+    ],
+    "wins": 35,
+    "podiums": 103,
+    "pole_positions": 51,
+    "fastest_laps": 14,
+    "constructor_championships": [
+      2005,
+      2006
+    ],
+    "driver_championships": [
+      {
+        "year": 2005,
+        "driver_id": "alonso"
+      },
+      {
+        "year": 2006,
+        "driver_id": "alonso"
+      }
+    ]
+  },
+  {
+    "id": "rial",
+    "name": "Rial",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1988\u20131989",
+    "seasons": [
+      1988,
+      1989
+    ],
+    "driver_ids": [
+      "danner",
+      "weidler",
+      "cesaris"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "sauber",
+    "name": "Sauber",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1993\u20132025",
+    "seasons": [
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "alesi",
+      "bortoleto",
+      "bottas",
+      "boullion",
+      "diniz",
+      "ericsson",
+      "fisichella",
+      "fontana",
+      "frentzen",
+      "giovinazzi",
+      "gutierrez",
+      "heidfeld",
+      "herbert",
+      "hulkenberg",
+      "lehto",
+      "kobayashi",
+      "larini",
+      "leclerc",
+      "massa",
+      "morbidelli",
+      "nasr",
+      "perez",
+      "raikkonen",
+      "salo",
+      "sutil",
+      "villeneuve",
+      "wehrlein",
+      "wendlinger",
+      "zhou",
+      "cesaris",
+      "rosa"
+    ],
+    "wins": 0,
+    "podiums": 11,
+    "pole_positions": 0,
+    "fastest_laps": 3,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "scarab",
+    "name": "Scarab",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1960\u20131960",
+    "seasons": [
+      1960
+    ],
+    "driver_ids": [
+      "daigh",
+      "ginther",
+      "reventlow"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "schroeder",
+    "name": "Schroeder",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1951\u20131955",
+    "seasons": [
+      1951,
+      1953,
+      1955
+    ],
+    "driver_ids": [
+      "andrews",
+      "ball",
+      "bryan",
+      "dinsmore"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "scirocco",
+    "name": "Scirocco",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1963\u20131964",
+    "seasons": [
+      1963,
+      1964
+    ],
+    "driver_ids": [
+      "burgess",
+      "andre_pilette",
+      "settember"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "shadow",
+    "name": "Shadow",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1973\u20131980",
+    "seasons": [
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980
+    ],
+    "driver_ids": [
+      "follmer",
+      "hill",
+      "jarier",
+      "jones",
+      "lammers",
+      "lees",
+      "merzario",
+      "oliver",
+      "patrese",
+      "pryce",
+      "redman",
+      "regazzoni",
+      "revson",
+      "roos",
+      "stuck",
+      "zorzi",
+      "angelis"
+    ],
+    "wins": 1,
+    "podiums": 7,
+    "pole_positions": 3,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "shannon",
+    "name": "Shannon",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1966\u20131966",
+    "seasons": [
+      1966
+    ],
+    "driver_ids": [
+      "trevor_taylor"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "sherman",
+    "name": "Sherman",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1951\u20131952",
+    "seasons": [
+      1951,
+      1952
+    ],
+    "driver_ids": [
+      "fonder",
+      "linden"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "simca",
+    "name": "Simca",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131953",
+    "seasons": [
+      1950,
+      1951,
+      1952,
+      1953
+    ],
+    "driver_ids": [
+      "georges_berger",
+      "bira",
+      "birger",
+      "claes",
+      "frere",
+      "gordini",
+      "manzon",
+      "obrien",
+      "simon",
+      "trintignant",
+      "terra"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "simtek",
+    "name": "Simtek",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1994\u20131995",
+    "seasons": [
+      1994,
+      1995
+    ],
+    "driver_ids": [
+      "brabham",
+      "gounon",
+      "inoue",
+      "montermini",
+      "ratzenberger",
+      "schiattarella",
+      "verstappen"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "snowberger",
+    "name": "Snowberger",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "schindler"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "spirit",
+    "name": "Spirit",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1983\u20131985",
+    "seasons": [
+      1983,
+      1984,
+      1985
+    ],
+    "driver_ids": [
+      "baldi",
+      "johansson",
+      "rothengatter"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "spyker",
+    "name": "Spyker",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2007\u20132007",
+    "seasons": [
+      2007
+    ],
+    "driver_ids": [
+      "albers",
+      "sutil",
+      "markus_winkelhock",
+      "yamamoto"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "stebro",
+    "name": "Stebro",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1963\u20131963",
+    "seasons": [
+      1963
+    ],
+    "driver_ids": [
+      "broeker",
+      "vos"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "stevens",
+    "name": "Stevens",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131956",
+    "seasons": [
+      1950,
+      1952,
+      1953,
+      1954,
+      1956
+    ],
+    "driver_ids": [
+      "darter",
+      "elisian",
+      "griffith",
+      "mccoy",
+      "niday",
+      "schindler",
+      "bob_scott"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "stewart",
+    "name": "Stewart",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1997\u20131999",
+    "seasons": [
+      1997,
+      1998,
+      1999
+    ],
+    "driver_ids": [
+      "barrichello",
+      "herbert",
+      "magnussen",
+      "verstappen"
+    ],
+    "wins": 1,
+    "podiums": 5,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "super-aguri",
+    "name": "Super Aguri",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2006\u20132008",
+    "seasons": [
+      2006,
+      2007,
+      2008
+    ],
+    "driver_ids": [
+      "davidson",
+      "ide",
+      "montagny",
+      "sato",
+      "yamamoto"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "surtees",
+    "name": "Surtees",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1970\u20131978",
+    "seasons": [
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978
+    ],
+    "driver_ids": [
+      "andersson",
+      "arnoux",
+      "bell",
+      "binder",
+      "brambilla",
+      "bueno",
+      "dolhem",
+      "hailwood",
+      "jones",
+      "keegan",
+      "kinnunen",
+      "koinigg",
+      "love",
+      "lunger",
+      "mass",
+      "morgan",
+      "pace",
+      "perkins",
+      "pescarolo",
+      "posey",
+      "quester",
+      "redman",
+      "schenken",
+      "schuppan",
+      "stommelen",
+      "surtees",
+      "takahara",
+      "watson",
+      "adamich",
+      "lennep"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "sutton",
+    "name": "Sutton",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1959\u20131959",
+    "seasons": [
+      1959
+    ],
+    "driver_ids": [
+      "magill"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "lago",
+    "name": "Talbot-Lago",
+    "nationality": "French",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Talbot-Lago",
+    "active_years": "1950\u20131951",
+    "seasons": [
+      1950,
+      1951
+    ],
+    "driver_ids": [
+      "cabantous",
+      "chaboud",
+      "chiron",
+      "claes",
+      "gonzalez",
+      "grignard",
+      "duncan_hamilton",
+      "levegh",
+      "louveau",
+      "guy_mairesse",
+      "martin",
+      "andre_pilette",
+      "pozzi",
+      "rosier",
+      "schell",
+      "sommer",
+      "swaters",
+      "etancelin"
+    ],
+    "wins": 0,
+    "podiums": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "team-lotus",
+    "name": "Team Lotus",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1958\u20131994",
+    "seasons": [
+      1958,
+      1959,
+      1960,
+      1962,
+      1963,
+      1970,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994
+    ],
+    "driver_ids": [
+      "adams",
+      "allison",
+      "mario_andretti",
+      "arundell",
+      "bailey",
+      "bernard",
+      "bueb",
+      "charlton",
+      "clark",
+      "crawford",
+      "donnelly",
+      "driver",
+      "dumfries",
+      "evans",
+      "emerson_fittipaldi",
+      "flockhart",
+      "halford",
+      "hall",
+      "hansgen",
+      "henton",
+      "herbert",
+      "hill",
+      "hakkinen",
+      "ickx",
+      "ireland",
+      "jarier",
+      "keizan",
+      "lamy",
+      "larreta",
+      "lees",
+      "love",
+      "lovely",
+      "mansell",
+      "miles",
+      "moss",
+      "satoru_nakajima",
+      "nilsson",
+      "peterson",
+      "piper",
+      "piquet",
+      "rebaque",
+      "reutemann",
+      "rindt",
+      "salo",
+      "ian_scheckter",
+      "schenken",
+      "senna",
+      "stacey",
+      "surtees",
+      "mike_taylor",
+      "tunmer",
+      "walker",
+      "warwick",
+      "watson",
+      "wisell",
+      "zanardi",
+      "angelis"
+    ],
+    "wins": 45,
+    "podiums": 114,
+    "pole_positions": 61,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1970,
+      1972,
+      1973,
+      1978
+    ],
+    "driver_championships": [
+      {
+        "year": 1970,
+        "driver_id": "rindt"
+      },
+      {
+        "year": 1972,
+        "driver_id": "emerson_fittipaldi"
+      },
+      {
+        "year": 1978,
+        "driver_id": "mario_andretti"
+      }
+    ]
+  },
+  {
+    "id": "tec-mec",
+    "name": "Tec-Mec",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1959\u20131959",
+    "seasons": [
+      1959
+    ],
+    "driver_ids": [
+      "orey"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "tecno",
+    "name": "Tecno",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1972\u20131973",
+    "seasons": [
+      1972,
+      1973
+    ],
+    "driver_ids": [
+      "amon",
+      "bell",
+      "galli"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "theodore",
+    "name": "Theodore",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1978\u20131983",
+    "seasons": [
+      1978,
+      1981,
+      1982,
+      1983
+    ],
+    "driver_ids": [
+      "byrne",
+      "cecotto",
+      "daly",
+      "guerrero",
+      "lammers",
+      "lees",
+      "keke_rosberg",
+      "surer",
+      "tambay"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "token",
+    "name": "Token",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1974\u20131974",
+    "seasons": [
+      1974
+    ],
+    "driver_ids": [
+      "ashley",
+      "pryce"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "toleman",
+    "name": "Toleman",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1981\u20131985",
+    "seasons": [
+      1981,
+      1982,
+      1983,
+      1984,
+      1985
+    ],
+    "driver_ids": [
+      "cecotto",
+      "fabi",
+      "ghinzani",
+      "giacomelli",
+      "henton",
+      "johansson",
+      "senna",
+      "warwick"
+    ],
+    "wins": 0,
+    "podiums": 3,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "toro-rosso",
+    "name": "Toro Rosso",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2006\u20132019",
+    "seasons": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "driver_ids": [
+      "albon",
+      "alguersuari",
+      "bourdais",
+      "buemi",
+      "gasly",
+      "brendon_hartley",
+      "kvyat",
+      "liuzzi",
+      "ricciardo",
+      "sainz",
+      "speed",
+      "vergne",
+      "max_verstappen",
+      "vettel"
+    ],
+    "wins": 1,
+    "podiums": 3,
+    "pole_positions": 1,
+    "fastest_laps": 1,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "toyota",
+    "name": "Toyota",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2002\u20132009",
+    "seasons": [
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+    ],
+    "driver_ids": [
+      "glock",
+      "kobayashi",
+      "mcnish",
+      "panis",
+      "salo",
+      "ralf_schumacher",
+      "trulli",
+      "zonta",
+      "matta"
+    ],
+    "wins": 0,
+    "podiums": 13,
+    "pole_positions": 3,
+    "fastest_laps": 3,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "trevis",
+    "name": "Trevis",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1951\u20131960",
+    "seasons": [
+      1951,
+      1952,
+      1955,
+      1960
+    ],
+    "driver_ids": [
+      "johnson",
+      "templeman",
+      "tingelstad",
+      "vukovich"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "trojan",
+    "name": "Trojan",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1974\u20131974",
+    "seasons": [
+      1974
+    ],
+    "driver_ids": [
+      "schenken"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "tyrrell",
+    "name": "Tyrrell",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1970\u20131998",
+    "seasons": [
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998
+    ],
+    "driver_ids": [
+      "alboreto",
+      "alesi",
+      "amon",
+      "bailey",
+      "bellof",
+      "blundell",
+      "borgudd",
+      "brundle",
+      "capelli",
+      "cevert",
+      "cheever",
+      "daly",
+      "depailler",
+      "grouillard",
+      "henton",
+      "herbert",
+      "hoshino",
+      "jabouille",
+      "jarier",
+      "johansson",
+      "katayama",
+      "keizan",
+      "leclere",
+      "lees",
+      "modena",
+      "satoru_nakajima",
+      "palmer",
+      "pesenti_rossi",
+      "peterson",
+      "pironi",
+      "revson",
+      "rosset",
+      "salo",
+      "ian_scheckter",
+      "scheckter",
+      "stewart",
+      "streiff",
+      "stuppacher",
+      "sullivan",
+      "takagi",
+      "takahashi",
+      "tarquini",
+      "thackwell",
+      "verstappen",
+      "zunino",
+      "cesaris"
+    ],
+    "wins": 23,
+    "podiums": 77,
+    "pole_positions": 14,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1971
+    ],
+    "driver_championships": [
+      {
+        "year": 1971,
+        "driver_id": "stewart"
+      },
+      {
+        "year": 1973,
+        "driver_id": "stewart"
+      }
+    ]
+  },
+  {
+    "id": "vanwall",
+    "name": "Vanwall",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1954\u20131960",
+    "seasons": [
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960
+    ],
+    "driver_ids": [
+      "brooks",
+      "chapman",
+      "collins",
+      "gonzalez",
+      "hawthorn",
+      "lewis-evans",
+      "moss",
+      "salvadori",
+      "schell",
+      "taruffi",
+      "trintignant",
+      "wharton"
+    ],
+    "wins": 10,
+    "podiums": 14,
+    "pole_positions": 8,
+    "fastest_laps": 0,
+    "constructor_championships": [
+      1958
+    ],
+    "driver_championships": []
+  },
+  {
+    "id": "veritas",
+    "name": "Veritas",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1951\u20131953",
+    "seasons": [
+      1951,
+      1952,
+      1953
+    ],
+    "driver_ids": [
+      "brudes",
+      "heeks",
+      "helfrich",
+      "herrmann",
+      "hirt",
+      "karch",
+      "klenk",
+      "legat",
+      "peters",
+      "pietsch",
+      "riess",
+      "seidel",
+      "ulmen"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "virgin",
+    "name": "Virgin",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "2010\u20132011",
+    "seasons": [
+      2010,
+      2011
+    ],
+    "driver_ids": [
+      "glock",
+      "ambrosio",
+      "grassi"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "wetteroth",
+    "name": "Wetteroth",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1950\u20131950",
+    "seasons": [
+      1950
+    ],
+    "driver_ids": [
+      "rathmann"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "williams",
+    "name": "Williams",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1975\u20132025",
+    "seasons": [
+      1975,
+      1976,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "driver_ids": [
+      "aitken",
+      "albon",
+      "mario_andretti",
+      "ashley",
+      "barrichello",
+      "bottas",
+      "boutsen",
+      "brise",
+      "brundle",
+      "button",
+      "colapinto",
+      "coulthard",
+      "daly",
+      "frentzen",
+      "gene",
+      "heidfeld",
+      "damon_hill",
+      "hulkenberg",
+      "jones",
+      "keegan",
+      "kubica",
+      "laffite",
+      "latifi",
+      "lombardi",
+      "magee",
+      "maldonado",
+      "mansell",
+      "massa",
+      "merzario",
+      "migault",
+      "nakajima",
+      "montoya",
+      "palmer",
+      "patrese",
+      "piquet",
+      "pizzonia",
+      "prost",
+      "regazzoni",
+      "reutemann",
+      "keke_rosberg",
+      "rosberg",
+      "russell",
+      "sainz",
+      "sargeant",
+      "ian_scheckter",
+      "schlesser",
+      "ralf_schumacher",
+      "senna",
+      "bruno_senna",
+      "sirotkin",
+      "stroll",
+      "villeneuve",
+      "vonlanthen",
+      "webber",
+      "wurz",
+      "zanardi",
+      "zorzi",
+      "de_vries",
+      "resta"
+    ],
+    "wins": 113,
+    "podiums": 314,
+    "pole_positions": 128,
+    "fastest_laps": 7,
+    "constructor_championships": [
+      1980,
+      1981,
+      1986,
+      1987,
+      1992,
+      1993,
+      1994,
+      1996,
+      1997
+    ],
+    "driver_championships": [
+      {
+        "year": 1980,
+        "driver_id": "jones"
+      },
+      {
+        "year": 1982,
+        "driver_id": "keke_rosberg"
+      },
+      {
+        "year": 1987,
+        "driver_id": "piquet"
+      },
+      {
+        "year": 1992,
+        "driver_id": "mansell"
+      },
+      {
+        "year": 1993,
+        "driver_id": "prost"
+      },
+      {
+        "year": 1996,
+        "driver_id": "damon_hill"
+      },
+      {
+        "year": 1997,
+        "driver_id": "villeneuve"
+      }
+    ]
+  },
+  {
+    "id": "wolf",
+    "name": "Wolf",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1976\u20131979",
+    "seasons": [
+      1976,
+      1977,
+      1978,
+      1979
+    ],
+    "driver_ids": [
+      "amon",
+      "binder",
+      "brown",
+      "hunt",
+      "ickx",
+      "leclere",
+      "merzario",
+      "rahal",
+      "keke_rosberg",
+      "scheckter"
+    ],
+    "wins": 3,
+    "podiums": 13,
+    "pole_positions": 1,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  },
+  {
+    "id": "zakspeed",
+    "name": "Zakspeed",
+    "nationality": "",
+    "wikipedia_url": "",
+    "active_years": "1985\u20131989",
+    "seasons": [
+      1985,
+      1986,
+      1987,
+      1988,
+      1989
+    ],
+    "driver_ids": [
+      "brundle",
+      "danner",
+      "ghinzani",
+      "palmer",
+      "rothengatter",
+      "schneider"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": []
+  }
+]
