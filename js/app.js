@@ -642,8 +642,10 @@ function renderDriverPage(data, driverId, params) {
           <dd>${esc((driver.teams || []).join(", ") || "—")}</dd>
 
           <dt>Championships</dt>
-          <dd>${driver.championships ?? "—"}</dd>
+          <dd>${driver.championships ?? 0}</dd>
 
+          <dt>Podiums</dt>
+          <dd>${driver.podiums ?? 0}</dd>
           <dt>Wins</dt>
           <dd>${driver.wins ?? "—"}</dd>
 
