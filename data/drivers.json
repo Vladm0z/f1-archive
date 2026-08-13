@@ -11,8 +11,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax",
-      "Porsche"
+      "Porsche",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131963",
@@ -138,7 +138,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Repco",
+      "Brabham",
       "Protos"
     ],
     "championships": 0,
@@ -303,7 +303,6 @@
     "podiums": 1,
     "teams": [
       "Ferrari",
-      "Lotus-Climax",
       "Maserati",
       "Team Lotus"
     ],
@@ -400,14 +399,14 @@
     "teams": [
       "Amon",
       "BRM",
-      "Cooper-Maserati",
+      "Cooper",
       "Ensign",
       "Ferrari",
       "Lola",
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "March",
       "Matra",
+      "Team Lotus",
       "Tecno",
       "Tyrrell",
       "Wolf"
@@ -428,7 +427,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Brabham-Climax",
+      "Brabham",
       "Lola"
     ],
     "championships": 0,
@@ -467,7 +466,6 @@
     "teams": [
       "Alfa Romeo",
       "Ferrari",
-      "Lotus-Ford",
       "March",
       "Parnelli",
       "Team Lotus",
@@ -636,8 +634,7 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -676,7 +673,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1959\u20131959",
@@ -716,7 +713,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131962",
@@ -753,9 +750,9 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Cooper-Maserati",
-      "Lotus-BRM",
-      "Lotus-Ford"
+      "Cooper",
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1964\u20131969",
@@ -816,9 +813,9 @@
     "teams": [
       "ATS",
       "BRM",
-      "Brabham-Climax",
+      "Brabham",
       "Ferrari",
-      "Lotus-Ford"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131967",
@@ -912,7 +909,7 @@
     "podiums": 8,
     "teams": [
       "BRM",
-      "Cooper-Maserati",
+      "Cooper",
       "Ferrari"
     ],
     "championships": 0,
@@ -987,8 +984,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "March",
-      "March-Ford"
+      "March"
     ],
     "championships": 0,
     "active_years": "1971\u20131972",
@@ -1063,7 +1059,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "EMW",
       "Porsche"
     ],
@@ -1249,7 +1245,7 @@
     "teams": [
       "Brabham",
       "Ferrari",
-      "McLaren-Ford",
+      "McLaren",
       "Surtees",
       "Tecno"
     ],
@@ -1326,8 +1322,7 @@
     "teams": [
       "BRM",
       "Matra",
-      "Matra-Ford",
-      "McLaren-Ford"
+      "McLaren"
     ],
     "championships": 0,
     "active_years": "1967\u20131974",
@@ -1499,8 +1494,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "March",
-      "March-Ford"
+      "March"
     ],
     "championships": 0,
     "active_years": "1971\u20131973",
@@ -1537,11 +1531,10 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Cooper-BRM",
-      "Cooper-Climax",
+      "Cooper",
       "ENB",
       "Lola",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1960\u20131968",
@@ -1707,7 +1700,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1965\u20131965",
@@ -1725,7 +1718,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1963\u20131963",
@@ -1803,7 +1796,7 @@
       "Eagle-Climax",
       "Eagle-Weslake",
       "Ferrari",
-      "Lotus-BRM"
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1965\u20131966",
@@ -1842,17 +1835,13 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Brabham-BRM",
-      "Brabham-Climax",
-      "Cooper-Climax",
-      "Cooper-Maserati",
+      "Brabham",
+      "Cooper",
       "Honda",
-      "Lotus-Ford",
       "Maserati",
       "McLaren",
-      "McLaren-BRM",
-      "McLaren-Ford",
-      "Porsche"
+      "Porsche",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1956\u20131971",
@@ -1870,7 +1859,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1960\u20131960",
@@ -1888,7 +1877,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
@@ -1943,7 +1932,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Climax"
+      "Brabham"
     ],
     "championships": 0,
     "active_years": "1967\u20131967",
@@ -2095,13 +2084,9 @@
     "podiums": 31,
     "teams": [
       "Brabham",
-      "Brabham-Climax",
-      "Brabham-Ford",
-      "Brabham-Repco",
       "Cooper",
-      "Cooper-Climax",
-      "Lotus-Climax",
-      "Maserati"
+      "Maserati",
+      "Team Lotus"
     ],
     "championships": 3,
     "active_years": "1955\u20131970",
@@ -2120,7 +2105,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Lotus-Ford"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1968\u20131972",
@@ -2281,8 +2266,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Borgward",
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1959\u20131960",
@@ -2319,7 +2303,7 @@
     "podiums": 10,
     "teams": [
       "BRM",
-      "Cooper-Climax",
+      "Cooper",
       "Ferrari",
       "Vanwall"
     ],
@@ -2529,7 +2513,7 @@
     "podiums": 0,
     "teams": [
       "Connaught",
-      "Cooper-Borgward",
+      "Cooper",
       "Maserati",
       "Team Lotus"
     ],
@@ -2586,10 +2570,8 @@
     "podiums": 0,
     "teams": [
       "Cooper",
-      "Cooper-Climax",
-      "Cooper-Maserati",
-      "Lotus-Climax",
-      "Scirocco"
+      "Scirocco",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1958\u20131963",
@@ -2627,7 +2609,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "De Tomaso-Alfa Romeo"
+      "De Tomaso"
     ],
     "championships": 0,
     "active_years": "1961\u20131965",
@@ -2706,7 +2688,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Castellotti",
+      "Cooper",
       "Maserati"
     ],
     "championships": 0,
@@ -2725,8 +2707,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "Cooper-Maserati",
+      "Cooper",
       "Derrington"
     ],
     "championships": 0,
@@ -2786,8 +2767,8 @@
     "teams": [
       "Emeryson",
       "Lola",
-      "Lotus-BRM",
-      "Lotus-Climax"
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131963",
@@ -3015,7 +2996,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -3071,9 +3052,6 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "Brabham-Climax",
-      "Brabham-Repco",
-      "Lotus-Ford",
       "McLaren",
       "Team Lotus"
     ],
@@ -3288,7 +3266,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1965\u20131965",
@@ -3306,9 +3284,7 @@
     "fastest_laps": 0,
     "podiums": 32,
     "teams": [
-      "Lotus-BRM",
-      "Lotus-Climax",
-      "Lotus-Ford",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 2,
@@ -3383,8 +3359,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "Lotus-Climax"
+      "Cooper",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131963",
@@ -3475,7 +3451,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Borgward"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1959\u20131959",
@@ -3493,7 +3469,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Climax"
+      "Brabham"
     ],
     "championships": 0,
     "active_years": "1969\u20131969",
@@ -3532,9 +3508,9 @@
     "podiums": 2,
     "teams": [
       "BRM",
-      "Brabham-Ford",
+      "Brabham",
       "De Tomaso",
-      "Lotus-BRM"
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1967\u20131970",
@@ -3823,7 +3799,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "Scarab"
     ],
     "championships": 0,
@@ -3962,7 +3938,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati",
+      "Cooper",
       "Porsche"
     ],
     "championships": 0,
@@ -4001,8 +3977,8 @@
     "teams": [
       "Brabham",
       "Ferrari",
-      "March-Alfa Romeo",
-      "McLaren-Alfa Romeo",
+      "March",
+      "McLaren",
       "Surtees"
     ],
     "championships": 0,
@@ -4041,7 +4017,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "Maserati",
       "Porsche"
     ],
@@ -4158,8 +4134,7 @@
     "podiums": 0,
     "teams": [
       "Alfa Romeo",
-      "Brabham",
-      "Brabham-Repco"
+      "Brabham"
     ],
     "championships": 0,
     "active_years": "1963\u20131970",
@@ -4252,7 +4227,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-OSCA",
+      "Cooper",
       "Ferrari"
     ],
     "championships": 0,
@@ -4441,7 +4416,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1963\u20131963",
@@ -4589,7 +4564,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-BRM",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -4608,7 +4583,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1960\u20131960",
@@ -4815,9 +4790,8 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Cooper-BRM",
-      "Cooper-Maserati",
-      "McLaren-Ford"
+      "Cooper",
+      "McLaren"
     ],
     "championships": 0,
     "active_years": "1968\u20131971",
@@ -4967,7 +4941,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Brabham-Ford",
+      "Brabham",
       "Team Lotus"
     ],
     "championships": 0,
@@ -5080,8 +5054,6 @@
       "BRM",
       "Connaught",
       "Cooper",
-      "Cooper-Climax",
-      "Cooper-Maserati",
       "Ferguson",
       "HWM"
     ],
@@ -5196,7 +5168,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-BRM"
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1967\u20131967",
@@ -5277,8 +5249,6 @@
     "podiums": 35,
     "teams": [
       "Fittipaldi",
-      "Lotus-Ford",
-      "Lotus-Pratt &amp; Whitney",
       "McLaren",
       "Team Lotus"
     ],
@@ -5392,7 +5362,7 @@
     "teams": [
       "BRM",
       "Connaught",
-      "Cooper-Climax",
+      "Cooper",
       "Maserati",
       "Team Lotus"
     ],
@@ -5867,8 +5837,7 @@
     "teams": [
       "Ferrari",
       "Iso Marlboro",
-      "March-Alfa Romeo",
-      "March-Ford",
+      "March",
       "Tecno"
     ],
     "championships": 0,
@@ -5925,8 +5894,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-BRM",
-      "Brabham-Ford"
+      "Brabham"
     ],
     "championships": 0,
     "active_years": "1964\u20131965",
@@ -6020,10 +5988,10 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "Emeryson",
       "Ferrari",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1956\u20131961",
@@ -6115,8 +6083,7 @@
     "teams": [
       "BRM",
       "Lola",
-      "McLaren",
-      "McLaren-Ford"
+      "McLaren"
     ],
     "championships": 0,
     "active_years": "1970\u20131974",
@@ -6194,7 +6161,7 @@
     "podiums": 14,
     "teams": [
       "BRM",
-      "Cooper-Maserati",
+      "Cooper",
       "Ferrari",
       "Honda",
       "Scarab"
@@ -6441,9 +6408,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati",
+      "Cooper",
       "Gilby",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1960\u20131962",
@@ -6463,12 +6430,11 @@
     "teams": [
       "BRM",
       "Behra-Porsche",
-      "Cooper-Climax",
-      "Cooper-Maserati",
+      "Cooper",
       "Lola",
-      "Lotus-BRM",
-      "Lotus-Climax",
-      "Maserati"
+      "Lotus",
+      "Maserati",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1957\u20131965",
@@ -6676,13 +6642,11 @@
     "teams": [
       "BRM",
       "Brabham",
-      "Brabham-Climax",
-      "Brabham-Repco",
       "Eagle-Climax",
       "Eagle-Weslake",
       "Ferrari",
-      "Lotus-BRM",
-      "McLaren-Ford",
+      "Lotus",
+      "McLaren",
       "Porsche"
     ],
     "championships": 0,
@@ -6775,10 +6739,10 @@
     "podiums": 2,
     "teams": [
       "Lola",
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "McLaren",
-      "Surtees"
+      "Surtees",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131974",
@@ -6796,7 +6760,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "Maserati",
       "Team Lotus"
     ],
@@ -6816,8 +6780,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -6912,8 +6875,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "Lotus-Climax",
+      "Cooper",
       "Team Lotus"
     ],
     "championships": 0,
@@ -6932,7 +6894,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Alfa Romeo"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -7077,8 +7039,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Ford",
-      "Lotus-Climax"
+      "Brabham",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1965\u20131965",
@@ -7264,7 +7226,7 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Cooper-Maserati",
+      "Cooper",
       "Maserati",
       "Mercedes",
       "Porsche",
@@ -7362,8 +7324,7 @@
       "BRM",
       "Brabham",
       "Lola",
-      "Lotus-BRM",
-      "Lotus-Ford",
+      "Lotus",
       "Shadow",
       "Team Lotus"
     ],
@@ -7384,9 +7345,9 @@
     "podiums": 16,
     "teams": [
       "ATS",
-      "Cooper-Climax",
+      "Cooper",
       "Ferrari",
-      "Lotus-BRM",
+      "Lotus",
       "Maserati"
     ],
     "championships": 1,
@@ -7461,7 +7422,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -7591,11 +7552,8 @@
     "fastest_laps": 0,
     "podiums": 33,
     "teams": [
-      "Brabham-Climax",
-      "Brabham-Repco",
-      "McLaren",
-      "McLaren-BRM",
-      "McLaren-Ford"
+      "Brabham",
+      "McLaren"
     ],
     "championships": 1,
     "active_years": "1965\u20131974",
@@ -7713,8 +7671,8 @@
     "fastest_laps": 0,
     "podiums": 25,
     "teams": [
-      "Brabham-Ford",
-      "Cooper-Maserati",
+      "Brabham",
+      "Cooper",
       "Ensign",
       "Ferrari",
       "Iso Marlboro",
@@ -7797,8 +7755,7 @@
     "teams": [
       "BRM",
       "BRP",
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "Team Lotus"
     ],
     "championships": 0,
@@ -7838,8 +7795,8 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Brabham-Climax",
-      "Lotus-BRM"
+      "Brabham",
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1966\u20131967",
@@ -7950,12 +7907,9 @@
       "ATS",
       "Ligier",
       "March",
-      "March-Ford",
       "Osella",
       "Penske",
       "Shadow",
-      "Shadow-Ford",
-      "Shadow-Matra",
       "Team Lotus",
       "Tyrrell"
     ],
@@ -7975,7 +7929,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "March-Ford"
+      "March"
     ],
     "championships": 0,
     "active_years": "1971\u20131971",
@@ -8319,7 +8273,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Ford"
+      "Brabham"
     ],
     "championships": 0,
     "active_years": "1976\u20131976",
@@ -8594,7 +8548,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Borgward"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -8899,11 +8853,8 @@
     "teams": [
       "BRM",
       "Brabham",
-      "Brabham-Alfa Romeo",
-      "Brabham-Ford",
       "Ferrari",
       "March",
-      "March-Ford",
       "McLaren"
     ],
     "championships": 3,
@@ -8960,7 +8911,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Ferrari"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1966\u20131966",
@@ -9052,7 +9003,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131963",
@@ -9184,8 +9135,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Cooper",
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1961\u20131962",
@@ -9222,8 +9172,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Repco",
-      "Cooper-Maserati"
+      "Brabham",
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1966\u20131967",
@@ -9313,7 +9263,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Ford",
+      "Brabham",
       "March",
       "Williams"
     ],
@@ -9403,10 +9353,9 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Brabham-Repco",
-      "Cooper-Climax",
-      "Lotus-Ford",
-      "March-Ford",
+      "Brabham",
+      "Cooper",
+      "March",
       "Surtees",
       "Team Lotus"
     ],
@@ -9426,8 +9375,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Castellotti",
-      "Lotus-Ford",
+      "Cooper",
       "Team Lotus"
     ],
     "championships": 0,
@@ -9631,9 +9579,9 @@
     "podiums": 3,
     "teams": [
       "BRM",
-      "Cooper-Climax",
-      "Lotus-BRM",
-      "Lotus-Climax"
+      "Cooper",
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131965",
@@ -9748,7 +9696,7 @@
     "podiums": 1,
     "teams": [
       "Ferrari",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1960\u20131963",
@@ -9936,7 +9884,7 @@
     "teams": [
       "BRM",
       "Cooper",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1957\u20131962",
@@ -10049,7 +9997,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
@@ -10067,7 +10015,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -10103,7 +10051,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "March-Ford"
+      "March"
     ],
     "championships": 0,
     "active_years": "1971\u20131971",
@@ -10248,12 +10196,8 @@
     "podiums": 27,
     "teams": [
       "Cooper",
-      "Cooper-Climax",
       "Eagle-Weslake",
-      "McLaren",
-      "McLaren-BRM",
-      "McLaren-Ford",
-      "McLaren-Serenissima"
+      "McLaren"
     ],
     "championships": 0,
     "active_years": "1958\u20131970",
@@ -10326,7 +10270,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Cooper-Maserati",
+      "Cooper",
       "Gordini",
       "Maserati"
     ],
@@ -10430,7 +10374,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Ford",
       "Team Lotus"
     ],
     "championships": 0,
@@ -10449,7 +10392,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
@@ -10503,8 +10446,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax",
-      "Porsche"
+      "Porsche",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131965",
@@ -10543,7 +10486,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131963",
@@ -10721,9 +10664,8 @@
     "podiums": 0,
     "teams": [
       "Bellasi",
-      "Brabham-Ford",
-      "Brabham-Repco",
-      "Cooper-ATS"
+      "Brabham",
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1967\u20131971",
@@ -10760,11 +10702,9 @@
       "BRM",
       "Connaught",
       "Cooper",
-      "Cooper-Climax",
       "ERA",
       "Ferguson",
       "HWM",
-      "Lotus-Climax",
       "Maserati",
       "Mercedes",
       "Team Lotus",
@@ -10786,7 +10726,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Castellotti",
+      "Cooper",
       "Maserati"
     ],
     "championships": 0,
@@ -10990,7 +10930,6 @@
     "podiums": 0,
     "teams": [
       "Cooper",
-      "Cooper-Maserati",
       "JBW"
     ],
     "championships": 0,
@@ -11116,7 +11055,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Ford"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131963",
@@ -11206,7 +11145,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Ford",
+      "Brabham",
       "Ensign",
       "March"
     ],
@@ -11301,10 +11240,9 @@
     "podiums": 2,
     "teams": [
       "BRM",
-      "BRM-Ford",
-      "Lotus-Ford",
       "McLaren",
-      "Shadow"
+      "Shadow",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1967\u20131977",
@@ -11341,7 +11279,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1960\u20131960",
@@ -11379,7 +11317,6 @@
     "podiums": 6,
     "teams": [
       "Brabham",
-      "Brabham-Alfa Romeo",
       "March",
       "Surtees"
     ],
@@ -11589,7 +11526,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
@@ -11666,8 +11603,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "Lotus-Climax"
+      "Cooper",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131962",
@@ -11706,7 +11643,7 @@
     "teams": [
       "BRM",
       "Boro",
-      "Brabham-Alfa Romeo",
+      "Brabham",
       "Surtees"
     ],
     "championships": 0,
@@ -11728,7 +11665,6 @@
       "BRM",
       "Iso Marlboro",
       "March",
-      "March-Ford",
       "Matra",
       "Politoys",
       "Surtees"
@@ -11786,8 +11722,6 @@
     "podiums": 26,
     "teams": [
       "March",
-      "March-Alfa Romeo",
-      "March-Ford",
       "Team Lotus",
       "Tyrrell"
     ],
@@ -11881,7 +11815,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131963",
@@ -12016,8 +11950,6 @@
     "teams": [
       "Benetton",
       "Brabham",
-      "Brabham-Alfa Romeo",
-      "Brabham-Ford",
       "Ensign",
       "McLaren",
       "Team Lotus",
@@ -12039,7 +11971,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
@@ -12224,7 +12156,6 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "Brabham-Climax",
       "Iso Marlboro"
     ],
     "championships": 0,
@@ -12259,8 +12190,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham",
-      "Brabham-Ford"
+      "Brabham"
     ],
     "championships": 0,
     "active_years": "1963\u20131965",
@@ -12300,7 +12230,6 @@
     "podiums": 2,
     "teams": [
       "Shadow",
-      "Shadow-Ford",
       "Token"
     ],
     "championships": 0,
@@ -12412,7 +12341,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-BRM",
+      "Brabham",
       "Gilby"
     ],
     "championships": 0,
@@ -12547,8 +12476,7 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Cooper-BRM",
-      "Cooper-Maserati",
+      "Cooper",
       "McLaren",
       "Shadow",
       "Surtees"
@@ -12608,8 +12536,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Ford",
-      "Cooper-Maserati"
+      "Brabham",
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1967\u20131967",
@@ -12650,7 +12578,6 @@
     "podiums": 45,
     "teams": [
       "Brabham",
-      "Brabham-Alfa Romeo",
       "Ferrari",
       "Team Lotus",
       "Williams"
@@ -12671,7 +12598,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "Scarab"
     ],
     "championships": 0,
@@ -12690,10 +12617,10 @@
     "fastest_laps": 0,
     "podiums": 8,
     "teams": [
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "McLaren",
       "Shadow",
+      "Team Lotus",
       "Tyrrell"
     ],
     "championships": 0,
@@ -12712,7 +12639,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1965\u20131965",
@@ -12827,11 +12754,8 @@
     "fastest_laps": 0,
     "podiums": 13,
     "teams": [
-      "Brabham-BRM",
-      "Brabham-Repco",
-      "Cooper-Climax",
-      "Cooper-Maserati",
-      "Lotus-Ford",
+      "Brabham",
+      "Cooper",
       "Team Lotus"
     ],
     "championships": 1,
@@ -12887,10 +12811,10 @@
     "podiums": 7,
     "teams": [
       "BRM",
-      "Cooper-Maserati",
+      "Cooper",
       "Ferrari",
-      "Lotus-BRM",
-      "Lotus-Climax"
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131971",
@@ -13135,7 +13059,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax",
+      "Team Lotus",
       "Watson"
     ],
     "championships": 0,
@@ -13192,7 +13116,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1965\u20131966",
@@ -13251,7 +13175,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
@@ -13398,8 +13322,6 @@
       "Aston Martin",
       "Connaught",
       "Cooper",
-      "Cooper-Climax",
-      "Cooper-Maserati",
       "Ferrari",
       "Lola",
       "Maserati",
@@ -13513,7 +13435,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Cooper-BRM",
+      "Cooper",
       "Eagle-Weslake",
       "Ferrari"
     ],
@@ -13533,9 +13455,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "Cooper-Maserati",
-      "De Tomaso-Osca",
+      "Cooper",
+      "De Tomaso",
       "Ferrari",
       "Maserati"
     ],
@@ -13599,7 +13520,6 @@
     "teams": [
       "BRM",
       "Cooper",
-      "Cooper-Climax",
       "Ferrari",
       "Gordini",
       "Maserati",
@@ -13681,7 +13601,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-BRM",
+      "Lotus",
       "Porsche"
     ],
     "championships": 0,
@@ -13794,7 +13714,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -13947,11 +13867,10 @@
     "podiums": 0,
     "teams": [
       "Cooper",
-      "Cooper-Climax",
       "Emeryson",
-      "Lotus-BRM",
-      "Lotus-Climax",
+      "Lotus",
       "Maserati",
+      "Team Lotus",
       "Veritas"
     ],
     "championships": 0,
@@ -13970,7 +13889,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-BRM"
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131963",
@@ -14084,10 +14003,9 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Cooper-BRM",
+      "Cooper",
       "March",
-      "Matra",
-      "Matra-Ford"
+      "Matra"
     ],
     "championships": 0,
     "active_years": "1967\u20131970",
@@ -14124,9 +14042,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-BRM",
-      "Cooper-Climax",
-      "Lotus-BRM"
+      "Brabham",
+      "Cooper",
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131964",
@@ -14182,7 +14100,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -14217,13 +14135,11 @@
     "podiums": 6,
     "teams": [
       "BRM",
-      "Brabham-BRM",
-      "Brabham-Climax",
-      "Cooper-Maserati",
-      "Lotus-BRM",
-      "Lotus-Climax",
-      "Lotus-Ford",
-      "March"
+      "Brabham",
+      "Cooper",
+      "Lotus",
+      "March",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131971",
@@ -14300,10 +14216,9 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Cooper-Maserati",
-      "Lotus-BRM",
-      "Lotus-Climax",
-      "Lotus-Ford"
+      "Cooper",
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131968",
@@ -14322,7 +14237,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "March-Ford"
+      "March"
     ],
     "championships": 0,
     "active_years": "1971\u20131972",
@@ -14428,8 +14343,8 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Lotus-BRM",
-      "Lotus-Climax"
+      "Lotus",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1963\u20131968",
@@ -14465,7 +14380,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Maserati"
+      "Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131963",
@@ -14543,7 +14458,7 @@
     "teams": [
       "BRM",
       "March",
-      "Matra-Ford",
+      "Matra",
       "Tyrrell"
     ],
     "championships": 3,
@@ -14600,7 +14515,6 @@
     "teams": [
       "Arrows",
       "Brabham",
-      "Brabham-Alfa Romeo",
       "Embassy Hill",
       "Hesketh",
       "Lola",
@@ -14744,12 +14658,11 @@
     "podiums": 24,
     "teams": [
       "BRM",
-      "Cooper-Climax",
-      "Cooper-Maserati",
+      "Cooper",
       "Ferrari",
       "Honda",
       "Lola",
-      "McLaren-Ford",
+      "McLaren",
       "Surtees",
       "Team Lotus"
     ],
@@ -15056,8 +14969,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "Lotus-Climax"
+      "Cooper",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1959\u20131961",
@@ -15075,8 +14988,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-BRM",
-      "Cooper-Climax"
+      "Brabham",
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1964\u20131966",
@@ -15094,7 +15007,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
+      "Cooper",
       "Team Lotus"
     ],
     "championships": 0,
@@ -15114,9 +15027,9 @@
     "podiums": 1,
     "teams": [
       "BRP",
-      "Lotus-BRM",
-      "Lotus-Climax",
-      "Shannon"
+      "Lotus",
+      "Shannon",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131966",
@@ -15206,7 +15119,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Maserati"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1960\u20131960",
@@ -15298,11 +15211,9 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Brabham-Repco",
+      "Brabham",
       "LDS",
-      "LDS-Alfa Romeo",
-      "LDS-Climax",
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131969",
@@ -15377,14 +15288,12 @@
       "BRM",
       "Bugatti",
       "Cooper",
-      "Cooper-Climax",
-      "Cooper-Maserati",
       "Ferrari",
       "Gordini",
       "Lola",
-      "Lotus-Climax",
       "Maserati",
       "Simca",
+      "Team Lotus",
       "Vanwall"
     ],
     "championships": 0,
@@ -15572,10 +15481,10 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "De Tomaso-Alfa Romeo",
+      "De Tomaso",
       "Ferrari",
-      "Lotus-Climax",
-      "Porsche"
+      "Porsche",
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1961\u20131965",
@@ -15649,7 +15558,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Climax"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1962\u20131962",
@@ -15687,8 +15596,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-Climax",
-      "McLaren-Ford"
+      "Cooper",
+      "McLaren"
     ],
     "championships": 0,
     "active_years": "1968\u20131969",
@@ -15976,7 +15885,7 @@
     "fastest_laps": 0,
     "podiums": 6,
     "teams": [
-      "Cooper-Maserati",
+      "Cooper",
       "Ferrari",
       "Porsche"
     ],
@@ -16051,7 +15960,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Lotus-Pratt &amp; Whitney",
       "Team Lotus"
     ],
     "championships": 0,
@@ -16132,7 +16040,7 @@
       "Kurtis Kraft",
       "Kuzma",
       "Lesovsky",
-      "Lotus-BRM",
+      "Lotus",
       "Watson"
     ],
     "championships": 0,
@@ -16440,7 +16348,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Cooper-BRM"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1968\u20131968",
@@ -16459,7 +16367,7 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "Lotus-Ford"
+      "Team Lotus"
     ],
     "championships": 0,
     "active_years": "1967\u20131974",
@@ -16586,7 +16494,7 @@
     "podiums": 0,
     "teams": [
       "BRM",
-      "Cooper-Climax"
+      "Cooper"
     ],
     "championships": 0,
     "active_years": "1960\u20131966",
@@ -16659,8 +16567,6 @@
     "podiums": 1,
     "teams": [
       "BRM",
-      "Lotus-Ford",
-      "Lotus-Pratt &amp; Whitney",
       "March",
       "Team Lotus"
     ],
@@ -16852,7 +16758,6 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "Brabham-Ford",
       "Tyrrell"
     ],
     "championships": 0,
