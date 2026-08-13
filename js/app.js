@@ -500,96 +500,125 @@ function attachEntityFilters(pathKey, params) {
 	}
 }
 
+function randomSample(items, count) {
+  const arr = [...items];
+
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return arr.slice(0, count);
+}
+
 function renderHome(data) {
-	const recentArticles = [...data.articles]
-		.sort((a, b) => {
-			return String(b.added_at || "").localeCompare(String(a.added_at || ""));
-		})
-		.slice(0, 6);
+  const recentArticles = [...data.articles]
+    .sort((a, b) => {
+      return String(b.added_at || "").localeCompare(String(a.added_at || ""));
+    })
+    .slice(0, 6);
 
-	const topDrivers = data.drivers.slice(0, 8);
+  const featuredDrivers = randomSample(data.drivers, 4);
 
-	const topRaces = [...data.races]
-		.sort((a, b) => {
-			return (b.season || 0) - (a.season || 0) || (a.round || 999) - (b.round || 999);
-		})
-		.slice(0, 8);
+  const today = new Date().toISOString().slice(0, 10);
 
-	const html = `
-		<section class="hero">
-			<h1>F1 interview & print archive</h1>
+  // Prefer races that already happened.
+  // If there are no dated past races, fall back to all races.
+  const pastRaces = data.races.filter((race) => {
+    return race.date && race.date <= today;
+  });
 
-			<p>
-				Browse interviews, race reports, profiles and other printed sources
-				by driver, race, language and date.
-			</p>
+  const latestRaces = (pastRaces.length ? pastRaces : data.races)
+    .sort((a, b) => {
+      return (
+        String(b.date || "").localeCompare(String(a.date || "")) ||
+        (b.season || 0) - (a.season || 0) ||
+        (b.round || 0) - (a.round || 0)
+      );
+    })
+    .slice(0, 4);
 
-			<div class="hero-actions">
-				<a class="button" href="#/drivers">Browse drivers</a>
-				<a class="button secondary" href="#/races">Browse races</a>
-				<a class="button secondary" href="#/articles">All articles</a>
-			</div>
-		</section>
+  const html = `
+    <section class="hero">
+      <h1>F1 interview & print archive</h1>
 
-		<section>
-			<div class="section-head">
-				<h2>Recently added articles</h2>
-				<a href="#/articles">View all articles</a>
-			</div>
+      <p>
+        Browse interviews, race reports, profiles and other printed sources
+        by driver, race, team, language and date.
+      </p>
 
-			<div class="stack">
-				${
-					recentArticles.length
-						? recentArticles.map((article) => articleCardHtml(data, article)).join("")
-						: emptyHtml("No articles yet.")
-				}
-			</div>
-		</section>
+      <div class="hero-actions">
+        <a class="button" href="#/drivers">Browse drivers</a>
+        <a class="button secondary" href="#/teams">Browse teams</a>
+        <a class="button secondary" href="#/races">Browse races</a>
+        <a class="button secondary" href="#/articles">All articles</a>
+      </div>
+    </section>
 
-		<section class="two-columns home-panels">
-			<div class="card">
-				<h2>Drivers</h2>
+    <section>
+      <div class="section-head">
+        <h2>Recently added articles</h2>
+        <a href="#/articles">View all articles</a>
+      </div>
 
-				<div class="list">
-					${
-						topDrivers.length
-							? topDrivers
-									.map((driver) => `
-										<a class="list-item" href="#/driver/${esc(driver.id)}">
-											<span>${esc(driver.name)}</span>
-											<span class="muted">${esc(driver.nationality || "")}</span>
-										</a>
-									`)
-									.join("")
-							: emptyHtml("No drivers yet.")
-					}
-				</div>
-			</div>
+      <div class="stack">
+        ${
+          recentArticles.length
+            ? recentArticles
+                .map((article) => articleCardHtml(data, article))
+                .join("")
+            : emptyHtml("No articles yet.")
+        }
+      </div>
+    </section>
 
-			<div class="card">
-				<h2>Races</h2>
+    <section class="two-columns home-panels">
+      <div class="card">
+        <h2>Featured drivers</h2>
 
-				<div class="list">
-					${
-						topRaces.length
-							? topRaces
-									.map((race) => `
-										<a class="list-item" href="#/race/${esc(race.id)}">
-											<span>${esc(race.name)} ${race.season || ""}</span>
-											<span class="muted">${esc(race.country || "")}</span>
-										</a>
-									`)
-									.join("")
-							: emptyHtml("No races yet.")
-					}
-				</div>
-			</div>
-		</section>
-	`;
+        <div class="list">
+          ${
+            featuredDrivers.length
+              ? featuredDrivers
+                  .map((driver) => `
+                    <a class="list-item" href="#/driver/${esc(driver.id)}">
+                      <span>${esc(driver.name)}</span>
+                      <span class="muted">${esc(driver.nationality || "")}</span>
+                    </a>
+                  `)
+                  .join("")
+              : emptyHtml("No drivers yet.")
+          }
+        </div>
+      </div>
 
-	return {
-		html
-	};
+      <div class="card">
+        <h2>Latest races</h2>
+
+        <div class="list">
+          ${
+            latestRaces.length
+              ? latestRaces
+                  .map((race) => `
+                    <a class="list-item" href="#/race/${esc(race.id)}">
+                      <span>${esc(race.name)} ${race.season || ""}</span>
+                      <span class="muted">
+                        ${esc(race.country || "")}
+                        ${race.date ? ` • ${esc(race.date)}` : ""}
+                      </span>
+                    </a>
+                  `)
+                  .join("")
+              : emptyHtml("No races yet.")
+          }
+        </div>
+      </div>
+    </section>
+  `;
+
+  return {
+    html
+  };
 }
 
 function renderDrivers(data) {
@@ -797,6 +826,10 @@ function renderDriverPage(data, driverId, params) {
 		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
 		: emptyHtml("No articles match these filters.");
 
+	const driverTeamLinks = (driver.teams || [])
+		.filter(Boolean)
+		.map((teamName) => teamLinkHtml(data, teamName));
+
 	const sidebar = `
 		<aside class="sidebar">
 			<div class="card">
@@ -822,7 +855,7 @@ function renderDriverPage(data, driverId, params) {
 					<dd>${esc(driver.active_years || "—")}</dd>
 
 					<dt>Teams</dt>
-					<dd>${esc((driver.teams || []).join(", ") || "—")}</dd>
+					<dd>${driverTeamLinks.length ? driverTeamLinks.join(", ") : "—"}</dd>
 
 					<dt>Championships</dt>
 					<dd>${driver.championships ?? 0}</dd>
