@@ -500,6 +500,8 @@ function attachEntityFilters(pathKey, params) {
 	}
 }
 
+/* Wikipedia intro (lead text + infobox image) */
+
 const wikiSummaryCache = {};
 
 function wikiTitleFromUrl(url) {
@@ -512,13 +514,47 @@ function wikiTitleFromUrl(url) {
 	return title || null;
 }
 
+/*
+ * Fallback image source.
+ * The summary API often has no thumbnail for pages whose infobox
+ * image is a logo/badge. The media-list API returns the page's images
+ * in order — the first one is usually the infobox image.
+ */
+async function fetchWikiMediaImage(title) {
+	try {
+		const res = await fetch(
+			"https://en.wikipedia.org/api/rest_v1/page/media-list/" + title
+		);
+
+		if (!res.ok) return "";
+
+		const data = await res.json();
+		const items = Array.isArray(data.items) ? data.items : [];
+
+		const firstImage =
+			items.find((item) => item.type === "image" && item.section_id === 0) ||
+			items.find((item) => item.type === "image");
+
+		if (!firstImage || !Array.isArray(firstImage.srcset) || !firstImage.srcset.length) {
+			return "";
+		}
+
+		const entry = firstImage.srcset[0];
+		if (!entry || !entry.src) return "";
+
+		return entry.src.startsWith("//") ? "https:" + entry.src : entry.src;
+	} catch (error) {
+		return "";
+	}
+}
+
 async function fetchWikiSummary(title) {
 	if (!title) return null;
 	if (wikiSummaryCache[title]) return wikiSummaryCache[title];
 
-	const storageKey = "wiki-summary:" + title;
+	// v2 key: ignores old caches that were saved without images
+	const storageKey = "wiki-summary:v2:" + title;
 
-	// localStorage cache (7 days)
 	try {
 		const stored = localStorage.getItem(storageKey);
 
@@ -531,7 +567,7 @@ async function fetchWikiSummary(title) {
 			}
 		}
 	} catch (error) {
-		// localStorage unavailable (private mode etc.) – ignore
+		// localStorage unavailable – ignore
 	}
 
 	try {
@@ -549,6 +585,11 @@ async function fetchWikiSummary(title) {
 			extract: data.extract || "",
 			image: data.thumbnail ? data.thumbnail.source : ""
 		};
+
+		// Fallback: grab the first real image on the page (infobox logo/photo)
+		if (!summary.image) {
+			summary.image = await fetchWikiMediaImage(title);
+		}
 
 		wikiSummaryCache[title] = summary;
 
@@ -597,6 +638,7 @@ async function loadWikiIntro(wikipediaUrl, altText) {
 		</div>
 	`;
 }
+
 
 function randomSample(items, count) {
 	const arr = [...items];
