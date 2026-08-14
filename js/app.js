@@ -9,15 +9,52 @@ init();
 async function init() {
 	try {
 		state.data = await loadData();
-		window.addEventListener("hashchange", route);
+		app.addEventListener("click", handleAppClick);
+		app.addEventListener("input", handleAppInput);
+		
 		route();
+		window.addEventListener("hashchange", route);
 	} catch (error) {
 		console.error(error);
-		app.innerHTML = `
-			<div class="empty">
-				Could not load data. Check the browser console and make sure all JSON files are valid.
-			</div>
-		`;
+		app.innerHTML = `<div class="empty">Could not load data. Check the browser console and make sure all JSON files are valid.</div>`;
+	}
+}
+
+function handleAppClick(e) {
+	const link = e.target.closest("[data-stat]");
+	if (!link) return;
+
+	e.preventDefault();
+	const stat = link.getAttribute("data-stat");
+	const driverId = link.getAttribute("data-driver");
+	const teamId = link.getAttribute("data-team");
+
+	if (driverId) {
+		showStatModal(state.data, driverId, stat);
+	} else if (teamId) {
+		showTeamStatModal(state.data, teamId, stat);
+	}
+}
+
+let searchDebounceTimer = null;
+
+function handleAppInput(e) {
+	if (e.target.id === "driver-search" || e.target.id === "team-search") {
+		clearTimeout(searchDebounceTimer);
+		searchDebounceTimer = setTimeout(() => {
+			if (e.target.id === "driver-search") {
+				const list = document.getElementById("driver-list");
+				if (!list) return;
+				const filtered = filterDrivers(state.data.drivers, e.target.value);
+				list.innerHTML = driverCardsHtml(state.data, filtered);
+			}
+			if (e.target.id === "team-search") {
+				const list = document.getElementById("team-list");
+				if (!list) return;
+				const filtered = filterTeams(state.data.teams, e.target.value);
+				list.innerHTML = teamCardsHtml(state.data, filtered);
+			}
+		}, 150);
 	}
 }
 
@@ -25,6 +62,13 @@ function clearCaches() {
 	teamParticipationCache = null;
 	racesByYearCache = null;
 	Object.keys(teamIdCache).forEach(k => delete teamIdCache[k]);
+}
+
+function clearAllCaches() {
+	teamParticipationCache = null;
+	racesByYearCache = null;
+	Object.keys(teamIdCache).forEach(k => delete teamIdCache[k]);
+	wikiIntroRequestId++;
 }
 
 async function loadData() {
@@ -38,16 +82,61 @@ async function loadData() {
 
 	const teams = Array.isArray(teamsRaw) ? teamsRaw : [];
 
+	// Build indexes once
+	const driversById = makeById(drivers);
+	const teamsById = makeById(teams);
+
+	// Driver -> races index
+	const driverRacesIndex = {};
+	races.forEach(race => {
+		const allDrivers = new Set();
+		(race.results || []).forEach(r => allDrivers.add(r.driver_id));
+		(race.qualifying || []).forEach(q => allDrivers.add(q.driver_id));
+		(race.starting_grid || []).forEach(g => allDrivers.add(g.driver_id));
+		allDrivers.forEach(did => {
+			if (!driverRacesIndex[did]) driverRacesIndex[did] = [];
+			driverRacesIndex[did].push(race);
+		});
+	});
+
+	// Article -> entity indexes
+	const articlesByDriver = {};
+	const articlesByTeam = {};
+	const articlesByRace = {};
+	const allArticleLanguages = new Set();
+
+	articles.forEach(article => {
+		if (article.language) allArticleLanguages.add(article.language);
+		(article.driver_ids || []).forEach(did => {
+			if (!articlesByDriver[did]) articlesByDriver[did] = [];
+			articlesByDriver[did].push(article);
+		});
+		(article.team_ids || []).forEach(tid => {
+			if (!articlesByTeam[tid]) articlesByTeam[tid] = [];
+			articlesByTeam[tid].push(article);
+		});
+		(article.race_ids || []).forEach(rid => {
+			if (!articlesByRace[rid]) articlesByRace[rid] = [];
+			articlesByRace[rid].push(article);
+		});
+	});
+
 	return {
 		languages,
 		drivers: sortDrivers(drivers),
 		races,
 		articles,
 		teams: sortTeams(teams),
-		driversById: makeById(drivers),
+		driversById,
 		racesById: makeById(races),
-		teamsById: makeById(teams),
-		teamsByName: makeTeamsByName(teams)
+		teamsById,
+		teamsByName: makeTeamsByName(teams),
+		// New indexes
+		driverRacesIndex,
+		articlesByDriver,
+		articlesByTeam,
+		articlesByRace,
+		allArticleLanguages: Array.from(allArticleLanguages).sort()
 	};
 }
 
@@ -229,18 +318,11 @@ function normalizeString(value) {
 		.replace(/[\u0300-\u036f]/g, "");
 }
 
-function esc(value) {
-	return String(value ?? "").replace(/[&<>"']/g, (character) => {
-		const entities = {
-			"&": "&amp;",
-			"<": "&lt;",
-			">": "&gt;",
-			'"': "&quot;",
-			"'": "&#39;"
-		};
+const ESC_MAP = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+const ESC_REGEX = /[&<>"']/g;
 
-		return entities[character];
-	});
+function esc(value) {
+	return String(value ?? "").replace(ESC_REGEX, char => ESC_MAP[char]);
 }
 
 function languageLabel(data, code) {
@@ -297,21 +379,25 @@ function sortArticles(articles, sortDirection) {
 }
 
 function getEntityArticles(data, { driverId, raceId, teamId }) {
-	return data.articles.filter((article) => {
-		const matchesDriver = driverId
-			? (article.driver_ids || []).includes(driverId)
-			: true;
+	let result = data.articles;
 
-		const matchesRace = raceId
-			? (article.race_ids || []).includes(raceId)
-			: true;
+	if (driverId) {
+		result = data.articlesByDriver[driverId] || [];
+	}
+	if (teamId) {
+		result = data.articlesByTeam[teamId] || [];
+	}
+	if (raceId) {
+		result = data.articlesByRace[raceId] || [];
+	}
 
-		const matchesTeam = teamId
-			? (article.team_ids || []).includes(teamId)
-			: true;
+	// If multiple filters, intersect
+	if (driverId && teamId) {
+		const teamSet = new Set((data.articlesByTeam[teamId] || []).map(a => a.id));
+		result = result.filter(a => teamSet.has(a.id));
+	}
 
-		return matchesDriver && matchesRace && matchesTeam;
-	});
+	return result;
 }
 
 // Cache for team participations, built once per data load
@@ -659,31 +745,37 @@ async function fetchWikiSummary(title) {
 	}
 }
 
+let wikiIntroRequestId = 0;
+
 async function loadWikiIntro(wikipediaUrl, altText) {
 	const container = document.getElementById("wiki-intro");
 	if (!container || !wikipediaUrl) return;
 
+	const requestId = ++wikiIntroRequestId;
 	const title = wikiTitleFromUrl(wikipediaUrl);
 	if (!title) return;
 
+	container.innerHTML = `<p class="muted" style="padding:0.5rem 0">Loading intro…</p>`;
+
 	const summary = await fetchWikiSummary(title);
-	if (!summary || (!summary.extract && !summary.image)) return;
+
+	// Bail if a newer request has started
+	if (requestId !== wikiIntroRequestId) return;
+
+	if (!summary || (!summary.extract && !summary.image)) {
+		container.innerHTML = "";
+		return;
+	}
 
 	container.innerHTML = `
 		<div class="wiki-intro card">
-			${
-				summary.image
-					? `<img class="wiki-intro-image" src="${esc(summary.image)}" alt="${esc(altText || "")}">`
-					: ""
-			}
+			${summary.image
+				? `<img class="wiki-intro-image" src="${esc(summary.image)}" alt="${esc(altText || "")}" loading="lazy">`
+				: ""}
 			<div class="wiki-intro-text">
 				${summary.extract ? `<p>${esc(summary.extract)}</p>` : ""}
 				<p class="muted wiki-intro-source">
-					From
-					<a href="${esc(String(wikipediaUrl).trim())}" target="_blank" rel="noopener">
-						Wikipedia
-					</a>
-					(CC BY-SA)
+					From <a href="${esc(wikipediaUrl)}" target="_blank" rel="noopener">Wikipedia</a> (CC BY-SA)
 				</p>
 			</div>
 		</div>
@@ -1206,16 +1298,6 @@ function renderDriverPage(data, driverId, params) {
 		afterRender: () => {
 			attachEntityFilters(`driver/${driver.id}`, params);
 			loadWikiIntro(driver.wikipedia_url, driver.name);
-
-			// Hook up the stat modal triggers
-			document.querySelectorAll('.stat-link').forEach(link => {
-				link.addEventListener('click', (e) => {
-					e.preventDefault(); // Prevent default anchor behavior
-					const stat = e.currentTarget.getAttribute('data-stat');
-					const dId = e.currentTarget.getAttribute('data-driver');
-					showStatModal(data, dId, stat);
-				});
-			});
 		}
 	};
 }
@@ -2445,15 +2527,6 @@ function renderTeamPage(data, teamId, params) {
 		afterRender: () => {
 			attachEntityFilters(`team/${team.id}`, params);
 			loadWikiIntro(team.wikipedia_url, team.name);
-
-			document.querySelectorAll('.team-stat-link').forEach(link => {
-				link.addEventListener('click', (e) => {
-					e.preventDefault();
-					const stat = e.currentTarget.getAttribute('data-stat');
-					const tId = e.currentTarget.getAttribute('data-team');
-					showTeamStatModal(data, tId, stat);
-				});
-			});
 		}
 	};
 }
@@ -2461,9 +2534,14 @@ function renderTeamPage(data, teamId, params) {
 /* Driver Career Stats */
 
 function getOrdinal(n) {
-	const s = ["th", "st", "nd", "rd"];
-	const v = n % 100;
-	return s[(v - 20) % 10] || s[v] || s[0];
+	if (n === null || n === undefined || isNaN(n)) return "th";
+	const abs = Math.abs(n);
+	const mod10 = abs % 10;
+	const mod100 = abs % 100;
+	if (mod10 === 1 && mod100 !== 11) return "st";
+	if (mod10 === 2 && mod100 !== 12) return "nd";
+	if (mod10 === 3 && mod100 !== 13) return "rd";
+	return "th";
 }
 
 function getDriverGridPos(p) {
@@ -2486,9 +2564,10 @@ function getDriverGridPos(p) {
 }
 
 function computeDriverStats(data, driverId) {
+	const driverRaces = data.driverRacesIndex[driverId] || [];
 	const participations = [];
-	
-	data.races.forEach(race => {
+
+	driverRaces.forEach(race => {
 		const qualiEntry = (race.qualifying || []).find(q => q.driver_id === driverId);
 		const resultEntry = (race.results || []).find(r => r.driver_id === driverId);
 		const gridEntry = (race.starting_grid || []).find(g => g.driver_id === driverId);
@@ -2514,7 +2593,9 @@ function computeDriverStats(data, driverId) {
 	
 	// Filter out 999 / Not Classified positions
 	const validPositions = champResults.map(r => parseInt(r.position, 10)).filter(p => p > 0 && p < 50);
-	const bestChampFinish = validPositions.length ? Math.min(...validPositions) : null;
+	const bestChampFinish = validPositions.length
+		? validPositions.reduce((min, p) => p < min ? p : min, validPositions[0])
+		: null;
 
 	return {
 		participations,
@@ -2623,7 +2704,7 @@ function computeTeamStats(data, teamId) {
 
 function renderModal(title, count, countNoun, listHtml) {
 	const modalHtml = `
-		<div class="stat-modal-overlay" id="stat-modal">
+		<div class="stat-modal-overlay" id="stat-modal" role="dialog" aria-modal="true" aria-label="${esc(title)}">
 			<div class="stat-modal">
 				<button class="stat-modal-close" aria-label="Close">&times;</button>
 				<h2>${esc(title)}</h2>
@@ -2632,16 +2713,39 @@ function renderModal(title, count, countNoun, listHtml) {
 			</div>
 		</div>
 	`;
+
 	const modalContainer = document.createElement('div');
 	modalContainer.id = 'stat-modal-container';
 	modalContainer.innerHTML = modalHtml;
 	document.body.appendChild(modalContainer);
+
+	const closeBtn = document.querySelector('.stat-modal-close');
+	closeBtn.focus(); // Move focus into modal
+
+	closeBtn.addEventListener('click', closeStatModal);
 	
-	document.querySelector('.stat-modal-close').addEventListener('click', closeStatModal);
-	document.querySelector('.stat-modal-overlay').addEventListener('click', (e) => {
+	const overlay = document.querySelector('.stat-modal-overlay');
+	overlay.addEventListener('click', (e) => {
 		if (e.target.id === 'stat-modal') closeStatModal();
 	});
+
+	// Escape key closes modal
+	document.addEventListener('keydown', handleModalKeydown);
+
 	document.body.style.overflow = 'hidden';
+}
+
+function handleModalKeydown(e) {
+	if (e.key === 'Escape') {
+		closeStatModal();
+	}
+}
+
+function closeStatModal() {
+	const container = document.getElementById('stat-modal-container');
+	if (container) container.remove();
+	document.removeEventListener('keydown', handleModalKeydown);
+	document.body.style.overflow = '';
 }
 
 let racesByYearCache = null;
