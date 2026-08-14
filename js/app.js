@@ -1912,15 +1912,48 @@ function attachRaceTabs() {
 	});
 }
 
+const TEAM_CANONICAL_BY_NAME = {
+	"lotus": "team-lotus",
+	"lotus-ford": "team-lotus",
+	"lotus-climax": "team-lotus",
+	"lotus-borgward": "team-lotus",
+	"lotus-pratt whitney": "team-lotus",
+	"lotus-pratt-amp-whitney": "team-lotus",
+	"brabham-ford": "brabham",
+	"brabham-climax": "brabham",
+	"brabham-brm": "brabham",
+	"brabham-alfa romeo": "brabham",
+	"brabham-repco": "brabham",
+	"cooper-climax": "cooper",
+	"cooper-maserati": "cooper",
+	"cooper-brm": "cooper",
+	"cooper-alfa romeo": "cooper",
+	"cooper-ats": "cooper",
+	"cooper-borgward": "cooper",
+	"cooper-castellotti": "cooper",
+	"cooper-ferrari": "cooper",
+	"cooper-osca": "cooper",
+	"mclaren-ford": "mclaren",
+	"mclaren-serenissima": "mclaren",
+	"eagle-climax": "eagle",
+	"eagle-weslake": "eagle",
+	"de tomaso-alfa romeo": "de-tomaso",
+	"de tomaso-osca": "de-tomaso",
+	"brm-ford": "brm"
+};
+
 function findTeamIdByName(data, teamName) {
 	if (!teamName || !data.teamsByName) {
 		return null;
 	}
-
 	const norm = normalizeTeamKey(teamName);
-
 	if (!norm || norm === "—") {
 		return null;
+	}
+
+	// Check canonical overrides
+	if (TEAM_CANONICAL_BY_NAME[norm]) {
+		return TEAM_CANONICAL_BY_NAME[norm];
 	}
 
 	// Exact match
@@ -1928,14 +1961,13 @@ function findTeamIdByName(data, teamName) {
 		return data.teamsByName[norm];
 	}
 
-	// Try parts before hyphen:
-	// "Kurtis Kraft-Offenhauser" -> "Kurtis Kraft"
+	// Try parts before hyphen
 	const parts = norm
 		.split(/[-–—/]/)
 		.map((part) => part.trim())
 		.filter(Boolean);
-
 	for (const part of parts) {
+		if (TEAM_CANONICAL_BY_NAME[part]) return TEAM_CANONICAL_BY_NAME[part];
 		if (data.teamsByName[part]) {
 			return data.teamsByName[part];
 		}
@@ -1944,14 +1976,12 @@ function findTeamIdByName(data, teamName) {
 	// Longest known team name contained inside the given team name
 	let bestId = null;
 	let bestLength = 0;
-
 	for (const [name, id] of Object.entries(data.teamsByName)) {
 		if (name.length >= 3 && norm.includes(name) && name.length > bestLength) {
 			bestLength = name.length;
 			bestId = id;
 		}
 	}
-
 	return bestId;
 }
 
