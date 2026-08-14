@@ -6,5 +6,61 @@
   {
     "code": "fr",
     "label": "French"
+  },
+  {
+    "code": "de",
+    "label": "German"
+  },
+  {
+    "code": "es-ES",
+    "label": "Spanish (Spain)"
+  },
+  {
+    "code": "es-LA",
+    "label": "Spanish (Latin America)"
+  },
+  {
+    "code": "pt-BR",
+    "label": "Portuguese (Brazil)"
+  },
+  {
+    "code": "pt-PT",
+    "label": "Portuguese (Portugal)"
+  },
+  {
+    "code": "nl",
+    "label": "Dutch"
+  },
+  {
+    "code": "ja",
+    "label": "Japanese"
+  },
+  {
+    "code": "fi",
+    "label": "Finnish"
+  },
+  {
+    "code": "pl",
+    "label": "Polish"
+  },
+  {
+    "code": "zh-CN",
+    "label": "Chinese (Simplified)"
+  },
+  {
+    "code": "it",
+    "label": "Italian"
+  },
+  {
+    "code": "ar",
+    "label": "Arabic"
+  },
+  {
+    "code": "ru",
+    "label": "Russian"
+  },
+  {
+    "code": "hu",
+    "label": "Hungarian"
   }
 ]
