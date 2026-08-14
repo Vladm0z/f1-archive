@@ -2335,34 +2335,16 @@ function renderTeamPage(data, teamId, params) {
 					<dt>Nationality</dt>
 					<dd>${esc(team.nationality || "—")}</dd>
 
-					<dt>Active years</dt>
-					<dd>${esc(team.active_years || "—")}</dd>
-
 					${statRows.join("")}
-					
+
 					<dt>Seasons</dt>
 					<dd>${seasonsHtml}</dd>
-
-					<dt>Wins</dt>
-					<dd>${team.wins ?? 0}</dd>
-
-					<dt>Podiums</dt>
-					<dd>${team.podiums ?? 0}</dd>
-
-					<dt>Pole positions</dt>
-					<dd>${team.pole_positions ?? 0}</dd>
-
-					<dt>Fastest laps</dt>
-					<dd>${team.fastest_laps ?? 0}</dd>
-
-					<dt>Constructor titles</dt>
-					<dd>${constructorChampsHtml}</dd>
 
 					<dt>Driver titles</dt>
 					<dd>${driverChampsHtml}</dd>
 
 					<dt>Drivers</dt>
-					<dd>${driversHtml}</dd>
+					<dd>${driverLinks.length ? driverLinks.join(", ") : "—"}</dd>
 				</dl>
 
 				${
@@ -2562,22 +2544,27 @@ function showStatModal(data, driverId, statType) {
 		filtered = participations.filter(p => p.result && parseInt(p.result.position || p.result.positionText, 10) === stats.bestFinish);
 	} else if (statType === "best-grid") {
 		title = `${driver.name} - Best Grid Positions (${stats.bestGrid}${getOrdinal(stats.bestGrid)})`;
-		// FIXED: Use the strict helper here too
 		filtered = participations.filter(p => getDriverGridPos(p) === stats.bestGrid);
 	} else if (statType === "best-champ") {
-		title = `${driver.name} - Championship Standings`;
-		const champResults = driver.championship_results || [];
-		champResults.sort((a, b) => a.position - b.position || b.year - a.year);
+		const isChampion = stats.bestChampFinish === 1;
+		title = isChampion 
+			? `${driver.name} - World Championships` 
+			: `${driver.name} - Best Championship Finishes (${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)})`;
+			
+		const champResults = (driver.championship_results || [])
+			.filter(r => r.position === stats.bestChampFinish)
+			.sort((a, b) => a.year - b.year);
 		
 		listHtml = `<ul class="stat-list">`;
 		champResults.forEach(r => {
-			listHtml += `<li><span class="muted">${r.year}</span> <span class="muted">${r.position}${getOrdinal(r.position)}${r.points ? ` • ${r.points} pts` : ""}</span></li>`;
+			const label = isChampion ? "World Champion" : `Finished ${r.position}${getOrdinal(r.position)}`;
+			listHtml += `<li><span class="muted">${r.year}</span> <span class="muted">${label}${r.points ? ` • ${r.points} pts` : ""}</span></li>`;
 		});
 		listHtml += `</ul>`;
 		
 		if (!champResults.length) listHtml = `<p class="muted">No championship finishes recorded.</p>`;
 		
-		// Render modal directly and return early
+		// Render modal and return early
 		const modalHtml = `
 			<div class="stat-modal-overlay" id="stat-modal">
 				<div class="stat-modal">
@@ -2836,13 +2823,19 @@ function showTeamStatModal(data, teamId, statType) {
 						 p.grids.some(g => parseInt(g.position, 10) === stats.bestGrid);
 		});
 	} else if (statType === "best-champ") {
-		title = `${team.name} - Championship Standings`;
-		const champResults = team.championship_results || [];
-		champResults.sort((a, b) => a.position - b.position || b.year - a.year);
+		const isChampion = stats.bestChampFinish === 1;
+		title = isChampion 
+			? `${team.name} - Constructor Championships` 
+			: `${team.name} - Best Championship Finishes (${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)})`;
+			
+		const champResults = (team.championship_results || [])
+			.filter(r => r.position === stats.bestChampFinish)
+			.sort((a, b) => a.year - b.year);
 		
 		let listHtml = `<ul class="stat-list">`;
 		champResults.forEach(r => {
-			listHtml += `<li><span class="muted">${r.year}</span> <span class="muted">${r.position}${getOrdinal(r.position)}${r.points ? ` • ${r.points} pts` : ""}</span></li>`;
+			const label = isChampion ? "Constructor Champion" : `Finished ${r.position}${getOrdinal(r.position)}`;
+			listHtml += `<li><span class="muted">${r.year}</span> <span class="muted">${label}${r.points ? ` • ${r.points} pts` : ""}</span></li>`;
 		});
 		listHtml += `</ul>`;
 		

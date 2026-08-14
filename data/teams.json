@@ -17,7 +17,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "afm",
@@ -40,7 +41,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "ags",
@@ -69,7 +71,39 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1986,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1987,
+        "position": 12,
+        "points": "1"
+      },
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 15,
+        "points": "1"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1991,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "alfa",
@@ -134,6 +168,78 @@
         "year": 1951,
         "driver_id": "fangio"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 1963,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1965,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1979,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1980,
+        "position": 11,
+        "points": "4"
+      },
+      {
+        "year": 1981,
+        "position": 9,
+        "points": "10"
+      },
+      {
+        "year": 1982,
+        "position": 9,
+        "points": "7"
+      },
+      {
+        "year": 1983,
+        "position": 6,
+        "points": "18"
+      },
+      {
+        "year": 1984,
+        "position": 8,
+        "points": "11"
+      },
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2019,
+        "position": 8,
+        "points": "57"
+      },
+      {
+        "year": 2020,
+        "position": 8,
+        "points": "8"
+      },
+      {
+        "year": 2021,
+        "position": 9,
+        "points": "13"
+      },
+      {
+        "year": 2022,
+        "position": 6,
+        "points": "55"
+      },
+      {
+        "year": 2023,
+        "position": 9,
+        "points": "16"
+      }
     ]
   },
   {
@@ -161,7 +267,29 @@
     "pole_positions": 0,
     "fastest_laps": 2,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2020,
+        "position": 7,
+        "points": "107"
+      },
+      {
+        "year": 2021,
+        "position": 6,
+        "points": "142"
+      },
+      {
+        "year": 2022,
+        "position": 9,
+        "points": "35"
+      },
+      {
+        "year": 2023,
+        "position": 8,
+        "points": "25"
+      }
+    ]
   },
   {
     "id": "alpine",
@@ -188,7 +316,29 @@
     "pole_positions": 0,
     "fastest_laps": 1,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2021,
+        "position": 5,
+        "points": "155"
+      },
+      {
+        "year": 2022,
+        "position": 4,
+        "points": "173"
+      },
+      {
+        "year": 2023,
+        "position": 6,
+        "points": "120"
+      },
+      {
+        "year": 2024,
+        "position": 6,
+        "points": "65"
+      }
+    ]
   },
   {
     "id": "alta",
@@ -212,7 +362,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "amon",
@@ -232,7 +383,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1974,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "andrea-moda",
@@ -252,7 +410,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "arrows",
@@ -319,6 +478,91 @@
     "driver_championships": [],
     "championship_results": [
       {
+        "year": 1978,
+        "position": 10,
+        "points": "11"
+      },
+      {
+        "year": 1979,
+        "position": 9,
+        "points": "5"
+      },
+      {
+        "year": 1980,
+        "position": 7,
+        "points": "11"
+      },
+      {
+        "year": 1981,
+        "position": 8,
+        "points": "10"
+      },
+      {
+        "year": 1982,
+        "position": 10,
+        "points": "5"
+      },
+      {
+        "year": 1983,
+        "position": 10,
+        "points": "4"
+      },
+      {
+        "year": 1984,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1985,
+        "position": 8,
+        "points": "14"
+      },
+      {
+        "year": 1986,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 1987,
+        "position": 7,
+        "points": "11"
+      },
+      {
+        "year": 1988,
+        "position": 5,
+        "points": "23"
+      },
+      {
+        "year": 1989,
+        "position": 7,
+        "points": "13"
+      },
+      {
+        "year": 1990,
+        "position": 9,
+        "points": "2"
+      },
+      {
+        "year": 1997,
+        "position": 8,
+        "points": "9"
+      },
+      {
+        "year": 1998,
+        "position": 7,
+        "points": "6"
+      },
+      {
+        "year": 1999,
+        "position": 9,
+        "points": "1"
+      },
+      {
+        "year": 2000,
+        "position": 7,
+        "points": "7"
+      },
+      {
         "year": 2001,
         "position": 10,
         "points": "1"
@@ -347,7 +591,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "butterworth",
@@ -367,7 +612,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "aston_martin",
@@ -409,6 +655,26 @@
         "year": 1960,
         "position": 999,
         "points": "0"
+      },
+      {
+        "year": 2021,
+        "position": 7,
+        "points": "77"
+      },
+      {
+        "year": 2022,
+        "position": 7,
+        "points": "55"
+      },
+      {
+        "year": 2023,
+        "position": 5,
+        "points": "280"
+      },
+      {
+        "year": 2024,
+        "position": 5,
+        "points": "94"
       }
     ]
   },
@@ -470,7 +736,49 @@
     "pole_positions": 2,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1963,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1978,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1979,
+        "position": 11,
+        "points": "2"
+      },
+      {
+        "year": 1980,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1981,
+        "position": 13,
+        "points": "1"
+      },
+      {
+        "year": 1982,
+        "position": 11,
+        "points": "4"
+      },
+      {
+        "year": 1983,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1984,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bar",
@@ -503,6 +811,16 @@
     "constructor_championships": [],
     "driver_championships": [],
     "championship_results": [
+      {
+        "year": 1999,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2000,
+        "position": 5,
+        "points": "20"
+      },
       {
         "year": 2001,
         "position": 6,
@@ -576,7 +894,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1970,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1971,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "benetton",
@@ -641,6 +971,81 @@
     ],
     "championship_results": [
       {
+        "year": 1986,
+        "position": 6,
+        "points": "19"
+      },
+      {
+        "year": 1987,
+        "position": 5,
+        "points": "28"
+      },
+      {
+        "year": 1988,
+        "position": 3,
+        "points": "39"
+      },
+      {
+        "year": 1989,
+        "position": 4,
+        "points": "39"
+      },
+      {
+        "year": 1990,
+        "position": 3,
+        "points": "71"
+      },
+      {
+        "year": 1991,
+        "position": 4,
+        "points": "38.5"
+      },
+      {
+        "year": 1992,
+        "position": 3,
+        "points": "91"
+      },
+      {
+        "year": 1993,
+        "position": 3,
+        "points": "72"
+      },
+      {
+        "year": 1994,
+        "position": 2,
+        "points": "103"
+      },
+      {
+        "year": 1995,
+        "position": 1,
+        "points": "147"
+      },
+      {
+        "year": 1996,
+        "position": 3,
+        "points": "68"
+      },
+      {
+        "year": 1997,
+        "position": 3,
+        "points": "67"
+      },
+      {
+        "year": 1998,
+        "position": 5,
+        "points": "33"
+      },
+      {
+        "year": 1999,
+        "position": 6,
+        "points": "16"
+      },
+      {
+        "year": 2000,
+        "position": 4,
+        "points": "20"
+      },
+      {
         "year": 2001,
         "position": 7,
         "points": "10"
@@ -671,7 +1076,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "bmw_sauber",
@@ -743,7 +1149,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1976,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "brabham",
@@ -894,6 +1312,118 @@
       {
         "year": 1983,
         "driver_id": "piquet"
+      }
+    ],
+    "championship_results": [
+      {
+        "year": 1962,
+        "position": 7,
+        "points": "6"
+      },
+      {
+        "year": 1963,
+        "position": 3,
+        "points": "28"
+      },
+      {
+        "year": 1970,
+        "position": 4,
+        "points": "35"
+      },
+      {
+        "year": 1971,
+        "position": 9,
+        "points": "5"
+      },
+      {
+        "year": 1972,
+        "position": 9,
+        "points": "7"
+      },
+      {
+        "year": 1973,
+        "position": 4,
+        "points": "22"
+      },
+      {
+        "year": 1974,
+        "position": 5,
+        "points": "35"
+      },
+      {
+        "year": 1975,
+        "position": 2,
+        "points": "54"
+      },
+      {
+        "year": 1977,
+        "position": 5,
+        "points": "27"
+      },
+      {
+        "year": 1978,
+        "position": 3,
+        "points": "53"
+      },
+      {
+        "year": 1980,
+        "position": 3,
+        "points": "55"
+      },
+      {
+        "year": 1981,
+        "position": 2,
+        "points": "61"
+      },
+      {
+        "year": 1982,
+        "position": 5,
+        "points": "41"
+      },
+      {
+        "year": 1983,
+        "position": 3,
+        "points": "72"
+      },
+      {
+        "year": 1984,
+        "position": 4,
+        "points": "38"
+      },
+      {
+        "year": 1985,
+        "position": 5,
+        "points": "26"
+      },
+      {
+        "year": 1986,
+        "position": 9,
+        "points": "2"
+      },
+      {
+        "year": 1987,
+        "position": 8,
+        "points": "10"
+      },
+      {
+        "year": 1989,
+        "position": 9,
+        "points": "8"
+      },
+      {
+        "year": 1990,
+        "position": 10,
+        "points": "2"
+      },
+      {
+        "year": 1991,
+        "position": 10,
+        "points": "3"
+      },
+      {
+        "year": 1992,
+        "position": 999,
+        "points": "0"
       }
     ]
   },
@@ -1079,6 +1609,86 @@
         "year": 1961,
         "position": 5,
         "points": "7"
+      },
+      {
+        "year": 1962,
+        "position": 1,
+        "points": "42"
+      },
+      {
+        "year": 1963,
+        "position": 2,
+        "points": "36"
+      },
+      {
+        "year": 1964,
+        "position": 2,
+        "points": "42"
+      },
+      {
+        "year": 1965,
+        "position": 2,
+        "points": "45"
+      },
+      {
+        "year": 1966,
+        "position": 4,
+        "points": "22"
+      },
+      {
+        "year": 1967,
+        "position": 6,
+        "points": "17"
+      },
+      {
+        "year": 1968,
+        "position": 5,
+        "points": "28"
+      },
+      {
+        "year": 1969,
+        "position": 5,
+        "points": "7"
+      },
+      {
+        "year": 1970,
+        "position": 6,
+        "points": "23"
+      },
+      {
+        "year": 1971,
+        "position": 2,
+        "points": "36"
+      },
+      {
+        "year": 1972,
+        "position": 7,
+        "points": "14"
+      },
+      {
+        "year": 1973,
+        "position": 7,
+        "points": "12"
+      },
+      {
+        "year": 1974,
+        "position": 7,
+        "points": "10"
+      },
+      {
+        "year": 1975,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1976,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
       }
     ]
   },
@@ -1102,7 +1712,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "brp",
@@ -1123,7 +1734,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1963,
+        "position": 6,
+        "points": "6"
+      },
+      {
+        "year": 1964,
+        "position": 7,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "bugatti",
@@ -1142,7 +1765,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "caterham",
@@ -1170,7 +1794,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2012,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2013,
+        "position": 11,
+        "points": "0"
+      },
+      {
+        "year": 2014,
+        "position": 11,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "christensen",
@@ -1191,7 +1832,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "coloni",
@@ -1219,7 +1861,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1987,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "connaught",
@@ -1304,7 +1963,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1972,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "cooper",
@@ -1467,6 +2133,11 @@
         "year": 1958,
         "position": 3,
         "points": "31"
+      },
+      {
+        "year": 1962,
+        "position": 999,
+        "points": "0"
       }
     ]
   },
@@ -1497,7 +2168,34 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 8,
+        "points": "8"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1991,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 1992,
+        "position": 10,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "de-tomaso",
@@ -1526,7 +2224,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "deidt",
@@ -1550,7 +2249,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "derrington",
@@ -1569,7 +2269,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1964,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "dunn",
@@ -1591,7 +2298,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "eagle",
@@ -1617,7 +2325,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "elder",
@@ -1636,7 +2345,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "hill",
@@ -1660,7 +2370,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1975,
+        "position": 11,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "emeryson",
@@ -1692,6 +2409,11 @@
         "year": 1961,
         "position": 999,
         "points": "0"
+      },
+      {
+        "year": 1962,
+        "position": 999,
+        "points": "0"
       }
     ]
   },
@@ -1712,7 +2434,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "enb",
@@ -1738,7 +2461,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1962,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "ensign",
@@ -1790,7 +2520,59 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1973,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1974,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1975,
+        "position": 13,
+        "points": "1"
+      },
+      {
+        "year": 1976,
+        "position": 12,
+        "points": "2"
+      },
+      {
+        "year": 1977,
+        "position": 10,
+        "points": "10"
+      },
+      {
+        "year": 1978,
+        "position": 14,
+        "points": "1"
+      },
+      {
+        "year": 1979,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1980,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1981,
+        "position": 11,
+        "points": "5"
+      },
+      {
+        "year": 1982,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "epperly",
@@ -1822,7 +2604,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "era",
@@ -1961,7 +2744,8 @@
         "year": 1957,
         "driver_id": "fangio"
       }
-    ]
+    ],
+    "championship_results": []
   },
   {
     "id": "eurobrun",
@@ -1984,7 +2768,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "ewing",
@@ -2006,7 +2802,8 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "ferguson",
@@ -2328,6 +3125,201 @@
         "points": "45"
       },
       {
+        "year": 1962,
+        "position": 6,
+        "points": "18"
+      },
+      {
+        "year": 1963,
+        "position": 4,
+        "points": "26"
+      },
+      {
+        "year": 1964,
+        "position": 1,
+        "points": "45"
+      },
+      {
+        "year": 1965,
+        "position": 4,
+        "points": "26"
+      },
+      {
+        "year": 1966,
+        "position": 2,
+        "points": "31"
+      },
+      {
+        "year": 1967,
+        "position": 5,
+        "points": "20"
+      },
+      {
+        "year": 1968,
+        "position": 4,
+        "points": "32"
+      },
+      {
+        "year": 1969,
+        "position": 6,
+        "points": "7"
+      },
+      {
+        "year": 1970,
+        "position": 2,
+        "points": "55"
+      },
+      {
+        "year": 1971,
+        "position": 4,
+        "points": "33"
+      },
+      {
+        "year": 1972,
+        "position": 4,
+        "points": "33"
+      },
+      {
+        "year": 1973,
+        "position": 6,
+        "points": "12"
+      },
+      {
+        "year": 1974,
+        "position": 2,
+        "points": "65"
+      },
+      {
+        "year": 1975,
+        "position": 1,
+        "points": "72.5"
+      },
+      {
+        "year": 1976,
+        "position": 1,
+        "points": "83"
+      },
+      {
+        "year": 1977,
+        "position": 1,
+        "points": "84"
+      },
+      {
+        "year": 1978,
+        "position": 2,
+        "points": "58"
+      },
+      {
+        "year": 1979,
+        "position": 1,
+        "points": "113"
+      },
+      {
+        "year": 1980,
+        "position": 10,
+        "points": "8"
+      },
+      {
+        "year": 1981,
+        "position": 5,
+        "points": "34"
+      },
+      {
+        "year": 1982,
+        "position": 1,
+        "points": "74"
+      },
+      {
+        "year": 1983,
+        "position": 1,
+        "points": "89"
+      },
+      {
+        "year": 1984,
+        "position": 2,
+        "points": "57.5"
+      },
+      {
+        "year": 1985,
+        "position": 2,
+        "points": "82"
+      },
+      {
+        "year": 1986,
+        "position": 4,
+        "points": "37"
+      },
+      {
+        "year": 1987,
+        "position": 4,
+        "points": "53"
+      },
+      {
+        "year": 1988,
+        "position": 2,
+        "points": "65"
+      },
+      {
+        "year": 1989,
+        "position": 3,
+        "points": "59"
+      },
+      {
+        "year": 1990,
+        "position": 2,
+        "points": "110"
+      },
+      {
+        "year": 1991,
+        "position": 3,
+        "points": "55.5"
+      },
+      {
+        "year": 1992,
+        "position": 4,
+        "points": "21"
+      },
+      {
+        "year": 1993,
+        "position": 4,
+        "points": "28"
+      },
+      {
+        "year": 1994,
+        "position": 3,
+        "points": "71"
+      },
+      {
+        "year": 1995,
+        "position": 3,
+        "points": "73"
+      },
+      {
+        "year": 1996,
+        "position": 2,
+        "points": "70"
+      },
+      {
+        "year": 1997,
+        "position": 2,
+        "points": "102"
+      },
+      {
+        "year": 1998,
+        "position": 2,
+        "points": "133"
+      },
+      {
+        "year": 1999,
+        "position": 1,
+        "points": "128"
+      },
+      {
+        "year": 2000,
+        "position": 1,
+        "points": "170"
+      },
+      {
         "year": 2001,
         "position": 1,
         "points": "179"
@@ -2376,6 +3368,76 @@
         "year": 2010,
         "position": 3,
         "points": "396"
+      },
+      {
+        "year": 2011,
+        "position": 3,
+        "points": "375"
+      },
+      {
+        "year": 2012,
+        "position": 2,
+        "points": "400"
+      },
+      {
+        "year": 2013,
+        "position": 3,
+        "points": "354"
+      },
+      {
+        "year": 2014,
+        "position": 4,
+        "points": "216"
+      },
+      {
+        "year": 2015,
+        "position": 2,
+        "points": "428"
+      },
+      {
+        "year": 2016,
+        "position": 3,
+        "points": "398"
+      },
+      {
+        "year": 2017,
+        "position": 2,
+        "points": "522"
+      },
+      {
+        "year": 2018,
+        "position": 2,
+        "points": "571"
+      },
+      {
+        "year": 2019,
+        "position": 2,
+        "points": "504"
+      },
+      {
+        "year": 2020,
+        "position": 6,
+        "points": "131"
+      },
+      {
+        "year": 2021,
+        "position": 3,
+        "points": "323.5"
+      },
+      {
+        "year": 2022,
+        "position": 2,
+        "points": "554"
+      },
+      {
+        "year": 2023,
+        "position": 3,
+        "points": "406"
+      },
+      {
+        "year": 2024,
+        "position": 2,
+        "points": "652"
       }
     ]
   },
@@ -2410,7 +3472,49 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1975,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1976,
+        "position": 11,
+        "points": "3"
+      },
+      {
+        "year": 1977,
+        "position": 9,
+        "points": "11"
+      },
+      {
+        "year": 1978,
+        "position": 7,
+        "points": "17"
+      },
+      {
+        "year": 1979,
+        "position": 12,
+        "points": "1"
+      },
+      {
+        "year": 1980,
+        "position": 8,
+        "points": "11"
+      },
+      {
+        "year": 1981,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1982,
+        "position": 13,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "fondmetal",
@@ -2433,7 +3537,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1991,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1992,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "footwork",
@@ -2467,7 +3583,39 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1991,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1992,
+        "position": 7,
+        "points": "6"
+      },
+      {
+        "year": 1993,
+        "position": 9,
+        "points": "4"
+      },
+      {
+        "year": 1994,
+        "position": 9,
+        "points": "9"
+      },
+      {
+        "year": 1995,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 1996,
+        "position": 9,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "force_india",
@@ -2518,6 +3666,46 @@
         "year": 2010,
         "position": 7,
         "points": "68"
+      },
+      {
+        "year": 2011,
+        "position": 6,
+        "points": "69"
+      },
+      {
+        "year": 2012,
+        "position": 7,
+        "points": "109"
+      },
+      {
+        "year": 2013,
+        "position": 6,
+        "points": "77"
+      },
+      {
+        "year": 2014,
+        "position": 6,
+        "points": "155"
+      },
+      {
+        "year": 2015,
+        "position": 5,
+        "points": "136"
+      },
+      {
+        "year": 2016,
+        "position": 4,
+        "points": "173"
+      },
+      {
+        "year": 2017,
+        "position": 4,
+        "points": "187"
+      },
+      {
+        "year": 2018,
+        "position": 5,
+        "points": "111"
       }
     ]
   },
@@ -2542,7 +3730,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1995,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1996,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "frazer_nash",
@@ -2562,7 +3762,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "gilby",
@@ -2588,6 +3789,16 @@
     "championship_results": [
       {
         "year": 1961,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1962,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1963,
         "position": 999,
         "points": "0"
       }
@@ -2639,7 +3850,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "haas",
@@ -2675,7 +3887,54 @@
     "pole_positions": 0,
     "fastest_laps": 3,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2016,
+        "position": 8,
+        "points": "29"
+      },
+      {
+        "year": 2017,
+        "position": 8,
+        "points": "47"
+      },
+      {
+        "year": 2018,
+        "position": 6,
+        "points": "93"
+      },
+      {
+        "year": 2019,
+        "position": 9,
+        "points": "28"
+      },
+      {
+        "year": 2020,
+        "position": 9,
+        "points": "3"
+      },
+      {
+        "year": 2021,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2022,
+        "position": 8,
+        "points": "37"
+      },
+      {
+        "year": 2023,
+        "position": 10,
+        "points": "12"
+      },
+      {
+        "year": 2024,
+        "position": 7,
+        "points": "58"
+      }
+    ]
   },
   {
     "id": "hall",
@@ -2694,7 +3953,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "hesketh",
@@ -2731,7 +3991,34 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1974,
+        "position": 6,
+        "points": "15"
+      },
+      {
+        "year": 1975,
+        "position": 4,
+        "points": "33"
+      },
+      {
+        "year": 1976,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1978,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "honda",
@@ -2766,6 +4053,31 @@
     "constructor_championships": [],
     "driver_championships": [],
     "championship_results": [
+      {
+        "year": 1964,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1965,
+        "position": 6,
+        "points": "11"
+      },
+      {
+        "year": 1966,
+        "position": 8,
+        "points": "3"
+      },
+      {
+        "year": 1967,
+        "position": 4,
+        "points": "20"
+      },
+      {
+        "year": 1968,
+        "position": 6,
+        "points": "14"
+      },
       {
         "year": 2006,
         "position": 4,
@@ -2815,6 +4127,16 @@
         "year": 2010,
         "position": 11,
         "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 11,
+        "points": "0"
+      },
+      {
+        "year": 2012,
+        "position": 12,
+        "points": "0"
       }
     ]
   },
@@ -2851,7 +4173,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "iso_marlboro",
@@ -2881,7 +4204,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1973,
+        "position": 10,
+        "points": "2"
+      },
+      {
+        "year": 1974,
+        "position": 10,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "jaguar",
@@ -2913,6 +4248,11 @@
     "constructor_championships": [],
     "driver_championships": [],
     "championship_results": [
+      {
+        "year": 2000,
+        "position": 9,
+        "points": "4"
+      },
       {
         "year": 2001,
         "position": 8,
@@ -3036,6 +4376,56 @@
     "driver_championships": [],
     "championship_results": [
       {
+        "year": 1991,
+        "position": 5,
+        "points": "13"
+      },
+      {
+        "year": 1992,
+        "position": 11,
+        "points": "1"
+      },
+      {
+        "year": 1993,
+        "position": 11,
+        "points": "3"
+      },
+      {
+        "year": 1994,
+        "position": 5,
+        "points": "28"
+      },
+      {
+        "year": 1995,
+        "position": 6,
+        "points": "21"
+      },
+      {
+        "year": 1996,
+        "position": 5,
+        "points": "22"
+      },
+      {
+        "year": 1997,
+        "position": 5,
+        "points": "33"
+      },
+      {
+        "year": 1998,
+        "position": 4,
+        "points": "34"
+      },
+      {
+        "year": 1999,
+        "position": 3,
+        "points": "61"
+      },
+      {
+        "year": 2000,
+        "position": 6,
+        "points": "17"
+      },
+      {
         "year": 2001,
         "position": 5,
         "points": "19"
@@ -3079,7 +4469,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "kojima",
@@ -3101,7 +4492,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1976,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "kurtis_kraft",
@@ -3272,7 +4675,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "lambo",
@@ -3292,7 +4696,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1991,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "lancia",
@@ -3316,7 +4727,8 @@
     "pole_positions": 2,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "langley",
@@ -3335,7 +4747,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "larrousse",
@@ -3372,7 +4785,49 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1987,
+        "position": 9,
+        "points": "3"
+      },
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 16,
+        "points": "1"
+      },
+      {
+        "year": 1990,
+        "position": 6,
+        "points": "11"
+      },
+      {
+        "year": 1991,
+        "position": 13,
+        "points": "1"
+      },
+      {
+        "year": 1992,
+        "position": 13,
+        "points": "1"
+      },
+      {
+        "year": 1993,
+        "position": 10,
+        "points": "3"
+      },
+      {
+        "year": 1994,
+        "position": 11,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "lds",
@@ -3397,7 +4852,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1962,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1963,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1968,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "lec",
@@ -3416,7 +4888,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "lesovsky",
@@ -3451,7 +4930,8 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "leyton-house",
@@ -3473,7 +4953,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "ligier",
@@ -3539,7 +5020,114 @@
     "pole_positions": 9,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1976,
+        "position": 6,
+        "points": "20"
+      },
+      {
+        "year": 1977,
+        "position": 8,
+        "points": "18"
+      },
+      {
+        "year": 1978,
+        "position": 6,
+        "points": "19"
+      },
+      {
+        "year": 1979,
+        "position": 3,
+        "points": "61"
+      },
+      {
+        "year": 1980,
+        "position": 2,
+        "points": "66"
+      },
+      {
+        "year": 1981,
+        "position": 4,
+        "points": "44"
+      },
+      {
+        "year": 1982,
+        "position": 8,
+        "points": "20"
+      },
+      {
+        "year": 1983,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1984,
+        "position": 10,
+        "points": "3"
+      },
+      {
+        "year": 1985,
+        "position": 6,
+        "points": "23"
+      },
+      {
+        "year": 1986,
+        "position": 5,
+        "points": "29"
+      },
+      {
+        "year": 1987,
+        "position": 11,
+        "points": "1"
+      },
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 14,
+        "points": "3"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1991,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1992,
+        "position": 8,
+        "points": "6"
+      },
+      {
+        "year": 1993,
+        "position": 5,
+        "points": "23"
+      },
+      {
+        "year": 1994,
+        "position": 6,
+        "points": "13"
+      },
+      {
+        "year": 1995,
+        "position": 5,
+        "points": "24"
+      },
+      {
+        "year": 1996,
+        "position": 6,
+        "points": "15"
+      }
+    ]
   },
   {
     "id": "lola",
@@ -3592,7 +5180,59 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1962,
+        "position": 4,
+        "points": "19"
+      },
+      {
+        "year": 1963,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1967,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1968,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1974,
+        "position": 12,
+        "points": "1"
+      },
+      {
+        "year": 1975,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1986,
+        "position": 8,
+        "points": "6"
+      },
+      {
+        "year": 1991,
+        "position": 12,
+        "points": "1"
+      },
+      {
+        "year": 1993,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "lotus",
@@ -3622,7 +5262,8 @@
     "pole_positions": 0,
     "fastest_laps": 5,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "lyncar",
@@ -3641,7 +5282,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1975,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "maki",
@@ -3662,7 +5310,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1975,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "march",
@@ -3747,7 +5402,74 @@
     "pole_positions": 5,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1970,
+        "position": 3,
+        "points": "48"
+      },
+      {
+        "year": 1972,
+        "position": 6,
+        "points": "15"
+      },
+      {
+        "year": 1973,
+        "position": 5,
+        "points": "14"
+      },
+      {
+        "year": 1974,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1975,
+        "position": 8,
+        "points": "7.5"
+      },
+      {
+        "year": 1976,
+        "position": 7,
+        "points": "19"
+      },
+      {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1981,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1982,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1987,
+        "position": 13,
+        "points": "1"
+      },
+      {
+        "year": 1988,
+        "position": 6,
+        "points": "22"
+      },
+      {
+        "year": 1989,
+        "position": 12,
+        "points": "4"
+      },
+      {
+        "year": 1992,
+        "position": 9,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "marchese",
@@ -3768,7 +5490,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "martini",
@@ -3787,7 +5510,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1978,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "marussia",
@@ -3819,7 +5549,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2012,
+        "position": 11,
+        "points": "0"
+      },
+      {
+        "year": 2013,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2014,
+        "position": 9,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "matra",
@@ -3856,6 +5603,33 @@
       {
         "year": 1969,
         "driver_id": "stewart"
+      }
+    ],
+    "championship_results": [
+      {
+        "year": 1967,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1968,
+        "position": 9,
+        "points": "8"
+      },
+      {
+        "year": 1970,
+        "position": 7,
+        "points": "23"
+      },
+      {
+        "year": 1971,
+        "position": 7,
+        "points": "9"
+      },
+      {
+        "year": 1972,
+        "position": 8,
+        "points": "12"
       }
     ]
   },
@@ -4090,6 +5864,161 @@
     ],
     "championship_results": [
       {
+        "year": 1968,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1971,
+        "position": 6,
+        "points": "10"
+      },
+      {
+        "year": 1972,
+        "position": 3,
+        "points": "49"
+      },
+      {
+        "year": 1973,
+        "position": 3,
+        "points": "58"
+      },
+      {
+        "year": 1974,
+        "position": 1,
+        "points": "72"
+      },
+      {
+        "year": 1975,
+        "position": 3,
+        "points": "53"
+      },
+      {
+        "year": 1976,
+        "position": 2,
+        "points": "74"
+      },
+      {
+        "year": 1977,
+        "position": 3,
+        "points": "56"
+      },
+      {
+        "year": 1978,
+        "position": 8,
+        "points": "15"
+      },
+      {
+        "year": 1979,
+        "position": 7,
+        "points": "15"
+      },
+      {
+        "year": 1980,
+        "position": 9,
+        "points": "11"
+      },
+      {
+        "year": 1981,
+        "position": 6,
+        "points": "28"
+      },
+      {
+        "year": 1982,
+        "position": 2,
+        "points": "69"
+      },
+      {
+        "year": 1983,
+        "position": 5,
+        "points": "34"
+      },
+      {
+        "year": 1984,
+        "position": 1,
+        "points": "143.5"
+      },
+      {
+        "year": 1985,
+        "position": 1,
+        "points": "90"
+      },
+      {
+        "year": 1986,
+        "position": 2,
+        "points": "96"
+      },
+      {
+        "year": 1987,
+        "position": 2,
+        "points": "76"
+      },
+      {
+        "year": 1988,
+        "position": 1,
+        "points": "199"
+      },
+      {
+        "year": 1989,
+        "position": 1,
+        "points": "141"
+      },
+      {
+        "year": 1990,
+        "position": 1,
+        "points": "121"
+      },
+      {
+        "year": 1991,
+        "position": 1,
+        "points": "139"
+      },
+      {
+        "year": 1992,
+        "position": 2,
+        "points": "99"
+      },
+      {
+        "year": 1993,
+        "position": 2,
+        "points": "84"
+      },
+      {
+        "year": 1994,
+        "position": 4,
+        "points": "42"
+      },
+      {
+        "year": 1995,
+        "position": 4,
+        "points": "30"
+      },
+      {
+        "year": 1996,
+        "position": 4,
+        "points": "49"
+      },
+      {
+        "year": 1997,
+        "position": 4,
+        "points": "63"
+      },
+      {
+        "year": 1998,
+        "position": 1,
+        "points": "156"
+      },
+      {
+        "year": 1999,
+        "position": 2,
+        "points": "124"
+      },
+      {
+        "year": 2000,
+        "position": 2,
+        "points": "162"
+      },
+      {
         "year": 2001,
         "position": 2,
         "points": "102"
@@ -4138,6 +6067,76 @@
         "year": 2010,
         "position": 2,
         "points": "454"
+      },
+      {
+        "year": 2011,
+        "position": 2,
+        "points": "497"
+      },
+      {
+        "year": 2012,
+        "position": 3,
+        "points": "378"
+      },
+      {
+        "year": 2013,
+        "position": 5,
+        "points": "122"
+      },
+      {
+        "year": 2014,
+        "position": 5,
+        "points": "181"
+      },
+      {
+        "year": 2015,
+        "position": 9,
+        "points": "27"
+      },
+      {
+        "year": 2016,
+        "position": 6,
+        "points": "76"
+      },
+      {
+        "year": 2017,
+        "position": 9,
+        "points": "30"
+      },
+      {
+        "year": 2018,
+        "position": 7,
+        "points": "62"
+      },
+      {
+        "year": 2019,
+        "position": 4,
+        "points": "145"
+      },
+      {
+        "year": 2020,
+        "position": 3,
+        "points": "202"
+      },
+      {
+        "year": 2021,
+        "position": 4,
+        "points": "275"
+      },
+      {
+        "year": 2022,
+        "position": 5,
+        "points": "159"
+      },
+      {
+        "year": 2023,
+        "position": 4,
+        "points": "302"
+      },
+      {
+        "year": 2024,
+        "position": 1,
+        "points": "666"
       }
     ]
   },
@@ -4239,6 +6238,76 @@
         "year": 2010,
         "position": 4,
         "points": "214"
+      },
+      {
+        "year": 2011,
+        "position": 4,
+        "points": "165"
+      },
+      {
+        "year": 2012,
+        "position": 5,
+        "points": "142"
+      },
+      {
+        "year": 2013,
+        "position": 2,
+        "points": "360"
+      },
+      {
+        "year": 2014,
+        "position": 1,
+        "points": "701"
+      },
+      {
+        "year": 2015,
+        "position": 1,
+        "points": "703"
+      },
+      {
+        "year": 2016,
+        "position": 1,
+        "points": "765"
+      },
+      {
+        "year": 2017,
+        "position": 1,
+        "points": "668"
+      },
+      {
+        "year": 2018,
+        "position": 1,
+        "points": "655"
+      },
+      {
+        "year": 2019,
+        "position": 1,
+        "points": "739"
+      },
+      {
+        "year": 2020,
+        "position": 1,
+        "points": "573"
+      },
+      {
+        "year": 2021,
+        "position": 1,
+        "points": "613.5"
+      },
+      {
+        "year": 2022,
+        "position": 3,
+        "points": "515"
+      },
+      {
+        "year": 2023,
+        "position": 2,
+        "points": "409"
+      },
+      {
+        "year": 2024,
+        "position": 4,
+        "points": "468"
       }
     ]
   },
@@ -4261,7 +6330,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1978,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1979,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "meskowski",
@@ -4281,7 +6362,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "mf1",
@@ -4327,7 +6409,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "minardi",
@@ -4405,6 +6488,86 @@
     "driver_championships": [],
     "championship_results": [
       {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1986,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1987,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1988,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 1989,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1991,
+        "position": 7,
+        "points": "6"
+      },
+      {
+        "year": 1992,
+        "position": 12,
+        "points": "1"
+      },
+      {
+        "year": 1993,
+        "position": 8,
+        "points": "7"
+      },
+      {
+        "year": 1994,
+        "position": 10,
+        "points": "5"
+      },
+      {
+        "year": 1995,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 1996,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1997,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1998,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1999,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 2000,
+        "position": 999,
+        "points": "0"
+      },
+      {
         "year": 2001,
         "position": 999,
         "points": "0"
@@ -4452,7 +6615,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "nichels",
@@ -4472,7 +6636,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "olson",
@@ -4491,7 +6656,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "onyx",
@@ -4515,7 +6681,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1989,
+        "position": 10,
+        "points": "6"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "osca",
@@ -4540,7 +6718,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "osella",
@@ -4585,7 +6764,64 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1980,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1981,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1982,
+        "position": 12,
+        "points": "3"
+      },
+      {
+        "year": 1983,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1984,
+        "position": 11,
+        "points": "2"
+      },
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1986,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1987,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1990,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "pacific",
@@ -4609,7 +6845,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1994,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1995,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "pankratz",
@@ -4628,7 +6876,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "parnelli",
@@ -4649,7 +6898,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1974,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1975,
+        "position": 10,
+        "points": "5"
+      },
+      {
+        "year": 1976,
+        "position": 13,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "pawl",
@@ -4671,7 +6937,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "penske",
@@ -4700,7 +6967,29 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1974,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1975,
+        "position": 12,
+        "points": "2"
+      },
+      {
+        "year": 1976,
+        "position": 5,
+        "points": "20"
+      },
+      {
+        "year": 1977,
+        "position": 12,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "phillips",
@@ -4727,7 +7016,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "politoys",
@@ -4746,7 +7036,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1972,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "porsche",
@@ -4809,6 +7106,21 @@
         "year": 1961,
         "position": 3,
         "points": "22"
+      },
+      {
+        "year": 1962,
+        "position": 5,
+        "points": "18"
+      },
+      {
+        "year": 1963,
+        "position": 7,
+        "points": "5"
+      },
+      {
+        "year": 1964,
+        "position": 999,
+        "points": "0"
       }
     ]
   },
@@ -4844,6 +7156,26 @@
     "driver_championships": [],
     "championship_results": [
       {
+        "year": 1997,
+        "position": 6,
+        "points": "21"
+      },
+      {
+        "year": 1998,
+        "position": 9,
+        "points": "1"
+      },
+      {
+        "year": 1999,
+        "position": 7,
+        "points": "9"
+      },
+      {
+        "year": 2000,
+        "position": 999,
+        "points": "0"
+      },
+      {
         "year": 2001,
         "position": 9,
         "points": "4"
@@ -4869,7 +7201,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1967,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "racing-point",
@@ -4891,7 +7230,8 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "rae",
@@ -4910,7 +7250,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "ram",
@@ -4941,7 +7282,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1983,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1984,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "rb-f1-team",
@@ -4964,7 +7322,8 @@
     "pole_positions": 0,
     "fastest_laps": 1,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "re",
@@ -4983,7 +7342,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1965,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "rebaque",
@@ -5002,7 +7368,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1979,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "red-bull",
@@ -5094,7 +7467,8 @@
         "year": 2024,
         "driver_id": "max_verstappen"
       }
-    ]
+    ],
+    "championship_results": []
   },
   {
     "id": "renault",
@@ -5176,6 +7550,51 @@
     ],
     "championship_results": [
       {
+        "year": 1977,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1978,
+        "position": 12,
+        "points": "3"
+      },
+      {
+        "year": 1979,
+        "position": 6,
+        "points": "26"
+      },
+      {
+        "year": 1980,
+        "position": 4,
+        "points": "38"
+      },
+      {
+        "year": 1981,
+        "position": 3,
+        "points": "54"
+      },
+      {
+        "year": 1982,
+        "position": 3,
+        "points": "62"
+      },
+      {
+        "year": 1983,
+        "position": 2,
+        "points": "79"
+      },
+      {
+        "year": 1984,
+        "position": 5,
+        "points": "34"
+      },
+      {
+        "year": 1985,
+        "position": 7,
+        "points": "16"
+      },
+      {
         "year": 2002,
         "position": 4,
         "points": "23"
@@ -5219,6 +7638,36 @@
         "year": 2010,
         "position": 5,
         "points": "163"
+      },
+      {
+        "year": 2011,
+        "position": 5,
+        "points": "73"
+      },
+      {
+        "year": 2016,
+        "position": 9,
+        "points": "8"
+      },
+      {
+        "year": 2017,
+        "position": 6,
+        "points": "57"
+      },
+      {
+        "year": 2018,
+        "position": 4,
+        "points": "122"
+      },
+      {
+        "year": 2019,
+        "position": 5,
+        "points": "91"
+      },
+      {
+        "year": 2020,
+        "position": 5,
+        "points": "181"
       }
     ]
   },
@@ -5242,7 +7691,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1988,
+        "position": 9,
+        "points": "3"
+      },
+      {
+        "year": 1989,
+        "position": 13,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "sauber",
@@ -5318,6 +7779,46 @@
     "driver_championships": [],
     "championship_results": [
       {
+        "year": 1993,
+        "position": 7,
+        "points": "12"
+      },
+      {
+        "year": 1994,
+        "position": 8,
+        "points": "12"
+      },
+      {
+        "year": 1995,
+        "position": 7,
+        "points": "18"
+      },
+      {
+        "year": 1996,
+        "position": 7,
+        "points": "11"
+      },
+      {
+        "year": 1997,
+        "position": 7,
+        "points": "16"
+      },
+      {
+        "year": 1998,
+        "position": 6,
+        "points": "10"
+      },
+      {
+        "year": 1999,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 2000,
+        "position": 8,
+        "points": "6"
+      },
+      {
         "year": 2001,
         "position": 4,
         "points": "21"
@@ -5346,6 +7847,51 @@
         "year": 2010,
         "position": 8,
         "points": "44"
+      },
+      {
+        "year": 2011,
+        "position": 7,
+        "points": "44"
+      },
+      {
+        "year": 2012,
+        "position": 6,
+        "points": "126"
+      },
+      {
+        "year": 2013,
+        "position": 7,
+        "points": "57"
+      },
+      {
+        "year": 2014,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2015,
+        "position": 8,
+        "points": "36"
+      },
+      {
+        "year": 2016,
+        "position": 10,
+        "points": "2"
+      },
+      {
+        "year": 2017,
+        "position": 10,
+        "points": "5"
+      },
+      {
+        "year": 2018,
+        "position": 8,
+        "points": "48"
+      },
+      {
+        "year": 2024,
+        "position": 10,
+        "points": "4"
       }
     ]
   },
@@ -5401,7 +7947,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "scirocco",
@@ -5423,7 +7970,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1963,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1964,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "shadow",
@@ -5468,7 +8027,44 @@
     "pole_positions": 3,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1973,
+        "position": 8,
+        "points": "9"
+      },
+      {
+        "year": 1974,
+        "position": 8,
+        "points": "7"
+      },
+      {
+        "year": 1976,
+        "position": 8,
+        "points": "10"
+      },
+      {
+        "year": 1977,
+        "position": 7,
+        "points": "23"
+      },
+      {
+        "year": 1978,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1979,
+        "position": 10,
+        "points": "3"
+      },
+      {
+        "year": 1980,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "shannon",
@@ -5487,7 +8083,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1966,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "sherman",
@@ -5508,7 +8111,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "simca",
@@ -5540,7 +8144,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "simtek",
@@ -5566,7 +8171,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1994,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1995,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "snowberger",
@@ -5585,7 +8202,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "spirit",
@@ -5608,7 +8226,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1983,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1984,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "spyker",
@@ -5658,7 +8293,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1963,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "stevens",
@@ -5691,7 +8333,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "stewart",
@@ -5715,7 +8358,24 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1997,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1998,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 1999,
+        "position": 4,
+        "points": "36"
+      }
+    ]
   },
   {
     "id": "super-aguri",
@@ -5740,7 +8400,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "surtees",
@@ -5801,7 +8462,54 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1970,
+        "position": 8,
+        "points": "3"
+      },
+      {
+        "year": 1971,
+        "position": 8,
+        "points": "8"
+      },
+      {
+        "year": 1972,
+        "position": 5,
+        "points": "18"
+      },
+      {
+        "year": 1973,
+        "position": 9,
+        "points": "7"
+      },
+      {
+        "year": 1974,
+        "position": 11,
+        "points": "3"
+      },
+      {
+        "year": 1975,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1976,
+        "position": 10,
+        "points": "7"
+      },
+      {
+        "year": 1977,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1978,
+        "position": 13,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "sutton",
@@ -5820,7 +8528,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "lago",
@@ -5858,7 +8567,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "team-lotus",
@@ -6071,7 +8781,8 @@
         "year": 1978,
         "driver_id": "mario_andretti"
       }
-    ]
+    ],
+    "championship_results": []
   },
   {
     "id": "tec-mec",
@@ -6120,7 +8831,19 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1972,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1973,
+        "position": 11,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "theodore",
@@ -6152,7 +8875,29 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1978,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1981,
+        "position": 12,
+        "points": "1"
+      },
+      {
+        "year": 1982,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1983,
+        "position": 11,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "token",
@@ -6173,7 +8918,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1974,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "toleman",
@@ -6203,7 +8955,34 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1981,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1982,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1983,
+        "position": 9,
+        "points": "10"
+      },
+      {
+        "year": 1984,
+        "position": 7,
+        "points": "16"
+      },
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "toro-rosso",
@@ -6248,7 +9027,8 @@
     "pole_positions": 1,
     "fastest_laps": 1,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "toyota",
@@ -6349,7 +9129,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "trojan",
@@ -6368,7 +9149,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1974,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "tyrrell",
@@ -6472,6 +9260,153 @@
         "year": 1973,
         "driver_id": "stewart"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 1970,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1971,
+        "position": 1,
+        "points": "73"
+      },
+      {
+        "year": 1972,
+        "position": 2,
+        "points": "51"
+      },
+      {
+        "year": 1973,
+        "position": 2,
+        "points": "80"
+      },
+      {
+        "year": 1974,
+        "position": 3,
+        "points": "51"
+      },
+      {
+        "year": 1975,
+        "position": 5,
+        "points": "25"
+      },
+      {
+        "year": 1976,
+        "position": 3,
+        "points": "71"
+      },
+      {
+        "year": 1977,
+        "position": 6,
+        "points": "27"
+      },
+      {
+        "year": 1978,
+        "position": 4,
+        "points": "38"
+      },
+      {
+        "year": 1979,
+        "position": 5,
+        "points": "28"
+      },
+      {
+        "year": 1980,
+        "position": 6,
+        "points": "12"
+      },
+      {
+        "year": 1981,
+        "position": 10,
+        "points": "10"
+      },
+      {
+        "year": 1982,
+        "position": 7,
+        "points": "25"
+      },
+      {
+        "year": 1983,
+        "position": 7,
+        "points": "12"
+      },
+      {
+        "year": 1984,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1985,
+        "position": 9,
+        "points": "7"
+      },
+      {
+        "year": 1986,
+        "position": 7,
+        "points": "11"
+      },
+      {
+        "year": 1987,
+        "position": 6,
+        "points": "11"
+      },
+      {
+        "year": 1988,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 1989,
+        "position": 5,
+        "points": "16"
+      },
+      {
+        "year": 1990,
+        "position": 5,
+        "points": "16"
+      },
+      {
+        "year": 1991,
+        "position": 6,
+        "points": "12"
+      },
+      {
+        "year": 1992,
+        "position": 6,
+        "points": "8"
+      },
+      {
+        "year": 1993,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1994,
+        "position": 7,
+        "points": "13"
+      },
+      {
+        "year": 1995,
+        "position": 9,
+        "points": "5"
+      },
+      {
+        "year": 1996,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 1997,
+        "position": 10,
+        "points": "2"
+      },
+      {
+        "year": 1998,
+        "position": 999,
+        "points": "0"
+      }
     ]
   },
   {
@@ -6562,7 +9497,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "virgin",
@@ -6590,6 +9526,11 @@
         "year": 2010,
         "position": 12,
         "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 12,
+        "points": "0"
       }
     ]
   },
@@ -6610,7 +9551,8 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": []
   },
   {
     "id": "williams",
@@ -6796,6 +9738,131 @@
     ],
     "championship_results": [
       {
+        "year": 1975,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1976,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1978,
+        "position": 9,
+        "points": "11"
+      },
+      {
+        "year": 1979,
+        "position": 2,
+        "points": "75"
+      },
+      {
+        "year": 1980,
+        "position": 1,
+        "points": "120"
+      },
+      {
+        "year": 1981,
+        "position": 1,
+        "points": "95"
+      },
+      {
+        "year": 1982,
+        "position": 4,
+        "points": "58"
+      },
+      {
+        "year": 1983,
+        "position": 4,
+        "points": "38"
+      },
+      {
+        "year": 1984,
+        "position": 6,
+        "points": "25.5"
+      },
+      {
+        "year": 1985,
+        "position": 3,
+        "points": "71"
+      },
+      {
+        "year": 1986,
+        "position": 1,
+        "points": "141"
+      },
+      {
+        "year": 1987,
+        "position": 1,
+        "points": "137"
+      },
+      {
+        "year": 1988,
+        "position": 7,
+        "points": "20"
+      },
+      {
+        "year": 1989,
+        "position": 2,
+        "points": "77"
+      },
+      {
+        "year": 1990,
+        "position": 4,
+        "points": "57"
+      },
+      {
+        "year": 1991,
+        "position": 2,
+        "points": "125"
+      },
+      {
+        "year": 1992,
+        "position": 1,
+        "points": "164"
+      },
+      {
+        "year": 1993,
+        "position": 1,
+        "points": "168"
+      },
+      {
+        "year": 1994,
+        "position": 1,
+        "points": "118"
+      },
+      {
+        "year": 1995,
+        "position": 2,
+        "points": "118"
+      },
+      {
+        "year": 1996,
+        "position": 1,
+        "points": "175"
+      },
+      {
+        "year": 1997,
+        "position": 1,
+        "points": "123"
+      },
+      {
+        "year": 1998,
+        "position": 3,
+        "points": "38"
+      },
+      {
+        "year": 1999,
+        "position": 5,
+        "points": "35"
+      },
+      {
+        "year": 2000,
+        "position": 3,
+        "points": "36"
+      },
+      {
         "year": 2001,
         "position": 3,
         "points": "80"
@@ -6844,6 +9911,76 @@
         "year": 2010,
         "position": 6,
         "points": "69"
+      },
+      {
+        "year": 2011,
+        "position": 9,
+        "points": "5"
+      },
+      {
+        "year": 2012,
+        "position": 8,
+        "points": "76"
+      },
+      {
+        "year": 2013,
+        "position": 9,
+        "points": "5"
+      },
+      {
+        "year": 2014,
+        "position": 3,
+        "points": "320"
+      },
+      {
+        "year": 2015,
+        "position": 3,
+        "points": "257"
+      },
+      {
+        "year": 2016,
+        "position": 5,
+        "points": "138"
+      },
+      {
+        "year": 2017,
+        "position": 5,
+        "points": "83"
+      },
+      {
+        "year": 2018,
+        "position": 10,
+        "points": "7"
+      },
+      {
+        "year": 2019,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 2020,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2021,
+        "position": 8,
+        "points": "23"
+      },
+      {
+        "year": 2022,
+        "position": 10,
+        "points": "8"
+      },
+      {
+        "year": 2023,
+        "position": 7,
+        "points": "28"
+      },
+      {
+        "year": 2024,
+        "position": 9,
+        "points": "17"
       }
     ]
   },
@@ -6876,7 +10013,29 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1976,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1977,
+        "position": 4,
+        "points": "55"
+      },
+      {
+        "year": 1978,
+        "position": 5,
+        "points": "24"
+      },
+      {
+        "year": 1979,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "zakspeed",
@@ -6905,6 +10064,33 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1985,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1986,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1987,
+        "position": 10,
+        "points": "2"
+      },
+      {
+        "year": 1988,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1989,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   }
 ]
