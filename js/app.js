@@ -2413,9 +2413,7 @@ function computeDriverStats(data, driverId) {
 
 	const wins = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1").length;
 	const podiums = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText))).length;
-	
 	const poles = participations.filter(p => getDriverGridPos(p) === 1).length;
-	
 	const fastestLaps = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1").length;
 
 	const finishes = participations.map(p => p.result ? parseInt(p.result.position || p.result.positionText, 10) : NaN).filter(n => !isNaN(n));
@@ -2424,11 +2422,19 @@ function computeDriverStats(data, driverId) {
 	const grids = participations.map(p => getDriverGridPos(p)).filter(n => n !== null);
 	const bestGrid = grids.length ? Math.min(...grids) : null;
 
+	const driver = data.driversById[driverId];
+	const champResults = driver.championship_results || [];
+	
+	// Filter out 999 / Not Classified positions
+	const validPositions = champResults.map(r => parseInt(r.position, 10)).filter(p => p > 0 && p < 50);
+	const bestChampFinish = validPositions.length ? Math.min(...validPositions) : null;
+
 	return {
 		participations,
 		racesEntered: participations.length,
 		wins, podiums, poles, fastestLaps,
-		bestFinish, bestGrid
+		bestFinish, bestGrid,
+		champResults, bestChampFinish
 	};
 }
 
@@ -2482,9 +2488,10 @@ function computeTeamStats(data, teamId) {
 	const participations = [];
 	
 	data.races.forEach(race => {
-		const resultEntries = (race.results || []).filter(r => resolveTeamId(data, r.team) === teamId);
-		const qualiEntries = (race.qualifying || []).filter(q => resolveTeamId(data, q.team) === teamId);
-		const gridEntries = (race.starting_grid || []).filter(g => resolveTeamId(data, g.team) === teamId);
+		// Using findTeamIdByName to ensure we don't hit missing function errors
+		const resultEntries = (race.results || []).filter(r => findTeamIdByName(data, r.team) === teamId);
+		const qualiEntries = (race.qualifying || []).filter(q => findTeamIdByName(data, q.team) === teamId);
+		const gridEntries = (race.starting_grid || []).filter(g => findTeamIdByName(data, g.team) === teamId);
 
 		if (resultEntries.length || qualiEntries.length || gridEntries.length) {
 			participations.push({ race, results: resultEntries, qualis: qualiEntries, grids: gridEntries });
@@ -2523,7 +2530,10 @@ function computeTeamStats(data, teamId) {
 
 	const team = data.teamsById[teamId];
 	const champResults = team.championship_results || [];
-	const bestChampFinish = champResults.length ? Math.min(...champResults.map(r => r.position)) : null;
+	
+	// Filter out 999 / Not Classified positions (anything over 50 is NC)
+	const validPositions = champResults.map(r => parseInt(r.position, 10)).filter(p => p > 0 && p < 50);
+	const bestChampFinish = validPositions.length ? Math.min(...validPositions) : null;
 
 	return {
 		participations,
