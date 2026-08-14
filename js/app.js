@@ -2237,17 +2237,17 @@ function renderTeamPage(data, teamId, params) {
 		statRows.push(`<dt>Fastest laps</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="fastest-laps" data-team="${esc(team.id)}">${stats.fastestLaps}</a></dd>`);
 	}
 
-	const hasChampionshipData = (driver.championship_results || []).length > 0; // (use team for teams)
+	const hasChampionshipData = (team.championship_results || []).length > 0;
 
 	if (stats.bestChampFinish !== null) {
 		statRows.push(`
 			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="best-champ" data-driver="${esc(driver.id)}">${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}</a></dd>
+			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-champ" data-team="${esc(team.id)}">${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}</a></dd>
 		`);
 	} else if (hasChampionshipData) {
 		statRows.push(`
 			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="best-champ" data-driver="${esc(driver.id)}">Not classified</a></dd>
+			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-champ" data-team="${esc(team.id)}">Not classified</a></dd>
 		`);
 	}
 
