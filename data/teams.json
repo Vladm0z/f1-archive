@@ -316,7 +316,19 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 2002,
+        "position": 11,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "arzani-volpini",
@@ -386,7 +398,19 @@
     "pole_positions": 0,
     "fastest_laps": 3,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "ats",
@@ -477,7 +501,34 @@
     "pole_positions": 2,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 6,
+        "points": "17"
+      },
+      {
+        "year": 2002,
+        "position": 8,
+        "points": "7"
+      },
+      {
+        "year": 2003,
+        "position": 5,
+        "points": "26"
+      },
+      {
+        "year": 2004,
+        "position": 2,
+        "points": "119"
+      },
+      {
+        "year": 2005,
+        "position": 6,
+        "points": "38"
+      }
+    ]
   },
   {
     "id": "behra-porsche",
@@ -498,7 +549,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bellasi",
@@ -580,6 +638,13 @@
         "year": 1995,
         "driver_id": "michael_schumacher"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 7,
+        "points": "10"
+      }
     ]
   },
   {
@@ -631,7 +696,29 @@
     "pole_positions": 1,
     "fastest_laps": 2,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 5,
+        "points": "36"
+      },
+      {
+        "year": 2007,
+        "position": 2,
+        "points": "101"
+      },
+      {
+        "year": 2008,
+        "position": 3,
+        "points": "135"
+      },
+      {
+        "year": 2009,
+        "position": 6,
+        "points": "36"
+      }
+    ]
   },
   {
     "id": "boro",
@@ -835,6 +922,13 @@
         "year": 2009,
         "driver_id": "button"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 2009,
+        "position": 1,
+        "points": "172"
+      }
     ]
   },
   {
@@ -963,6 +1057,28 @@
       {
         "year": 1962,
         "driver_id": "hill"
+      }
+    ],
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 4,
+        "points": "18"
+      },
+      {
+        "year": 1959,
+        "position": 3,
+        "points": "18"
+      },
+      {
+        "year": 1960,
+        "position": 4,
+        "points": "8"
+      },
+      {
+        "year": 1961,
+        "position": 5,
+        "points": "7"
       }
     ]
   },
@@ -1157,7 +1273,19 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "connew",
@@ -1332,6 +1460,13 @@
       {
         "year": 1960,
         "driver_id": "jack_brabham"
+      }
+    ],
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 3,
+        "points": "31"
       }
     ]
   },
@@ -1551,7 +1686,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "emw",
@@ -1884,7 +2026,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "ferrari",
@@ -2156,6 +2305,78 @@
         "year": 2007,
         "driver_id": "raikkonen"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 2,
+        "points": "40"
+      },
+      {
+        "year": 1959,
+        "position": 2,
+        "points": "32"
+      },
+      {
+        "year": 1960,
+        "position": 3,
+        "points": "26"
+      },
+      {
+        "year": 1961,
+        "position": 1,
+        "points": "45"
+      },
+      {
+        "year": 2001,
+        "position": 1,
+        "points": "179"
+      },
+      {
+        "year": 2002,
+        "position": 1,
+        "points": "221"
+      },
+      {
+        "year": 2003,
+        "position": 1,
+        "points": "158"
+      },
+      {
+        "year": 2004,
+        "position": 1,
+        "points": "262"
+      },
+      {
+        "year": 2005,
+        "position": 3,
+        "points": "100"
+      },
+      {
+        "year": 2006,
+        "position": 2,
+        "points": "201"
+      },
+      {
+        "year": 2007,
+        "position": 1,
+        "points": "204"
+      },
+      {
+        "year": 2008,
+        "position": 1,
+        "points": "172"
+      },
+      {
+        "year": 2009,
+        "position": 4,
+        "points": "70"
+      },
+      {
+        "year": 2010,
+        "position": 3,
+        "points": "396"
+      }
     ]
   },
   {
@@ -2281,7 +2502,24 @@
     "pole_positions": 1,
     "fastest_laps": 5,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2008,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2009,
+        "position": 9,
+        "points": "13"
+      },
+      {
+        "year": 2010,
+        "position": 7,
+        "points": "68"
+      }
+    ]
   },
   {
     "id": "forti",
@@ -2346,7 +2584,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "gordini",
@@ -2519,7 +2764,24 @@
     "pole_positions": 2,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 4,
+        "points": "86"
+      },
+      {
+        "year": 2007,
+        "position": 8,
+        "points": "6"
+      },
+      {
+        "year": 2008,
+        "position": 9,
+        "points": "14"
+      }
+    ]
   },
   {
     "id": "hrt",
@@ -2547,7 +2809,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 11,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "hwm",
@@ -2642,7 +2911,29 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 8,
+        "points": "9"
+      },
+      {
+        "year": 2002,
+        "position": 7,
+        "points": "8"
+      },
+      {
+        "year": 2003,
+        "position": 7,
+        "points": "18"
+      },
+      {
+        "year": 2004,
+        "position": 7,
+        "points": "10"
+      }
+    ]
   },
   {
     "id": "jbw",
@@ -2663,7 +2954,24 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "jordan",
@@ -2725,7 +3033,34 @@
     "pole_positions": 2,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 5,
+        "points": "19"
+      },
+      {
+        "year": 2002,
+        "position": 6,
+        "points": "9"
+      },
+      {
+        "year": 2003,
+        "position": 9,
+        "points": "13"
+      },
+      {
+        "year": 2004,
+        "position": 9,
+        "points": "5"
+      },
+      {
+        "year": 2005,
+        "position": 9,
+        "points": "12"
+      }
+    ]
   },
   {
     "id": "klenk",
@@ -2880,7 +3215,14 @@
     "pole_positions": 6,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "kuzma",
@@ -3534,7 +3876,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "mclaren",
@@ -3738,6 +4087,58 @@
         "year": 2025,
         "driver_id": "norris"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 2,
+        "points": "102"
+      },
+      {
+        "year": 2002,
+        "position": 3,
+        "points": "65"
+      },
+      {
+        "year": 2003,
+        "position": 3,
+        "points": "142"
+      },
+      {
+        "year": 2004,
+        "position": 5,
+        "points": "69"
+      },
+      {
+        "year": 2005,
+        "position": 2,
+        "points": "182"
+      },
+      {
+        "year": 2006,
+        "position": 3,
+        "points": "110"
+      },
+      {
+        "year": 2007,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2008,
+        "position": 2,
+        "points": "151"
+      },
+      {
+        "year": 2009,
+        "position": 3,
+        "points": "71"
+      },
+      {
+        "year": 2010,
+        "position": 2,
+        "points": "454"
+      }
     ]
   },
   {
@@ -3832,6 +4233,13 @@
         "year": 2020,
         "driver_id": "hamilton"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 4,
+        "points": "214"
+      }
     ]
   },
   {
@@ -3893,7 +4301,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 10,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "milano",
@@ -3987,7 +4402,34 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2002,
+        "position": 9,
+        "points": "2"
+      },
+      {
+        "year": 2003,
+        "position": 10,
+        "points": "0"
+      },
+      {
+        "year": 2004,
+        "position": 10,
+        "points": "1"
+      },
+      {
+        "year": 2005,
+        "position": 10,
+        "points": "7"
+      }
+    ]
   },
   {
     "id": "moore",
@@ -4346,7 +4788,29 @@
     "pole_positions": 1,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 7,
+        "points": "1"
+      },
+      {
+        "year": 1961,
+        "position": 3,
+        "points": "22"
+      }
+    ]
   },
   {
     "id": "prost",
@@ -4377,7 +4841,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 9,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "protos",
@@ -4702,6 +5173,53 @@
         "year": 2006,
         "driver_id": "alonso"
       }
+    ],
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 4,
+        "points": "23"
+      },
+      {
+        "year": 2003,
+        "position": 4,
+        "points": "88"
+      },
+      {
+        "year": 2004,
+        "position": 3,
+        "points": "105"
+      },
+      {
+        "year": 2005,
+        "position": 1,
+        "points": "191"
+      },
+      {
+        "year": 2006,
+        "position": 1,
+        "points": "206"
+      },
+      {
+        "year": 2007,
+        "position": 3,
+        "points": "51"
+      },
+      {
+        "year": 2008,
+        "position": 4,
+        "points": "80"
+      },
+      {
+        "year": 2009,
+        "position": 8,
+        "points": "26"
+      },
+      {
+        "year": 2010,
+        "position": 5,
+        "points": "163"
+      }
     ]
   },
   {
@@ -4797,7 +5315,39 @@
     "pole_positions": 0,
     "fastest_laps": 3,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 4,
+        "points": "21"
+      },
+      {
+        "year": 2002,
+        "position": 5,
+        "points": "11"
+      },
+      {
+        "year": 2003,
+        "position": 6,
+        "points": "19"
+      },
+      {
+        "year": 2004,
+        "position": 6,
+        "points": "34"
+      },
+      {
+        "year": 2005,
+        "position": 8,
+        "points": "20"
+      },
+      {
+        "year": 2010,
+        "position": 8,
+        "points": "44"
+      }
+    ]
   },
   {
     "id": "scarab",
@@ -4818,7 +5368,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "schroeder",
@@ -5074,7 +5631,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 10,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "stebro",
@@ -5526,7 +6090,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "tecno",
@@ -5711,7 +6282,49 @@
     "pole_positions": 3,
     "fastest_laps": 3,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 10,
+        "points": "2"
+      },
+      {
+        "year": 2003,
+        "position": 8,
+        "points": "16"
+      },
+      {
+        "year": 2004,
+        "position": 8,
+        "points": "9"
+      },
+      {
+        "year": 2005,
+        "position": 4,
+        "points": "88"
+      },
+      {
+        "year": 2006,
+        "position": 6,
+        "points": "35"
+      },
+      {
+        "year": 2007,
+        "position": 6,
+        "points": "13"
+      },
+      {
+        "year": 2008,
+        "position": 5,
+        "points": "56"
+      },
+      {
+        "year": 2009,
+        "position": 5,
+        "points": "59.5"
+      }
+    ]
   },
   {
     "id": "trevis",
@@ -5897,7 +6510,24 @@
     "constructor_championships": [
       1958
     ],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 1,
+        "points": "48"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "veritas",
@@ -5954,7 +6584,14 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
-    "driver_championships": []
+    "driver_championships": [],
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 12,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "wetteroth",
@@ -6155,6 +6792,58 @@
       {
         "year": 1997,
         "driver_id": "villeneuve"
+      }
+    ],
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 3,
+        "points": "80"
+      },
+      {
+        "year": 2002,
+        "position": 2,
+        "points": "92"
+      },
+      {
+        "year": 2003,
+        "position": 2,
+        "points": "144"
+      },
+      {
+        "year": 2004,
+        "position": 4,
+        "points": "88"
+      },
+      {
+        "year": 2005,
+        "position": 5,
+        "points": "66"
+      },
+      {
+        "year": 2006,
+        "position": 8,
+        "points": "11"
+      },
+      {
+        "year": 2007,
+        "position": 4,
+        "points": "33"
+      },
+      {
+        "year": 2008,
+        "position": 8,
+        "points": "26"
+      },
+      {
+        "year": 2009,
+        "position": 7,
+        "points": "34.5"
+      },
+      {
+        "year": 2010,
+        "position": 6,
+        "points": "69"
       }
     ]
   },

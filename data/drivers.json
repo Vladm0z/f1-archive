@@ -124,7 +124,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131957",
-    "date_of_death": "1989-10-13"
+    "date_of_death": "1989-10-13",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 19,
+        "points": "1.5"
+      },
+      {
+        "year": 1954,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "ahrens",
@@ -182,7 +194,24 @@
     ],
     "championships": 0,
     "active_years": "2005\u20132007",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 19,
+        "points": "4"
+      },
+      {
+        "year": 2006,
+        "position": 22,
+        "points": "0"
+      },
+      {
+        "year": 2007,
+        "position": 25,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "albon",
@@ -249,7 +278,14 @@
     ],
     "championships": 0,
     "active_years": "1989\u20132001",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 15,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "alguersuari",
@@ -267,7 +303,24 @@
     ],
     "championships": 0,
     "active_years": "2009\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2009,
+        "position": 24,
+        "points": "0"
+      },
+      {
+        "year": 2010,
+        "position": 19,
+        "points": "5"
+      },
+      {
+        "year": 2011,
+        "position": 14,
+        "points": "26"
+      }
+    ]
   },
   {
     "id": "alliot",
@@ -310,7 +363,29 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131961",
-    "date_of_death": "2005-04-07"
+    "date_of_death": "2005-04-07",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 19,
+        "points": "3"
+      },
+      {
+        "year": 1959,
+        "position": 17,
+        "points": "2"
+      },
+      {
+        "year": 1960,
+        "position": 13,
+        "points": "6"
+      },
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "alonso",
@@ -333,7 +408,59 @@
     ],
     "championships": 2,
     "active_years": "2001\u20132025",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2003,
+        "position": 6,
+        "points": "55"
+      },
+      {
+        "year": 2004,
+        "position": 4,
+        "points": "59"
+      },
+      {
+        "year": 2005,
+        "position": 1,
+        "points": "133"
+      },
+      {
+        "year": 2006,
+        "position": 1,
+        "points": "134"
+      },
+      {
+        "year": 2007,
+        "position": 3,
+        "points": "109"
+      },
+      {
+        "year": 2008,
+        "position": 5,
+        "points": "61"
+      },
+      {
+        "year": 2009,
+        "position": 9,
+        "points": "26"
+      },
+      {
+        "year": 2010,
+        "position": 2,
+        "points": "252"
+      },
+      {
+        "year": 2011,
+        "position": 4,
+        "points": "257"
+      }
+    ]
   },
   {
     "id": "amati",
@@ -369,7 +496,14 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131958",
-    "date_of_death": "1959-04-04"
+    "date_of_death": "1959-04-04",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 15,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "amick",
@@ -664,7 +798,34 @@
     ],
     "championships": 2,
     "active_years": "1950\u20131955",
-    "date_of_death": "1955-05-26"
+    "date_of_death": "1955-05-26",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 5,
+        "points": "11"
+      },
+      {
+        "year": 1951,
+        "position": 2,
+        "points": "25"
+      },
+      {
+        "year": 1952,
+        "position": 1,
+        "points": "36"
+      },
+      {
+        "year": 1953,
+        "position": 1,
+        "points": "34.5"
+      },
+      {
+        "year": 1954,
+        "position": 25,
+        "points": "1.1400000000000001"
+      }
+    ]
   },
   {
     "id": "ashdown",
@@ -782,7 +943,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131954",
-    "date_of_death": "1955-05-17"
+    "date_of_death": "1955-05-17",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 16,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "badoer",
@@ -803,7 +971,14 @@
     ],
     "championships": 0,
     "active_years": "1993\u20132009",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2009,
+        "position": 25,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "baghetti",
@@ -825,7 +1000,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131967",
-    "date_of_death": "1995-11-27"
+    "date_of_death": "1995-11-27",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 9,
+        "points": "9"
+      }
+    ]
   },
   {
     "id": "bailey",
@@ -883,7 +1065,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131951",
-    "date_of_death": "1954-02-27"
+    "date_of_death": "1954-02-27",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 19,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "balsa",
@@ -921,7 +1110,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131967",
-    "date_of_death": "1967-05-10"
+    "date_of_death": "1967-05-10",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "banks",
@@ -942,7 +1138,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131952",
-    "date_of_death": "1994-12-18"
+    "date_of_death": "1994-12-18",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "barbazza",
@@ -1037,7 +1240,64 @@
     ],
     "championships": 0,
     "active_years": "1993\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 3,
+        "points": "56"
+      },
+      {
+        "year": 2002,
+        "position": 2,
+        "points": "77"
+      },
+      {
+        "year": 2003,
+        "position": 4,
+        "points": "65"
+      },
+      {
+        "year": 2004,
+        "position": 2,
+        "points": "114"
+      },
+      {
+        "year": 2005,
+        "position": 8,
+        "points": "38"
+      },
+      {
+        "year": 2006,
+        "position": 7,
+        "points": "30"
+      },
+      {
+        "year": 2007,
+        "position": 20,
+        "points": "0"
+      },
+      {
+        "year": 2008,
+        "position": 14,
+        "points": "11"
+      },
+      {
+        "year": 2009,
+        "position": 3,
+        "points": "77"
+      },
+      {
+        "year": 2010,
+        "position": 10,
+        "points": "47"
+      },
+      {
+        "year": 2011,
+        "position": 17,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "bartels",
@@ -1073,7 +1333,19 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131964",
-    "date_of_death": "1965-05-20"
+    "date_of_death": "1965-05-20",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bassi",
@@ -1128,7 +1400,19 @@
     ],
     "championships": 0,
     "active_years": "2003\u20132004",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 24,
+        "points": "0"
+      },
+      {
+        "year": 2004,
+        "position": 20,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "bayol",
@@ -1147,7 +1431,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131956",
-    "date_of_death": "1995-05-25"
+    "date_of_death": "1995-05-25",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 21,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "bearman",
@@ -1242,7 +1533,49 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131959",
-    "date_of_death": "1959-08-01"
+    "date_of_death": "1959-08-01",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 26,
+        "points": "0.14"
+      },
+      {
+        "year": 1955,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1956,
+        "position": 4,
+        "points": "22"
+      },
+      {
+        "year": 1957,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1958,
+        "position": 12,
+        "points": "9"
+      },
+      {
+        "year": 1959,
+        "position": 18,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "bell",
@@ -1457,7 +1790,19 @@
     ],
     "championships": 0,
     "active_years": "2001\u20132002",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2002,
+        "position": 22,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bertaggia",
@@ -1498,7 +1843,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131960",
-    "date_of_death": "1961-05-12"
+    "date_of_death": "1961-05-12",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 21,
+        "points": "1"
+      },
+      {
+        "year": 1955,
+        "position": 13,
+        "points": "3"
+      },
+      {
+        "year": 1958,
+        "position": 17,
+        "points": "4"
+      },
+      {
+        "year": 1959,
+        "position": 16,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "beuttler",
@@ -1557,7 +1924,14 @@
     ],
     "championships": 0,
     "active_years": "1960\u20131968",
-    "date_of_death": "1969-03-30"
+    "date_of_death": "1969-03-30",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 24,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "bianco",
@@ -1639,7 +2013,24 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131954",
-    "date_of_death": "1985-12-23"
+    "date_of_death": "1985-12-23",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 8,
+        "points": "5"
+      },
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 17,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "birger",
@@ -1694,7 +2085,14 @@
     ],
     "championships": 0,
     "active_years": "1959\u20131959",
-    "date_of_death": "1960-01-31"
+    "date_of_death": "1960-01-31",
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bleekemolen",
@@ -1847,7 +2245,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131953",
-    "date_of_death": "1953-11-21"
+    "date_of_death": "1953-11-21",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 19,
+        "points": "2"
+      },
+      {
+        "year": 1951,
+        "position": 8,
+        "points": "7"
+      },
+      {
+        "year": 1952,
+        "position": 19,
+        "points": "2"
+      },
+      {
+        "year": 1953,
+        "position": 9,
+        "points": "6.5"
+      }
+    ]
   },
   {
     "id": "bonnier",
@@ -1873,7 +2293,34 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131971",
-    "date_of_death": "1972-06-11"
+    "date_of_death": "1972-06-11",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1958,
+        "position": 20,
+        "points": "3"
+      },
+      {
+        "year": 1959,
+        "position": 8,
+        "points": "10"
+      },
+      {
+        "year": 1960,
+        "position": 18,
+        "points": "4"
+      },
+      {
+        "year": 1961,
+        "position": 15,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "bonomi",
@@ -2021,7 +2468,19 @@
     ],
     "championships": 0,
     "active_years": "2008\u20132009",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2008,
+        "position": 17,
+        "points": "4"
+      },
+      {
+        "year": 2009,
+        "position": 19,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "boutsen",
@@ -2062,7 +2521,24 @@
     ],
     "championships": 0,
     "active_years": "1957\u20131960",
-    "date_of_death": "2003-10-26"
+    "date_of_death": "2003-10-26",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1958,
+        "position": 16,
+        "points": "4"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "brabham",
@@ -2119,7 +2595,34 @@
     ],
     "championships": 3,
     "active_years": "1955\u20131970",
-    "date_of_death": "2014-05-19"
+    "date_of_death": "2014-05-19",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1958,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 1959,
+        "position": 1,
+        "points": "31"
+      },
+      {
+        "year": 1960,
+        "position": 1,
+        "points": "43"
+      },
+      {
+        "year": 1961,
+        "position": 11,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "brack",
@@ -2248,7 +2751,14 @@
     ],
     "championships": 0,
     "active_years": "1959\u20131960",
-    "date_of_death": "1966-11-12"
+    "date_of_death": "1966-11-12",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 21,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "bridger",
@@ -2342,7 +2852,34 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131961",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 5,
+        "points": "11"
+      },
+      {
+        "year": 1958,
+        "position": 3,
+        "points": "24"
+      },
+      {
+        "year": 1959,
+        "position": 2,
+        "points": "27"
+      },
+      {
+        "year": 1960,
+        "position": 11,
+        "points": "7"
+      },
+      {
+        "year": 1961,
+        "position": 10,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "alan_brown",
@@ -2360,7 +2897,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131953",
-    "date_of_death": "2004-01-20"
+    "date_of_death": "2004-01-20",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 16,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "walt_brown",
@@ -2474,7 +3018,14 @@
     ],
     "championships": 0,
     "active_years": "2004\u20132004",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2004,
+        "position": 25,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bryan",
@@ -2495,7 +3046,29 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131960",
-    "date_of_death": "1960-06-19"
+    "date_of_death": "1960-06-19",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 10,
+        "points": "6"
+      },
+      {
+        "year": 1957,
+        "position": 16,
+        "points": "4"
+      },
+      {
+        "year": 1958,
+        "position": 13,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "bucci",
@@ -2555,7 +3128,14 @@
     ],
     "championships": 0,
     "active_years": "1957\u20131959",
-    "date_of_death": "1959-08-01"
+    "date_of_death": "1959-08-01",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "buemi",
@@ -2573,7 +3153,24 @@
     ],
     "championships": 0,
     "active_years": "2009\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2009,
+        "position": 16,
+        "points": "6"
+      },
+      {
+        "year": 2010,
+        "position": 16,
+        "points": "8"
+      },
+      {
+        "year": 2011,
+        "position": 15,
+        "points": "15"
+      }
+    ]
   },
   {
     "id": "bueno",
@@ -2611,7 +3208,19 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131963",
-    "date_of_death": "2012-05-19"
+    "date_of_death": "2012-05-19",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "burti",
@@ -2630,7 +3239,14 @@
     ],
     "championships": 0,
     "active_years": "2000\u20132001",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "bussinello",
@@ -2673,7 +3289,64 @@
     ],
     "championships": 1,
     "active_years": "2000\u20132017",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 17,
+        "points": "2"
+      },
+      {
+        "year": 2002,
+        "position": 7,
+        "points": "14"
+      },
+      {
+        "year": 2003,
+        "position": 9,
+        "points": "17"
+      },
+      {
+        "year": 2004,
+        "position": 3,
+        "points": "85"
+      },
+      {
+        "year": 2005,
+        "position": 9,
+        "points": "37"
+      },
+      {
+        "year": 2006,
+        "position": 6,
+        "points": "56"
+      },
+      {
+        "year": 2007,
+        "position": 15,
+        "points": "6"
+      },
+      {
+        "year": 2008,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 2009,
+        "position": 1,
+        "points": "95"
+      },
+      {
+        "year": 2010,
+        "position": 5,
+        "points": "214"
+      },
+      {
+        "year": 2011,
+        "position": 2,
+        "points": "270"
+      }
+    ]
   },
   {
     "id": "byrne",
@@ -2710,7 +3383,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131953",
-    "date_of_death": "1973-03-30"
+    "date_of_death": "1973-03-30",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 14,
+        "points": "3"
+      },
+      {
+        "year": 1951,
+        "position": 18,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "cabianca",
@@ -2731,7 +3416,14 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131960",
-    "date_of_death": "1961-06-15"
+    "date_of_death": "1961-06-15",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 22,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "cabral",
@@ -2946,7 +3638,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131960",
-    "date_of_death": "1993-03-07"
+    "date_of_death": "1993-03-07",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 15,
+        "points": "3"
+      },
+      {
+        "year": 1953,
+        "position": 13,
+        "points": "2"
+      },
+      {
+        "year": 1954,
+        "position": 23,
+        "points": "1.5"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "castellotti",
@@ -2965,7 +3679,19 @@
     ],
     "championships": 0,
     "active_years": "1955\u20131957",
-    "date_of_death": "1957-03-14"
+    "date_of_death": "1957-03-14",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 3,
+        "points": "12"
+      },
+      {
+        "year": 1956,
+        "position": 6,
+        "points": "7.5"
+      }
+    ]
   },
   {
     "id": "cecotto",
@@ -3022,7 +3748,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1983-12-28"
+    "date_of_death": "1983-12-28",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 20,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "chamberlain",
@@ -3059,7 +3792,19 @@
     ],
     "championships": 0,
     "active_years": "2010\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 22,
+        "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 28,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "chapman",
@@ -3237,7 +3982,24 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131956",
-    "date_of_death": "1979-06-22"
+    "date_of_death": "1979-06-22",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 10,
+        "points": "4"
+      },
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1955,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "chitwood",
@@ -3255,7 +4017,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131950",
-    "date_of_death": "1988-01-03"
+    "date_of_death": "1988-01-03",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 22,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "christie",
@@ -3298,7 +4067,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131955",
-    "date_of_death": "1956-02-03"
+    "date_of_death": "1956-02-03",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "clapham",
@@ -3334,7 +4115,19 @@
     ],
     "championships": 2,
     "active_years": "1960\u20131968",
-    "date_of_death": "1968-04-07"
+    "date_of_death": "1968-04-07",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 10,
+        "points": "8"
+      },
+      {
+        "year": 1961,
+        "position": 7,
+        "points": "11"
+      }
+    ]
   },
   {
     "id": "cogan",
@@ -3394,7 +4187,29 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131958",
-    "date_of_death": "1958-08-03"
+    "date_of_death": "1958-08-03",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1956,
+        "position": 3,
+        "points": "25"
+      },
+      {
+        "year": 1957,
+        "position": 9,
+        "points": "8"
+      },
+      {
+        "year": 1958,
+        "position": 5,
+        "points": "14"
+      }
+    ]
   },
   {
     "id": "collomb",
@@ -3545,7 +4360,49 @@
     ],
     "championships": 0,
     "active_years": "1994\u20132008",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 2,
+        "points": "65"
+      },
+      {
+        "year": 2002,
+        "position": 5,
+        "points": "41"
+      },
+      {
+        "year": 2003,
+        "position": 7,
+        "points": "51"
+      },
+      {
+        "year": 2004,
+        "position": 10,
+        "points": "24"
+      },
+      {
+        "year": 2005,
+        "position": 12,
+        "points": "24"
+      },
+      {
+        "year": 2006,
+        "position": 13,
+        "points": "14"
+      },
+      {
+        "year": 2007,
+        "position": 10,
+        "points": "14"
+      },
+      {
+        "year": 2008,
+        "position": 16,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "courage",
@@ -3729,7 +4586,19 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131955",
-    "date_of_death": "2005-04-15"
+    "date_of_death": "2005-04-15",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 20,
+        "points": "2"
+      },
+      {
+        "year": 1953,
+        "position": 10,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "crossley",
@@ -3785,7 +4654,14 @@
     ],
     "championships": 0,
     "active_years": "2011\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2011,
+        "position": 24,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "orey",
@@ -3823,7 +4699,19 @@
     ],
     "championships": 0,
     "active_years": "2003\u20132004",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 13,
+        "points": "10"
+      },
+      {
+        "year": 2004,
+        "position": 17,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "ramos",
@@ -3843,7 +4731,14 @@
     ],
     "championships": 0,
     "active_years": "1955\u20131956",
-    "date_of_death": "2026-05-04"
+    "date_of_death": "2026-05-04",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 22,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "daigh",
@@ -3965,7 +4860,29 @@
     ],
     "championships": 0,
     "active_years": "2002\u20132008",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2005,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2007,
+        "position": 23,
+        "points": "0"
+      },
+      {
+        "year": 2008,
+        "position": 22,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "davies",
@@ -3985,7 +4902,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131955",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 12,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "davis",
@@ -4022,7 +4946,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131959",
-    "date_of_death": "1966-04-04"
+    "date_of_death": "1966-04-04",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "adamich",
@@ -4085,7 +5016,14 @@
     ],
     "championships": 0,
     "active_years": "1957\u20131964",
-    "date_of_death": "1964-08-02"
+    "date_of_death": "1964-08-02",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "cesaris",
@@ -4185,7 +5123,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131956",
-    "date_of_death": "2007-01-22"
+    "date_of_death": "2007-01-22",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1951,
+        "position": 17,
+        "points": "2"
+      },
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1953,
+        "position": 8,
+        "points": "7"
+      }
+    ]
   },
   {
     "id": "klerk",
@@ -4226,7 +5186,39 @@
     ],
     "championships": 0,
     "active_years": "1999\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 16,
+        "points": "3"
+      },
+      {
+        "year": 2002,
+        "position": 21,
+        "points": "0"
+      },
+      {
+        "year": 2005,
+        "position": 20,
+        "points": "4"
+      },
+      {
+        "year": 2006,
+        "position": 11,
+        "points": "19"
+      },
+      {
+        "year": 2010,
+        "position": 17,
+        "points": "6"
+      },
+      {
+        "year": 2011,
+        "position": 20,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "portago",
@@ -4244,7 +5236,19 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131957",
-    "date_of_death": "1957-05-12"
+    "date_of_death": "1957-05-12",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 15,
+        "points": "3"
+      },
+      {
+        "year": 1957,
+        "position": 22,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "riu",
@@ -4317,7 +5321,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131952",
-    "date_of_death": "1953-09-18"
+    "date_of_death": "1953-09-18",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "villota",
@@ -4413,7 +5424,14 @@
     ],
     "championships": 0,
     "active_years": "2010\u20132010",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 24,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "resta",
@@ -4432,7 +5450,14 @@
     ],
     "championships": 0,
     "active_years": "2011\u20132017",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2011,
+        "position": 13,
+        "points": "27"
+      }
+    ]
   },
   {
     "id": "diniz",
@@ -4584,7 +5609,19 @@
     ],
     "championships": 0,
     "active_years": "2005\u20132006",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 25,
+        "points": "0"
+      },
+      {
+        "year": 2006,
+        "position": 24,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "downing",
@@ -4925,7 +5962,14 @@
     ],
     "championships": 0,
     "active_years": "2001\u20132001",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "england",
@@ -5115,7 +6159,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1952-06-20"
+    "date_of_death": "1952-06-20",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 3,
+        "points": "24"
+      },
+      {
+        "year": 1951,
+        "position": 11,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "fairman",
@@ -5137,7 +6193,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131961",
-    "date_of_death": "2002-02-07"
+    "date_of_death": "2002-02-07",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 10,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "fangio",
@@ -5159,7 +6222,49 @@
     ],
     "championships": 5,
     "active_years": "1950\u20131958",
-    "date_of_death": "1995-07-17"
+    "date_of_death": "1995-07-17",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 2,
+        "points": "27"
+      },
+      {
+        "year": 1951,
+        "position": 1,
+        "points": "31"
+      },
+      {
+        "year": 1953,
+        "position": 2,
+        "points": "28"
+      },
+      {
+        "year": 1954,
+        "position": 1,
+        "points": "42"
+      },
+      {
+        "year": 1955,
+        "position": 1,
+        "points": "40"
+      },
+      {
+        "year": 1956,
+        "position": 1,
+        "points": "30"
+      },
+      {
+        "year": 1957,
+        "position": 1,
+        "points": "40"
+      },
+      {
+        "year": 1958,
+        "position": 14,
+        "points": "7"
+      }
+    ]
   },
   {
     "id": "farina",
@@ -5179,7 +6284,39 @@
     ],
     "championships": 1,
     "active_years": "1950\u20131955",
-    "date_of_death": "1966-06-30"
+    "date_of_death": "1966-06-30",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 1,
+        "points": "30"
+      },
+      {
+        "year": 1951,
+        "position": 4,
+        "points": "19"
+      },
+      {
+        "year": 1952,
+        "position": 2,
+        "points": "24"
+      },
+      {
+        "year": 1953,
+        "position": 3,
+        "points": "26"
+      },
+      {
+        "year": 1954,
+        "position": 8,
+        "points": "6"
+      },
+      {
+        "year": 1955,
+        "position": 5,
+        "points": "9"
+      }
+    ]
   },
   {
     "id": "faulkner",
@@ -5198,7 +6335,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131955",
-    "date_of_death": "1956-04-22"
+    "date_of_death": "1956-04-22",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 23,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "firman",
@@ -5216,7 +6360,14 @@
     ],
     "championships": 0,
     "active_years": "2003\u20132003",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 19,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "fischer",
@@ -5235,7 +6386,19 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131952",
-    "date_of_death": "1976-12-30"
+    "date_of_death": "1976-12-30",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1952,
+        "position": 4,
+        "points": "10"
+      }
+    ]
   },
   {
     "id": "fisher",
@@ -5277,7 +6440,54 @@
     ],
     "championships": 0,
     "active_years": "1996\u20132009",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 11,
+        "points": "8"
+      },
+      {
+        "year": 2002,
+        "position": 11,
+        "points": "7"
+      },
+      {
+        "year": 2003,
+        "position": 12,
+        "points": "12"
+      },
+      {
+        "year": 2004,
+        "position": 11,
+        "points": "22"
+      },
+      {
+        "year": 2005,
+        "position": 5,
+        "points": "58"
+      },
+      {
+        "year": 2006,
+        "position": 4,
+        "points": "72"
+      },
+      {
+        "year": 2007,
+        "position": 8,
+        "points": "21"
+      },
+      {
+        "year": 2008,
+        "position": 19,
+        "points": "0"
+      },
+      {
+        "year": 2009,
+        "position": 15,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "fitch",
@@ -5413,7 +6623,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131959",
-    "date_of_death": "2002-04-09"
+    "date_of_death": "2002-04-09",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 5,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "flinterman",
@@ -5455,7 +6672,24 @@
     ],
     "championships": 0,
     "active_years": "1954\u20131960",
-    "date_of_death": "1962-04-12"
+    "date_of_death": "1962-04-12",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 13,
+        "points": "4"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 25,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "fohr",
@@ -5584,7 +6818,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131951",
-    "date_of_death": "2000-01-17"
+    "date_of_death": "2000-01-17",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "force",
@@ -5729,7 +6970,14 @@
     ],
     "championships": 0,
     "active_years": "1954\u20131960",
-    "date_of_death": "2007-11-02"
+    "date_of_death": "2007-11-02",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 14,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "frentzen",
@@ -5751,7 +6999,24 @@
     ],
     "championships": 0,
     "active_years": "1994\u20132003",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 13,
+        "points": "6"
+      },
+      {
+        "year": 2002,
+        "position": 18,
+        "points": "2"
+      },
+      {
+        "year": 2003,
+        "position": 11,
+        "points": "13"
+      }
+    ]
   },
   {
     "id": "friesacher",
@@ -5769,7 +7034,14 @@
     ],
     "championships": 0,
     "active_years": "2005\u20132005",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 21,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "fry",
@@ -5809,7 +7081,24 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131956",
-    "date_of_death": "2008-02-23"
+    "date_of_death": "2008-02-23",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 18,
+        "points": "2"
+      },
+      {
+        "year": 1955,
+        "position": 15,
+        "points": "3"
+      },
+      {
+        "year": 1956,
+        "position": 8,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "antonio_fuoco",
@@ -6098,7 +7387,34 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131961",
-    "date_of_death": "1998-10-02"
+    "date_of_death": "1998-10-02",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 23,
+        "points": "2"
+      },
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 15,
+        "points": "3"
+      },
+      {
+        "year": 1960,
+        "position": 6,
+        "points": "10"
+      },
+      {
+        "year": 1961,
+        "position": 14,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "gene",
@@ -6117,7 +7433,19 @@
     ],
     "championships": 0,
     "active_years": "1999\u20132004",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 17,
+        "points": "4"
+      },
+      {
+        "year": 2004,
+        "position": 23,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "george",
@@ -6154,7 +7482,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131957",
-    "date_of_death": "1990-01-26"
+    "date_of_death": "1990-01-26",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "gerini",
@@ -6173,7 +7513,14 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131958",
-    "date_of_death": "2013-04-17"
+    "date_of_death": "2013-04-17",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 25,
+        "points": "1.5"
+      }
+    ]
   },
   {
     "id": "gethin",
@@ -6274,7 +7621,19 @@
     ],
     "championships": 0,
     "active_years": "1960\u20131966",
-    "date_of_death": "1989-09-20"
+    "date_of_death": "1989-09-20",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 9,
+        "points": "8"
+      },
+      {
+        "year": 1961,
+        "position": 5,
+        "points": "16"
+      }
+    ]
   },
   {
     "id": "giovinazzi",
@@ -6332,7 +7691,34 @@
     ],
     "championships": 0,
     "active_years": "2004\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2004,
+        "position": 19,
+        "points": "2"
+      },
+      {
+        "year": 2008,
+        "position": 10,
+        "points": "25"
+      },
+      {
+        "year": 2009,
+        "position": 10,
+        "points": "24"
+      },
+      {
+        "year": 2010,
+        "position": 25,
+        "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 25,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "godia",
@@ -6351,7 +7737,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131958",
-    "date_of_death": "1990-11-28"
+    "date_of_death": "1990-11-28",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 9,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "goethals",
@@ -6388,7 +7781,19 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131960",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 19,
+        "points": "2"
+      },
+      {
+        "year": 1960,
+        "position": 17,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "gonzalez",
@@ -6410,7 +7815,39 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131960",
-    "date_of_death": "2013-06-15"
+    "date_of_death": "2013-06-15",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 3,
+        "points": "24"
+      },
+      {
+        "year": 1952,
+        "position": 9,
+        "points": "6.5"
+      },
+      {
+        "year": 1953,
+        "position": 6,
+        "points": "13.5"
+      },
+      {
+        "year": 1954,
+        "position": 2,
+        "points": "25.14"
+      },
+      {
+        "year": 1955,
+        "position": 17,
+        "points": "2"
+      },
+      {
+        "year": 1957,
+        "position": 21,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "oscar_gonzalez",
@@ -6429,7 +7866,14 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131956",
-    "date_of_death": "2006-11-05"
+    "date_of_death": "2006-11-05",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "gordini",
@@ -6467,7 +7911,14 @@
     ],
     "championships": 0,
     "active_years": "1954\u20131960",
-    "date_of_death": "1968-11-04"
+    "date_of_death": "1968-11-04",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 21,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "gounon",
@@ -6504,7 +7955,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1951-07-29"
+    "date_of_death": "1951-07-29",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 17,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "greene",
@@ -6548,7 +8006,29 @@
     ],
     "championships": 0,
     "active_years": "1957\u20131965",
-    "date_of_death": "1985-11-08"
+    "date_of_death": "1985-11-08",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 6,
+        "points": "10"
+      },
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 9,
+        "points": "10"
+      },
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "griffith",
@@ -6625,7 +8105,14 @@
     ],
     "championships": 0,
     "active_years": "2009\u20132020",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2009,
+        "position": 23,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "grouillard",
@@ -6761,7 +8248,19 @@
     ],
     "championships": 0,
     "active_years": "1959\u20131970",
-    "date_of_death": "2018-01-14"
+    "date_of_death": "2018-01-14",
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 7,
+        "points": "13"
+      },
+      {
+        "year": 1961,
+        "position": 4,
+        "points": "21"
+      }
+    ]
   },
   {
     "id": "gutierrez",
@@ -6799,7 +8298,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131953",
-    "date_of_death": "1989-12-16"
+    "date_of_death": "1989-12-16",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 15,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "hadjar",
@@ -6916,7 +8422,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131953",
-    "date_of_death": "1994-05-13"
+    "date_of_death": "1994-05-13",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "hamilton",
@@ -6936,7 +8449,34 @@
     ],
     "championships": 7,
     "active_years": "2007\u20132025",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 2,
+        "points": "109"
+      },
+      {
+        "year": 2008,
+        "position": 1,
+        "points": "98"
+      },
+      {
+        "year": 2009,
+        "position": 5,
+        "points": "49"
+      },
+      {
+        "year": 2010,
+        "position": 4,
+        "points": "240"
+      },
+      {
+        "year": 2011,
+        "position": 5,
+        "points": "227"
+      }
+    ]
   },
   {
     "id": "hampshire",
@@ -6974,7 +8514,29 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131957",
-    "date_of_death": "1994-06-27"
+    "date_of_death": "1994-06-27",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 12,
+        "points": "4"
+      },
+      {
+        "year": 1953,
+        "position": 14,
+        "points": "2"
+      },
+      {
+        "year": 1956,
+        "position": 7,
+        "points": "6"
+      },
+      {
+        "year": 1957,
+        "position": 8,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "hansgen",
@@ -7029,7 +8591,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131950",
-    "date_of_death": "1981-01-21"
+    "date_of_death": "1981-01-21",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "hart",
@@ -7183,7 +8752,44 @@
     ],
     "championships": 1,
     "active_years": "1952\u20131958",
-    "date_of_death": "1959-01-22"
+    "date_of_death": "1959-01-22",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 5,
+        "points": "10"
+      },
+      {
+        "year": 1953,
+        "position": 4,
+        "points": "19"
+      },
+      {
+        "year": 1954,
+        "position": 3,
+        "points": "24.64"
+      },
+      {
+        "year": 1955,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1956,
+        "position": 12,
+        "points": "4"
+      },
+      {
+        "year": 1957,
+        "position": 4,
+        "points": "13"
+      },
+      {
+        "year": 1958,
+        "position": 1,
+        "points": "42"
+      }
+    ]
   },
   {
     "id": "heeks",
@@ -7226,7 +8832,64 @@
     ],
     "championships": 0,
     "active_years": "2000\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 8,
+        "points": "12"
+      },
+      {
+        "year": 2002,
+        "position": 10,
+        "points": "7"
+      },
+      {
+        "year": 2003,
+        "position": 14,
+        "points": "6"
+      },
+      {
+        "year": 2004,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 2005,
+        "position": 11,
+        "points": "28"
+      },
+      {
+        "year": 2006,
+        "position": 9,
+        "points": "23"
+      },
+      {
+        "year": 2007,
+        "position": 5,
+        "points": "61"
+      },
+      {
+        "year": 2008,
+        "position": 6,
+        "points": "60"
+      },
+      {
+        "year": 2009,
+        "position": 13,
+        "points": "19"
+      },
+      {
+        "year": 2010,
+        "position": 18,
+        "points": "6"
+      },
+      {
+        "year": 2011,
+        "position": 11,
+        "points": "34"
+      }
+    ]
   },
   {
     "id": "helfrich",
@@ -7356,7 +9019,29 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131961",
-    "date_of_death": "2026-01-09"
+    "date_of_death": "2026-01-09",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 7,
+        "points": "8"
+      },
+      {
+        "year": 1955,
+        "position": 22,
+        "points": "1"
+      },
+      {
+        "year": 1960,
+        "position": 27,
+        "points": "1"
+      },
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "colton_herta",
@@ -7454,7 +9139,29 @@
     ],
     "championships": 2,
     "active_years": "1958\u20131975",
-    "date_of_death": "1975-11-29"
+    "date_of_death": "1975-11-29",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 15,
+        "points": "4"
+      },
+      {
+        "year": 1961,
+        "position": 16,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "phil_hill",
@@ -7479,7 +9186,29 @@
     ],
     "championships": 1,
     "active_years": "1958\u20131964",
-    "date_of_death": "2008-08-28"
+    "date_of_death": "2008-08-28",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 10,
+        "points": "9"
+      },
+      {
+        "year": 1959,
+        "position": 4,
+        "points": "20"
+      },
+      {
+        "year": 1960,
+        "position": 5,
+        "points": "16"
+      },
+      {
+        "year": 1961,
+        "position": 1,
+        "points": "34"
+      }
+    ]
   },
   {
     "id": "ryo_hirakawa",
@@ -7514,7 +9243,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131953",
-    "date_of_death": "1992-06-28"
+    "date_of_death": "1992-06-28",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "hobbs",
@@ -7590,7 +9326,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131953",
-    "date_of_death": "1984-05-20"
+    "date_of_death": "1984-05-20",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 7,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "holmes",
@@ -7628,7 +9371,14 @@
     ],
     "championships": 0,
     "active_years": "1955\u20131960",
-    "date_of_death": "2001-05-05"
+    "date_of_death": "2001-05-05",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 24,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "hoshino",
@@ -7761,7 +9511,14 @@
     ],
     "championships": 2,
     "active_years": "1991\u20132001",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 5,
+        "points": "37"
+      }
+    ]
   },
   {
     "id": "hulkenberg",
@@ -7785,7 +9542,14 @@
     ],
     "championships": 0,
     "active_years": "2010\u20132025",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 14,
+        "points": "22"
+      }
+    ]
   },
   {
     "id": "ickx",
@@ -7831,7 +9595,14 @@
     ],
     "championships": 0,
     "active_years": "2006\u20132006",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 25,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "iglesias",
@@ -7888,7 +9659,24 @@
     ],
     "championships": 0,
     "active_years": "1959\u20131966",
-    "date_of_death": "1993-10-22"
+    "date_of_death": "1993-10-22",
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 14,
+        "points": "5"
+      },
+      {
+        "year": 1960,
+        "position": 4,
+        "points": "18"
+      },
+      {
+        "year": 1961,
+        "position": 6,
+        "points": "12"
+      }
+    ]
   },
   {
     "id": "irvine",
@@ -7908,7 +9696,19 @@
     ],
     "championships": 0,
     "active_years": "1993\u20132002",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 12,
+        "points": "6"
+      },
+      {
+        "year": 2002,
+        "position": 9,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "irwin",
@@ -8111,7 +9911,19 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131960",
-    "date_of_death": "1974-06-30"
+    "date_of_death": "1974-06-30",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 26,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "leslie_johnson",
@@ -8264,7 +10076,19 @@
     ],
     "championships": 0,
     "active_years": "2005\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 18,
+        "points": "5"
+      },
+      {
+        "year": 2011,
+        "position": 26,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "katayama",
@@ -8452,7 +10276,14 @@
     ],
     "championships": 0,
     "active_years": "2003\u20132003",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 23,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "kinnunen",
@@ -8524,7 +10355,29 @@
     ],
     "championships": 0,
     "active_years": "2004\u20132010",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2004,
+        "position": 16,
+        "points": "3"
+      },
+      {
+        "year": 2005,
+        "position": 15,
+        "points": "9"
+      },
+      {
+        "year": 2006,
+        "position": 18,
+        "points": "2"
+      },
+      {
+        "year": 2010,
+        "position": 27,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "kling",
@@ -8542,7 +10395,19 @@
     ],
     "championships": 0,
     "active_years": "1954\u20131955",
-    "date_of_death": "2003-03-18"
+    "date_of_death": "2003-03-18",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 5,
+        "points": "12"
+      },
+      {
+        "year": 1955,
+        "position": 11,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "klodwig",
@@ -8580,7 +10445,24 @@
     ],
     "championships": 0,
     "active_years": "2009\u20132014",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2009,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 2010,
+        "position": 12,
+        "points": "32"
+      },
+      {
+        "year": 2011,
+        "position": 12,
+        "points": "30"
+      }
+    ]
   },
   {
     "id": "koinigg",
@@ -8621,7 +10503,34 @@
     ],
     "championships": 0,
     "active_years": "2007\u20132013",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 7,
+        "points": "30"
+      },
+      {
+        "year": 2008,
+        "position": 7,
+        "points": "53"
+      },
+      {
+        "year": 2009,
+        "position": 12,
+        "points": "22"
+      },
+      {
+        "year": 2010,
+        "position": 20,
+        "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 22,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "kozarowitzky",
@@ -8678,7 +10587,34 @@
     ],
     "championships": 0,
     "active_years": "2006\u20132021",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 16,
+        "points": "6"
+      },
+      {
+        "year": 2007,
+        "position": 6,
+        "points": "39"
+      },
+      {
+        "year": 2008,
+        "position": 4,
+        "points": "75"
+      },
+      {
+        "year": 2009,
+        "position": 14,
+        "points": "17"
+      },
+      {
+        "year": 2010,
+        "position": 8,
+        "points": "136"
+      }
+    ]
   },
   {
     "id": "kuhnke",
@@ -8833,7 +10769,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131956",
-    "date_of_death": "1989-06-07"
+    "date_of_death": "1989-06-07",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 26,
+        "points": "1.5"
+      }
+    ]
   },
   {
     "id": "lang",
@@ -8853,7 +10796,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131954",
-    "date_of_death": "1987-10-19"
+    "date_of_death": "1987-10-19",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 17,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "langes",
@@ -9025,7 +10975,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131952",
-    "date_of_death": "1997-02-06"
+    "date_of_death": "1997-02-06",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "lavaggi",
@@ -9251,7 +11208,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1955-06-11"
+    "date_of_death": "1955-06-11",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "levrett",
@@ -9288,7 +11257,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131962",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 13,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "lewis-evans",
@@ -9307,7 +11283,19 @@
     ],
     "championships": 0,
     "active_years": "1957\u20131958",
-    "date_of_death": "1958-10-25"
+    "date_of_death": "1958-10-25",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 12,
+        "points": "5"
+      },
+      {
+        "year": 1958,
+        "position": 9,
+        "points": "11"
+      }
+    ]
   },
   {
     "id": "ligier",
@@ -9363,7 +11351,24 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131957",
-    "date_of_death": "1987-02-11"
+    "date_of_death": "1987-02-11",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 14,
+        "points": "3"
+      },
+      {
+        "year": 1955,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1957,
+        "position": 19,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "lippi",
@@ -9402,7 +11407,39 @@
     ],
     "championships": 0,
     "active_years": "2005\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 24,
+        "points": "1"
+      },
+      {
+        "year": 2006,
+        "position": 19,
+        "points": "1"
+      },
+      {
+        "year": 2007,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 2009,
+        "position": 22,
+        "points": "0"
+      },
+      {
+        "year": 2010,
+        "position": 15,
+        "points": "21"
+      },
+      {
+        "year": 2011,
+        "position": 23,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "lombardi",
@@ -9646,7 +11683,14 @@
     ],
     "championships": 0,
     "active_years": "1957\u20131957",
-    "date_of_death": "2016-01-19"
+    "date_of_death": "2016-01-19",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "mackay-fraser",
@@ -9742,7 +11786,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131965",
-    "date_of_death": "2009-06-02"
+    "date_of_death": "2009-06-02",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "magill",
@@ -9782,7 +11833,19 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131957",
-    "date_of_death": "1999-02-07"
+    "date_of_death": "1999-02-07",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 18,
+        "points": "2"
+      },
+      {
+        "year": 1955,
+        "position": 21,
+        "points": "1.33"
+      }
+    ]
   },
   {
     "id": "magnussen",
@@ -9858,7 +11921,14 @@
     ],
     "championships": 0,
     "active_years": "1960\u20131963",
-    "date_of_death": "1969-09-02"
+    "date_of_death": "1969-09-02",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 16,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "maldonado",
@@ -9878,7 +11948,14 @@
     ],
     "championships": 0,
     "active_years": "2011\u20132015",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2011,
+        "position": 19,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "mansell",
@@ -9918,7 +11995,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131955",
-    "date_of_death": "2001-02-23"
+    "date_of_death": "2001-02-23",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 16,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "mantz",
@@ -9956,7 +12040,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131956",
-    "date_of_death": "2015-01-19"
+    "date_of_death": "2015-01-19",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 16,
+        "points": "3"
+      },
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1952,
+        "position": 6,
+        "points": "9"
+      },
+      {
+        "year": 1954,
+        "position": 15,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "marimon",
@@ -9975,7 +12081,19 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131954",
-    "date_of_death": "1954-07-31"
+    "date_of_death": "1954-07-31",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 11,
+        "points": "4"
+      },
+      {
+        "year": 1954,
+        "position": 14,
+        "points": "4.14"
+      }
+    ]
   },
   {
     "id": "marko",
@@ -10011,7 +12129,14 @@
     ],
     "championships": 0,
     "active_years": "1996\u20132001",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "marr",
@@ -10144,7 +12269,54 @@
     ],
     "championships": 0,
     "active_years": "2002\u20132017",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 13,
+        "points": "4"
+      },
+      {
+        "year": 2004,
+        "position": 12,
+        "points": "12"
+      },
+      {
+        "year": 2005,
+        "position": 13,
+        "points": "11"
+      },
+      {
+        "year": 2006,
+        "position": 3,
+        "points": "80"
+      },
+      {
+        "year": 2007,
+        "position": 4,
+        "points": "94"
+      },
+      {
+        "year": 2008,
+        "position": 2,
+        "points": "97"
+      },
+      {
+        "year": 2009,
+        "position": 11,
+        "points": "22"
+      },
+      {
+        "year": 2010,
+        "position": 6,
+        "points": "144"
+      },
+      {
+        "year": 2011,
+        "position": 6,
+        "points": "118"
+      }
+    ]
   },
   {
     "id": "may",
@@ -10162,7 +12334,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "mayer",
@@ -10235,7 +12414,14 @@
     ],
     "championships": 0,
     "active_years": "2000\u20132001",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "mcalpine",
@@ -10327,7 +12513,24 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131955",
-    "date_of_death": "1955-11-06"
+    "date_of_death": "1955-11-06",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 15,
+        "points": "2"
+      },
+      {
+        "year": 1953,
+        "position": 16,
+        "points": "2"
+      },
+      {
+        "year": 1954,
+        "position": 12,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "mcguire",
@@ -10363,7 +12566,29 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131970",
-    "date_of_death": "1970-06-02"
+    "date_of_death": "1970-06-02",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 6,
+        "points": "16.5"
+      },
+      {
+        "year": 1960,
+        "position": 2,
+        "points": "34"
+      },
+      {
+        "year": 1961,
+        "position": 8,
+        "points": "11"
+      }
+    ]
   },
   {
     "id": "mcnish",
@@ -10381,7 +12606,14 @@
     ],
     "championships": 0,
     "active_years": "2002\u20132002",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 19,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "mcrae",
@@ -10439,7 +12671,29 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131960",
-    "date_of_death": "1973-04-27"
+    "date_of_death": "1973-04-27",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 19,
+        "points": "2"
+      },
+      {
+        "year": 1957,
+        "position": 15,
+        "points": "4"
+      },
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 20,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "merhi",
@@ -10504,7 +12758,24 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131955",
-    "date_of_death": "2012-01-26"
+    "date_of_death": "2012-01-26",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1955,
+        "position": 8,
+        "points": "7"
+      }
+    ]
   },
   {
     "id": "migault",
@@ -10676,7 +12947,14 @@
     ],
     "championships": 0,
     "active_years": "2006\u20132006",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 27,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "monteiro",
@@ -10697,7 +12975,19 @@
     ],
     "championships": 0,
     "active_years": "2005\u20132006",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 16,
+        "points": "7"
+      },
+      {
+        "year": 2006,
+        "position": 21,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "montermini",
@@ -10881,7 +13171,54 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131961",
-    "date_of_death": "2020-04-12"
+    "date_of_death": "2020-04-12",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 13,
+        "points": "4.14"
+      },
+      {
+        "year": 1955,
+        "position": 2,
+        "points": "23"
+      },
+      {
+        "year": 1956,
+        "position": 2,
+        "points": "27"
+      },
+      {
+        "year": 1957,
+        "position": 2,
+        "points": "25"
+      },
+      {
+        "year": 1958,
+        "position": 2,
+        "points": "41"
+      },
+      {
+        "year": 1959,
+        "position": 3,
+        "points": "25.5"
+      },
+      {
+        "year": 1960,
+        "position": 3,
+        "points": "19"
+      },
+      {
+        "year": 1961,
+        "position": 3,
+        "points": "21"
+      }
+    ]
   },
   {
     "id": "munaron",
@@ -10941,7 +13278,34 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131958",
-    "date_of_death": "1958-07-06"
+    "date_of_death": "1958-07-06",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1955,
+        "position": 10,
+        "points": "6"
+      },
+      {
+        "year": 1956,
+        "position": 11,
+        "points": "4"
+      },
+      {
+        "year": 1957,
+        "position": 3,
+        "points": "16"
+      },
+      {
+        "year": 1958,
+        "position": 8,
+        "points": "12"
+      }
+    ]
   },
   {
     "id": "nakajima",
@@ -10959,7 +13323,24 @@
     ],
     "championships": 0,
     "active_years": "2007\u20132009",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 22,
+        "points": "0"
+      },
+      {
+        "year": 2008,
+        "position": 15,
+        "points": "9"
+      },
+      {
+        "year": 2009,
+        "position": 20,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "satoru_nakajima",
@@ -11126,7 +13507,19 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131954",
-    "date_of_death": "1955-05-01"
+    "date_of_death": "1955-05-01",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 9,
+        "points": "6"
+      },
+      {
+        "year": 1954,
+        "position": 22,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "needell",
@@ -11481,7 +13874,39 @@
     ],
     "championships": 0,
     "active_years": "2001\u20132006",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 6,
+        "points": "31"
+      },
+      {
+        "year": 2002,
+        "position": 3,
+        "points": "50"
+      },
+      {
+        "year": 2003,
+        "position": 3,
+        "points": "82"
+      },
+      {
+        "year": 2004,
+        "position": 5,
+        "points": "58"
+      },
+      {
+        "year": 2005,
+        "position": 4,
+        "points": "60"
+      },
+      {
+        "year": 2006,
+        "position": 8,
+        "points": "26"
+      }
+    ]
   },
   {
     "id": "pace",
@@ -11616,7 +14041,29 @@
     ],
     "championships": 0,
     "active_years": "1994\u20132004",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 14,
+        "points": "5"
+      },
+      {
+        "year": 2002,
+        "position": 14,
+        "points": "3"
+      },
+      {
+        "year": 2003,
+        "position": 15,
+        "points": "6"
+      },
+      {
+        "year": 2004,
+        "position": 14,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "pantano",
@@ -11634,7 +14081,14 @@
     ],
     "championships": 0,
     "active_years": "2004\u20132004",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2004,
+        "position": 24,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "papis",
@@ -11693,7 +14147,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131954",
-    "date_of_death": "1964-01-07"
+    "date_of_death": "1964-01-07",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 11,
+        "points": "4"
+      },
+      {
+        "year": 1951,
+        "position": 10,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "parnell",
@@ -11711,7 +14177,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
-    "date_of_death": "2017-04-05"
+    "date_of_death": "2017-04-05",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "parsons",
@@ -11729,7 +14202,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131958",
-    "date_of_death": "1984-09-08"
+    "date_of_death": "1984-09-08",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 6,
+        "points": "9"
+      },
+      {
+        "year": 1956,
+        "position": 18,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "patrese",
@@ -11789,7 +14274,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131962",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "perdisa",
@@ -11809,7 +14301,24 @@
     ],
     "championships": 0,
     "active_years": "1955\u20131957",
-    "date_of_death": "1998-05-10"
+    "date_of_death": "1998-05-10",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 18,
+        "points": "2"
+      },
+      {
+        "year": 1956,
+        "position": 16,
+        "points": "3"
+      },
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "perkins",
@@ -11930,7 +14439,19 @@
     ],
     "championships": 0,
     "active_years": "2010\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 13,
+        "points": "27"
+      },
+      {
+        "year": 2011,
+        "position": 10,
+        "points": "37"
+      }
+    ]
   },
   {
     "id": "piastri",
@@ -12047,7 +14568,24 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131964",
-    "date_of_death": "1993-12-27"
+    "date_of_death": "1993-12-27",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 19,
+        "points": "2"
+      },
+      {
+        "year": 1956,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "pilette",
@@ -12086,7 +14624,14 @@
     ],
     "championships": 0,
     "active_years": "1955\u20131957",
-    "date_of_death": "1971-04-19"
+    "date_of_death": "1971-04-19",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "piper",
@@ -12124,7 +14669,19 @@
     ],
     "championships": 0,
     "active_years": "2008\u20132009",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2008,
+        "position": 12,
+        "points": "19"
+      },
+      {
+        "year": 2009,
+        "position": 21,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "piquet",
@@ -12223,7 +14780,24 @@
     ],
     "championships": 0,
     "active_years": "2003\u20132005",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 21,
+        "points": "0"
+      },
+      {
+        "year": 2004,
+        "position": 15,
+        "points": "6"
+      },
+      {
+        "year": 2005,
+        "position": 22,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "pian",
@@ -12260,7 +14834,14 @@
     ],
     "championships": 0,
     "active_years": "1954\u20131955",
-    "date_of_death": "1997-08-16"
+    "date_of_death": "1997-08-16",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "pon",
@@ -12296,7 +14877,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131952",
-    "date_of_death": "1987-02-12"
+    "date_of_death": "1987-02-12",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 14,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "posey",
@@ -12332,7 +14920,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131950",
-    "date_of_death": "2001-02-28"
+    "date_of_death": "2001-02-28",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "pretorius",
@@ -12490,7 +15085,14 @@
     ],
     "championships": 0,
     "active_years": "2011\u20132024",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2011,
+        "position": 16,
+        "points": "14"
+      }
+    ]
   },
   {
     "id": "sala",
@@ -12602,7 +15204,14 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131959",
-    "date_of_death": "2000-02-01"
+    "date_of_death": "2000-02-01",
+    "championship_results": [
+      {
+        "year": 1956,
+        "position": 24,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "rathmann",
@@ -12624,7 +15233,39 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131960",
-    "date_of_death": "2011-11-23"
+    "date_of_death": "2011-11-23",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 10,
+        "points": "6"
+      },
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1957,
+        "position": 10,
+        "points": "7"
+      },
+      {
+        "year": 1958,
+        "position": 21,
+        "points": "2"
+      },
+      {
+        "year": 1959,
+        "position": 11,
+        "points": "6"
+      },
+      {
+        "year": 1960,
+        "position": 8,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "ratzenberger",
@@ -12709,7 +15350,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131958",
-    "date_of_death": "1958-09-28"
+    "date_of_death": "1958-09-28",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "reed",
@@ -12891,7 +15539,14 @@
     ],
     "championships": 0,
     "active_years": "2011\u20132024",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2011,
+        "position": 27,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "richardson",
@@ -13159,7 +15814,39 @@
     ],
     "championships": 1,
     "active_years": "2006\u20132016",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 17,
+        "points": "4"
+      },
+      {
+        "year": 2007,
+        "position": 9,
+        "points": "20"
+      },
+      {
+        "year": 2008,
+        "position": 13,
+        "points": "17"
+      },
+      {
+        "year": 2009,
+        "position": 7,
+        "points": "34.5"
+      },
+      {
+        "year": 2010,
+        "position": 7,
+        "points": "142"
+      },
+      {
+        "year": 2011,
+        "position": 7,
+        "points": "89"
+      }
+    ]
   },
   {
     "id": "rose",
@@ -13177,7 +15864,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1981-01-01"
+    "date_of_death": "1981-01-01",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 12,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "rosier",
@@ -13198,7 +15892,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131956",
-    "date_of_death": "1956-10-29"
+    "date_of_death": "1956-10-29",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 4,
+        "points": "13"
+      },
+      {
+        "year": 1951,
+        "position": 13,
+        "points": "3"
+      },
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1956,
+        "position": 19,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "rosset",
@@ -13276,7 +15992,14 @@
     ],
     "championships": 0,
     "active_years": "1960\u20131961",
-    "date_of_death": "2009-03-23"
+    "date_of_death": "2009-03-23",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "russell",
@@ -13352,7 +16075,29 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131959",
-    "date_of_death": "1976-02-13"
+    "date_of_death": "1976-02-13",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 18,
+        "points": "1.5"
+      },
+      {
+        "year": 1955,
+        "position": 14,
+        "points": "3"
+      },
+      {
+        "year": 1956,
+        "position": 27,
+        "points": "1"
+      },
+      {
+        "year": 1957,
+        "position": 17,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "ruttman",
@@ -13376,7 +16121,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131960",
-    "date_of_death": "1997-05-19"
+    "date_of_death": "1997-05-19",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 7,
+        "points": "8"
+      },
+      {
+        "year": 1954,
+        "position": 24,
+        "points": "1.5"
+      }
+    ]
   },
   {
     "id": "ryan",
@@ -13394,7 +16151,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131961",
-    "date_of_death": "1962-07-02"
+    "date_of_death": "1962-07-02",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "raikkonen",
@@ -13417,7 +16181,54 @@
     ],
     "championships": 1,
     "active_years": "2001\u20132021",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 10,
+        "points": "9"
+      },
+      {
+        "year": 2002,
+        "position": 6,
+        "points": "24"
+      },
+      {
+        "year": 2003,
+        "position": 2,
+        "points": "91"
+      },
+      {
+        "year": 2004,
+        "position": 7,
+        "points": "45"
+      },
+      {
+        "year": 2005,
+        "position": 2,
+        "points": "112"
+      },
+      {
+        "year": 2006,
+        "position": 5,
+        "points": "65"
+      },
+      {
+        "year": 2007,
+        "position": 1,
+        "points": "110"
+      },
+      {
+        "year": 2008,
+        "position": 3,
+        "points": "75"
+      },
+      {
+        "year": 2009,
+        "position": 6,
+        "points": "48"
+      }
+    ]
   },
   {
     "id": "sachs",
@@ -13521,7 +16332,14 @@
     ],
     "championships": 0,
     "active_years": "1994\u20132002",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 17,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "salvadori",
@@ -13546,7 +16364,29 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131962",
-    "date_of_death": "2012-06-03"
+    "date_of_death": "2012-06-03",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 18,
+        "points": "2"
+      },
+      {
+        "year": 1958,
+        "position": 4,
+        "points": "15"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1961,
+        "position": 17,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "sanesi",
@@ -13564,7 +16404,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1998-07-28"
+    "date_of_death": "1998-07-28",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 12,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "sargeant",
@@ -13620,7 +16467,44 @@
     ],
     "championships": 0,
     "active_years": "2002\u20132008",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 15,
+        "points": "2"
+      },
+      {
+        "year": 2003,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 2004,
+        "position": 8,
+        "points": "34"
+      },
+      {
+        "year": 2005,
+        "position": 23,
+        "points": "1"
+      },
+      {
+        "year": 2006,
+        "position": 23,
+        "points": "0"
+      },
+      {
+        "year": 2007,
+        "position": 17,
+        "points": "4"
+      },
+      {
+        "year": 2008,
+        "position": 21,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "scarborough",
@@ -13680,7 +16564,19 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131961",
-    "date_of_death": "1990-07-26"
+    "date_of_death": "1990-07-26",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 20,
+        "points": "1"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "ian_scheckter",
@@ -13748,7 +16644,44 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131960",
-    "date_of_death": "1960-05-13"
+    "date_of_death": "1960-05-13",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1955,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1956,
+        "position": 17,
+        "points": "3"
+      },
+      {
+        "year": 1957,
+        "position": 7,
+        "points": "10"
+      },
+      {
+        "year": 1958,
+        "position": 6,
+        "points": "14"
+      },
+      {
+        "year": 1959,
+        "position": 13,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "schenken",
@@ -13961,7 +16894,49 @@
     ],
     "championships": 6,
     "active_years": "1991\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 1,
+        "points": "123"
+      },
+      {
+        "year": 2002,
+        "position": 1,
+        "points": "144"
+      },
+      {
+        "year": 2003,
+        "position": 1,
+        "points": "93"
+      },
+      {
+        "year": 2004,
+        "position": 1,
+        "points": "148"
+      },
+      {
+        "year": 2005,
+        "position": 3,
+        "points": "62"
+      },
+      {
+        "year": 2006,
+        "position": 2,
+        "points": "121"
+      },
+      {
+        "year": 2010,
+        "position": 9,
+        "points": "72"
+      },
+      {
+        "year": 2011,
+        "position": 8,
+        "points": "76"
+      }
+    ]
   },
   {
     "id": "mick_schumacher",
@@ -13999,7 +16974,44 @@
     ],
     "championships": 0,
     "active_years": "1997\u20132007",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 4,
+        "points": "49"
+      },
+      {
+        "year": 2002,
+        "position": 4,
+        "points": "42"
+      },
+      {
+        "year": 2003,
+        "position": 5,
+        "points": "58"
+      },
+      {
+        "year": 2004,
+        "position": 9,
+        "points": "24"
+      },
+      {
+        "year": 2005,
+        "position": 6,
+        "points": "45"
+      },
+      {
+        "year": 2006,
+        "position": 10,
+        "points": "20"
+      },
+      {
+        "year": 2007,
+        "position": 16,
+        "points": "5"
+      }
+    ]
   },
   {
     "id": "schuppan",
@@ -14157,7 +17169,19 @@
     ],
     "championships": 0,
     "active_years": "2010\u20132012",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2010,
+        "position": 23,
+        "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 18,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "serafini",
@@ -14175,7 +17199,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131950",
-    "date_of_death": "2000-07-05"
+    "date_of_death": "2000-07-05",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 13,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "serra",
@@ -14271,7 +17302,14 @@
     ],
     "championships": 0,
     "active_years": "1961\u20131964",
-    "date_of_death": "1993-05-07"
+    "date_of_death": "1993-05-07",
+    "championship_results": [
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "shawe_taylor",
@@ -14310,7 +17348,19 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131959",
-    "date_of_death": "2012-05-10"
+    "date_of_death": "2012-05-10",
+    "championship_results": [
+      {
+        "year": 1958,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "shelly",
@@ -14389,7 +17439,19 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131957",
-    "date_of_death": "2012-07-11"
+    "date_of_death": "2012-07-11",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1952,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "sirotkin",
@@ -14483,7 +17545,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131950",
-    "date_of_death": "1950-09-10"
+    "date_of_death": "1950-09-10",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 15,
+        "points": "3"
+      }
+    ]
   },
   {
     "id": "sospiri",
@@ -14553,7 +17622,19 @@
     ],
     "championships": 0,
     "active_years": "2006\u20132007",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 20,
+        "points": "0"
+      },
+      {
+        "year": 2007,
+        "position": 21,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "spence",
@@ -14590,7 +17671,14 @@
     ],
     "championships": 0,
     "active_years": "1958\u20131960",
-    "date_of_death": "1960-06-19"
+    "date_of_death": "1960-06-19",
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "starrabba",
@@ -14898,7 +17986,19 @@
     ],
     "championships": 1,
     "active_years": "1960\u20131972",
-    "date_of_death": "2017-03-10"
+    "date_of_death": "2017-03-10",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 12,
+        "points": "6"
+      },
+      {
+        "year": 1961,
+        "position": 12,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "sutcliffe",
@@ -14936,7 +18036,34 @@
     ],
     "championships": 0,
     "active_years": "2007\u20132014",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 19,
+        "points": "1"
+      },
+      {
+        "year": 2008,
+        "position": 20,
+        "points": "0"
+      },
+      {
+        "year": 2009,
+        "position": 17,
+        "points": "5"
+      },
+      {
+        "year": 2010,
+        "position": 11,
+        "points": "47"
+      },
+      {
+        "year": 2011,
+        "position": 9,
+        "points": "42"
+      }
+    ]
   },
   {
     "id": "sutton",
@@ -15017,7 +18144,14 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131954",
-    "date_of_death": "2010-12-10"
+    "date_of_death": "2010-12-10",
+    "championship_results": [
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "sweikert",
@@ -15036,7 +18170,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131956",
-    "date_of_death": "1956-06-17"
+    "date_of_death": "1956-06-17",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 7,
+        "points": "8"
+      }
+    ]
   },
   {
     "id": "takagi",
@@ -15177,7 +18318,24 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131956",
-    "date_of_death": "1988-01-12"
+    "date_of_death": "1988-01-12",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 6,
+        "points": "10"
+      },
+      {
+        "year": 1952,
+        "position": 3,
+        "points": "22"
+      },
+      {
+        "year": 1955,
+        "position": 6,
+        "points": "9"
+      }
+    ]
   },
   {
     "id": "dennis_taylor",
@@ -15212,7 +18370,19 @@
     ],
     "championships": 0,
     "active_years": "1959\u20131961",
-    "date_of_death": "2013-10-24"
+    "date_of_death": "2013-10-24",
+    "championship_results": [
+      {
+        "year": 1960,
+        "position": 19,
+        "points": "3"
+      },
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "taylor",
@@ -15288,7 +18458,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131957",
-    "date_of_death": "1959-02-11"
+    "date_of_death": "1959-02-11",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "templeman",
@@ -15381,7 +18558,14 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131952",
-    "date_of_death": "2015-08-22"
+    "date_of_death": "2015-08-22",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 21,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "thomson",
@@ -15402,7 +18586,24 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131960",
-    "date_of_death": "1960-09-24"
+    "date_of_death": "1960-09-24",
+    "championship_results": [
+      {
+        "year": 1955,
+        "position": 16,
+        "points": "3"
+      },
+      {
+        "year": 1959,
+        "position": 12,
+        "points": "5"
+      },
+      {
+        "year": 1960,
+        "position": 23,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "thorne",
@@ -15544,7 +18745,54 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131964",
-    "date_of_death": "2005-02-13"
+    "date_of_death": "2005-02-13",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 17,
+        "points": "2"
+      },
+      {
+        "year": 1953,
+        "position": 12,
+        "points": "4"
+      },
+      {
+        "year": 1954,
+        "position": 4,
+        "points": "17"
+      },
+      {
+        "year": 1955,
+        "position": 4,
+        "points": "10"
+      },
+      {
+        "year": 1957,
+        "position": 13,
+        "points": "5"
+      },
+      {
+        "year": 1958,
+        "position": 7,
+        "points": "12"
+      },
+      {
+        "year": 1959,
+        "position": 5,
+        "points": "19"
+      },
+      {
+        "year": 1960,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1961,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "trulli",
@@ -15567,7 +18815,64 @@
     ],
     "championships": 0,
     "active_years": "1997\u20132011",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 9,
+        "points": "12"
+      },
+      {
+        "year": 2002,
+        "position": 8,
+        "points": "9"
+      },
+      {
+        "year": 2003,
+        "position": 8,
+        "points": "33"
+      },
+      {
+        "year": 2004,
+        "position": 6,
+        "points": "46"
+      },
+      {
+        "year": 2005,
+        "position": 7,
+        "points": "43"
+      },
+      {
+        "year": 2006,
+        "position": 12,
+        "points": "15"
+      },
+      {
+        "year": 2007,
+        "position": 13,
+        "points": "8"
+      },
+      {
+        "year": 2008,
+        "position": 9,
+        "points": "31"
+      },
+      {
+        "year": 2009,
+        "position": 8,
+        "points": "32.5"
+      },
+      {
+        "year": 2010,
+        "position": 21,
+        "points": "0"
+      },
+      {
+        "year": 2011,
+        "position": 21,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "tsunoda",
@@ -15932,7 +19237,19 @@
     ],
     "championships": 0,
     "active_years": "1994\u20132003",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 18,
+        "points": "1"
+      },
+      {
+        "year": 2003,
+        "position": 22,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "max_verstappen",
@@ -15989,7 +19306,34 @@
     ],
     "championships": 4,
     "active_years": "2007\u20132022",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 14,
+        "points": "6"
+      },
+      {
+        "year": 2008,
+        "position": 8,
+        "points": "35"
+      },
+      {
+        "year": 2009,
+        "position": 2,
+        "points": "84"
+      },
+      {
+        "year": 2010,
+        "position": 1,
+        "points": "256"
+      },
+      {
+        "year": 2011,
+        "position": 1,
+        "points": "392"
+      }
+    ]
   },
   {
     "id": "villeneuve_sr",
@@ -16047,7 +19391,39 @@
     ],
     "championships": 1,
     "active_years": "1996\u20132006",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 7,
+        "points": "12"
+      },
+      {
+        "year": 2002,
+        "position": 12,
+        "points": "4"
+      },
+      {
+        "year": 2003,
+        "position": 16,
+        "points": "6"
+      },
+      {
+        "year": 2004,
+        "position": 21,
+        "points": "0"
+      },
+      {
+        "year": 2005,
+        "position": 14,
+        "points": "9"
+      },
+      {
+        "year": 2006,
+        "position": 15,
+        "points": "7"
+      }
+    ]
   },
   {
     "id": "villoresi",
@@ -16068,7 +19444,44 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131956",
-    "date_of_death": "1997-08-24"
+    "date_of_death": "1997-08-24",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1951,
+        "position": 5,
+        "points": "15"
+      },
+      {
+        "year": 1952,
+        "position": 8,
+        "points": "8"
+      },
+      {
+        "year": 1953,
+        "position": 5,
+        "points": "17"
+      },
+      {
+        "year": 1954,
+        "position": 20,
+        "points": "2"
+      },
+      {
+        "year": 1955,
+        "position": 20,
+        "points": "2"
+      },
+      {
+        "year": 1956,
+        "position": 20,
+        "points": "2"
+      }
+    ]
   },
   {
     "id": "volonterio",
@@ -16144,7 +19557,34 @@
     ],
     "championships": 0,
     "active_years": "1956\u20131961",
-    "date_of_death": "1961-09-10"
+    "date_of_death": "1961-09-10",
+    "championship_results": [
+      {
+        "year": 1957,
+        "position": 14,
+        "points": "4"
+      },
+      {
+        "year": 1958,
+        "position": 11,
+        "points": "9"
+      },
+      {
+        "year": 1959,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1960,
+        "position": 7,
+        "points": "10"
+      },
+      {
+        "year": 1961,
+        "position": 2,
+        "points": "33"
+      }
+    ]
   },
   {
     "id": "vonlanthen",
@@ -16181,7 +19621,29 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131955",
-    "date_of_death": "1955-05-30"
+    "date_of_death": "1955-05-30",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 22,
+        "points": "1"
+      },
+      {
+        "year": 1953,
+        "position": 7,
+        "points": "9"
+      },
+      {
+        "year": 1954,
+        "position": 6,
+        "points": "8"
+      },
+      {
+        "year": 1955,
+        "position": 25,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "wacker",
@@ -16199,7 +19661,14 @@
     ],
     "championships": 0,
     "active_years": "1953\u20131954",
-    "date_of_death": "1998-06-16"
+    "date_of_death": "1998-06-16",
+    "championship_results": [
+      {
+        "year": 1954,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "walker",
@@ -16238,7 +19707,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131955",
-    "date_of_death": "1984-03-01"
+    "date_of_death": "1984-03-01",
+    "championship_results": [
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "wallard",
@@ -16257,7 +19733,19 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131951",
-    "date_of_death": "1963-11-29"
+    "date_of_death": "1963-11-29",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1951,
+        "position": 7,
+        "points": "9"
+      }
+    ]
   },
   {
     "id": "walter",
@@ -16300,7 +19788,19 @@
     ],
     "championships": 0,
     "active_years": "1951\u20131963",
-    "date_of_death": "2004-07-05"
+    "date_of_death": "2004-07-05",
+    "championship_results": [
+      {
+        "year": 1959,
+        "position": 10,
+        "points": "8"
+      },
+      {
+        "year": 1960,
+        "position": 14,
+        "points": "6"
+      }
+    ]
   },
   {
     "id": "warwick",
@@ -16387,7 +19887,59 @@
     ],
     "championships": 0,
     "active_years": "2002\u20132013",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2002,
+        "position": 16,
+        "points": "2"
+      },
+      {
+        "year": 2003,
+        "position": 10,
+        "points": "17"
+      },
+      {
+        "year": 2004,
+        "position": 13,
+        "points": "7"
+      },
+      {
+        "year": 2005,
+        "position": 10,
+        "points": "36"
+      },
+      {
+        "year": 2006,
+        "position": 14,
+        "points": "7"
+      },
+      {
+        "year": 2007,
+        "position": 12,
+        "points": "10"
+      },
+      {
+        "year": 2008,
+        "position": 11,
+        "points": "21"
+      },
+      {
+        "year": 2009,
+        "position": 4,
+        "points": "69.5"
+      },
+      {
+        "year": 2010,
+        "position": 3,
+        "points": "242"
+      },
+      {
+        "year": 2011,
+        "position": 3,
+        "points": "258"
+      }
+    ]
   },
   {
     "id": "wehrlein",
@@ -16523,7 +20075,24 @@
     ],
     "championships": 0,
     "active_years": "1952\u20131955",
-    "date_of_death": "1957-01-12"
+    "date_of_death": "1957-01-12",
+    "championship_results": [
+      {
+        "year": 1952,
+        "position": 13,
+        "points": "3"
+      },
+      {
+        "year": 1953,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 1954,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "whiteaway",
@@ -16577,7 +20146,14 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131954",
-    "date_of_death": "1958-09-21"
+    "date_of_death": "1958-09-21",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 9,
+        "points": "4"
+      }
+    ]
   },
   {
     "id": "whitehouse",
@@ -16744,7 +20320,14 @@
     ],
     "championships": 0,
     "active_years": "2003\u20132003",
-    "date_of_death": "2015-08-24"
+    "date_of_death": "2015-08-24",
+    "championship_results": [
+      {
+        "year": 2003,
+        "position": 20,
+        "points": "1"
+      }
+    ]
   },
   {
     "id": "vic_wilson",
@@ -16818,7 +20401,14 @@
     ],
     "championships": 0,
     "active_years": "2007\u20132007",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2007,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "wisell",
@@ -16876,7 +20466,19 @@
     ],
     "championships": 0,
     "active_years": "1997\u20132007",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2005,
+        "position": 17,
+        "points": "6"
+      },
+      {
+        "year": 2007,
+        "position": 11,
+        "points": "13"
+      }
+    ]
   },
   {
     "id": "yamamoto",
@@ -16896,7 +20498,24 @@
     ],
     "championships": 0,
     "active_years": "2006\u20132010",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2006,
+        "position": 26,
+        "points": "0"
+      },
+      {
+        "year": 2007,
+        "position": 24,
+        "points": "0"
+      },
+      {
+        "year": 2010,
+        "position": 26,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "yoong",
@@ -16914,7 +20533,19 @@
     ],
     "championships": 0,
     "active_years": "2001\u20132002",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2002,
+        "position": 20,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "zanardi",
@@ -16992,7 +20623,24 @@
     ],
     "championships": 0,
     "active_years": "1999\u20132005",
-    "date_of_death": null
+    "date_of_death": null,
+    "championship_results": [
+      {
+        "year": 2001,
+        "position": 999,
+        "points": "0"
+      },
+      {
+        "year": 2004,
+        "position": 22,
+        "points": "0"
+      },
+      {
+        "year": 2005,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   },
   {
     "id": "zorzi",
@@ -17050,6 +20698,18 @@
     ],
     "championships": 0,
     "active_years": "1950\u20131952",
-    "date_of_death": "1981-10-13"
+    "date_of_death": "1981-10-13",
+    "championship_results": [
+      {
+        "year": 1950,
+        "position": 18,
+        "points": "3"
+      },
+      {
+        "year": 1951,
+        "position": 999,
+        "points": "0"
+      }
+    ]
   }
 ]
