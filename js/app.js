@@ -2237,6 +2237,7 @@ function renderTeamPage(data, teamId, params) {
 		statRows.push(`<dt>Fastest laps</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="fastest-laps" data-team="${esc(team.id)}">${stats.fastestLaps}</a></dd>`);
 	}
 
+	// Best Championship (Handles "Not classified" for 999 positions)
 	const hasChampionshipData = (team.championship_results || []).length > 0;
 
 	if (stats.bestChampFinish !== null) {
@@ -2286,7 +2287,7 @@ function renderTeamPage(data, teamId, params) {
 
 	const driversHtml = teamDrivers.length
 		? `<div class="scroll-list">${
-			teamDrivers.map((driver) => `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`).join("")
+			teamDrivers.map((d) => `<a href="#/driver/${esc(d.id)}">${esc(d.name)}</a>`).join("")
 		  }</div>`
 		: "—";
 
