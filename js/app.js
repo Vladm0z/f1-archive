@@ -2907,7 +2907,6 @@ function showTeamStatModal(data, teamId, statType) {
 	const team = data.teamsById[teamId];
 	if (!team) return;
 	
-	const stats = computeTeamStats(data, teamId);
 	const stats = (data._lastTeamStats && data._lastTeamStats.id === teamId)
 		? data._lastTeamStats.stats
 		: computeTeamStats(data, teamId);
