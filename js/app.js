@@ -2072,6 +2072,10 @@ function findTeamIdByName(data, teamName) {
 	return bestId;
 }
 
+function resolveTeamId(data, teamName) {
+  return findTeamIdByName(data, teamName);
+}
+
 function teamLinkHtml(data, teamName) {
 	if (!teamName) {
 		return "—";
