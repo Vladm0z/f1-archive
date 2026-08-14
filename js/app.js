@@ -837,7 +837,7 @@ function driverCardsHtml(data, drivers) {
 
 				<p class="muted">
 					${esc(driver.nationality || "")}
-					${driver.active_years ? ` • ${esc(driver.active_years)}` : ""}
+					${driver.active_years ? ` • ${esc(formatActiveYears(driver.active_years))}` : ""}
 				</p>
 			</a>
 		`)
@@ -973,7 +973,7 @@ function renderDriverPage(data, driverId, params) {
 	// Active Years (Clickable to show all races)
 	statRows.push(`
 		<dt>Active years</dt>
-		<dd><a href="javascript:void(0)" class="stat-link" data-stat="races" data-driver="${esc(driver.id)}">${esc(driver.active_years || "—")}</a></dd>
+		<dd><a href="javascript:void(0)" class="stat-link" data-stat="races" data-driver="${esc(driver.id)}">${esc(formatActiveYears(driver.active_years))}</a></dd>
 	`);
 
 	// Wins
@@ -1117,7 +1117,7 @@ function renderDriverPage(data, driverId, params) {
 
 			<p class="muted">
 				${esc(driver.nationality || "")}
-				${driver.active_years ? ` • ${esc(driver.active_years)}` : ""}
+				${driver.active_years ? ` • ${esc(formatActiveYears(driver.active_years))}` : ""}
 			</p>
 		</section>
 
@@ -2134,7 +2134,7 @@ function teamCardsHtml(data, teams) {
 
 				<p class="muted">
 					${esc(team.nationality || "")}
-					${team.active_years ? ` • ${esc(team.active_years)}` : ""}
+					${team.active_years ? ` • ${esc(formatActiveYears(team.active_years))}` : ""}
 				</p>
 
 				<p class="muted">
@@ -2214,7 +2214,7 @@ function renderTeamPage(data, teamId, params) {
 
 	statRows.push(`
 		<dt>Active years</dt>
-		<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="races" data-team="${esc(team.id)}">${esc(team.active_years || "—")}</a></dd>
+		<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="races" data-team="${esc(team.id)}">${esc(formatActiveYears(team.active_years))}</a></dd>
 	`);
 
 	if (stats.wins > 0) {
@@ -2333,7 +2333,7 @@ function renderTeamPage(data, teamId, params) {
 			<h1>${esc(team.name)}</h1>
 			<p class="muted">
 				${esc(team.nationality || "")}
-				${team.active_years ? ` • ${esc(team.active_years)}` : ""}
+				${team.active_years ? ` • ${esc(formatActiveYears(team.active_years))}` : ""}
 			</p>
 		</section>
 
@@ -2906,4 +2906,15 @@ function showTeamStatModal(data, teamId, statType) {
 	if (!filtered.length) listHtml = `<p class="muted">No races found.</p>`;
 
 	renderModal(title, filtered.length, "race", listHtml);
+}
+
+function formatActiveYears(years) {
+	if (!years) return "—";
+	const parts = String(years).split(/[–-]/);
+	
+	if (parts.length === 2 && parts[0].trim() === parts[1].trim()) {
+		return parts[0].trim();
+	}
+	
+	return years;
 }
