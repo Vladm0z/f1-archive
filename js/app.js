@@ -2475,28 +2475,24 @@ function showStatModal(data, driverId, statType) {
 		filtered = participations;
 	} else if (statType === "wins") {
 		title = `${driver.name} - Wins`;
-		filtered = participations.filter(p => p.result && String(p.result.position) === "1");
+		filtered = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1");
 	} else if (statType === "podiums") {
 		title = `${driver.name} - Podiums`;
-		filtered = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position)));
+		filtered = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText)));
 	} else if (statType === "poles") {
 		title = `${driver.name} - Pole Positions`;
-		filtered = participations.filter(p => {
-			const pos = p.grid ? String(p.grid.position) : (p.quali ? String(p.quali.position) : null);
-			return pos === "1";
-		});
+		// FIXED: Use the strict helper instead of the old ternary logic
+		filtered = participations.filter(p => getDriverGridPos(p) === 1);
 	} else if (statType === "fastest-laps") {
 		title = `${driver.name} - Fastest Laps`;
 		filtered = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1");
 	} else if (statType === "best-finish") {
 		title = `${driver.name} - Best Finishes (${stats.bestFinish}${getOrdinal(stats.bestFinish)})`;
-		filtered = participations.filter(p => p.result && parseInt(p.result.position, 10) === stats.bestFinish);
+		filtered = participations.filter(p => p.result && parseInt(p.result.position || p.result.positionText, 10) === stats.bestFinish);
 	} else if (statType === "best-grid") {
 		title = `${driver.name} - Best Grid Positions (${stats.bestGrid}${getOrdinal(stats.bestGrid)})`;
-		filtered = participations.filter(p => {
-			const pos = p.grid ? p.grid.position : (p.quali ? p.quali.position : null);
-			return pos && parseInt(pos, 10) === stats.bestGrid;
-		});
+		// FIXED: Use the strict helper here too
+		filtered = participations.filter(p => getDriverGridPos(p) === stats.bestGrid);
 	}
 
 	// Sort chronologically (newest first)
