@@ -2365,7 +2365,6 @@ function getOrdinal(n) {
 function computeDriverStats(data, driverId) {
 	const participations = [];
 	
-	// Scan all races for this driver's entries
 	data.races.forEach(race => {
 		const qualiEntry = (race.qualifying || []).find(q => q.driver_id === driverId);
 		const resultEntry = (race.results || []).find(r => r.driver_id === driverId);
@@ -2376,23 +2375,27 @@ function computeDriverStats(data, driverId) {
 		}
 	});
 
-	const wins = participations.filter(p => p.result && String(p.result.position) === "1").length;
-	const podiums = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position))).length;
+	const wins = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1").length;
+	const podiums = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText))).length;
 	
+	// FIXED: Fallback to result.grid (from Ergast API) if starting_grid is missing
 	const poles = participations.filter(p => {
-		const pos = p.grid ? String(p.grid.position) : (p.quali ? String(p.quali.position) : null);
+		const pos = p.grid ? String(p.grid.position) : 
+								(p.result && p.result.grid ? String(p.result.grid) : 
+								(p.quali ? String(p.quali.position) : null));
 		return pos === "1";
 	}).length;
 	
 	const fastestLaps = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1").length;
 
-	// Best numeric finish
-	const finishes = participations.map(p => p.result ? parseInt(p.result.position, 10) : NaN).filter(n => !isNaN(n));
+	const finishes = participations.map(p => p.result ? parseInt(p.result.position || p.result.positionText, 10) : NaN).filter(n => !isNaN(n));
 	const bestFinish = finishes.length ? Math.min(...finishes) : null;
 
-	// Best numeric grid position
+	// FIXED: Include result.grid in best grid calculation
 	const grids = participations.map(p => {
-		const pos = p.grid ? p.grid.position : (p.quali ? p.quali.position : null);
+		const pos = p.grid ? String(p.grid.position) : 
+								(p.result && p.result.grid ? String(p.result.grid) : 
+								(p.quali ? String(p.quali.position) : null));
 		return pos && /^\d+$/.test(pos) ? parseInt(pos, 10) : NaN;
 	}).filter(n => !isNaN(n));
 	const bestGrid = grids.length ? Math.min(...grids) : null;
@@ -2410,25 +2413,42 @@ function formatRaceEntry(p) {
 	const raceLink = `#/race/${p.race.id}`;
 	let details = [];
 	
-	const gridPos = p.grid ? p.grid.position : (p.quali && /^\d+$/.test(p.quali.position) ? p.quali.position : null);
-	if (gridPos) {
-		details.push(`Grid ${gridPos}`);
-	} else if (p.quali && !/^\d+$/.test(p.quali.position)) {
-		details.push(p.quali.position); // e.g. DNQ
+	// Determine Grid Position (Prioritize API result.grid)
+	const gridPos = p.grid ? String(p.grid.position) : 
+								 (p.result && p.result.grid ? String(p.result.grid) : 
+								 (p.quali && /^\d+$/.test(String(p.quali.position)) ? String(p.quali.position) : null));
+								 
+	const isPole = gridPos === "1";
+
+	if (gridPos && /^\d+$/.test(gridPos)) {
+		details.push(`Grid ${gridPos}${isPole ? ' (Pole)' : ''}`);
+	} else if (p.quali && p.quali.position && !/^\d+$/.test(String(p.quali.position))) {
+		details.push(String(p.quali.position)); // e.g. DNQ
 	}
 
+	// Determine Race Result
 	if (p.result) {
-		const status = p.result.status || "";
-		const pos = p.result.position;
-		if (status === "Finished" || status.startsWith("+")) {
+		const status = p.result.status || p.result.statusText || "";
+		const pos = String(p.result.position || p.result.positionText || "");
+		
+		if (/^\d+$/.test(pos)) {
 			 details.push(`Finished ${pos}${getOrdinal(parseInt(pos, 10))}`);
-		} else if (status === "Disqualified") {
-			 details.push(`DSQ (Qualified ${gridPos || '?'})`);
-		} else {
+		} else if (pos === "DSQ" || status === "Disqualified") {
+			 details.push(`DSQ`);
+		} else if (status) {
 			 details.push(`Retired (${status})`);
+		} else {
+			 details.push(`Retired`); // FIXED: Prevents empty "Retired ()"
 		}
-	} else if (p.grid || p.quali) {
-		 details.push('DNS/DNQ');
+	} else {
+		 // No result entry at all
+		 if (gridPos && /^\d+$/.test(gridPos)) {
+				 // FIXED: They had a grid position but no result data. Don't call it DNQ!
+				 details.push('No race result');
+		 } else {
+				 // No result and no valid grid position (e.g. Senna 1984 San Marino)
+				 details.push('Did not qualify / Did not start');
+		 }
 	}
 
 	return `<li><a href="${raceLink}">${esc(raceName)}</a> <span class="muted">${details.join(' • ')}</span></li>`;
