@@ -2177,9 +2177,7 @@ function renderTeamPage(data, teamId, params) {
 	const team = data.teamsById[teamId];
 
 	if (!team) {
-		return {
-			html: emptyHtml("Team not found.")
-		};
+		return { html: emptyHtml("Team not found.") };
 	}
 
 	const entityArticles = getEntityArticles(data, { teamId });
@@ -2187,9 +2185,7 @@ function renderTeamPage(data, teamId, params) {
 	const sort = getSort(params);
 
 	const availableLanguages = [...new Set(
-		entityArticles
-			.map((article) => article.language)
-			.filter(Boolean)
+		entityArticles.map((article) => article.language).filter(Boolean)
 	)].sort();
 
 	const filteredArticles = sortArticles(
@@ -2201,73 +2197,7 @@ function renderTeamPage(data, teamId, params) {
 		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
 		: emptyHtml("No articles match these filters.");
 
-	const teamDrivers = (team.driver_ids || [])
-		.map((id) => data.driversById[id])
-		.filter(Boolean)
-		.sort((a, b) => {
-			return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
-		});
-
-	const driversHtml = teamDrivers.length
-		? `
-			<div class="scroll-list">
-				${
-					teamDrivers
-						.map((driver) => `
-							<a href="#/driver/${esc(driver.id)}">
-								${esc(driver.name)}
-							</a>
-						`)
-						.join("")
-				}
-			</div>
-		`
-		: "—";
-
-	const seasons = team.seasons || [];
-
-	const seasonsHtml = seasons.length
-		? `
-			<div class="scroll-list">
-				${seasons.map((year) => `<span>${esc(year)}</span>`).join("")}
-			</div>
-		`
-		: "—";
-
-	const constructorChamps = team.constructor_championships || [];
-
-	const constructorChampsHtml = constructorChamps.length
-		? `
-			<div class="scroll-list">
-				${constructorChamps.map((year) => `<span>${esc(year)}</span>`).join("")}
-			</div>
-		`
-		: "—";
-
-	const driverChamps = team.driver_championships || [];
-
-	const driverChampsHtml = driverChamps.length
-		? `
-			<div class="scroll-list">
-				${
-					driverChamps
-						.map((item) => {
-							if (item && typeof item === "object") {
-								const driverText = item.driver_id
-									? ` — ${esc(driverName(data, item.driver_id))}`
-									: "";
-
-								return `<span>${esc(item.year)}${driverText}</span>`;
-							}
-
-							return `<span>${esc(item)}</span>`;
-						})
-						.join("")
-				}
-			</div>
-		`
-		: "—";
-
+	// Compute Stats
 	const stats = computeTeamStats(data, team.id);
 	const statRows = [];
 
@@ -2277,55 +2207,69 @@ function renderTeamPage(data, teamId, params) {
 	`);
 
 	if (stats.wins > 0) {
-		statRows.push(`
-			<dt>Wins</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="wins" data-team="${esc(team.id)}">${stats.wins}</a></dd>
-		`);
+		statRows.push(`<dt>Wins</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="wins" data-team="${esc(team.id)}">${stats.wins}</a></dd>`);
 	}
 
 	if (stats.podiums > 0) {
-		statRows.push(`
-			<dt>Podiums</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="podiums" data-team="${esc(team.id)}">${stats.podiums}</a></dd>
-		`);
+		statRows.push(`<dt>Podiums</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="podiums" data-team="${esc(team.id)}">${stats.podiums}</a></dd>`);
 	} else if (stats.bestFinish !== null) {
-		statRows.push(`
-			<dt>Best finish</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-finish" data-team="${esc(team.id)}">${stats.bestFinish}${getOrdinal(stats.bestFinish)}</a></dd>
-		`);
+		statRows.push(`<dt>Best finish</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-finish" data-team="${esc(team.id)}">${stats.bestFinish}${getOrdinal(stats.bestFinish)}</a></dd>`);
 	}
 
 	if (stats.poles > 0) {
-		statRows.push(`
-			<dt>Pole positions</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="poles" data-team="${esc(team.id)}">${stats.poles}</a></dd>
-		`);
+		statRows.push(`<dt>Pole positions</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="poles" data-team="${esc(team.id)}">${stats.poles}</a></dd>`);
 	} else if (stats.bestGrid !== null) {
-		statRows.push(`
-			<dt>Best grid</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-grid" data-team="${esc(team.id)}">${stats.bestGrid}${getOrdinal(stats.bestGrid)}</a></dd>
-		`);
+		statRows.push(`<dt>Best grid</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-grid" data-team="${esc(team.id)}">${stats.bestGrid}${getOrdinal(stats.bestGrid)}</a></dd>`);
 	}
 
 	if (stats.fastestLaps > 0) {
-		statRows.push(`
-			<dt>Fastest laps</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="fastest-laps" data-team="${esc(team.id)}">${stats.fastestLaps}</a></dd>
-		`);
+		statRows.push(`<dt>Fastest laps</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="fastest-laps" data-team="${esc(team.id)}">${stats.fastestLaps}</a></dd>`);
 	}
 
 	if (stats.bestChampFinish !== null) {
-		statRows.push(`
-			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-champ" data-team="${esc(team.id)}">${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}</a></dd>
-		`);
+		statRows.push(`<dt>Best championship</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-champ" data-team="${esc(team.id)}">${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}</a></dd>`);
 	}
 
-	statRows.push(`
-		<dt>Constructor titles</dt>
-		<dd>${team.championships ?? 0}</dd>
-	`);
+	// Constructor Titles (Clickable)
+	const constructorTitles = (team.constructor_championships || []).length;
+	if (constructorTitles > 0) {
+		statRows.push(`<dt>Constructor titles</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="constructor-titles" data-team="${esc(team.id)}">${constructorTitles}</a></dd>`);
+	} else {
+		statRows.push(`<dt>Constructor titles</dt><dd>0</dd>`);
+	}
 
+	// Build Sidebar Sub-components safely
+	const seasons = team.seasons || [];
+	const seasonsHtml = seasons.length
+		? `<div class="scroll-list">${seasons.map((year) => `<span>${esc(year)}</span>`).join("")}</div>`
+		: "—";
+
+	const driverChamps = team.driver_championships || [];
+	const driverChampsHtml = driverChamps.length
+		? `<div class="scroll-list">${
+			driverChamps.map((item) => {
+				if (item && typeof item === "object") {
+					const driverObj = data.driversById[item.driver_id];
+					const driverText = driverObj ? ` — ${esc(driverObj.name)}` : "";
+					return `<span>${esc(item.year)}${driverText}</span>`;
+				}
+				return `<span>${esc(item)}</span>`;
+			}).join("")
+		  }</div>`
+		: "—";
+
+	const teamDrivers = (team.driver_ids || [])
+		.map((id) => data.driversById[id])
+		.filter(Boolean)
+		.sort((a, b) => (a.sort_name || a.name).localeCompare(b.sort_name || b.name));
+
+	const driversHtml = teamDrivers.length
+		? `<div class="scroll-list">${
+			teamDrivers.map((driver) => `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`).join("")
+		  }</div>`
+		: "—";
+
+	// Build Sidebar
 	const sidebar = `
 		<aside class="sidebar">
 			<div class="card">
@@ -2344,36 +2288,27 @@ function renderTeamPage(data, teamId, params) {
 					<dd>${driverChampsHtml}</dd>
 
 					<dt>Drivers</dt>
-					<dd>${driverLinks.length ? driverLinks.join(", ") : "—"}</dd>
+					<dd>${driversHtml}</dd>
 				</dl>
 
 				${
 					team.wikipedia_url
-						? `
-							<p>
-								<a href="${esc(team.wikipedia_url)}" target="_blank" rel="noopener">
-									Wikipedia
-								</a>
-							</p>
-						`
+						? `<p><a href="${esc(team.wikipedia_url)}" target="_blank" rel="noopener">Wikipedia</a></p>`
 						: ""
 				}
 			</div>
 
 			<div class="card">
 				<h2>Articles</h2>
-
-				<p class="muted">
-					${filteredArticles.length} shown / ${entityArticles.length} total
-				</p>
+				<p class="muted">${filteredArticles.length} shown / ${entityArticles.length} total</p>
 			</div>
 		</aside>
 	`;
 
+	// Main HTML
 	const html = `
 		<section class="page-head">
 			<h1>${esc(team.name)}</h1>
-
 			<p class="muted">
 				${esc(team.nationality || "")}
 				${team.active_years ? ` • ${esc(team.active_years)}` : ""}
@@ -2387,16 +2322,15 @@ function renderTeamPage(data, teamId, params) {
 					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
 					${sortFilterHtml(sort)}
 				</div>
-
 				<div class="stack">
 					${articlesHtml}
 				</div>
 			</div>
-
 			${sidebar}
 		</div>
 	`;
 
+	// Return with Event Listeners
 	return {
 		html,
 		afterRender: () => {
@@ -2407,8 +2341,8 @@ function renderTeamPage(data, teamId, params) {
 				link.addEventListener('click', (e) => {
 					e.preventDefault();
 					const stat = e.currentTarget.getAttribute('data-stat');
-					const teamId = e.currentTarget.getAttribute('data-team');
-					showTeamStatModal(data, teamId, stat);
+					const tId = e.currentTarget.getAttribute('data-team');
+					showTeamStatModal(data, tId, stat);
 				});
 			});
 		}
@@ -2848,6 +2782,26 @@ function showTeamStatModal(data, teamId, statType) {
 						 p.qualis.some(q => parseInt(q.position, 10) === stats.bestGrid) ||
 						 p.grids.some(g => parseInt(g.position, 10) === stats.bestGrid);
 		});
+	} else if (statType === "constructor-titles") {
+		title = `${team.name} - Constructor Championships`;
+		const titles = (team.constructor_championships || []).sort((a, b) => a - b);
+		
+		let listHtml = `<ul class="stat-list">`;
+		titles.forEach(year => {
+			const driverIds = getTeamDriversInYear(data, teamId, year);
+			const driversHtml = driverIds.map(did => {
+				const d = data.driversById[did];
+				return d ? `<a href="#/driver/${esc(d.id)}">${esc(d.name)}</a>` : esc(did);
+			}).join(", ") || "Unknown drivers";
+			
+			listHtml += `<li><span>${year}</span> <span class="muted">Constructor Champion • ${driversHtml}</span></li>`;
+		});
+		listHtml += `</ul>`;
+		
+		if (!titles.length) listHtml = `<p class="muted">No constructor championships recorded.</p>`;
+		
+		renderModal(title, titles.length, "title", listHtml);
+		return;
 	} else if (statType === "best-champ") {
 		const isChampion = parseInt(stats.bestChampFinish, 10) === 1;
 		title = isChampion 
