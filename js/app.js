@@ -1783,35 +1783,53 @@ function raceQualifyingTableHtml(data, race) {
 		return emptyHtml("No qualifying data stored yet.");
 	}
 
+	// Dynamically check which time columns actually have valid data for THIS race
+	const hasQ1 = race.qualifying.some(r => r.q1 && r.q1 !== "—" && r.q1 !== "-" && r.q1 !== "" && r.q1 !== "no time");
+	const hasQ2 = race.qualifying.some(r => r.q2 && r.q2 !== "—" && r.q2 !== "-" && r.q2 !== "" && r.q2 !== "no time");
+	const hasQ3 = race.qualifying.some(r => r.q3 && r.q3 !== "—" && r.q3 !== "-" && r.q3 !== "" && r.q3 !== "no time");
+
+	// If none of the knockout sessions exist, just show a single "Time" column
+	const showSingleTime = !hasQ1 && !hasQ2 && !hasQ3;
+
+	let headerCols = `<th>Pos</th><th>Driver</th><th>Constructor</th>`;
+	if (showSingleTime) {
+		headerCols += `<th>Time</th>`;
+	} else {
+		if (hasQ1) headerCols += `<th>Q1</th>`;
+		if (hasQ2) headerCols += `<th>Q2</th>`;
+		if (hasQ3) headerCols += `<th>Q3</th>`;
+	}
+
 	const rows = [...race.qualifying]
 		.sort((a, b) => {
 			const aPos = parseInt(a.position, 10);
 			const bPos = parseInt(b.position, 10);
-
 			const aSort = Number.isNaN(aPos) ? 9999 : aPos;
 			const bSort = Number.isNaN(bPos) ? 9999 : bPos;
-
 			return aSort - bSort;
 		})
 		.map((q) => {
 			const driver = data.driversById[q.driver_id];
-
 			const driverHtml = driver
-				? `
-					<a href="#/driver/${esc(driver.id)}">
-						${esc(driver.name)}
-					</a>
-				`
+				? `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`
 				: esc(q.driver_id || "—");
+
+			let timeCols = "";
+			if (showSingleTime) {
+				const time = (q.q1 && q.q1 !== "no time" ? q.q1 : "") || (q.q2 && q.q2 !== "no time" ? q.q2 : "") || (q.q3 && q.q3 !== "no time" ? q.q3 : "") || "—";
+				timeCols = `<td>${esc(time)}</td>`;
+			} else {
+				if (hasQ1) timeCols += `<td>${esc((q.q1 && q.q1 !== "no time") ? q.q1 : "—")}</td>`;
+				if (hasQ2) timeCols += `<td>${esc((q.q2 && q.q2 !== "no time") ? q.q2 : "—")}</td>`;
+				if (hasQ3) timeCols += `<td>${esc((q.q3 && q.q3 !== "no time") ? q.q3 : "—")}</td>`;
+			}
 
 			return `
 				<tr>
 					<td>${esc(q.position || "—")}</td>
 					<td>${driverHtml}</td>
 					<td>${teamLinkHtml(data, q.team)}</td>
-					<td>${esc(q.q1 || "—")}</td>
-					<td>${esc(q.q2 || "—")}</td>
-					<td>${esc(q.q3 || "—")}</td>
+					${timeCols}
 				</tr>
 			`;
 		})
@@ -1821,19 +1839,9 @@ function raceQualifyingTableHtml(data, race) {
 		<div class="table-wrap">
 			<table>
 				<thead>
-					<tr>
-						<th>Pos</th>
-						<th>Driver</th>
-						<th>Team</th>
-						<th>Q1</th>
-						<th>Q2</th>
-						<th>Q3</th>
-					</tr>
+					<tr>${headerCols}</tr>
 				</thead>
-
-				<tbody>
-					${rows}
-				</tbody>
+				<tbody>${rows}</tbody>
 			</table>
 		</div>
 	`;
@@ -2362,6 +2370,25 @@ function getOrdinal(n) {
 	return s[(v - 20) % 10] || s[v] || s[0];
 }
 
+function getDriverGridPos(p) {
+	// Official API starting grid (highest priority, most reliable)
+	if (p.result && p.result.grid) {
+		const g = parseInt(p.result.grid, 10);
+		if (!isNaN(g) && g > 0) return g;
+	}
+	// Scraped starting_grid array
+	if (p.grid && p.grid.position) {
+		const g = parseInt(p.grid.position, 10);
+		if (!isNaN(g) && g > 0) return g;
+	}
+	// Scraped qualifying array
+	if (p.quali && p.quali.position) {
+		const g = parseInt(p.quali.position, 10);
+		if (!isNaN(g) && g > 0) return g;
+	}
+	return null;
+}
+
 function computeDriverStats(data, driverId) {
 	const participations = [];
 	
@@ -2378,26 +2405,14 @@ function computeDriverStats(data, driverId) {
 	const wins = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1").length;
 	const podiums = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText))).length;
 	
-	// FIXED: Fallback to result.grid (from Ergast API) if starting_grid is missing
-	const poles = participations.filter(p => {
-		const pos = p.grid ? String(p.grid.position) : 
-								(p.result && p.result.grid ? String(p.result.grid) : 
-								(p.quali ? String(p.quali.position) : null));
-		return pos === "1";
-	}).length;
+	const poles = participations.filter(p => getDriverGridPos(p) === 1).length;
 	
 	const fastestLaps = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1").length;
 
 	const finishes = participations.map(p => p.result ? parseInt(p.result.position || p.result.positionText, 10) : NaN).filter(n => !isNaN(n));
 	const bestFinish = finishes.length ? Math.min(...finishes) : null;
 
-	// FIXED: Include result.grid in best grid calculation
-	const grids = participations.map(p => {
-		const pos = p.grid ? String(p.grid.position) : 
-								(p.result && p.result.grid ? String(p.result.grid) : 
-								(p.quali ? String(p.quali.position) : null));
-		return pos && /^\d+$/.test(pos) ? parseInt(pos, 10) : NaN;
-	}).filter(n => !isNaN(n));
+	const grids = participations.map(p => getDriverGridPos(p)).filter(n => n !== null);
 	const bestGrid = grids.length ? Math.min(...grids) : null;
 
 	return {
@@ -2413,42 +2428,34 @@ function formatRaceEntry(p) {
 	const raceLink = `#/race/${p.race.id}`;
 	let details = [];
 	
-	// Determine Grid Position (Prioritize API result.grid)
-	const gridPos = p.grid ? String(p.grid.position) : 
-								 (p.result && p.result.grid ? String(p.result.grid) : 
-								 (p.quali && /^\d+$/.test(String(p.quali.position)) ? String(p.quali.position) : null));
-								 
-	const isPole = gridPos === "1";
+	const gridPos = getDriverGridPos(p);
+	const isPole = gridPos === 1;
 
-	if (gridPos && /^\d+$/.test(gridPos)) {
+	if (gridPos !== null) {
 		details.push(`Grid ${gridPos}${isPole ? ' (Pole)' : ''}`);
 	} else if (p.quali && p.quali.position && !/^\d+$/.test(String(p.quali.position))) {
 		details.push(String(p.quali.position)); // e.g. DNQ
 	}
 
-	// Determine Race Result
 	if (p.result) {
 		const status = p.result.status || p.result.statusText || "";
 		const pos = String(p.result.position || p.result.positionText || "");
 		
 		if (/^\d+$/.test(pos)) {
-			 details.push(`Finished ${pos}${getOrdinal(parseInt(pos, 10))}`);
+			details.push(`Finished ${pos}${getOrdinal(parseInt(pos, 10))}`);
 		} else if (pos === "DSQ" || status === "Disqualified") {
-			 details.push(`DSQ`);
-		} else if (status) {
-			 details.push(`Retired (${status})`);
-		} else {
-			 details.push(`Retired`); // FIXED: Prevents empty "Retired ()"
+			details.push(`DSQ`);
+		} else if (status && status !== "Finished") {
+			details.push(`Retired (${status})`);
+		} else if (!status) {
+			details.push(`Retired`); 
 		}
 	} else {
-		 // No result entry at all
-		 if (gridPos && /^\d+$/.test(gridPos)) {
-				 // FIXED: They had a grid position but no result data. Don't call it DNQ!
-				 details.push('No race result');
-		 } else {
-				 // No result and no valid grid position (e.g. Senna 1984 San Marino)
-				 details.push('Did not qualify / Did not start');
-		 }
+		if (gridPos !== null) {
+			details.push('No race result');
+		} else {
+			details.push('Did not qualify / Did not start');
+		}
 	}
 
 	return `<li><a href="${raceLink}">${esc(raceName)}</a> <span class="muted">${details.join(' • ')}</span></li>`;
