@@ -133,7 +133,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Kurtis Kraft"
+      "Kurtis Kraft",
+      "Maserati"
     ],
     "championships": 0,
     "active_years": "1950–1957",
@@ -1490,7 +1491,8 @@
     "teams": [
       "Kurtis Kraft",
       "Kuzma",
-      "Lesovsky"
+      "Lesovsky",
+      "Maserati"
     ],
     "championships": 0,
     "active_years": "1951–1954",
@@ -6480,8 +6482,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Gordini",
-      "Maserati"
+      "Gordini"
     ],
     "championships": 0,
     "active_years": "1955–1956",
@@ -7252,7 +7253,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Maserati"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": "2008-12-11",
@@ -9245,7 +9248,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Kurtis Kraft"
+      "Kurtis Kraft",
+      "Maserati"
     ],
     "championships": 0,
     "active_years": "1951–1951",
@@ -9330,9 +9334,7 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [
-      "Maserati"
-    ],
+    "teams": [],
     "championships": 0,
     "active_years": "1951–1951",
     "date_of_death": "1981-10-15",
@@ -11386,6 +11388,7 @@
     "teams": [
       "Hersham and Walton Motors",
       "HWM",
+      "Maserati",
       "Talbot-Lago"
     ],
     "championships": 0,
@@ -12669,6 +12672,7 @@
     "podiums": 0,
     "teams": [
       "Kurtis Kraft",
+      "Maserati",
       "Olson"
     ],
     "championships": 0,
@@ -14237,7 +14241,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Maserati"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": "2009-04-26",
@@ -17267,7 +17273,8 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Kurtis Kraft"
+      "Kurtis Kraft",
+      "Maserati"
     ],
     "championships": 0,
     "active_years": "1950–1952",
@@ -21756,6 +21763,7 @@
     "podiums": 0,
     "teams": [
       "ATS",
+      "Maserati",
       "Watson"
     ],
     "championships": 0,
@@ -25684,7 +25692,9 @@
     "pole_positions": 0,
     "fastest_laps": 0,
     "podiums": 0,
-    "teams": [],
+    "teams": [
+      "Maserati"
+    ],
     "championships": 0,
     "active_years": "",
     "date_of_death": "2004-02-15",
@@ -27457,6 +27467,7 @@
     "podiums": 2,
     "teams": [
       "Kurtis Kraft",
+      "Maserati",
       "Trevis"
     ],
     "championships": 0,
