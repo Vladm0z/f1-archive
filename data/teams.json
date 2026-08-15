@@ -4,7 +4,7 @@
     "name": "Adams",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Adams_(constructor)",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -27,7 +27,7 @@
     "name": "AFM",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alex_von_Falkenhausen_Motorenbau",
-    "active_years": "1952–1953",
+    "active_years": "1952\u20131953",
     "seasons": [
       1952,
       1953
@@ -54,7 +54,7 @@
     "name": "AGS",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Automobiles_Gonfaronnaises_Sportives",
-    "active_years": "1986–1991",
+    "active_years": "1986\u20131991",
     "seasons": [
       1986,
       1987,
@@ -117,7 +117,7 @@
     "name": "Alfa Romeo",
     "nationality": "Swiss",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
-    "active_years": "1950–2023",
+    "active_years": "1950\u20132023",
     "seasons": [
       1950,
       1951,
@@ -248,7 +248,7 @@
     "name": "All American Racers",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1966–1969",
+    "active_years": "1966\u20131969",
     "seasons": [
       1966,
       1967,
@@ -273,7 +273,7 @@
     "name": "AlphaTauri",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_AlphaTauri",
-    "active_years": "2020–2023",
+    "active_years": "2020\u20132023",
     "seasons": [
       2020,
       2021,
@@ -321,7 +321,7 @@
     "name": "Alpine F1 Team",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alpine_F1_Team",
-    "active_years": "2021–2025",
+    "active_years": "2021\u20132025",
     "seasons": [
       2021,
       2022,
@@ -370,7 +370,7 @@
     "name": "Alta",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alta_Car_and_Engineering_Company",
-    "active_years": "1950–1952",
+    "active_years": "1950\u20131952",
     "seasons": [
       1950,
       1951,
@@ -397,7 +397,7 @@
     "name": "Amon",
     "nationality": "New Zealander",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Amon_Racing",
-    "active_years": "1974–1974",
+    "active_years": "1974\u20131974",
     "seasons": [
       1974
     ],
@@ -425,7 +425,7 @@
     "name": "Andrea Moda",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Andrea_Moda_Formula",
-    "active_years": "1992–1992",
+    "active_years": "1992\u20131992",
     "seasons": [
       1992
     ],
@@ -448,7 +448,7 @@
     "name": "Anglo American Racers",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1966–1968",
+    "active_years": "1966\u20131968",
     "seasons": [
       1966,
       1967,
@@ -473,7 +473,7 @@
     "name": "Apollon",
     "nationality": "Swiss",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Apollon_(Formula_One)",
-    "active_years": "1977–1977",
+    "active_years": "1977\u20131977",
     "seasons": [
       1977
     ],
@@ -493,7 +493,7 @@
     "name": "Arrows",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Arrows_Grand_Prix_International",
-    "active_years": "1978–2002",
+    "active_years": "1978\u20132002",
     "seasons": [
       1978,
       1979,
@@ -632,7 +632,7 @@
     "name": "Arzani-Volpini",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Arzani-Volpini",
-    "active_years": "1955–1955",
+    "active_years": "1955\u20131955",
     "seasons": [
       1955
     ],
@@ -654,7 +654,7 @@
     "name": "Aston Butterworth",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aston_Butterworth",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -677,7 +677,7 @@
     "name": "Aston Martin",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One",
-    "active_years": "1959–2025",
+    "active_years": "1959\u20132025",
     "seasons": [
       1959,
       1960,
@@ -742,7 +742,7 @@
     "name": "ATS",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/ATS_Wheels",
-    "active_years": "1952–1984",
+    "active_years": "1952\u20131984",
     "seasons": [
       1952,
       1956,
@@ -828,7 +828,7 @@
     "name": "Automobiles Gonfaronnaises Sportives",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1986–1991",
+    "active_years": "1986\u20131991",
     "seasons": [
       1986,
       1987,
@@ -861,7 +861,7 @@
     "name": "Automobili Turismo e Sport",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1963–1964",
+    "active_years": "1963\u20131964",
     "seasons": [
       1963,
       1964
@@ -884,7 +884,7 @@
     "name": "BAR",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/British_American_Racing",
-    "active_years": "1999–2005",
+    "active_years": "1999\u20132005",
     "seasons": [
       1999,
       2000,
@@ -951,7 +951,7 @@
     "name": "Behra-Porsche",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Behra-Porsche",
-    "active_years": "1960–1960",
+    "active_years": "1960\u20131960",
     "seasons": [
       1960
     ],
@@ -980,7 +980,7 @@
     "name": "Bellasi",
     "nationality": "Swiss",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bellasi",
-    "active_years": "1970–1971",
+    "active_years": "1970\u20131971",
     "seasons": [
       1970,
       1971
@@ -1014,7 +1014,7 @@
     "name": "Benetton",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Benetton_Formula",
-    "active_years": "1986–2001",
+    "active_years": "1986\u20132001",
     "seasons": [
       1986,
       1987,
@@ -1147,7 +1147,7 @@
     "name": "BMW",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/BMW",
-    "active_years": "1952–1953",
+    "active_years": "1952\u20131953",
     "seasons": [
       1952,
       1953
@@ -1173,7 +1173,7 @@
     "name": "BMW Sauber",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_in_Formula_One",
-    "active_years": "2006–2009",
+    "active_years": "2006\u20132009",
     "seasons": [
       2006,
       2007,
@@ -1222,7 +1222,7 @@
     "name": "Boro",
     "nationality": "Dutch",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Boro_(Formula_One)",
-    "active_years": "1976–1977",
+    "active_years": "1976\u20131977",
     "seasons": [
       1976,
       1977
@@ -1257,7 +1257,7 @@
     "name": "Brabham",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
-    "active_years": "1962–1992",
+    "active_years": "1962\u20131992",
     "seasons": [
       1962,
       1963,
@@ -1452,7 +1452,7 @@
     "name": "Brawn",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Brawn_GP",
-    "active_years": "2009–2009",
+    "active_years": "2009\u20132009",
     "seasons": [
       2009
     ],
@@ -1488,7 +1488,7 @@
     "name": "British American Racing",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1999–2002",
+    "active_years": "1999\u20132002",
     "seasons": [
       1999,
       2000,
@@ -1514,7 +1514,7 @@
     "name": "British Racing Motors",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1951–1977",
+    "active_years": "1951\u20131977",
     "seasons": [
       1951,
       1956,
@@ -1579,7 +1579,7 @@
       "migault",
       "moss",
       "oliver",
-      "pedro_rodríguez_de_la_vega",
+      "pedro_rodr\u00edguez_de_la_vega",
       "pescarolo",
       "peter_walker",
       "pilette",
@@ -1616,7 +1616,7 @@
     "name": "British Racing Partnership",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1963–1964",
+    "active_years": "1963\u20131964",
     "seasons": [
       1963,
       1964
@@ -1638,7 +1638,7 @@
     "name": "BRM",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Motors",
-    "active_years": "1951–1977",
+    "active_years": "1951\u20131977",
     "seasons": [
       1951,
       1956,
@@ -1807,7 +1807,7 @@
     "name": "Bromme",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bromme",
-    "active_years": "1951–1952",
+    "active_years": "1951\u20131952",
     "seasons": [
       1951,
       1952
@@ -1831,7 +1831,7 @@
     "name": "BRP",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Partnership",
-    "active_years": "1963–1964",
+    "active_years": "1963\u20131964",
     "seasons": [
       1963,
       1964
@@ -1866,7 +1866,7 @@
     "name": "BS Fabrications",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1977–1977",
+    "active_years": "1977\u20131977",
     "seasons": [
       1977
     ],
@@ -1886,7 +1886,7 @@
     "name": "Bugatti",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bugatti",
-    "active_years": "1956–1956",
+    "active_years": "1956\u20131956",
     "seasons": [
       1956
     ],
@@ -1908,7 +1908,7 @@
     "name": "Caterham",
     "nationality": "Malaysian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Caterham_F1",
-    "active_years": "2012–2014",
+    "active_years": "2012\u20132014",
     "seasons": [
       2012,
       2013,
@@ -1953,7 +1953,7 @@
     "name": "Christensen",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Christensen_(constructor)",
-    "active_years": "1959–1960",
+    "active_years": "1959\u20131960",
     "seasons": [
       1959,
       1960
@@ -1977,7 +1977,7 @@
     "name": "Cisitalia",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cisitalia",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -1997,7 +1997,7 @@
     "name": "Coloni",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Coloni",
-    "active_years": "1987–1989",
+    "active_years": "1987\u20131989",
     "seasons": [
       1987,
       1988,
@@ -2040,7 +2040,7 @@
     "name": "Connaught",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Connaught_Engineering",
-    "active_years": "1952–1959",
+    "active_years": "1952\u20131959",
     "seasons": [
       1952,
       1953,
@@ -2105,7 +2105,7 @@
     "name": "Connew",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Connew",
-    "active_years": "1972–1972",
+    "active_years": "1972\u20131972",
     "seasons": [
       1972
     ],
@@ -2133,7 +2133,7 @@
     "name": "Cooper",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
-    "active_years": "1950–1969",
+    "active_years": "1950\u20131969",
     "seasons": [
       1950,
       1952,
@@ -2252,7 +2252,7 @@
     "name": "Copersucar",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1976–1976",
+    "active_years": "1976\u20131976",
     "seasons": [
       1976
     ],
@@ -2272,7 +2272,7 @@
     "name": "Copersucar-Ford",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1976–1977",
+    "active_years": "1976\u20131977",
     "seasons": [
       1976,
       1977
@@ -2294,7 +2294,7 @@
     "name": "Dallara",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dallara",
-    "active_years": "1988–1992",
+    "active_years": "1988\u20131992",
     "seasons": [
       1988,
       1989,
@@ -2350,7 +2350,7 @@
     "name": "De Tomaso",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/De_Tomaso",
-    "active_years": "1961–1970",
+    "active_years": "1961\u20131970",
     "seasons": [
       1961,
       1962,
@@ -2382,7 +2382,7 @@
     "name": "Deidt",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Emil_Diedt",
-    "active_years": "1950–1952",
+    "active_years": "1950\u20131952",
     "seasons": [
       1950,
       1951,
@@ -2410,7 +2410,7 @@
     "name": "Derrington",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Derrington-Francis",
-    "active_years": "1964–1964",
+    "active_years": "1964\u20131964",
     "seasons": [
       1964
     ],
@@ -2438,7 +2438,7 @@
     "name": "Dunn",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dunn_Engineering",
-    "active_years": "1957–1959",
+    "active_years": "1957\u20131959",
     "seasons": [
       1957,
       1958,
@@ -2463,7 +2463,7 @@
     "name": "Eagle",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/All_American_Racers",
-    "active_years": "1966–1969",
+    "active_years": "1966\u20131969",
     "seasons": [
       1966,
       1967,
@@ -2492,7 +2492,7 @@
     "name": "Ecurie Nationale Belge",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1962–1962",
+    "active_years": "1962\u20131962",
     "seasons": [
       1962
     ],
@@ -2512,7 +2512,7 @@
     "name": "Eifelland",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1972–1972",
+    "active_years": "1972\u20131972",
     "seasons": [
       1972
     ],
@@ -2532,7 +2532,7 @@
     "name": "Eisenacher Motorenwerk",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1953–1953",
+    "active_years": "1953\u20131953",
     "seasons": [
       1953
     ],
@@ -2552,7 +2552,7 @@
     "name": "Elder",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Edgar_Elder",
-    "active_years": "1959–1959",
+    "active_years": "1959\u20131959",
     "seasons": [
       1959
     ],
@@ -2574,7 +2574,7 @@
     "name": "Embassy Hill",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Embassy_Hill",
-    "active_years": "1975–1975",
+    "active_years": "1975\u20131975",
     "seasons": [
       1975
     ],
@@ -2606,7 +2606,7 @@
     "name": "Emeryson",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Emeryson",
-    "active_years": "1956–1962",
+    "active_years": "1956\u20131962",
     "seasons": [
       1956,
       1961,
@@ -2645,7 +2645,7 @@
     "name": "Emil Diedt",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1950–1952",
+    "active_years": "1950\u20131952",
     "seasons": [
       1950,
       1951,
@@ -2671,7 +2671,7 @@
     "name": "EMW",
     "nationality": "East German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Eisenacher_Motorenwerk",
-    "active_years": "1953–1953",
+    "active_years": "1953\u20131953",
     "seasons": [
       1953
     ],
@@ -2692,8 +2692,8 @@
     "id": "enb",
     "name": "ENB",
     "nationality": "Belgian",
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Écurie_Nationale_Belge",
-    "active_years": "1962–1962",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/\u00c9curie_Nationale_Belge",
+    "active_years": "1962\u20131962",
     "seasons": [
       1962
     ],
@@ -2721,7 +2721,7 @@
     "name": "English Racing Automobiles",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1950–1952",
+    "active_years": "1950\u20131952",
     "seasons": [
       1950,
       1951,
@@ -2748,7 +2748,7 @@
     "name": "Ensign",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ensign_Racing",
-    "active_years": "1973–1982",
+    "active_years": "1973\u20131982",
     "seasons": [
       1973,
       1974,
@@ -2853,7 +2853,7 @@
     "name": "Epperly",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Epperly",
-    "active_years": "1955–1960",
+    "active_years": "1955\u20131960",
     "seasons": [
       1955,
       1957,
@@ -2888,21 +2888,13 @@
     "name": "ERA",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/English_Racing_Automobiles",
-    "active_years": "1950–1952",
+    "active_years": "1950\u20131952",
     "seasons": [
       1950,
       1951,
       1952
     ],
-    "driver_ids": [
-      "gerard",
-      "harrison",
-      "leslie_johnson",
-      "moss",
-      "rolt",
-      "shawe_taylor",
-      "peter_walker"
-    ],
+    "driver_ids": [],
     "wins": 0,
     "podiums": 0,
     "pole_positions": 0,
@@ -2918,7 +2910,7 @@
     "name": "Ernst Klodwig",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1952–1953",
+    "active_years": "1952\u20131953",
     "seasons": [
       1952,
       1953
@@ -2939,7 +2931,7 @@
     "name": "Euro Brun",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/EuroBrun",
-    "active_years": "1988–1990",
+    "active_years": "1988\u20131990",
     "seasons": [
       1988,
       1990
@@ -2975,7 +2967,7 @@
     "name": "Ewing",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Wayne_Ewing",
-    "active_years": "1950–1960",
+    "active_years": "1950\u20131960",
     "seasons": [
       1950,
       1960
@@ -3000,7 +2992,7 @@
     "name": "Ferguson",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ferguson_Research",
-    "active_years": "1961–1961",
+    "active_years": "1961\u20131961",
     "seasons": [
       1961
     ],
@@ -3029,7 +3021,7 @@
     "name": "Ferrari",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
-    "active_years": "1950–2025",
+    "active_years": "1950\u20132025",
     "seasons": [
       1950,
       1951,
@@ -3567,7 +3559,7 @@
     "name": "Fittipaldi",
     "nationality": "Brazilian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Fittipaldi_Automotive",
-    "active_years": "1975–1982",
+    "active_years": "1975\u20131982",
     "seasons": [
       1975,
       1976,
@@ -3642,7 +3634,7 @@
     "name": "Fondmetal",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Fondmetal",
-    "active_years": "1991–1992",
+    "active_years": "1991\u20131992",
     "seasons": [
       1991,
       1992
@@ -3679,7 +3671,7 @@
     "name": "Footwork",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_Arrows",
-    "active_years": "1991–1996",
+    "active_years": "1991\u20131996",
     "seasons": [
       1991,
       1992,
@@ -3743,7 +3735,7 @@
     "name": "Force India",
     "nationality": "Indian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Racing_Point_Force_India",
-    "active_years": "2008–2018",
+    "active_years": "2008\u20132018",
     "seasons": [
       2008,
       2009,
@@ -3833,7 +3825,7 @@
     "name": "Forti",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Forti",
-    "active_years": "1995–1996",
+    "active_years": "1995\u20131996",
     "seasons": [
       1995,
       1996
@@ -3870,7 +3862,7 @@
     "name": "Frank DelRoy",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1953–1953",
+    "active_years": "1953\u20131953",
     "seasons": [
       1953
     ],
@@ -3890,7 +3882,7 @@
     "name": "Frazer Nash",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Frazer_Nash",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -3913,7 +3905,7 @@
     "name": "Frazer-Nash",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -3933,7 +3925,7 @@
     "name": "George Salih",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1957–1960",
+    "active_years": "1957\u20131960",
     "seasons": [
       1957,
       1958,
@@ -3957,7 +3949,7 @@
     "name": "Gilby",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gilby",
-    "active_years": "1961–1963",
+    "active_years": "1961\u20131963",
     "seasons": [
       1961,
       1962,
@@ -3998,7 +3990,7 @@
     "name": "Gordini",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gordini",
-    "active_years": "1952–1956",
+    "active_years": "1952\u20131956",
     "seasons": [
       1952,
       1953,
@@ -4046,7 +4038,7 @@
     "name": "Greifzu",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1953–1953",
+    "active_years": "1953\u20131953",
     "seasons": [
       1953
     ],
@@ -4063,10 +4055,10 @@
   },
   {
     "id": "g-nther-bechem",
-    "name": "Günther Bechem",
+    "name": "G\u00fcnther Bechem",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -4086,7 +4078,7 @@
     "name": "Haas F1 Team",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Haas_F1_Team",
-    "active_years": "2016–2025",
+    "active_years": "2016\u20132025",
     "seasons": [
       2016,
       2017,
@@ -4165,7 +4157,7 @@
     "name": "Hall",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hall_(constructor)",
-    "active_years": "1951–1951",
+    "active_years": "1951\u20131951",
     "seasons": [
       1951
     ],
@@ -4187,7 +4179,7 @@
     "name": "Hersham and Walton Motors",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1951–1954",
+    "active_years": "1951\u20131954",
     "seasons": [
       1951,
       1952,
@@ -4224,7 +4216,7 @@
     "name": "Hesketh",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hesketh_Racing",
-    "active_years": "1974–1978",
+    "active_years": "1974\u20131978",
     "seasons": [
       1974,
       1975,
@@ -4287,7 +4279,7 @@
     "name": "Honda",
     "nationality": "Japanese",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Honda_in_Formula_One",
-    "active_years": "1964–2008",
+    "active_years": "1964\u20132008",
     "seasons": [
       1964,
       1965,
@@ -4364,7 +4356,7 @@
     "name": "HRT",
     "nationality": "Spanish",
     "wikipedia_url": "https://en.wikipedia.org/wiki/HRT_Formula_1_Team",
-    "active_years": "2010–2012",
+    "active_years": "2010\u20132012",
     "seasons": [
       2010,
       2011,
@@ -4411,7 +4403,7 @@
     "name": "HWM",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hersham_and_Walton_Motors",
-    "active_years": "1951–1954",
+    "active_years": "1951\u20131954",
     "seasons": [
       1951,
       1952,
@@ -4449,7 +4441,7 @@
     "name": "Iso Marlboro",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Frank_Williams_Racing_Cars",
-    "active_years": "1973–1974",
+    "active_years": "1973\u20131974",
     "seasons": [
       1973,
       1974
@@ -4493,7 +4485,7 @@
     "name": "Iso-Ford",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1973–1974",
+    "active_years": "1973\u20131974",
     "seasons": [
       1973,
       1974
@@ -4520,7 +4512,7 @@
     "name": "Jaguar",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Jaguar_Racing",
-    "active_years": "2000–2004",
+    "active_years": "2000\u20132004",
     "seasons": [
       2000,
       2001,
@@ -4575,7 +4567,7 @@
     "name": "JBW",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/JBW",
-    "active_years": "1959–1961",
+    "active_years": "1959\u20131961",
     "seasons": [
       1959,
       1960,
@@ -4615,7 +4607,7 @@
     "name": "Jordan",
     "nationality": "Irish",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix",
-    "active_years": "1991–2005",
+    "active_years": "1991\u20132005",
     "seasons": [
       1991,
       1992,
@@ -4740,7 +4732,7 @@
     "name": "Klenk",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Klenk",
-    "active_years": "1954–1954",
+    "active_years": "1954\u20131954",
     "seasons": [
       1954
     ],
@@ -4762,7 +4754,7 @@
     "name": "Kojima",
     "nationality": "Japanese",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Kojima_Engineering",
-    "active_years": "1976–1977",
+    "active_years": "1976\u20131977",
     "seasons": [
       1976,
       1977
@@ -4798,7 +4790,7 @@
     "name": "Kurtis Kraft",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Kurtis_Kraft",
-    "active_years": "1950–1960",
+    "active_years": "1950\u20131960",
     "seasons": [
       1950,
       1951,
@@ -4887,7 +4879,7 @@
     "name": "Kuzma",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Eddie_Kuzma",
-    "active_years": "1951–1960",
+    "active_years": "1951\u20131960",
     "seasons": [
       1951,
       1952,
@@ -4940,7 +4932,7 @@
     "name": "Lambo",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Modena_(racing_team)",
-    "active_years": "1991–1991",
+    "active_years": "1991\u20131991",
     "seasons": [
       1991
     ],
@@ -4969,7 +4961,7 @@
     "name": "Lancia",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lancia_in_Formula_One",
-    "active_years": "1954–1955",
+    "active_years": "1954\u20131955",
     "seasons": [
       1954,
       1955
@@ -4996,7 +4988,7 @@
     "name": "Langley",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Langley_(constructor)",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -5018,7 +5010,7 @@
     "name": "Larrousse",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Larrousse",
-    "active_years": "1987–1994",
+    "active_years": "1987\u20131994",
     "seasons": [
       1987,
       1988,
@@ -5099,7 +5091,7 @@
     "name": "LDS",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/LDS_(automobile)",
-    "active_years": "1962–1968",
+    "active_years": "1962\u20131968",
     "seasons": [
       1962,
       1963,
@@ -5143,7 +5135,7 @@
     "name": "LEC",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/LEC_(Formula_One)",
-    "active_years": "1977–1977",
+    "active_years": "1977\u20131977",
     "seasons": [
       1977
     ],
@@ -5171,7 +5163,7 @@
     "name": "Lesovsky",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lesovsky",
-    "active_years": "1950–1960",
+    "active_years": "1950\u20131960",
     "seasons": [
       1950,
       1952,
@@ -5209,7 +5201,7 @@
     "name": "Leyton House",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leyton_House",
-    "active_years": "1990–1991",
+    "active_years": "1990\u20131991",
     "seasons": [
       1990,
       1991
@@ -5234,7 +5226,7 @@
     "name": "Life",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1990–1990",
+    "active_years": "1990\u20131990",
     "seasons": [
       1990
     ],
@@ -5254,7 +5246,7 @@
     "name": "Life Racing Engines",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1990–1990",
+    "active_years": "1990\u20131990",
     "seasons": [
       1990
     ],
@@ -5275,7 +5267,7 @@
     "name": "Ligier",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ligier",
-    "active_years": "1976–1996",
+    "active_years": "1976\u20131996",
     "seasons": [
       1976,
       1977,
@@ -5450,7 +5442,7 @@
     "name": "Lola",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lola_Cars",
-    "active_years": "1962–1993",
+    "active_years": "1962\u20131993",
     "seasons": [
       1962,
       1963,
@@ -5557,7 +5549,7 @@
     "name": "Lotus F1",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1978–2015",
+    "active_years": "1978\u20132015",
     "seasons": [
       1978,
       2012,
@@ -5586,7 +5578,7 @@
     "name": "Lotus F1 Team",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lotus_F1",
-    "active_years": "2010–2015",
+    "active_years": "2010\u20132015",
     "seasons": [
       2010,
       2011,
@@ -5615,162 +5607,11 @@
     "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
-    "id": "lotus-borgward",
-    "name": "Lotus-Borgward",
-    "nationality": "",
-    "wikipedia_url": "",
-    "active_years": "",
-    "seasons": [],
-    "driver_ids": [],
-    "wins": 0,
-    "podiums": 0,
-    "pole_positions": 0,
-    "fastest_laps": 0,
-    "constructor_championships": [],
-    "driver_championships": [],
-    "championship_results": [
-      {
-        "year": 1962,
-        "position": 999,
-        "points": "0"
-      }
-    ]
-  },
-  {
-    "id": "lotus-climax",
-    "name": "Lotus-Climax",
-    "nationality": "",
-    "wikipedia_url": "",
-    "active_years": "",
-    "seasons": [],
-    "driver_ids": [],
-    "wins": 0,
-    "podiums": 0,
-    "pole_positions": 0,
-    "fastest_laps": 0,
-    "constructor_championships": [
-      1963,
-      1965
-    ],
-    "driver_championships": [
-      {
-        "year": 1963,
-        "driver_id": "clark"
-      },
-      {
-        "year": 1965,
-        "driver_id": "clark"
-      }
-    ],
-    "championship_results": [
-      {
-        "year": 1961,
-        "position": 2,
-        "points": "35"
-      },
-      {
-        "year": 1962,
-        "position": 2,
-        "points": "36"
-      },
-      {
-        "year": 1963,
-        "position": 1,
-        "points": "54"
-      },
-      {
-        "year": 1964,
-        "position": 3,
-        "points": "37"
-      },
-      {
-        "year": 1965,
-        "position": 1,
-        "points": "54"
-      },
-      {
-        "year": 1966,
-        "position": 6,
-        "points": "8"
-      },
-      {
-        "year": 1967,
-        "position": 999,
-        "points": "0"
-      }
-    ]
-  },
-  {
-    "id": "lotus-ford",
-    "name": "Lotus-Ford",
-    "nationality": "",
-    "wikipedia_url": "",
-    "active_years": "",
-    "seasons": [],
-    "driver_ids": [],
-    "wins": 0,
-    "podiums": 0,
-    "pole_positions": 0,
-    "fastest_laps": 0,
-    "constructor_championships": [
-      1968
-    ],
-    "driver_championships": [
-      {
-        "year": 1968,
-        "driver_id": "hill"
-      }
-    ],
-    "championship_results": [
-      {
-        "year": 1963,
-        "position": 999,
-        "points": "0"
-      },
-      {
-        "year": 1967,
-        "position": 2,
-        "points": "44"
-      },
-      {
-        "year": 1968,
-        "position": 1,
-        "points": "62"
-      },
-      {
-        "year": 1969,
-        "position": 3,
-        "points": "47"
-      },
-      {
-        "year": 1971,
-        "position": 5,
-        "points": "21"
-      }
-    ]
-  },
-  {
-    "id": "lotus-pratt-amp-whitney",
-    "name": "Lotus-Pratt &amp; Whitney",
-    "nationality": "",
-    "wikipedia_url": "",
-    "active_years": "",
-    "seasons": [],
-    "driver_ids": [],
-    "wins": 0,
-    "podiums": 0,
-    "pole_positions": 0,
-    "fastest_laps": 0,
-    "constructor_championships": [],
-    "driver_championships": [],
-    "championship_results": []
-  },
-  {
     "id": "lyncar",
     "name": "Lyncar",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lyncar",
-    "active_years": "1975–1975",
+    "active_years": "1975\u20131975",
     "seasons": [
       1975
     ],
@@ -5798,7 +5639,7 @@
     "name": "Maki",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Maki_(cars)",
-    "active_years": "1975–1975",
+    "active_years": "1975\u20131975",
     "seasons": [
       1975
     ],
@@ -5828,7 +5669,7 @@
     "name": "Marcel Balsa",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -5848,7 +5689,7 @@
     "name": "March",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/March_Engineering",
-    "active_years": "1970–1992",
+    "active_years": "1970\u20131992",
     "seasons": [
       1970,
       1971,
@@ -6001,7 +5842,7 @@
     "name": "Marchese",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Marchese_(constructor)",
-    "active_years": "1950–1951",
+    "active_years": "1950\u20131951",
     "seasons": [
       1950,
       1951
@@ -6025,7 +5866,7 @@
     "name": "Martini",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Martini_(cars)",
-    "active_years": "1978–1978",
+    "active_years": "1978\u20131978",
     "seasons": [
       1978
     ],
@@ -6053,7 +5894,7 @@
     "name": "Marussia",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Marussia_F1",
-    "active_years": "2012–2016",
+    "active_years": "2012\u20132016",
     "seasons": [
       2012,
       2013,
@@ -6104,7 +5945,7 @@
     "name": "Maserati",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Maserati",
-    "active_years": "1950–1969",
+    "active_years": "1950\u20131969",
     "seasons": [
       1950,
       1951,
@@ -6125,137 +5966,7 @@
       1968,
       1969
     ],
-    "driver_ids": [
-      "alberto_uría",
-      "allison",
-      "amon",
-      "ascari",
-      "asdrúbal_fontes_bayardo",
-      "ashmore",
-      "attwood",
-      "bandini",
-      "banks",
-      "behra",
-      "bianco",
-      "bira",
-      "birabongse_bhanudej",
-      "blokdyk",
-      "bonetto",
-      "bonnier",
-      "bonomi",
-      "jack_brabham",
-      "branca",
-      "bucci",
-      "bueb",
-      "burgess",
-      "cabianca",
-      "cabral",
-      "cade",
-      "cantoni",
-      "chimeri",
-      "chiron",
-      "claes",
-      "clapham",
-      "clark",
-      "collins",
-      "comotti",
-      "crespo",
-      "creus",
-      "orey",
-      "ramos",
-      "daponte",
-      "davis",
-      "beaufort",
-      "filippis",
-      "graffenried",
-      "drake",
-      "elford",
-      "estefano",
-      "fairman",
-      "fangio",
-      "fitch",
-      "flinterman",
-      "flockhart",
-      "fontes",
-      "parker",
-      "fry",
-      "gerini",
-      "ginther",
-      "godia",
-      "gonzalez",
-      "oscar_gonzalez",
-      "gould",
-      "greene",
-      "gregory",
-      "galvez",
-      "halford",
-      "hall",
-      "hampshire",
-      "hawthorn",
-      "herrmann",
-      "phil_hill",
-      "ickx",
-      "ireland",
-      "john_james",
-      "jover",
-      "kavanagh",
-      "landi",
-      "lang",
-      "ligier",
-      "macklin",
-      "maglioli",
-      "mantovani",
-      "marimon",
-      "mcdowell",
-      "menditeguy",
-      "mieres",
-      "moss",
-      "munaron",
-      "murray",
-      "musso",
-      "naylor",
-      "pagani",
-      "reg_parnell",
-      "parnell",
-      "perdisa",
-      "pietsch",
-      "andre_pilette",
-      "piotti",
-      "pirocchi",
-      "pian",
-      "redman",
-      "rees",
-      "rindt",
-      "rodriguez",
-      "rol",
-      "rosier",
-      "ruttman",
-      "salvadori",
-      "scarlatti",
-      "schell",
-      "seidel",
-      "shawe_taylor",
-      "shelby",
-      "siffert",
-      "simon",
-      "solana",
-      "spence",
-      "starrabba",
-      "surtees",
-      "taruffi",
-      "henry_taylor",
-      "testut",
-      "thiele",
-      "trintignant",
-      "uria",
-      "villoresi",
-      "volonterio",
-      "trips",
-      "peter_walker",
-      "webb",
-      "wharton",
-      "etancelin"
-    ],
+    "driver_ids": [],
     "wins": 11,
     "podiums": 47,
     "pole_positions": 12,
@@ -6278,7 +5989,7 @@
     "name": "Matra",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Matra",
-    "active_years": "1967–1972",
+    "active_years": "1967\u20131972",
     "seasons": [
       1967,
       1968,
@@ -6345,7 +6056,7 @@
     "name": "MBM",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/MBM_(automobile)",
-    "active_years": "1961–1961",
+    "active_years": "1961\u20131961",
     "seasons": [
       1961
     ],
@@ -6373,7 +6084,7 @@
     "name": "McGuire",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1977–1977",
+    "active_years": "1977\u20131977",
     "seasons": [
       1977
     ],
@@ -6393,7 +6104,7 @@
     "name": "McLaren",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/McLaren",
-    "active_years": "1966–2025",
+    "active_years": "1966\u20132025",
     "seasons": [
       1966,
       1967,
@@ -6876,7 +6587,7 @@
     "name": "Mercedes",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One",
-    "active_years": "1954–2025",
+    "active_years": "1954\u20132025",
     "seasons": [
       1954,
       1955,
@@ -7049,7 +6760,7 @@
     "name": "Merzario",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Merzario",
-    "active_years": "1978–1979",
+    "active_years": "1978\u20131979",
     "seasons": [
       1978,
       1979
@@ -7084,7 +6795,7 @@
     "name": "Meskowski",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Meskowski",
-    "active_years": "1960–1960",
+    "active_years": "1960\u20131960",
     "seasons": [
       1960
     ],
@@ -7107,7 +6818,7 @@
     "name": "MF1",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Midland_F1_Racing",
-    "active_years": "2006–2006",
+    "active_years": "2006\u20132006",
     "seasons": [
       2006
     ],
@@ -7136,7 +6847,7 @@
     "name": "Milano",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Milano",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -7158,7 +6869,7 @@
     "name": "Minardi",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Minardi",
-    "active_years": "1985–2005",
+    "active_years": "1985\u20132005",
     "seasons": [
       1985,
       1986,
@@ -7342,7 +7053,7 @@
     "name": "Modena",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1991–1991",
+    "active_years": "1991\u20131991",
     "seasons": [
       1991
     ],
@@ -7363,7 +7074,7 @@
     "name": "Moore",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Moore_(constructor)",
-    "active_years": "1950–1959",
+    "active_years": "1950\u20131959",
     "seasons": [
       1950,
       1951,
@@ -7389,7 +7100,7 @@
     "name": "Nichels",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Nichels",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -7412,7 +7123,7 @@
     "name": "Olson",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Olson_(constructor)",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -7434,7 +7145,7 @@
     "name": "Onyx",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Onyx_(racing_team)",
-    "active_years": "1989–1990",
+    "active_years": "1989\u20131990",
     "seasons": [
       1989,
       1990
@@ -7471,7 +7182,7 @@
     "name": "OSCA",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/OSCA",
-    "active_years": "1951–1953",
+    "active_years": "1951\u20131953",
     "seasons": [
       1951,
       1952,
@@ -7499,7 +7210,7 @@
     "name": "Osella",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Osella",
-    "active_years": "1980–1990",
+    "active_years": "1980\u20131990",
     "seasons": [
       1980,
       1981,
@@ -7603,7 +7314,7 @@
     "name": "Pacific",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pacific_Racing",
-    "active_years": "1994–1995",
+    "active_years": "1994\u20131995",
     "seasons": [
       1994,
       1995
@@ -7641,7 +7352,7 @@
     "name": "Pankratz",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pankratz",
-    "active_years": "1954–1954",
+    "active_years": "1954\u20131954",
     "seasons": [
       1954
     ],
@@ -7663,7 +7374,7 @@
     "name": "Parnelli",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Parnelli",
-    "active_years": "1974–1976",
+    "active_years": "1974\u20131976",
     "seasons": [
       1974,
       1975,
@@ -7703,7 +7414,7 @@
     "name": "Pawl",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pawl_(constructor)",
-    "active_years": "1951–1955",
+    "active_years": "1951\u20131955",
     "seasons": [
       1951,
       1955
@@ -7728,7 +7439,7 @@
     "name": "Penske",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Penske_Racing",
-    "active_years": "1974–1977",
+    "active_years": "1974\u20131977",
     "seasons": [
       1974,
       1975,
@@ -7780,7 +7491,7 @@
     "name": "Phillips",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Phillips_(constructor)",
-    "active_years": "1954–1960",
+    "active_years": "1954\u20131960",
     "seasons": [
       1954,
       1955,
@@ -7810,7 +7521,7 @@
     "name": "Politoys",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Politoys",
-    "active_years": "1972–1972",
+    "active_years": "1972\u20131972",
     "seasons": [
       1972
     ],
@@ -7838,7 +7549,7 @@
     "name": "Porsche",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Porsche_in_Formula_One",
-    "active_years": "1957–1964",
+    "active_years": "1957\u20131964",
     "seasons": [
       1957,
       1958,
@@ -7919,7 +7630,7 @@
     "name": "Prost",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Prost_Grand_Prix",
-    "active_years": "1997–2001",
+    "active_years": "1997\u20132001",
     "seasons": [
       1997,
       1998,
@@ -7979,7 +7690,7 @@
     "name": "Protos",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Protos_(racing_team)",
-    "active_years": "1967–1967",
+    "active_years": "1967\u20131967",
     "seasons": [
       1967
     ],
@@ -8009,7 +7720,7 @@
     "name": "Racing Point",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Racing_Point_F1_Team",
-    "active_years": "2019–2020",
+    "active_years": "2019\u20132020",
     "seasons": [
       2019,
       2020
@@ -8034,7 +7745,7 @@
     "name": "Rae",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rae_(constructor)",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -8056,7 +7767,7 @@
     "name": "RAM",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/RAM_Racing",
-    "active_years": "1983–1985",
+    "active_years": "1983\u20131985",
     "seasons": [
       1983,
       1984,
@@ -8105,7 +7816,7 @@
     "name": "RB F1 Team",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/RB_Formula_1_Team",
-    "active_years": "2024–2025",
+    "active_years": "2024\u20132025",
     "seasons": [
       2024,
       2025
@@ -8131,7 +7842,7 @@
     "name": "RE",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/RE_(automobile)",
-    "active_years": "1965–1965",
+    "active_years": "1965\u20131965",
     "seasons": [
       1965
     ],
@@ -8159,7 +7870,7 @@
     "name": "Rebaque",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rebaque",
-    "active_years": "1979–1979",
+    "active_years": "1979\u20131979",
     "seasons": [
       1979
     ],
@@ -8187,7 +7898,7 @@
     "name": "Red Bull",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Red_Bull_Racing",
-    "active_years": "2005–2025",
+    "active_years": "2005\u20132025",
     "seasons": [
       2005,
       2006,
@@ -8282,7 +7993,7 @@
     "name": "Reif",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -8302,7 +8013,7 @@
     "name": "Renault",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One",
-    "active_years": "1977–2020",
+    "active_years": "1977\u20132020",
     "seasons": [
       1977,
       1978,
@@ -8505,7 +8216,7 @@
     "name": "Rial",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rial_Racing",
-    "active_years": "1988–1989",
+    "active_years": "1988\u20131989",
     "seasons": [
       1988,
       1989
@@ -8541,7 +8252,7 @@
     "name": "Sauber",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sauber",
-    "active_years": "1993–2025",
+    "active_years": "1993\u20132025",
     "seasons": [
       1993,
       1994,
@@ -8732,7 +8443,7 @@
     "name": "Scarab",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scarab_(constructor)",
-    "active_years": "1960–1960",
+    "active_years": "1960\u20131960",
     "seasons": [
       1960
     ],
@@ -8762,7 +8473,7 @@
     "name": "Schroeder",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Schroeder_(constructor)",
-    "active_years": "1951–1955",
+    "active_years": "1951\u20131955",
     "seasons": [
       1951,
       1953,
@@ -8791,7 +8502,7 @@
     "name": "Scirocco",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scirocco-Powell",
-    "active_years": "1963–1964",
+    "active_years": "1963\u20131964",
     "seasons": [
       1963,
       1964
@@ -8827,7 +8538,7 @@
     "name": "Shadow",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Shadow_Racing_Cars",
-    "active_years": "1973–1980",
+    "active_years": "1973\u20131980",
     "seasons": [
       1973,
       1974,
@@ -8911,7 +8622,7 @@
     "name": "Shannon",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Shannon_(Formula_One)",
-    "active_years": "1966–1966",
+    "active_years": "1966\u20131966",
     "seasons": [
       1966
     ],
@@ -8939,7 +8650,7 @@
     "name": "Sherman",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sherman_(constructor)",
-    "active_years": "1951–1952",
+    "active_years": "1951\u20131952",
     "seasons": [
       1951,
       1952
@@ -8963,7 +8674,7 @@
     "name": "Simca",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Simca",
-    "active_years": "1950–1953",
+    "active_years": "1950\u20131953",
     "seasons": [
       1950,
       1951,
@@ -8998,7 +8709,7 @@
     "name": "Simtek",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Simtek",
-    "active_years": "1994–1995",
+    "active_years": "1994\u20131995",
     "seasons": [
       1994,
       1995
@@ -9038,7 +8749,7 @@
     "name": "Snowberger",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Snowberger",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -9060,7 +8771,7 @@
     "name": "Spirit",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Spirit_(racing_team)",
-    "active_years": "1983–1985",
+    "active_years": "1983\u20131985",
     "seasons": [
       1983,
       1984,
@@ -9102,7 +8813,7 @@
     "name": "Spyker",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Spyker_F1",
-    "active_years": "2007–2007",
+    "active_years": "2007\u20132007",
     "seasons": [
       2007
     ],
@@ -9134,7 +8845,7 @@
     "name": "Stebro",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Stebro",
-    "active_years": "1963–1963",
+    "active_years": "1963\u20131963",
     "seasons": [
       1963
     ],
@@ -9163,7 +8874,7 @@
     "name": "Stevens",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Stevens_(constructor)",
-    "active_years": "1950–1956",
+    "active_years": "1950\u20131956",
     "seasons": [
       1950,
       1952,
@@ -9199,7 +8910,7 @@
     "name": "Stewart",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Stewart_Grand_Prix",
-    "active_years": "1997–1999",
+    "active_years": "1997\u20131999",
     "seasons": [
       1997,
       1998,
@@ -9242,7 +8953,7 @@
     "name": "Super Aguri",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Super_Aguri_F1",
-    "active_years": "2006–2008",
+    "active_years": "2006\u20132008",
     "seasons": [
       2006,
       2007,
@@ -9270,7 +8981,7 @@
     "name": "Surtees",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Surtees",
-    "active_years": "1970–1978",
+    "active_years": "1970\u20131978",
     "seasons": [
       1970,
       1971,
@@ -9380,7 +9091,7 @@
     "name": "Sutton",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sutton_(constructor)",
-    "active_years": "1959–1959",
+    "active_years": "1959\u20131959",
     "seasons": [
       1959
     ],
@@ -9402,7 +9113,7 @@
     "name": "Talbot-Lago",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Talbot-Lago",
-    "active_years": "1950–1951",
+    "active_years": "1950\u20131951",
     "seasons": [
       1950,
       1951
@@ -9442,7 +9153,7 @@
     "name": "Team Gunston",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1972–1974",
+    "active_years": "1972\u20131974",
     "seasons": [
       1972,
       1974
@@ -9466,7 +9177,7 @@
     "name": "Team Lotus",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Team_Lotus",
-    "active_years": "1958–1994",
+    "active_years": "1958\u20131994",
     "seasons": [
       1958,
       1959,
@@ -9681,7 +9392,7 @@
     "name": "Tec-Mec",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tec-Mec",
-    "active_years": "1959–1959",
+    "active_years": "1959\u20131959",
     "seasons": [
       1959
     ],
@@ -9709,7 +9420,7 @@
     "name": "Tecno",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tecno",
-    "active_years": "1972–1973",
+    "active_years": "1972\u20131973",
     "seasons": [
       1972,
       1973
@@ -9746,7 +9457,7 @@
     "name": "Theodore",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Theodore_Racing",
-    "active_years": "1978–1983",
+    "active_years": "1978\u20131983",
     "seasons": [
       1978,
       1981,
@@ -9802,7 +9513,7 @@
     "name": "Token",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Token_(racing_team)",
-    "active_years": "1974–1974",
+    "active_years": "1974\u20131974",
     "seasons": [
       1974
     ],
@@ -9832,7 +9543,7 @@
     "name": "Toleman",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Toleman",
-    "active_years": "1981–1985",
+    "active_years": "1981\u20131985",
     "seasons": [
       1981,
       1982,
@@ -9891,7 +9602,7 @@
     "name": "Toro Rosso",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso",
-    "active_years": "2006–2019",
+    "active_years": "2006\u20132019",
     "seasons": [
       2006,
       2007,
@@ -9939,7 +9650,7 @@
     "name": "Toyota",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Toyota_Racing",
-    "active_years": "2002–2009",
+    "active_years": "2002\u20132009",
     "seasons": [
       2002,
       2003,
@@ -10017,7 +9728,7 @@
     "name": "Trevis",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Trevis",
-    "active_years": "1951–1960",
+    "active_years": "1951\u20131960",
     "seasons": [
       1951,
       1952,
@@ -10045,7 +9756,7 @@
     "name": "Trojan",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Trojan_(automobile)",
-    "active_years": "1974–1974",
+    "active_years": "1974\u20131974",
     "seasons": [
       1974
     ],
@@ -10073,7 +9784,7 @@
     "name": "Turner",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1953–1953",
+    "active_years": "1953\u20131953",
     "seasons": [
       1953
     ],
@@ -10093,7 +9804,7 @@
     "name": "Tyrrell",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tyrrell_Racing",
-    "active_years": "1970–1998",
+    "active_years": "1970\u20131998",
     "seasons": [
       1970,
       1971,
@@ -10346,7 +10057,7 @@
     "name": "Vanwall",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Vanwall",
-    "active_years": "1954–1960",
+    "active_years": "1954\u20131960",
     "seasons": [
       1954,
       1955,
@@ -10403,7 +10114,7 @@
     "name": "Veritas",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Veritas_(automobile)",
-    "active_years": "1951–1953",
+    "active_years": "1951\u20131953",
     "seasons": [
       1951,
       1952,
@@ -10441,7 +10152,7 @@
     "name": "Virgin",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Virgin_Racing",
-    "active_years": "2010–2011",
+    "active_years": "2010\u20132011",
     "seasons": [
       2010,
       2011
@@ -10477,7 +10188,7 @@
     "name": "Wetteroth",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Wetteroth",
-    "active_years": "1950–1950",
+    "active_years": "1950\u20131950",
     "seasons": [
       1950
     ],
@@ -10499,7 +10210,7 @@
     "name": "Willi Krakau",
     "nationality": "",
     "wikipedia_url": "",
-    "active_years": "1952–1952",
+    "active_years": "1952\u20131952",
     "seasons": [
       1952
     ],
@@ -10519,7 +10230,7 @@
     "name": "Williams",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Williams_Racing",
-    "active_years": "1975–2025",
+    "active_years": "1975\u20132025",
     "seasons": [
       1975,
       1976,
@@ -10950,7 +10661,7 @@
     "name": "Wolf",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Walter_Wolf_Racing",
-    "active_years": "1976–1979",
+    "active_years": "1976\u20131979",
     "seasons": [
       1976,
       1977,
@@ -11005,7 +10716,7 @@
     "name": "Zakspeed",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Zakspeed",
-    "active_years": "1985–1989",
+    "active_years": "1985\u20131989",
     "seasons": [
       1985,
       1986,
