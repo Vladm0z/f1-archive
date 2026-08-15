@@ -31,7 +31,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM"
     ],
     "championships": 0,
@@ -217,8 +216,7 @@
     "teams": [
       "MF1",
       "Minardi",
-      "Spyker",
-      "Spyker MF1"
+      "Spyker"
     ],
     "championships": 0,
     "active_years": "2005–2007",
@@ -818,7 +816,6 @@
     "teams": [
       "Amon",
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ensign",
@@ -955,7 +952,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
+      "BRM",
       "Surtees"
     ],
     "championships": 0,
@@ -1446,7 +1443,6 @@
     "podiums": 1,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Team Lotus"
@@ -1566,9 +1562,7 @@
     "podiums": 1,
     "teams": [
       "ATS",
-      "Automobili Turismo e Sport",
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Ferrari",
       "Team Lotus"
@@ -1725,7 +1719,6 @@
     "fastest_laps": 0,
     "podiums": 8,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari"
@@ -1810,7 +1803,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Automobiles Gonfaronnaises Sportives",
+      "AGS",
       "Minardi"
     ],
     "championships": 0,
@@ -2037,7 +2030,6 @@
     "podiums": 0,
     "teams": [
       "Cooper",
-      "Eisenacher Motorenwerk",
       "EMW",
       "Porsche"
     ],
@@ -2069,7 +2061,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM"
     ],
     "championships": 0,
@@ -2249,7 +2240,6 @@
     "podiums": 9,
     "teams": [
       "Behra-Porsche",
-      "British Racing Motors",
       "BRM",
       "Ferrari",
       "Gordini",
@@ -2425,7 +2415,6 @@
     "fastest_laps": 0,
     "podiums": 8,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Matra",
       "McLaren"
@@ -2741,7 +2730,6 @@
     "teams": [
       "ATS",
       "Deidt",
-      "Emil Diedt",
       "Epperly",
       "Kurtis Kraft",
       "Kuzma",
@@ -2845,10 +2833,8 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
-      "Ecurie Nationale Belge",
       "Emeryson",
       "ENB",
       "Lola",
@@ -3211,8 +3197,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Anglo American Racers",
-      "British Racing Motors",
       "BRM",
       "Eagle",
       "Ferrari",
@@ -3289,7 +3273,6 @@
     "podiums": 1,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Honda",
@@ -3766,7 +3749,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Life Racing Engines"
+      "Life"
     ],
     "championships": 0,
     "active_years": "",
@@ -3878,7 +3861,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Team Lotus"
     ],
@@ -4146,7 +4128,6 @@
     "fastest_laps": 0,
     "podiums": 10,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -4651,7 +4632,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "De Tomaso"
     ],
@@ -4807,7 +4787,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM",
       "Talbot-Lago"
     ],
@@ -4866,7 +4845,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Automobili Turismo e Sport",
+      "ATS",
       "Cooper",
       "Derrington"
     ],
@@ -5058,7 +5037,6 @@
     "podiums": 3,
     "teams": [
       "AGS",
-      "Automobiles Gonfaronnaises Sportives",
       "Ferrari",
       "Jordan",
       "Leyton House",
@@ -5138,7 +5116,6 @@
     "podiums": 1,
     "teams": [
       "Deidt",
-      "Emil Diedt",
       "Kurtis Kraft",
       "Kuzma",
       "Lesovsky",
@@ -5672,7 +5649,6 @@
       "Connaught",
       "Ferrari",
       "Gordini",
-      "Hersham and Walton Motors",
       "HWM",
       "Maserati",
       "Simca",
@@ -5837,7 +5813,6 @@
     "podiums": 9,
     "teams": [
       "Ferrari",
-      "Hersham and Walton Motors",
       "HWM",
       "Maserati",
       "Vanwall"
@@ -6148,7 +6123,6 @@
     "podiums": 2,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "De Tomaso",
       "Team Lotus"
@@ -6528,7 +6502,6 @@
     "podiums": 0,
     "teams": [
       "AGS",
-      "Automobiles Gonfaronnaises Sportives",
       "Larrousse",
       "Lola"
     ],
@@ -7975,7 +7948,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM"
     ],
     "championships": 0,
@@ -8042,7 +8014,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
+      "BRM",
       "Hesketh",
       "Lola"
     ],
@@ -8291,7 +8263,6 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Team Lotus"
     ],
@@ -8386,8 +8357,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "AGS",
-      "Automobiles Gonfaronnaises Sportives"
+      "AGS"
     ],
     "championships": 0,
     "active_years": "1987–1987",
@@ -8461,12 +8431,10 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Connaught",
       "Cooper",
       "Ferguson",
-      "Hersham and Walton Motors",
       "HWM"
     ],
     "championships": 0,
@@ -8810,7 +8778,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM",
       "Maserati"
     ],
@@ -8867,8 +8834,6 @@
     "fastest_laps": 0,
     "podiums": 35,
     "teams": [
-      "Copersucar",
-      "Copersucar-Ford",
       "Fittipaldi",
       "McLaren",
       "Team Lotus"
@@ -9074,7 +9039,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Connaught",
       "Cooper",
@@ -9556,7 +9520,6 @@
     "teams": [
       "Ferrari",
       "Gordini",
-      "Hersham and Walton Motors",
       "HWM",
       "Simca"
     ],
@@ -9728,7 +9691,6 @@
     "teams": [
       "Ferrari",
       "Iso Marlboro",
-      "Iso-Ford",
       "March",
       "Tecno",
       "Williams"
@@ -9781,10 +9743,8 @@
     "podiums": 0,
     "teams": [
       "Boro",
-      "British Racing Motors",
       "BRM",
       "Iso Marlboro",
-      "Iso-Ford",
       "Maki",
       "March",
       "Williams"
@@ -9960,7 +9920,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM"
     ],
     "championships": 0,
@@ -10144,7 +10103,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Lola",
       "McLaren"
@@ -10232,7 +10190,6 @@
     "teams": [
       "Alfa Romeo",
       "Life",
-      "Life Racing Engines",
       "McLaren",
       "Toleman"
     ],
@@ -10298,7 +10255,6 @@
     "fastest_laps": 0,
     "podiums": 14,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -10748,7 +10704,6 @@
     "podiums": 3,
     "teams": [
       "Behra-Porsche",
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Lola",
@@ -10939,7 +10894,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Automobiles Gonfaronnaises Sportives",
+      "AGS",
       "Fondmetal",
       "Ligier",
       "Osella",
@@ -11101,10 +11056,7 @@
     "fastest_laps": 0,
     "podiums": 19,
     "teams": [
-      "All American Racers",
-      "Anglo American Racers",
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Eagle",
       "Ferrari",
@@ -11386,7 +11338,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM",
       "Maserati",
       "Talbot-Lago"
@@ -11728,7 +11679,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia",
+      "Manor",
       "Marussia"
     ],
     "championships": 0,
@@ -11818,7 +11769,6 @@
     "fastest_laps": 0,
     "podiums": 18,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -12004,7 +11954,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Emil Diedt",
+      "Deidt",
       "Kurtis Kraft"
     ],
     "championships": 0,
@@ -12335,7 +12285,6 @@
     "podiums": 36,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Embassy Hill",
       "Lola",
@@ -12451,7 +12400,6 @@
     "podiums": 16,
     "teams": [
       "ATS",
-      "Automobili Turismo e Sport",
       "Cooper",
       "Ferrari",
       "Maserati",
@@ -12555,7 +12503,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Honda",
       "Lola",
@@ -12618,7 +12565,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Copersucar-Ford",
       "Fittipaldi"
     ],
     "championships": 0,
@@ -12645,7 +12591,6 @@
     "podiums": 1,
     "teams": [
       "Deidt",
-      "Emil Diedt",
       "Kurtis Kraft"
     ],
     "championships": 0,
@@ -13247,8 +13192,6 @@
     "fastest_laps": 0,
     "podiums": 4,
     "teams": [
-      "British Racing Motors",
-      "British Racing Partnership",
       "BRM",
       "BRP",
       "Team Lotus"
@@ -13384,7 +13327,6 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Team Lotus"
     ],
@@ -13740,7 +13682,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM"
     ],
     "championships": 0,
@@ -14686,7 +14627,6 @@
     "podiums": 33,
     "teams": [
       "Iso Marlboro",
-      "Iso-Ford",
       "Ligier",
       "Williams"
     ],
@@ -15106,7 +15046,6 @@
     "podiums": 54,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Ferrari",
       "March",
@@ -15191,7 +15130,6 @@
     "podiums": 0,
     "teams": [
       "Ferrari",
-      "Hersham and Walton Motors",
       "HWM"
     ],
     "championships": 0,
@@ -15498,7 +15436,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Connaught"
     ],
@@ -15568,7 +15505,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper"
     ],
@@ -16163,7 +16099,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM",
       "Maserati"
     ],
@@ -16204,7 +16139,6 @@
     "fastest_laps": 0,
     "podiums": 3,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Team Lotus"
@@ -16722,7 +16656,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM"
     ],
     "championships": 0,
@@ -17347,8 +17280,6 @@
     "fastest_laps": 0,
     "podiums": 27,
     "teams": [
-      "All American Racers",
-      "Anglo American Racers",
       "Cooper",
       "Eagle",
       "McLaren"
@@ -17461,8 +17392,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Iso Marlboro",
-      "Iso-Ford"
+      "Iso Marlboro"
     ],
     "championships": 0,
     "active_years": "1973–1973",
@@ -17543,7 +17473,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia",
+      "Manor",
       "Marussia"
     ],
     "championships": 0,
@@ -17573,7 +17503,6 @@
       "Ferrari",
       "Fittipaldi",
       "Iso Marlboro",
-      "Iso-Ford",
       "March",
       "Merzario",
       "Shadow",
@@ -17654,7 +17583,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Connew",
       "Embassy Hill",
@@ -17892,8 +17820,7 @@
     "teams": [
       "Jordan",
       "MF1",
-      "Spyker",
-      "Spyker MF1"
+      "Spyker"
     ],
     "championships": 0,
     "active_years": "2005–2006",
@@ -18044,7 +17971,6 @@
     "teams": [
       "AGS",
       "Andrea Moda",
-      "Automobiles Gonfaronnaises Sportives",
       "Benetton",
       "Coloni",
       "Euro Brun",
@@ -18153,13 +18079,11 @@
     "fastest_laps": 0,
     "podiums": 24,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Connaught",
       "Cooper",
       "ERA",
       "Ferguson",
-      "Hersham and Walton Motors",
       "HWM",
       "Maserati",
       "Mercedes",
@@ -18937,7 +18861,7 @@
       "Alpine F1 Team",
       "Force India",
       "Haas F1 Team",
-      "Manor Marussia",
+      "Manor",
       "Marussia",
       "Renault"
     ],
@@ -18999,7 +18923,6 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "McLaren",
       "Shadow",
@@ -19349,7 +19272,6 @@
     "podiums": 5,
     "teams": [
       "BAR",
-      "British American Racing",
       "Ligier",
       "Prost",
       "Toyota"
@@ -19503,7 +19425,6 @@
     "podiums": 1,
     "teams": [
       "Alfa Romeo",
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -19702,7 +19623,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "All American Racers",
       "Eagle"
     ],
     "championships": 0,
@@ -19824,10 +19744,8 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Iso Marlboro",
-      "Iso-Ford",
       "March",
       "Matra",
       "Politoys",
@@ -20195,7 +20113,7 @@
     "podiums": 0,
     "teams": [
       "Brabham",
-      "British Racing Motors"
+      "BRM"
     ],
     "championships": 0,
     "active_years": "1974–1974",
@@ -21244,7 +21162,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "De Tomaso",
@@ -21365,7 +21282,6 @@
     "fastest_laps": 0,
     "podiums": 28,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Ensign",
       "Ferrari",
@@ -21723,7 +21639,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM"
     ],
     "championships": 0,
@@ -21874,7 +21789,6 @@
     "fastest_laps": 0,
     "podiums": 7,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -22187,8 +22101,7 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Deidt",
-      "Emil Diedt"
+      "Deidt"
     ],
     "championships": 0,
     "active_years": "1950–1951",
@@ -22286,7 +22199,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia",
+      "Manor",
       "Marussia"
     ],
     "championships": 0,
@@ -22841,7 +22754,6 @@
     "teams": [
       "Arrows",
       "BAR",
-      "British American Racing",
       "Ferrari",
       "Sauber",
       "Team Lotus",
@@ -23103,7 +23015,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "Anglo American Racers",
       "Cooper",
       "Eagle",
       "Ferrari"
@@ -23276,7 +23187,6 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -23374,7 +23284,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM"
     ],
     "championships": 0,
@@ -23801,7 +23710,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
+      "BRM",
       "Embassy Hill",
       "Ensign",
       "Surtees"
@@ -24314,7 +24223,6 @@
     "podiums": 6,
     "teams": [
       "Brabham",
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "March",
@@ -24466,7 +24374,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Team Lotus"
@@ -24504,7 +24411,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "March"
     ],
@@ -24636,7 +24542,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Team Lotus"
     ],
@@ -24723,7 +24628,7 @@
     "podiums": 0,
     "teams": [
       "Caterham",
-      "Manor Marussia",
+      "Manor",
       "Marussia"
     ],
     "championships": 0,
@@ -24796,7 +24701,6 @@
     "fastest_laps": 0,
     "podiums": 43,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "March",
       "Matra",
@@ -24973,7 +24877,6 @@
     "podiums": 1,
     "teams": [
       "AGS",
-      "Automobiles Gonfaronnaises Sportives",
       "Ligier",
       "Renault",
       "Tyrrell"
@@ -25080,7 +24983,7 @@
     "teams": [
       "ATS",
       "Brabham",
-      "British Racing Motors",
+      "BRM",
       "ENB",
       "Ferrari",
       "March",
@@ -25238,7 +25141,6 @@
     "fastest_laps": 0,
     "podiums": 24,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper",
       "Ferrari",
@@ -25713,7 +25615,6 @@
     "podiums": 0,
     "teams": [
       "AGS",
-      "Automobiles Gonfaronnaises Sportives",
       "Coloni",
       "Fondmetal",
       "Osella",
@@ -25895,7 +25796,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Partnership",
       "BRP",
       "Shannon",
       "Team Lotus"
@@ -26232,7 +26132,6 @@
     "podiums": 10,
     "teams": [
       "Aston Martin",
-      "British Racing Motors",
       "BRM",
       "Bugatti",
       "Cooper",
@@ -26548,7 +26447,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM"
     ],
     "championships": 0,
@@ -26692,7 +26590,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Hersham and Walton Motors",
       "HWM"
     ],
     "championships": 0,
@@ -26733,7 +26630,6 @@
     "teams": [
       "Ensign",
       "Iso Marlboro",
-      "Iso-Ford",
       "Surtees",
       "Williams"
     ],
@@ -27200,7 +27096,6 @@
     "teams": [
       "BAR",
       "BMW Sauber",
-      "British American Racing",
       "RAM",
       "Renault",
       "Sauber",
@@ -27558,7 +27453,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Connaught",
       "ERA",
@@ -27927,7 +27821,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Manor Marussia",
+      "Manor",
       "Marussia",
       "Sauber"
     ],
@@ -28081,7 +27975,6 @@
     "teams": [
       "Cooper",
       "Frazer Nash",
-      "Frazer-Nash",
       "Maserati",
       "Vanwall"
     ],
@@ -28239,7 +28132,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Ensign",
       "March"
@@ -28370,7 +28262,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "Cooper"
     ],
@@ -28397,7 +28288,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "Automobiles Gonfaronnaises Sportives"
+      "AGS"
     ],
     "championships": 0,
     "active_years": "",
@@ -28484,7 +28375,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "British Racing Motors",
       "BRM",
       "March",
       "Team Lotus"
@@ -28749,7 +28639,6 @@
     "podiums": 0,
     "teams": [
       "BAR",
-      "British American Racing",
       "Jordan",
       "Toyota"
     ],
