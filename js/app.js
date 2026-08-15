@@ -3104,74 +3104,62 @@ function makeTeamsByName(teams) {
 }
 
 function findTeamIdByName(data, teamName) {
-	const raw = String(teamName ?? "").trim();
-
-	if (!raw || !data || !data.teamsByName) {
-		return null;
-	}
-
-	if (hasOwn(data.teamsById, raw)) {
-		return raw;
-	}
-
-	if (caches.teamId.has(raw)) {
-		return caches.teamId.get(raw);
-	}
-
-	const norm = normalizeTeamKey(raw);
-
-	if (!norm || norm === "—") {
-		caches.teamId.set(raw, null);
-		return null;
-	}
-
-	if (hasOwn(TEAM_CANONICAL_BY_NAME, norm)) {
-		const canonicalId = TEAM_CANONICAL_BY_NAME[norm];
-
-		if (hasOwn(data.teamsById, canonicalId)) {
-			caches.teamId.set(raw, canonicalId);
-			return canonicalId;
-		}
-	}
-
-	if (hasOwn(data.teamsByName, norm)) {
-		caches.teamId.set(raw, data.teamsByName[norm]);
-		return data.teamsByName[norm];
-	}
-
-	const parts = norm
-		.split(/[-–—/]/)
-		.map(part => part.trim())
-		.filter(Boolean);
-
-	for (const part of parts) {
-		if (hasOwn(TEAM_CANONICAL_BY_NAME, part)) {
-			const canonicalId = TEAM_CANONICAL_BY_NAME[part];
-
-			if (hasOwn(data.teamsById, canonicalId)) {
-				caches.teamId.set(raw, canonicalId);
-				return canonicalId;
-			}
-		}
-
-		if (hasOwn(data.teamsByName, part)) {
-			caches.teamId.set(raw, data.teamsByName[part]);
-			return data.teamsByName[part];
-		}
-	}
-
-	let bestId = null;
-	let bestLength = 0;
-
-	for (const [name, id] of Object.entries(data.teamsByName)) {
-		if (name.length >= 3 && norm.includes(name) && name.length > bestLength) {
-			bestLength = name.length;
-			bestId = id;
-		}
-	}
-
-	caches.teamId.set(raw, bestId);
-	return bestId;
+    if (!teamName || !data.teamsByName) return null;
+    const cacheKey = teamName;
+    if (teamIdCache[cacheKey] !== undefined) return teamIdCache[cacheKey];
+    
+    const norm = normalizeTeamKey(teamName);
+    if (!norm || norm === "—") {
+        teamIdCache[cacheKey] = null;
+        return null;
+    }
+    
+    // Exact canonical match
+    if (TEAM_CANONICAL_BY_NAME[norm]) {
+        teamIdCache[cacheKey] = TEAM_CANONICAL_BY_NAME[norm];
+        return teamIdCache[cacheKey];
+    }
+    
+    // Exact dictionary match
+    if (data.teamsByName[norm]) {
+        teamIdCache[cacheKey] = data.teamsByName[norm];
+        return teamIdCache[cacheKey];
+    }
+    
+    // Match individual parts
+    const parts = norm.split(/[-–—/\s]/).map(p => p.trim()).filter(Boolean);
+    for (const part of parts) {
+        if (TEAM_CANONICAL_BY_NAME[part]) {
+            teamIdCache[cacheKey] = TEAM_CANONICAL_BY_NAME[part];
+            return teamIdCache[cacheKey];
+        }
+        if (data.teamsByName[part]) {
+            teamIdCache[cacheKey] = data.teamsByName[part];
+            return teamIdCache[cacheKey];
+        }
+    }
+    
+    // Regex Fallback (Word Boundaries)
+    let bestId = null;
+    let bestLength = 0;
+    for (const [name, id] of Object.entries(data.teamsByName)) {
+        if (name.length >= 3) {
+            // Escape regex special characters in the team name
+            const escapedName = name.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            
+            // \b ensures we only match whole words/parts. 
+            // "maserati" will NO LONGER match "era".
+            const regex = new RegExp(`\\b${escapedName}\\b`);
+            
+            if (regex.test(norm) && name.length > bestLength) {
+                bestLength = name.length;
+                bestId = id;
+            }
+        }
+    }
+    
+    teamIdCache[cacheKey] = bestId;
+    return bestId;
 }
 
 function resolveTeamId(data, teamName) {
