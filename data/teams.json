@@ -4,7 +4,7 @@
     "name": "Adams",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Adams_(constructor)",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -18,19 +18,22 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "afm",
     "name": "AFM",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alex_von_Falkenhausen_Motorenbau",
-    "active_years": "1952\u20131953",
+    "active_years": "1952–1953",
     "seasons": [
       1952,
       1953
     ],
     "driver_ids": [
+      "bechem",
       "fitzau",
       "hans_stuck",
       "heeks",
@@ -42,14 +45,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "ags",
     "name": "AGS",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Automobiles_Gonfaronnaises_Sportives",
-    "active_years": "1986\u20131991",
+    "active_years": "1986–1991",
     "seasons": [
       1986,
       1987,
@@ -103,14 +108,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "alfa",
     "name": "Alfa Romeo",
     "nationality": "Swiss",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
-    "active_years": "1950\u20132023",
+    "active_years": "1950–2023",
     "seasons": [
       1950,
       1951,
@@ -130,29 +137,21 @@
       2023
     ],
     "driver_ids": [
-      "baldi",
       "bonetto",
-      "bottas",
       "brambilla",
       "cesaris",
-      "cheever",
       "depailler",
       "fagioli",
       "fangio",
       "farina",
       "giacomelli",
-      "giovinazzi",
       "graffenried",
       "klerk",
-      "kubica",
       "mario_andretti",
-      "patrese",
       "pietsch",
-      "raikkonen",
       "reg_parnell",
       "sanesi",
-      "taruffi",
-      "zhou"
+      "taruffi"
     ],
     "wins": 11,
     "podiums": 28,
@@ -240,14 +239,16 @@
         "position": 9,
         "points": "16"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "alphatauri",
     "name": "AlphaTauri",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_AlphaTauri",
-    "active_years": "2020\u20132023",
+    "active_years": "2020–2023",
     "seasons": [
       2020,
       2021,
@@ -255,11 +256,8 @@
       2023
     ],
     "driver_ids": [
-      "de_vries",
       "gasly",
       "kvyat",
-      "lawson",
-      "ricciardo",
       "tsunoda"
     ],
     "wins": 1,
@@ -289,14 +287,16 @@
         "position": 8,
         "points": "25"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "alpine",
     "name": "Alpine F1 Team",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alpine_F1_Team",
-    "active_years": "2021\u20132025",
+    "active_years": "2021–2025",
     "seasons": [
       2021,
       2022,
@@ -306,8 +306,6 @@
     ],
     "driver_ids": [
       "alonso",
-      "colapinto",
-      "doohan",
       "gasly",
       "ocon"
     ],
@@ -338,14 +336,16 @@
         "position": 6,
         "points": "65"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "alta",
     "name": "Alta",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alta_Car_and_Engineering_Company",
-    "active_years": "1950\u20131952",
+    "active_years": "1950–1952",
     "seasons": [
       1950,
       1951,
@@ -363,20 +363,21 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "amon",
     "name": "Amon",
     "nationality": "New Zealander",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chris_Amon_Racing",
-    "active_years": "1974\u20131974",
+    "active_years": "1974–1974",
     "seasons": [
       1974
     ],
     "driver_ids": [
-      "amon",
-      "perkins"
+      "amon"
     ],
     "wins": 0,
     "podiums": 0,
@@ -390,14 +391,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "andrea-moda",
     "name": "Andrea Moda",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Andrea_Moda_Formula",
-    "active_years": "1992\u20131992",
+    "active_years": "1992–1992",
     "seasons": [
       1992
     ],
@@ -411,14 +414,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "arrows",
     "name": "Arrows",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Arrows_Grand_Prix_International",
-    "active_years": "1978\u20132002",
+    "active_years": "1978–2002",
     "seasons": [
       1978,
       1979,
@@ -441,34 +446,10 @@
       2002
     ],
     "driver_ids": [
-      "alboreto",
-      "baldi",
-      "berger",
-      "bernoldi",
-      "boutsen",
-      "caffi",
-      "cheever",
-      "damon_hill",
-      "danner",
-      "diniz",
-      "donnelly",
-      "frentzen",
-      "henton",
-      "jones",
-      "manfred_winkelhock",
       "mass",
       "patrese",
-      "rosa",
-      "salo",
-      "schneider",
-      "serra",
       "stohr",
-      "stommelen",
-      "surer",
-      "takagi",
-      "thackwell",
-      "verstappen",
-      "warwick"
+      "stommelen"
     ],
     "wins": 0,
     "podiums": 8,
@@ -572,14 +553,16 @@
         "position": 11,
         "points": "2"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "arzani-volpini",
     "name": "Arzani-Volpini",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Arzani-Volpini",
-    "active_years": "1955\u20131955",
+    "active_years": "1955–1955",
     "seasons": [
       1955
     ],
@@ -592,14 +575,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "butterworth",
     "name": "Aston Butterworth",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aston_Butterworth",
-    "active_years": "1952\u20131952",
+    "active_years": "1952–1952",
     "seasons": [
       1952
     ],
@@ -613,14 +598,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "aston_martin",
     "name": "Aston Martin",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One",
-    "active_years": "1959\u20132025",
+    "active_years": "1959–2025",
     "seasons": [
       1959,
       1960,
@@ -676,14 +663,16 @@
         "position": 5,
         "points": "94"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "ats",
     "name": "ATS",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/ATS_Wheels",
-    "active_years": "1952\u20131984",
+    "active_years": "1952–1984",
     "seasons": [
       1952,
       1956,
@@ -701,35 +690,17 @@
     ],
     "driver_ids": [
       "baghetti",
-      "berger",
-      "bettenhausen",
-      "binder",
       "bleekemolen",
       "borgudd",
-      "dick_rathmann",
-      "elisian",
-      "ertl",
-      "flaherty",
-      "freeland",
-      "james",
       "jarier",
       "keke_rosberg",
       "lammers",
-      "larson",
       "manfred_winkelhock",
       "mass",
       "phil_hill",
-      "rathmann",
-      "reece",
-      "rigsby",
-      "ruby",
-      "ruttman",
       "salazar",
-      "stevenson",
       "stuck",
-      "surer",
-      "sutton",
-      "ward"
+      "surer"
     ],
     "wins": 3,
     "podiums": 5,
@@ -778,14 +749,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "bar",
     "name": "BAR",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/British_American_Racing",
-    "active_years": "1999\u20132005",
+    "active_years": "1999–2005",
     "seasons": [
       1999,
       2000,
@@ -796,11 +769,8 @@
       2005
     ],
     "driver_ids": [
-      "button",
-      "davidson",
       "panis",
       "salo",
-      "sato",
       "villeneuve",
       "zonta"
     ],
@@ -846,19 +816,20 @@
         "position": 6,
         "points": "38"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "behra-porsche",
     "name": "Behra-Porsche",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Behra-Porsche",
-    "active_years": "1960\u20131960",
+    "active_years": "1960–1960",
     "seasons": [
       1960
     ],
     "driver_ids": [
-      "behra",
       "gamble",
       "gregory"
     ],
@@ -874,14 +845,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "bellasi",
     "name": "Bellasi",
     "nationality": "Swiss",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bellasi",
-    "active_years": "1970\u20131971",
+    "active_years": "1970–1971",
     "seasons": [
       1970,
       1971
@@ -906,14 +879,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "benetton",
     "name": "Benetton",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Benetton_Formula",
-    "active_years": "1986\u20132001",
+    "active_years": "1986–2001",
     "seasons": [
       1986,
       1987,
@@ -933,24 +908,11 @@
       2001
     ],
     "driver_ids": [
-      "alesi",
       "berger",
       "boutsen",
-      "brundle",
-      "button",
       "fabi",
-      "fisichella",
       "herbert",
-      "jj_lehto",
-      "lehto",
-      "michael_schumacher",
-      "moreno",
-      "nannini",
-      "patrese",
-      "piquet",
-      "pirro",
-      "verstappen",
-      "wurz"
+      "nannini"
     ],
     "wins": 27,
     "podiums": 102,
@@ -1050,14 +1012,16 @@
         "position": 7,
         "points": "10"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "bmw",
     "name": "BMW",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/BMW",
-    "active_years": "1952\u20131953",
+    "active_years": "1952–1953",
     "seasons": [
       1952,
       1953
@@ -1065,11 +1029,8 @@
     "driver_ids": [
       "balsa",
       "bechem",
-      "hahne",
       "klodwig",
-      "krause",
-      "mitter",
-      "quester"
+      "krause"
     ],
     "wins": 0,
     "podiums": 0,
@@ -1077,14 +1038,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "bmw_sauber",
     "name": "BMW Sauber",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_in_Formula_One",
-    "active_years": "2006\u20132009",
+    "active_years": "2006–2009",
     "seasons": [
       2006,
       2007,
@@ -1124,24 +1087,22 @@
         "position": 6,
         "points": "36"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "boro",
     "name": "Boro",
     "nationality": "Dutch",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Boro_(Formula_One)",
-    "active_years": "1976\u20131977",
+    "active_years": "1976–1977",
     "seasons": [
       1976,
       1977
     ],
     "driver_ids": [
-      "belso",
-      "ganley",
       "henton",
-      "jabouille",
-      "merzario",
       "perkins"
     ],
     "wins": 0,
@@ -1161,14 +1122,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "brabham",
     "name": "Brabham",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Brabham",
-    "active_years": "1962\u20131992",
+    "active_years": "1962–1992",
     "seasons": [
       1962,
       1963,
@@ -1202,91 +1165,20 @@
       1992
     ],
     "driver_ids": [
-      "adamich",
-      "ahrens",
-      "amati",
-      "amon",
-      "anderson",
-      "angelis",
-      "ashley",
-      "attwood",
-      "baghetti",
       "bell",
-      "blundell",
-      "bonnier",
-      "botha",
-      "brabham",
-      "brundle",
-      "cesaris",
       "charlton",
-      "cordts",
-      "corrado_fabi",
-      "courage",
       "craft",
-      "damon_hill",
-      "evans",
-      "fabi",
-      "facetti",
-      "foitek",
-      "francia",
-      "gardner",
-      "geki",
       "gurney",
-      "hawkins",
-      "herrmann",
-      "hesnault",
       "hill",
-      "hulme",
       "hutchison",
-      "ickx",
-      "irwin",
       "jack_brabham",
-      "kessel",
       "klerk",
-      "koinigg",
-      "larrousse",
-      "lauda",
-      "ligier",
-      "lombardi",
-      "love",
-      "magee",
-      "manfred_winkelhock",
-      "mitter",
-      "modena",
-      "moser",
-      "neve",
-      "opel",
-      "pace",
-      "patrese",
-      "perkins",
-      "pilette",
-      "piquet",
-      "piquet_jr",
-      "poele",
       "pretorius",
       "prophet",
-      "raby",
-      "rebaque",
-      "rees",
       "reutemann",
-      "rindt",
-      "robarts",
       "schenken",
-      "sharp",
-      "siffert",
       "stommelen",
-      "stuck",
-      "surer",
-      "taylor",
-      "tingle",
-      "warwick",
-      "watson",
-      "westbury",
-      "wietzes",
-      "wilson_fittipaldi",
-      "wilson_fittipaldi_j\u00fanior",
-      "xavier_perrot",
-      "zunino"
+      "wilson_fittipaldi"
     ],
     "wins": 35,
     "podiums": 124,
@@ -1425,14 +1317,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "brawn",
     "name": "Brawn",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Brawn_GP",
-    "active_years": "2009\u20132009",
+    "active_years": "2009–2009",
     "seasons": [
       2009
     ],
@@ -1459,14 +1353,16 @@
         "position": 1,
         "points": "172"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "brm",
     "name": "BRM",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Motors",
-    "active_years": "1951\u20131977",
+    "active_years": "1951–1977",
     "seasons": [
       1951,
       1956,
@@ -1493,88 +1389,24 @@
       1977
     ],
     "driver_ids": [
-      "Cannoc",
-      "amon",
-      "arundell",
-      "ashley",
-      "ashmore",
-      "attwood",
-      "baghetti",
-      "bandini",
-      "bassi",
       "behra",
-      "beltoise",
-      "bianchi",
-      "bondurant",
       "bonnier",
-      "brack",
       "brooks",
-      "bussinello",
-      "campbell-jones",
-      "clark",
-      "courage",
-      "driver",
-      "eaton",
-      "elford",
-      "evans",
       "fairman",
-      "fisher",
       "flockhart",
-      "ganley",
-      "gethin",
       "ginther",
-      "gregory",
       "gurney",
-      "hailwood",
-      "hall",
       "hawthorn",
       "herrmann",
       "hill",
-      "hobbs",
-      "hulme",
-      "ireland",
-      "irwin",
-      "johnstone",
-      "lauda",
       "leston",
-      "lewis",
       "mackay-fraser",
-      "maggs",
-      "marko",
-      "marsh",
-      "mclaren",
-      "migault",
       "moss",
-      "oliver",
-      "pedro_rodriguez",
-      "perkins",
-      "pescarolo",
       "peter_walker",
-      "phil_hill",
-      "redman",
       "reg_parnell",
-      "regazzoni",
-      "revson",
       "richardson",
-      "rodriguez",
-      "roig",
       "schell",
-      "schiller",
-      "seidel",
-      "seiffert",
-      "sharp",
-      "siffert",
-      "solana",
-      "spence",
-      "stewart",
-      "surtees",
-      "trevor_taylor",
-      "trintignant",
-      "unser",
-      "vic_wilson",
-      "ward",
-      "wilds",
-      "wisell"
+      "trintignant"
     ],
     "wins": 18,
     "podiums": 63,
@@ -1690,20 +1522,21 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "bromme",
     "name": "Bromme",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bromme",
-    "active_years": "1951\u20131952",
+    "active_years": "1951–1952",
     "seasons": [
       1951,
       1952
     ],
     "driver_ids": [
-      "bob_scott",
       "ward",
       "webb"
     ],
@@ -1713,14 +1546,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "brp",
     "name": "BRP",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/British_Racing_Partnership",
-    "active_years": "1963\u20131964",
+    "active_years": "1963–1964",
     "seasons": [
       1963,
       1964
@@ -1746,14 +1581,16 @@
         "position": 7,
         "points": "5"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "bugatti",
     "name": "Bugatti",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bugatti",
-    "active_years": "1956\u20131956",
+    "active_years": "1956–1956",
     "seasons": [
       1956
     ],
@@ -1766,14 +1603,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "caterham",
     "name": "Caterham",
     "nationality": "Malaysian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Caterham_F1",
-    "active_years": "2012\u20132014",
+    "active_years": "2012–2014",
     "seasons": [
       2012,
       2013,
@@ -1784,10 +1623,8 @@
       "garde",
       "kobayashi",
       "kovalainen",
-      "lotterer",
       "petrov",
-      "pic",
-      "stevens"
+      "pic"
     ],
     "wins": 0,
     "podiums": 0,
@@ -1811,14 +1648,16 @@
         "position": 11,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "christensen",
     "name": "Christensen",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Christensen_(constructor)",
-    "active_years": "1959\u20131960",
+    "active_years": "1959–1960",
     "seasons": [
       1959,
       1960
@@ -1833,24 +1672,22 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "coloni",
     "name": "Coloni",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Coloni",
-    "active_years": "1987\u20131989",
+    "active_years": "1987–1989",
     "seasons": [
       1987,
       1988,
       1989
     ],
     "driver_ids": [
-      "bertaggia",
-      "chaves",
-      "gachot",
-      "hattori",
       "larini",
       "moreno",
       "raphanel",
@@ -1878,14 +1715,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "connaught",
     "name": "Connaught",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Connaught_Engineering",
-    "active_years": "1952\u20131959",
+    "active_years": "1952–1959",
     "seasons": [
       1952,
       1953,
@@ -1900,15 +1739,12 @@
       "andre_pilette",
       "beauman",
       "bira",
-      "birabongse_bhanudej",
       "bueb",
       "claes",
       "downing",
-      "emery",
       "fairman",
       "flockhart",
       "ian_stewart",
-      "kessler",
       "leston",
       "lewis-evans",
       "marr",
@@ -1944,14 +1780,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "connew",
     "name": "Connew",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Connew",
-    "active_years": "1972\u20131972",
+    "active_years": "1972–1972",
     "seasons": [
       1972
     ],
@@ -1970,14 +1808,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "cooper",
     "name": "Cooper",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper_Car_Company",
-    "active_years": "1950\u20131969",
+    "active_years": "1950–1969",
     "seasons": [
       1950,
       1952,
@@ -2002,40 +1842,20 @@
     "driver_ids": [
       "alan_brown",
       "amon",
-      "ashdown",
-      "attwood",
       "bandini",
-      "barth",
-      "beaufort",
-      "bianchi",
-      "blignaut",
       "blokdyk",
       "bonnier",
       "bonomi",
       "brandon",
       "bridger",
-      "bristow",
-      "brooks",
-      "bueb",
       "burgess",
-      "cabianca",
       "cabral",
       "clapham",
-      "collomb",
-      "constantine",
       "crook",
       "cruz",
-      "daigh",
       "davis",
-      "dochnal",
-      "drogo",
-      "elford",
       "england",
-      "ernesto_brambilla",
       "fairman",
-      "flockhart",
-      "gavin",
-      "gendebien",
       "gerard",
       "gibson",
       "ginther",
@@ -2044,71 +1864,39 @@
       "greene",
       "gregory",
       "guelfi",
-      "halford",
-      "hansgen",
-      "harris",
       "hawthorn",
-      "helm_gl\u00f6ckler",
-      "henry_taylor",
       "herrmann",
-      "ickx",
       "jack_brabham",
-      "jeanclaude_rudaz",
       "jimmy_stewart",
       "john_barber",
       "la_caze",
-      "lawrence",
-      "lewis",
       "ligier",
-      "love",
-      "lovely",
       "macdowel",
-      "maggs",
       "marsh",
-      "mayer",
       "mclaren",
       "menditeguy",
-      "mike_taylor",
-      "moser",
       "moss",
-      "munaron",
       "murray",
       "natili",
       "naylor",
       "nuckey",
-      "owen",
-      "pedro_rodriguez",
-      "penske",
-      "phil_hill",
       "picard",
       "pirocchi",
-      "redman",
-      "rees",
       "reg_parnell",
-      "reventlow",
-      "rhodes",
       "rindt",
       "rodriguez",
-      "rollinson",
-      "rooyen",
       "salvadori",
-      "scarfiotti",
       "scarlatti",
       "schell",
       "seidel",
-      "sharp",
       "siffert",
       "solana",
       "surtees",
-      "taylor",
       "thiele",
-      "tomaso",
       "trintignant",
       "trips",
-      "vic_wilson",
       "wharton",
-      "whitehead",
-      "widdows"
+      "whitehead"
     ],
     "wins": 16,
     "podiums": 59,
@@ -2139,14 +1927,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "dallara",
     "name": "Dallara",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dallara",
-    "active_years": "1988\u20131992",
+    "active_years": "1988–1992",
     "seasons": [
       1988,
       1989,
@@ -2157,9 +1947,7 @@
     "driver_ids": [
       "caffi",
       "cesaris",
-      "jj_lehto",
       "lehto",
-      "martini",
       "morbidelli",
       "pirro"
     ],
@@ -2195,14 +1983,16 @@
         "position": 10,
         "points": "2"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "de-tomaso",
     "name": "De Tomaso",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/De_Tomaso",
-    "active_years": "1961\u20131970",
+    "active_years": "1961–1970",
     "seasons": [
       1961,
       1962,
@@ -2225,14 +2015,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "deidt",
     "name": "Deidt",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Emil_Diedt",
-    "active_years": "1950\u20131952",
+    "active_years": "1950–1952",
     "seasons": [
       1950,
       1951,
@@ -2241,6 +2033,7 @@
     "driver_ids": [
       "bettenhausen",
       "darter",
+      "hellings",
       "holland",
       "rose"
     ],
@@ -2250,14 +2043,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "derrington",
     "name": "Derrington",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Derrington-Francis",
-    "active_years": "1964\u20131964",
+    "active_years": "1964–1964",
     "seasons": [
       1964
     ],
@@ -2276,14 +2071,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "dunn",
     "name": "Dunn",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dunn_Engineering",
-    "active_years": "1957\u20131959",
+    "active_years": "1957–1959",
     "seasons": [
       1957,
       1958,
@@ -2299,14 +2096,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "eagle",
     "name": "Eagle",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/All_American_Racers",
-    "active_years": "1966\u20131969",
+    "active_years": "1966–1969",
     "seasons": [
       1966,
       1967,
@@ -2326,14 +2125,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "elder",
     "name": "Elder",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Edgar_Elder",
-    "active_years": "1959\u20131959",
+    "active_years": "1959–1959",
     "seasons": [
       1959
     ],
@@ -2346,20 +2147,21 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "hill",
     "name": "Embassy Hill",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Embassy_Hill",
-    "active_years": "1975\u20131975",
+    "active_years": "1975–1975",
     "seasons": [
       1975
     ],
     "driver_ids": [
       "brise",
-      "hill",
       "jones",
       "migault",
       "schuppan",
@@ -2377,21 +2179,22 @@
         "position": 11,
         "points": "3"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "emeryson",
     "name": "Emeryson",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Emeryson",
-    "active_years": "1956\u20131962",
+    "active_years": "1956–1962",
     "seasons": [
       1956,
       1961,
       1962
     ],
     "driver_ids": [
-      "bianchi",
       "campbell-jones",
       "emery",
       "gendebien",
@@ -2415,14 +2218,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "emw",
     "name": "EMW",
     "nationality": "East German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Eisenacher_Motorenwerk",
-    "active_years": "1953\u20131953",
+    "active_years": "1953–1953",
     "seasons": [
       1953
     ],
@@ -2435,26 +2240,21 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "enb",
     "name": "ENB",
     "nationality": "Belgian",
-    "wikipedia_url": "https://en.wikipedia.org/wiki/\u00c9curie_Nationale_Belge",
-    "active_years": "1962\u20131962",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Écurie_Nationale_Belge",
+    "active_years": "1962–1962",
     "seasons": [
       1962
     ],
     "driver_ids": [
-      "bechem",
-      "bianchi",
-      "fischer",
-      "fitzau",
-      "heeks",
-      "niedermayr",
-      "stuck",
-      "willi_krakau"
+      "bianchi"
     ],
     "wins": 0,
     "podiums": 0,
@@ -2468,14 +2268,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "ensign",
     "name": "Ensign",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ensign_Racing",
-    "active_years": "1973\u20131982",
+    "active_years": "1973–1982",
     "seasons": [
       1973,
       1974,
@@ -2494,7 +2296,6 @@
       "daly",
       "ertl",
       "gaillard",
-      "guerrero",
       "ickx",
       "lammers",
       "lees",
@@ -2572,14 +2373,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "epperly",
     "name": "Epperly",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Epperly",
-    "active_years": "1955\u20131960",
+    "active_years": "1955–1960",
     "seasons": [
       1955,
       1957,
@@ -2605,130 +2408,29 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "era",
     "name": "ERA",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/English_Racing_Automobiles",
-    "active_years": "1950\u20131963",
+    "active_years": "1950–1952",
     "seasons": [
       1950,
       1951,
-      1952,
-      1953,
-      1954,
-      1955,
-      1956,
-      1957,
-      1958,
-      1959,
-      1960,
-      1961,
-      1963
+      1952
     ],
     "driver_ids": [
-      "alberto_ur\u00eda",
-      "allison",
-      "ascari",
-      "asdr\u00fabal_fontes_bayardo",
-      "banks",
-      "beaufort",
-      "behra",
-      "bianco",
-      "bira",
-      "birabongse_bhanudej",
-      "bonetto",
-      "bonnier",
-      "branca",
-      "bucci",
-      "bueb",
-      "cabianca",
-      "cade",
-      "cantoni",
-      "chimeri",
-      "chiron",
-      "claes",
-      "collins",
-      "comotti",
-      "crespo",
-      "creus",
-      "daponte",
-      "drake",
-      "estefano",
-      "etancelin",
-      "fangio",
-      "filippis",
-      "fitch",
-      "flinterman",
-      "flockhart",
-      "fontes",
-      "fry",
-      "galvez",
       "gerard",
-      "gerini",
-      "godia",
-      "gonzalez",
-      "gould",
-      "graffenried",
-      "gregory",
-      "halford",
-      "hampshire",
       "harrison",
-      "hawthorn",
-      "herrmann",
-      "jack_brabham",
-      "john_james",
-      "jover",
-      "kavanagh",
-      "landi",
-      "lang",
       "leslie_johnson",
-      "macklin",
-      "maglioli",
-      "mantovani",
-      "marimon",
-      "mcdowell",
-      "menditeguy",
-      "mieres",
       "moss",
-      "munaron",
-      "murray",
-      "musso",
-      "orey",
-      "oscar_gonzalez",
-      "pagani",
-      "parker",
-      "perdisa",
       "peter_walker",
-      "phil_hill",
-      "pian",
-      "pietsch",
-      "piotti",
-      "purley",
-      "ramos",
-      "reg_parnell",
-      "rol",
       "rolt",
-      "rosier",
-      "ruttman",
-      "salvadori",
-      "scarlatti",
-      "schell",
-      "seidel",
-      "shawe_taylor",
-      "shelby",
-      "simon",
-      "starrabba",
-      "taruffi",
-      "testut",
-      "trintignant",
-      "uria",
-      "villoresi",
-      "volonterio",
-      "webb",
-      "wharton"
+      "shawe_taylor"
     ],
     "wins": 9,
     "podiums": 40,
@@ -2745,20 +2447,21 @@
         "driver_id": "fangio"
       }
     ],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "manual_override",
+    "driver_ids_note": "Verified ERA World Championship entries, 1950-1952."
   },
   {
     "id": "eurobrun",
     "name": "Euro Brun",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/EuroBrun",
-    "active_years": "1988\u20131990",
+    "active_years": "1988–1990",
     "seasons": [
       1988,
       1990
     ],
     "driver_ids": [
-      "foitek",
       "larrauri",
       "modena",
       "moreno"
@@ -2780,14 +2483,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "ewing",
     "name": "Ewing",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Wayne_Ewing",
-    "active_years": "1950\u20131960",
+    "active_years": "1950–1960",
     "seasons": [
       1950,
       1960
@@ -2803,14 +2508,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "ferguson",
     "name": "Ferguson",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ferguson_Research",
-    "active_years": "1961\u20131961",
+    "active_years": "1961–1961",
     "seasons": [
       1961
     ],
@@ -2830,14 +2537,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "ferrari",
     "name": "Ferrari",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
-    "active_years": "1950\u20132025",
+    "active_years": "1950–2025",
     "seasons": [
       1950,
       1951,
@@ -2917,107 +2626,34 @@
       2025
     ],
     "driver_ids": [
-      "adamich",
-      "adolff",
       "alboreto",
-      "alesi",
-      "allison",
       "alonso",
-      "amon",
-      "andre_pilette",
-      "arnoux",
       "ascari",
-      "badoer",
-      "baghetti",
-      "bandini",
-      "barrichello",
-      "bearman",
-      "behra",
-      "bell",
       "berger",
       "biondetti",
-      "bondurant",
-      "brooks",
-      "capelli",
       "carini",
-      "castellotti",
-      "claes",
-      "collins",
       "comotti",
-      "ernesto_brambilla",
-      "fangio",
       "farina",
       "fischer",
-      "fisichella",
-      "frere",
-      "galli",
-      "gendebien",
-      "gilles_villeneuve",
-      "ginther",
-      "giunti",
       "gonzalez",
-      "gurney",
-      "hamilton",
       "hawthorn",
       "hirt",
-      "ickx",
-      "irvine",
       "johansson",
       "landi",
-      "larini",
-      "lauda",
       "laurent",
-      "leclerc",
-      "maglioli",
-      "mairesse",
-      "mansell",
-      "manzon",
-      "mario_andretti",
-      "massa",
-      "merzario",
-      "michael_schumacher",
-      "morbidelli",
-      "musso",
-      "parkes",
-      "pedro_rodriguez",
-      "perdisa",
-      "phil_hill",
-      "pironi",
-      "portago",
-      "prost",
       "raikkonen",
       "reg_parnell",
-      "regazzoni",
-      "reutemann",
-      "ricardo_rodriguez",
-      "rodriguez",
       "rosier",
-      "sainz",
-      "salo",
       "salvadori",
-      "scarfiotti",
-      "scarlatti",
-      "scheckter",
-      "schell",
       "schoeller",
       "serafini",
       "simon",
       "sommer",
-      "stuck",
-      "surtees",
-      "swaters",
-      "tambay",
       "taruffi",
-      "terra",
-      "tomaso",
       "tornaco",
-      "trintignant",
-      "trips",
-      "vaccarella",
       "vettel",
       "villoresi",
-      "whitehead",
-      "williams"
+      "whitehead"
     ],
     "wins": 248,
     "podiums": 846,
@@ -3439,14 +3075,16 @@
         "position": 2,
         "points": "652"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "fittipaldi",
     "name": "Fittipaldi",
     "nationality": "Brazilian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Fittipaldi_Automotive",
-    "active_years": "1975\u20131982",
+    "active_years": "1975–1982",
     "seasons": [
       1975,
       1976,
@@ -3462,10 +3100,8 @@
       "hoffmann",
       "keke_rosberg",
       "merzario",
-      "ribeiro",
       "serra",
-      "wilson_fittipaldi",
-      "wilson_fittipaldi_j\u00fanior"
+      "wilson_fittipaldi"
     ],
     "wins": 0,
     "podiums": 3,
@@ -3514,14 +3150,16 @@
         "position": 13,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "fondmetal",
     "name": "Fondmetal",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Fondmetal",
-    "active_years": "1991\u20131992",
+    "active_years": "1991–1992",
     "seasons": [
       1991,
       1992
@@ -3549,14 +3187,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "footwork",
     "name": "Footwork",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_Arrows",
-    "active_years": "1991\u20131996",
+    "active_years": "1991–1996",
     "seasons": [
       1991,
       1992,
@@ -3569,13 +3209,9 @@
       "alboreto",
       "caffi",
       "fittipaldi",
-      "inoue",
       "johansson",
       "morbidelli",
-      "papis",
-      "rosset",
       "suzuki",
-      "verstappen",
       "warwick"
     ],
     "wins": 0,
@@ -3615,14 +3251,16 @@
         "position": 9,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "force_india",
     "name": "Force India",
     "nationality": "Indian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Racing_Point_Force_India",
-    "active_years": "2008\u20132018",
+    "active_years": "2008–2018",
     "seasons": [
       2008,
       2009,
@@ -3638,11 +3276,7 @@
     ],
     "driver_ids": [
       "fisichella",
-      "hulkenberg",
       "liuzzi",
-      "ocon",
-      "perez",
-      "resta",
       "sutil"
     ],
     "wins": 0,
@@ -3707,14 +3341,16 @@
         "position": 5,
         "points": "111"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "forti",
     "name": "Forti",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Forti",
-    "active_years": "1995\u20131996",
+    "active_years": "1995–1996",
     "seasons": [
       1995,
       1996
@@ -3742,14 +3378,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "frazer_nash",
     "name": "Frazer Nash",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Frazer_Nash",
-    "active_years": "1952\u20131952",
+    "active_years": "1952–1952",
     "seasons": [
       1952
     ],
@@ -3763,14 +3401,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "gilby",
     "name": "Gilby",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gilby",
-    "active_years": "1961\u20131963",
+    "active_years": "1961–1963",
     "seasons": [
       1961,
       1962,
@@ -3802,14 +3442,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "gordini",
     "name": "Gordini",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gordini",
-    "active_years": "1952\u20131956",
+    "active_years": "1952–1956",
     "seasons": [
       1952,
       1953,
@@ -3822,7 +3464,6 @@
       "bayol",
       "behra",
       "bira",
-      "birabongse_bhanudej",
       "birger",
       "bucci",
       "claes",
@@ -3835,13 +3476,11 @@
       "menditeguy",
       "mieres",
       "milhoux",
-      "obrien",
       "pollet",
       "ramos",
       "schell",
       "simon",
       "sparken",
-      "terra",
       "trintignant",
       "wacker"
     ],
@@ -3851,14 +3490,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "haas",
     "name": "Haas F1 Team",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Haas_F1_Team",
-    "active_years": "2016\u20132025",
+    "active_years": "2016–2025",
     "seasons": [
       2016,
       2017,
@@ -3872,15 +3513,9 @@
       2025
     ],
     "driver_ids": [
-      "bearman",
       "grosjean",
       "gutierrez",
-      "hulkenberg",
-      "kevin_magnussen",
-      "mazepin",
-      "mick_schumacher",
-      "ocon",
-      "pietro_fittipaldi"
+      "kevin_magnussen"
     ],
     "wins": 0,
     "podiums": 0,
@@ -3934,14 +3569,16 @@
         "position": 7,
         "points": "58"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "hall",
     "name": "Hall",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hall_(constructor)",
-    "active_years": "1951\u20131951",
+    "active_years": "1951–1951",
     "seasons": [
       1951
     ],
@@ -3954,14 +3591,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "hesketh",
     "name": "Hesketh",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hesketh_Racing",
-    "active_years": "1974\u20131978",
+    "active_years": "1974–1978",
     "seasons": [
       1974,
       1975,
@@ -3972,12 +3611,9 @@
     "driver_ids": [
       "ashley",
       "cheever",
-      "daly",
       "edwards",
       "ertl",
-      "galica",
       "hunt",
-      "ian_scheckter",
       "jones",
       "keegan",
       "lunger",
@@ -4018,14 +3654,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "honda",
     "name": "Honda",
     "nationality": "Japanese",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Honda_in_Formula_One",
-    "active_years": "1964\u20132008",
+    "active_years": "1964–2008",
     "seasons": [
       1964,
       1965,
@@ -4093,14 +3731,16 @@
         "position": 9,
         "points": "14"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "hrt",
     "name": "HRT",
     "nationality": "Spanish",
     "wikipedia_url": "https://en.wikipedia.org/wiki/HRT_Formula_1_Team",
-    "active_years": "2010\u20132012",
+    "active_years": "2010–2012",
     "seasons": [
       2010,
       2011,
@@ -4138,14 +3778,16 @@
         "position": 12,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "hwm",
     "name": "HWM",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hersham_and_Walton_Motors",
-    "active_years": "1951\u20131954",
+    "active_years": "1951–1954",
     "seasons": [
       1951,
       1952,
@@ -4174,14 +3816,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "iso_marlboro",
     "name": "Iso Marlboro",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Frank_Williams_Racing_Cars",
-    "active_years": "1973\u20131974",
+    "active_years": "1973–1974",
     "seasons": [
       1973,
       1974
@@ -4216,14 +3860,16 @@
         "position": 10,
         "points": "4"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "jaguar",
     "name": "Jaguar",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Jaguar_Racing",
-    "active_years": "2000\u20132004",
+    "active_years": "2000–2004",
     "seasons": [
       2000,
       2001,
@@ -4235,11 +3881,7 @@
       "burti",
       "herbert",
       "irvine",
-      "klien",
-      "pizzonia",
-      "rosa",
-      "webber",
-      "wilson"
+      "rosa"
     ],
     "wins": 0,
     "podiums": 2,
@@ -4273,14 +3915,16 @@
         "position": 7,
         "points": "10"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "jbw",
     "name": "JBW",
     "nationality": "British",
     "wikipedia_url": "https://en.wikipedia.org/wiki/JBW",
-    "active_years": "1959\u20131961",
+    "active_years": "1959–1961",
     "seasons": [
       1959,
       1960,
@@ -4311,14 +3955,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "jordan",
     "name": "Jordan",
     "nationality": "Irish",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix",
-    "active_years": "1991\u20132005",
+    "active_years": "1991–2005",
     "seasons": [
       1991,
       1992,
@@ -4337,36 +3983,20 @@
       2005
     ],
     "driver_ids": [
-      "alesi",
       "apicella",
       "barrichello",
-      "baumgartner",
       "boutsen",
-      "brundle",
       "capelli",
       "cesaris",
-      "damon_hill",
-      "firman",
-      "fisichella",
-      "frentzen",
       "gachot",
-      "glock",
       "gugelmin",
-      "heidfeld",
       "irvine",
-      "karthikeyan",
       "michael_schumacher",
       "modena",
-      "monteiro",
       "moreno",
       "naspetti",
-      "pantano",
-      "ralf_schumacher",
-      "sato",
       "suzuki",
-      "trulli",
-      "zanardi",
-      "zonta"
+      "zanardi"
     ],
     "wins": 4,
     "podiums": 19,
@@ -4450,14 +4080,16 @@
         "position": 9,
         "points": "12"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "klenk",
     "name": "Klenk",
     "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Klenk",
-    "active_years": "1954\u20131954",
+    "active_years": "1954–1954",
     "seasons": [
       1954
     ],
@@ -4470,14 +4102,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "kojima",
     "name": "Kojima",
     "nationality": "Japanese",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Kojima_Engineering",
-    "active_years": "1976\u20131977",
+    "active_years": "1976–1977",
     "seasons": [
       1976,
       1977
@@ -4504,14 +4138,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "kurtis_kraft",
     "name": "Kurtis Kraft",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Kurtis_Kraft",
-    "active_years": "1950\u20131960",
+    "active_years": "1950–1960",
     "seasons": [
       1950,
       1951,
@@ -4527,63 +4163,37 @@
     ],
     "driver_ids": [
       "agabashian",
-      "amick",
-      "andrews",
-      "armi",
-      "arnold",
       "ayulo",
       "bettenhausen",
       "bob_scott",
-      "boyd",
       "bryan",
-      "cheesbourg",
       "chitwood",
-      "christie",
-      "connor",
       "crockett",
       "cross",
       "darter",
       "davies",
       "daywalt",
-      "dempsey_wilson",
-      "dick_rathmann",
       "dinsmore",
-      "edmunds",
-      "elisian",
       "faulkner",
       "flaherty",
       "forberg",
       "force",
-      "foyt",
-      "freeland",
-      "garrett",
-      "george",
       "george_connor",
-      "goldsmith",
       "green",
       "griffith",
-      "grim",
       "hanks",
       "hartley",
       "hellings",
-      "herman",
       "holland",
       "holmes",
-      "homeier",
       "hoyt",
       "jackson",
       "james",
-      "jerry_unser",
       "johnson",
-      "keller",
-      "larson",
       "linden",
-      "magill",
       "mantz",
-      "mccoy",
       "mcdowell",
       "mcgrath",
-      "mcwithey",
       "miller",
       "nalon",
       "nazaruk",
@@ -4591,27 +4201,19 @@
       "parsons",
       "paul_russo",
       "rathmann",
-      "ray_crawford",
       "reece",
-      "russo",
       "ruttman",
       "scarborough",
       "schindler",
       "stevenson",
-      "sutton",
       "sweikert",
       "teague",
-      "templeman",
       "thomson",
-      "tolan",
-      "turner",
-      "veith",
       "vukovich",
       "wallard",
       "walt_brown",
       "ward",
-      "webb",
-      "weyant"
+      "webb"
     ],
     "wins": 5,
     "podiums": 19,
@@ -4625,14 +4227,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "kuzma",
     "name": "Kuzma",
     "nationality": "American",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Eddie_Kuzma",
-    "active_years": "1951\u20131960",
+    "active_years": "1951–1960",
     "seasons": [
       1951,
       1952,
@@ -4676,14 +4280,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "lambo",
     "name": "Lambo",
     "nationality": "Italian",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Modena_(racing_team)",
-    "active_years": "1991\u20131991",
+    "active_years": "1991–1991",
     "seasons": [
       1991
     ],
@@ -4703,14 +4309,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "lancia",
     "name": "Lancia",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lancia_in_Formula_One",
-    "active_years": "1954\u20131955",
+    "active_years": "1954–1955",
     "seasons": [
       1954,
       1955
@@ -4728,14 +4336,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "langley",
     "name": "Langley",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Langley_(constructor)",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -4748,14 +4358,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "larrousse",
     "name": "Larrousse",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Larrousse",
-    "active_years": "1987\u20131994",
+    "active_years": "1987–1994",
     "seasons": [
       1987,
       1988,
@@ -4827,14 +4439,16 @@
         "position": 11,
         "points": "2"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lds",
     "name": "LDS",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/LDS_(automobile)",
-    "active_years": "1962\u20131968",
+    "active_years": "1962–1968",
     "seasons": [
       1962,
       1963,
@@ -4869,14 +4483,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lec",
     "name": "LEC",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/LEC_(Formula_One)",
-    "active_years": "1977\u20131977",
+    "active_years": "1977–1977",
     "seasons": [
       1977
     ],
@@ -4895,14 +4511,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lesovsky",
     "name": "Lesovsky",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lesovsky",
-    "active_years": "1950\u20131960",
+    "active_years": "1950–1960",
     "seasons": [
       1950,
       1952,
@@ -4931,14 +4549,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "leyton-house",
     "name": "Leyton House",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leyton_House",
-    "active_years": "1990\u20131991",
+    "active_years": "1990–1991",
     "seasons": [
       1990,
       1991
@@ -4954,14 +4574,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "ligier",
     "name": "Ligier",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ligier",
-    "active_years": "1976\u20131996",
+    "active_years": "1976–1996",
     "seasons": [
       1976,
       1977,
@@ -5127,14 +4749,16 @@
         "position": 6,
         "points": "15"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lola",
     "name": "Lola",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lola_Cars",
-    "active_years": "1962\u20131993",
+    "active_years": "1962–1993",
     "seasons": [
       1962,
       1963,
@@ -5232,14 +4856,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lotus",
     "name": "Lotus F1 Team",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lotus_F1",
-    "active_years": "2010\u20132015",
+    "active_years": "2010–2015",
     "seasons": [
       2010,
       2011,
@@ -5263,14 +4889,16 @@
     "fastest_laps": 5,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lyncar",
     "name": "Lyncar",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lyncar",
-    "active_years": "1975\u20131975",
+    "active_years": "1975–1975",
     "seasons": [
       1975
     ],
@@ -5289,14 +4917,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "maki",
     "name": "Maki",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Maki_(cars)",
-    "active_years": "1975\u20131975",
+    "active_years": "1975–1975",
     "seasons": [
       1975
     ],
@@ -5317,14 +4947,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "march",
     "name": "March",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/March_Engineering",
-    "active_years": "1970\u20131992",
+    "active_years": "1970–1992",
     "seasons": [
       1970,
       1971,
@@ -5349,7 +4981,6 @@
       "beuttler",
       "bleekemolen",
       "boesel",
-      "boy_hayje",
       "brambilla",
       "capelli",
       "cevert",
@@ -5469,14 +5100,16 @@
         "position": 9,
         "points": "3"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "marchese",
     "name": "Marchese",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Marchese_(constructor)",
-    "active_years": "1950\u20131951",
+    "active_years": "1950–1951",
     "seasons": [
       1950,
       1951
@@ -5491,14 +5124,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "martini",
     "name": "Martini",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Martini_(cars)",
-    "active_years": "1978\u20131978",
+    "active_years": "1978–1978",
     "seasons": [
       1978
     ],
@@ -5517,14 +5152,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "marussia",
     "name": "Marussia",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Marussia_F1",
-    "active_years": "2012\u20132016",
+    "active_years": "2012–2016",
     "seasons": [
       2012,
       2013,
@@ -5566,14 +5203,16 @@
         "position": 9,
         "points": "2"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "matra",
     "name": "Matra",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Matra",
-    "active_years": "1967\u20131972",
+    "active_years": "1967–1972",
     "seasons": [
       1967,
       1968,
@@ -5631,14 +5270,16 @@
         "position": 8,
         "points": "12"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "mbm",
     "name": "MBM",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/MBM_(automobile)",
-    "active_years": "1961\u20131961",
+    "active_years": "1961–1961",
     "seasons": [
       1961
     ],
@@ -5657,14 +5298,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "mclaren",
     "name": "McLaren",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/McLaren",
-    "active_years": "1966\u20132025",
+    "active_years": "1966–2025",
     "seasons": [
       1966,
       1967,
@@ -6138,14 +5781,16 @@
         "position": 1,
         "points": "666"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "mercedes",
     "name": "Mercedes",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One",
-    "active_years": "1954\u20132025",
+    "active_years": "1954–2025",
     "seasons": [
       1954,
       1955,
@@ -6309,14 +5954,16 @@
         "position": 4,
         "points": "468"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "merzario",
     "name": "Merzario",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Merzario",
-    "active_years": "1978\u20131979",
+    "active_years": "1978–1979",
     "seasons": [
       1978,
       1979
@@ -6342,14 +5989,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "meskowski",
     "name": "Meskowski",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Meskowski",
-    "active_years": "1960\u20131960",
+    "active_years": "1960–1960",
     "seasons": [
       1960
     ],
@@ -6363,14 +6012,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "mf1",
     "name": "MF1",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Midland_F1_Racing",
-    "active_years": "2006\u20132006",
+    "active_years": "2006–2006",
     "seasons": [
       2006
     ],
@@ -6390,14 +6041,16 @@
         "position": 10,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "milano",
     "name": "Milano",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Milano",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -6410,14 +6063,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "minardi",
     "name": "Minardi",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Minardi",
-    "active_years": "1985\u20132005",
+    "active_years": "1985–2005",
     "seasons": [
       1985,
       1986,
@@ -6592,14 +6247,16 @@
         "position": 10,
         "points": "7"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "moore",
     "name": "Moore",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Moore_(constructor)",
-    "active_years": "1950\u20131959",
+    "active_years": "1950–1959",
     "seasons": [
       1950,
       1951,
@@ -6616,14 +6273,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "nichels",
     "name": "Nichels",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Nichels",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -6637,14 +6296,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "olson",
     "name": "Olson",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Olson_(constructor)",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -6657,14 +6318,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "onyx",
     "name": "Onyx",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Onyx_(racing_team)",
-    "active_years": "1989\u20131990",
+    "active_years": "1989–1990",
     "seasons": [
       1989,
       1990
@@ -6672,7 +6335,6 @@
     "driver_ids": [
       "foitek",
       "gachot",
-      "jj_lehto",
       "johansson",
       "lehto"
     ],
@@ -6693,14 +6355,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "osca",
     "name": "OSCA",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/OSCA",
-    "active_years": "1951\u20131953",
+    "active_years": "1951–1953",
     "seasons": [
       1951,
       1952,
@@ -6719,14 +6383,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "osella",
     "name": "Osella",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Osella",
-    "active_years": "1980\u20131990",
+    "active_years": "1980–1990",
     "seasons": [
       1980,
       1981,
@@ -6821,14 +6487,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "pacific",
     "name": "Pacific",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pacific_Racing",
-    "active_years": "1994\u20131995",
+    "active_years": "1994–1995",
     "seasons": [
       1994,
       1995
@@ -6857,14 +6525,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "pankratz",
     "name": "Pankratz",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pankratz",
-    "active_years": "1954\u20131954",
+    "active_years": "1954–1954",
     "seasons": [
       1954
     ],
@@ -6877,14 +6547,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "parnelli",
     "name": "Parnelli",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Parnelli",
-    "active_years": "1974\u20131976",
+    "active_years": "1974–1976",
     "seasons": [
       1974,
       1975,
@@ -6915,14 +6587,16 @@
         "position": 13,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "pawl",
     "name": "Pawl",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pawl_(constructor)",
-    "active_years": "1951\u20131955",
+    "active_years": "1951–1955",
     "seasons": [
       1951,
       1955
@@ -6938,14 +6612,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "penske",
     "name": "Penske",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Penske_Racing",
-    "active_years": "1974\u20131977",
+    "active_years": "1974–1977",
     "seasons": [
       1974,
       1975,
@@ -6954,7 +6630,6 @@
     ],
     "driver_ids": [
       "binder",
-      "boy_hayje",
       "donohue",
       "hayje",
       "heyer",
@@ -6989,14 +6664,16 @@
         "position": 12,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "phillips",
     "name": "Phillips",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Phillips_(constructor)",
-    "active_years": "1954\u20131960",
+    "active_years": "1954–1960",
     "seasons": [
       1954,
       1955,
@@ -7017,14 +6694,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "politoys",
     "name": "Politoys",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Politoys",
-    "active_years": "1972\u20131972",
+    "active_years": "1972–1972",
     "seasons": [
       1972
     ],
@@ -7043,14 +6722,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "porsche",
     "name": "Porsche",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Porsche_in_Formula_One",
-    "active_years": "1957\u20131964",
+    "active_years": "1957–1964",
     "seasons": [
       1957,
       1958,
@@ -7122,14 +6803,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "prost",
     "name": "Prost",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Prost_Grand_Prix",
-    "active_years": "1997\u20132001",
+    "active_years": "1997–2001",
     "seasons": [
       1997,
       1998,
@@ -7180,14 +6863,16 @@
         "position": 9,
         "points": "4"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "protos",
     "name": "Protos",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Protos_(racing_team)",
-    "active_years": "1967\u20131967",
+    "active_years": "1967–1967",
     "seasons": [
       1967
     ],
@@ -7208,14 +6893,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "racing-point",
     "name": "Racing Point",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Racing_Point_F1_Team",
-    "active_years": "2019\u20132020",
+    "active_years": "2019–2020",
     "seasons": [
       2019,
       2020
@@ -7231,14 +6918,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "rae",
     "name": "Rae",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rae_(constructor)",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -7251,14 +6940,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "ram",
     "name": "RAM",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/RAM_Racing",
-    "active_years": "1983\u20131985",
+    "active_years": "1983–1985",
     "seasons": [
       1983,
       1984,
@@ -7267,7 +6958,6 @@
     "driver_ids": [
       "acheson",
       "alliot",
-      "jac_nellemann",
       "kessel",
       "manfred_winkelhock",
       "palmer",
@@ -7299,14 +6989,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "rb-f1-team",
     "name": "RB F1 Team",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/RB_Formula_1_Team",
-    "active_years": "2024\u20132025",
+    "active_years": "2024–2025",
     "seasons": [
       2024,
       2025
@@ -7323,14 +7015,16 @@
     "fastest_laps": 1,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "re",
     "name": "RE",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/RE_(automobile)",
-    "active_years": "1965\u20131965",
+    "active_years": "1965–1965",
     "seasons": [
       1965
     ],
@@ -7349,14 +7043,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "rebaque",
     "name": "Rebaque",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rebaque",
-    "active_years": "1979\u20131979",
+    "active_years": "1979–1979",
     "seasons": [
       1979
     ],
@@ -7375,14 +7071,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "red-bull",
     "name": "Red Bull",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Red_Bull_Racing",
-    "active_years": "2005\u20132025",
+    "active_years": "2005–2025",
     "seasons": [
       2005,
       2006,
@@ -7468,14 +7166,16 @@
         "driver_id": "max_verstappen"
       }
     ],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "renault",
     "name": "Renault",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One",
-    "active_years": "1977\u20132020",
+    "active_years": "1977–2020",
     "seasons": [
       1977,
       1978,
@@ -7669,14 +7369,16 @@
         "position": 5,
         "points": "181"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "rial",
     "name": "Rial",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rial_Racing",
-    "active_years": "1988\u20131989",
+    "active_years": "1988–1989",
     "seasons": [
       1988,
       1989
@@ -7703,14 +7405,16 @@
         "position": 13,
         "points": "3"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "sauber",
     "name": "Sauber",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sauber",
-    "active_years": "1993\u20132025",
+    "active_years": "1993–2025",
     "seasons": [
       1993,
       1994,
@@ -7753,7 +7457,6 @@
       "heidfeld",
       "herbert",
       "hulkenberg",
-      "jj_lehto",
       "kobayashi",
       "larini",
       "leclerc",
@@ -7893,14 +7596,16 @@
         "position": 10,
         "points": "4"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "scarab",
     "name": "Scarab",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scarab_(constructor)",
-    "active_years": "1960\u20131960",
+    "active_years": "1960–1960",
     "seasons": [
       1960
     ],
@@ -7921,14 +7626,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "schroeder",
     "name": "Schroeder",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Schroeder_(constructor)",
-    "active_years": "1951\u20131955",
+    "active_years": "1951–1955",
     "seasons": [
       1951,
       1953,
@@ -7948,14 +7655,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "scirocco",
     "name": "Scirocco",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scirocco-Powell",
-    "active_years": "1963\u20131964",
+    "active_years": "1963–1964",
     "seasons": [
       1963,
       1964
@@ -7982,14 +7691,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "shadow",
     "name": "Shadow",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Shadow_Racing_Cars",
-    "active_years": "1973\u20131980",
+    "active_years": "1973–1980",
     "seasons": [
       1973,
       1974,
@@ -8064,14 +7775,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "shannon",
     "name": "Shannon",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Shannon_(Formula_One)",
-    "active_years": "1966\u20131966",
+    "active_years": "1966–1966",
     "seasons": [
       1966
     ],
@@ -8090,14 +7803,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "sherman",
     "name": "Sherman",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sherman_(constructor)",
-    "active_years": "1951\u20131952",
+    "active_years": "1951–1952",
     "seasons": [
       1951,
       1952
@@ -8112,14 +7827,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "simca",
     "name": "Simca",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Simca",
-    "active_years": "1950\u20131953",
+    "active_years": "1950–1953",
     "seasons": [
       1950,
       1951,
@@ -8145,14 +7862,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "simtek",
     "name": "Simtek",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Simtek",
-    "active_years": "1994\u20131995",
+    "active_years": "1994–1995",
     "seasons": [
       1994,
       1995
@@ -8183,14 +7902,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "snowberger",
     "name": "Snowberger",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Snowberger",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -8203,14 +7924,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "spirit",
     "name": "Spirit",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Spirit_(racing_team)",
-    "active_years": "1983\u20131985",
+    "active_years": "1983–1985",
     "seasons": [
       1983,
       1984,
@@ -8243,14 +7966,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "spyker",
     "name": "Spyker",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Spyker_F1",
-    "active_years": "2007\u20132007",
+    "active_years": "2007–2007",
     "seasons": [
       2007
     ],
@@ -8273,14 +7998,16 @@
         "position": 10,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "stebro",
     "name": "Stebro",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Stebro",
-    "active_years": "1963\u20131963",
+    "active_years": "1963–1963",
     "seasons": [
       1963
     ],
@@ -8300,14 +8027,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "stevens",
     "name": "Stevens",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Stevens_(constructor)",
-    "active_years": "1950\u20131956",
+    "active_years": "1950–1956",
     "seasons": [
       1950,
       1952,
@@ -8334,14 +8063,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "stewart",
     "name": "Stewart",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Stewart_Grand_Prix",
-    "active_years": "1997\u20131999",
+    "active_years": "1997–1999",
     "seasons": [
       1997,
       1998,
@@ -8375,14 +8106,16 @@
         "position": 4,
         "points": "36"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "super-aguri",
     "name": "Super Aguri",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Super_Aguri_F1",
-    "active_years": "2006\u20132008",
+    "active_years": "2006–2008",
     "seasons": [
       2006,
       2007,
@@ -8401,14 +8134,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "surtees",
     "name": "Surtees",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Surtees",
-    "active_years": "1970\u20131978",
+    "active_years": "1970–1978",
     "seasons": [
       1970,
       1971,
@@ -8509,14 +8244,16 @@
         "position": 13,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "sutton",
     "name": "Sutton",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sutton_(constructor)",
-    "active_years": "1959\u20131959",
+    "active_years": "1959–1959",
     "seasons": [
       1959
     ],
@@ -8529,14 +8266,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "lago",
     "name": "Talbot-Lago",
     "nationality": "French",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Talbot-Lago",
-    "active_years": "1950\u20131951",
+    "active_years": "1950–1951",
     "seasons": [
       1950,
       1951
@@ -8559,8 +8298,7 @@
       "rosier",
       "schell",
       "sommer",
-      "swaters",
-      "yves_giraudcabantous"
+      "swaters"
     ],
     "wins": 0,
     "podiums": 2,
@@ -8568,14 +8306,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "ergast",
+    "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
     "id": "team-lotus",
     "name": "Team Lotus",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Team_Lotus",
-    "active_years": "1958\u20131994",
+    "active_years": "1958–1994",
     "seasons": [
       1958,
       1959,
@@ -8620,6 +8360,7 @@
       "adams",
       "allison",
       "amon",
+      "andre_pilette",
       "angelis",
       "arundell",
       "ashmore",
@@ -8628,6 +8369,7 @@
       "bailey",
       "bernard",
       "bianchi",
+      "bondurant",
       "bonnier",
       "bordeu",
       "brack",
@@ -8638,17 +8380,20 @@
       "charlton",
       "clark",
       "collomb",
+      "courage",
       "crawford",
       "donnelly",
       "driver",
       "dumfries",
       "emerson_fittipaldi",
       "evans",
+      "fisher",
       "flockhart",
       "geki",
       "gendebien",
       "greene",
       "gregory",
+      "gurney",
       "hailwood",
       "hakkinen",
       "halford",
@@ -8658,14 +8403,15 @@
       "henry_taylor",
       "henton",
       "herbert",
+      "herrmann",
       "hill",
       "hocking",
       "ian_scheckter",
       "ickx",
       "ireland",
+      "irwin",
       "jack_brabham",
       "jarier",
-      "john_crichtonstuart_7th_marquess_of_bute",
       "keizan",
       "ken_miles",
       "kuhnke",
@@ -8692,9 +8438,12 @@
       "parnell",
       "penske",
       "peterson",
+      "phil_hill",
       "pieterse",
       "piper",
       "piquet",
+      "prinoth",
+      "puzey",
       "rebaque",
       "reutemann",
       "revson",
@@ -8705,8 +8454,10 @@
       "salo",
       "satoru_nakajima",
       "schenken",
+      "schiller",
       "schroeder",
       "seidel",
+      "seiffert",
       "senna",
       "sharp",
       "shelly",
@@ -8714,6 +8465,8 @@
       "solana",
       "spence",
       "stacey",
+      "starrabba",
+      "stommelen",
       "surtees",
       "tingle",
       "trevor_taylor",
@@ -8722,26 +8475,12 @@
       "vaccarella",
       "vyver",
       "walker",
+      "ward",
       "warwick",
       "watson",
       "wietzes",
       "wisell",
-      "zanardi",
-      "andre_pilette",
-      "bondurant",
-      "courage",
-      "fisher",
-      "gurney",
-      "herrmann",
-      "irwin",
-      "phil_hill",
-      "prinoth",
-      "puzey",
-      "schiller",
-      "seiffert",
-      "starrabba",
-      "stommelen",
-      "ward"
+      "zanardi"
     ],
     "wins": 78,
     "podiums": 170,
@@ -8782,14 +8521,16 @@
         "driver_id": "mario_andretti"
       }
     ],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "tec-mec",
     "name": "Tec-Mec",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tec-Mec",
-    "active_years": "1959\u20131959",
+    "active_years": "1959–1959",
     "seasons": [
       1959
     ],
@@ -8808,14 +8549,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "tecno",
     "name": "Tecno",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tecno",
-    "active_years": "1972\u20131973",
+    "active_years": "1972–1973",
     "seasons": [
       1972,
       1973
@@ -8843,14 +8586,16 @@
         "position": 11,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "theodore",
     "name": "Theodore",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Theodore_Racing",
-    "active_years": "1978\u20131983",
+    "active_years": "1978–1983",
     "seasons": [
       1978,
       1981,
@@ -8897,14 +8642,16 @@
         "position": 11,
         "points": "1"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "token",
     "name": "Token",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Token_(racing_team)",
-    "active_years": "1974\u20131974",
+    "active_years": "1974–1974",
     "seasons": [
       1974
     ],
@@ -8925,14 +8672,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "toleman",
     "name": "Toleman",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Toleman",
-    "active_years": "1981\u20131985",
+    "active_years": "1981–1985",
     "seasons": [
       1981,
       1982,
@@ -8982,14 +8731,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "toro-rosso",
     "name": "Toro Rosso",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso",
-    "active_years": "2006\u20132019",
+    "active_years": "2006–2019",
     "seasons": [
       2006,
       2007,
@@ -9028,14 +8779,16 @@
     "fastest_laps": 1,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "toyota",
     "name": "Toyota",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Toyota_Racing",
-    "active_years": "2002\u20132009",
+    "active_years": "2002–2009",
     "seasons": [
       2002,
       2003,
@@ -9104,14 +8857,16 @@
         "position": 5,
         "points": "59.5"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "trevis",
     "name": "Trevis",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Trevis",
-    "active_years": "1951\u20131960",
+    "active_years": "1951–1960",
     "seasons": [
       1951,
       1952,
@@ -9130,14 +8885,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "trojan",
     "name": "Trojan",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Trojan_(automobile)",
-    "active_years": "1974\u20131974",
+    "active_years": "1974–1974",
     "seasons": [
       1974
     ],
@@ -9156,14 +8913,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "tyrrell",
     "name": "Tyrrell",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tyrrell_Racing",
-    "active_years": "1970\u20131998",
+    "active_years": "1970–1998",
     "seasons": [
       1970,
       1971,
@@ -9407,14 +9166,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "vanwall",
     "name": "Vanwall",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Vanwall",
-    "active_years": "1954\u20131960",
+    "active_years": "1954–1960",
     "seasons": [
       1954,
       1955,
@@ -9462,14 +9223,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "veritas",
     "name": "Veritas",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Veritas_(automobile)",
-    "active_years": "1951\u20131953",
+    "active_years": "1951–1953",
     "seasons": [
       1951,
       1952,
@@ -9498,14 +9261,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "virgin",
     "name": "Virgin",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Virgin_Racing",
-    "active_years": "2010\u20132011",
+    "active_years": "2010–2011",
     "seasons": [
       2010,
       2011
@@ -9532,14 +9297,16 @@
         "position": 12,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "wetteroth",
     "name": "Wetteroth",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Wetteroth",
-    "active_years": "1950\u20131950",
+    "active_years": "1950–1950",
     "seasons": [
       1950
     ],
@@ -9552,14 +9319,16 @@
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": []
+    "championship_results": [],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "williams",
     "name": "Williams",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Williams_Racing",
-    "active_years": "1975\u20132025",
+    "active_years": "1975–2025",
     "seasons": [
       1975,
       1976,
@@ -9654,7 +9423,6 @@
       "maldonado",
       "mansell",
       "mario_andretti",
-      "masami_kuwashima",
       "massa",
       "merzario",
       "migault",
@@ -9982,14 +9750,16 @@
         "position": 9,
         "points": "17"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "wolf",
     "name": "Wolf",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Walter_Wolf_Racing",
-    "active_years": "1976\u20131979",
+    "active_years": "1976–1979",
     "seasons": [
       1976,
       1977,
@@ -10035,14 +9805,16 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   },
   {
     "id": "zakspeed",
     "name": "Zakspeed",
     "nationality": "",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Zakspeed",
-    "active_years": "1985\u20131989",
+    "active_years": "1985–1989",
     "seasons": [
       1985,
       1986,
@@ -10091,6 +9863,8 @@
         "position": 999,
         "points": "0"
       }
-    ]
+    ],
+    "driver_ids_source": "local_cleaned",
+    "driver_ids_note": "Local IDs cleaned against ids.txt."
   }
 ]
