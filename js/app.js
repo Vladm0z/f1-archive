@@ -3103,6 +3103,8 @@ function makeTeamsByName(teams) {
 	return map;
 }
 
+const teamIdCache = {}; 
+
 function findTeamIdByName(data, teamName) {
     if (!teamName || !data.teamsByName) return null;
     const cacheKey = teamName;
