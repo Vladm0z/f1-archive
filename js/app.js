@@ -1,33 +1,128 @@
+"use strict";
+
 const app = document.getElementById("app");
 
 const state = {
 	data: null
 };
 
-init();
+const uiState = {
+	driverSearch: "",
+	teamSearch: ""
+};
 
-async function init() {
-	try {
-		state.data = await loadData();
-		app.addEventListener("click", handleAppClick);
-		app.addEventListener("input", handleAppInput);
-		
-		route();
-		window.addEventListener("hashchange", route);
-	} catch (error) {
-		console.error(error);
-		app.innerHTML = `<div class="empty">Could not load data. Check the browser console and make sure all JSON files are valid.</div>`;
+const caches = {
+	teamParticipation: null,
+	racesByYear: null,
+	teamId: new Map(),
+	wikiSummary: new Map(),
+	driverStats: new Map(),
+	teamStats: new Map()
+};
+
+const KNOWN_DRIVER_STATS = new Set([
+	"races",
+	"wins",
+	"podiums",
+	"poles",
+	"fastest-laps",
+	"best-finish",
+	"best-grid",
+	"best-champ"
+]);
+
+const KNOWN_TEAM_STATS = new Set([
+	"races",
+	"wins",
+	"podiums",
+	"poles",
+	"fastest-laps",
+	"best-finish",
+	"best-grid",
+	"constructor-titles",
+	"best-champ"
+]);
+
+const TEAM_CANONICAL_BY_NAME = {
+	"lotus": "team-lotus",
+	"lotus-ford": "team-lotus",
+	"lotus-climax": "team-lotus",
+	"lotus-borgward": "team-lotus",
+	"lotus-pratt whitney": "team-lotus",
+	"lotus-pratt-amp-whitney": "team-lotus",
+
+	"brabham-ford": "brabham",
+	"brabham-climax": "brabham",
+	"brabham-brm": "brabham",
+	"brabham-alfa romeo": "brabham",
+	"brabham-repco": "brabham",
+
+	"cooper-climax": "cooper",
+	"cooper-maserati": "cooper",
+	"cooper-brm": "cooper",
+	"cooper-alfa romeo": "cooper",
+	"cooper-ats": "cooper",
+	"cooper-borgward": "cooper",
+	"cooper-castellotti": "cooper",
+	"cooper-ferrari": "cooper",
+	"cooper-osca": "cooper",
+
+	"mclaren-ford": "mclaren",
+	"mclaren-serenissima": "mclaren",
+
+	"eagle-climax": "eagle",
+	"eagle-weslake": "eagle",
+
+	"de tomaso-alfa romeo": "de-tomaso",
+	"de tomaso-osca": "de-tomaso",
+
+	"brm-ford": "brm"
+};
+
+let wikiIntroRequestId = 0;
+let articleContentRequestId = 0;
+let lastFocusedElement = null;
+
+function init() {
+	if (!app) {
+		console.error("Missing #app element.");
+		return;
 	}
+
+	loadData()
+		.then(data => {
+			state.data = data;
+
+			app.addEventListener("click", handleAppClick);
+
+			route();
+			window.addEventListener("hashchange", route);
+		})
+		.catch(error => {
+			console.error(error);
+			app.innerHTML = `
+				<div class="empty">
+					Could not load data. Check the browser console and make sure all JSON files are valid.
+				</div>
+			`;
+		});
 }
 
 function handleAppClick(e) {
-	const link = e.target.closest("[data-stat]");
-	if (!link) return;
+	if (!state.data) return;
 
-	e.preventDefault();
-	const stat = link.getAttribute("data-stat");
-	const driverId = link.getAttribute("data-driver");
-	const teamId = link.getAttribute("data-team");
+	const trigger = e.target.closest("[data-stat]");
+	if (!trigger) return;
+
+	if (trigger.tagName === "A") {
+		e.preventDefault();
+	}
+
+	const stat = trigger.getAttribute("data-stat");
+	if (!stat) return;
+
+	const driverId = trigger.getAttribute("data-driver");
+	const teamId = trigger.getAttribute("data-team");
 
 	if (driverId) {
 		showStatModal(state.data, driverId, stat);
@@ -36,43 +131,31 @@ function handleAppClick(e) {
 	}
 }
 
-let searchDebounceTimer = null;
-
-function handleAppInput(e) {
-	if (e.target.id === "driver-search" || e.target.id === "team-search") {
-		clearTimeout(searchDebounceTimer);
-		searchDebounceTimer = setTimeout(() => {
-			if (e.target.id === "driver-search") {
-				const list = document.getElementById("driver-list");
-				if (!list) return;
-				const filtered = filterDrivers(state.data.drivers, e.target.value);
-				list.innerHTML = driverCardsHtml(state.data, filtered);
-			}
-			if (e.target.id === "team-search") {
-				const list = document.getElementById("team-list");
-				if (!list) return;
-				const filtered = filterTeams(state.data.teams, e.target.value);
-				list.innerHTML = teamCardsHtml(state.data, filtered);
-			}
-		}, 150);
-	}
-}
-
 function clearCaches() {
-	teamParticipationCache = null;
-	racesByYearCache = null;
-	Object.keys(teamIdCache).forEach(k => delete teamIdCache[k]);
+	caches.teamParticipation = null;
+	caches.racesByYear = null;
+	caches.teamId.clear();
+	caches.driverStats.clear();
+	caches.teamStats.clear();
 }
 
 function clearAllCaches() {
-	teamParticipationCache = null;
-	racesByYearCache = null;
-	Object.keys(teamIdCache).forEach(k => delete teamIdCache[k]);
+	clearCaches();
+	caches.wikiSummary.clear();
 	wikiIntroRequestId++;
+	articleContentRequestId++;
 }
 
 async function loadData() {
-	const [languages, drivers, races, articles, teamsRaw] = await Promise.all([
+	clearAllCaches();
+
+	const [
+		languagesRaw,
+		driversRaw,
+		racesRaw,
+		articlesRaw,
+		teamsRaw
+	] = await Promise.all([
 		fetch("data/languages.json").then(checkResponse),
 		fetch("data/drivers.json").then(checkResponse),
 		fetch("data/races.json").then(checkResponse),
@@ -80,95 +163,142 @@ async function loadData() {
 		fetchOptionalJson("data/teams.json")
 	]);
 
-	const teams = Array.isArray(teamsRaw) ? teamsRaw : [];
+	if (!Array.isArray(languagesRaw)) {
+		throw new Error("languages.json must be an array.");
+	}
 
-	// Build indexes once
-	const driversById = makeById(drivers);
-	const teamsById = makeById(teams);
+	if (!Array.isArray(driversRaw)) {
+		throw new Error("drivers.json must be an array.");
+	}
 
-	// Driver -> races index
-	const driverRacesIndex = {};
+	if (!Array.isArray(racesRaw)) {
+		throw new Error("races.json must be an array.");
+	}
+
+	if (!Array.isArray(articlesRaw)) {
+		throw new Error("articles.json must be an array.");
+	}
+
+	const languages = languagesRaw.filter(isObject);
+
+	const drivers = sortDrivers(
+		driversRaw.filter(isObject).filter(hasValidId)
+	).map(driver => ({
+		...driver,
+		_searchText: driverSearchText(driver)
+	}));
+
+	const races = racesRaw.filter(isObject).filter(hasValidId);
+	const articles = articlesRaw.filter(isObject).filter(hasValidId);
+
+	const teams = sortTeams(
+		(Array.isArray(teamsRaw) ? teamsRaw : []).filter(isObject).filter(hasValidId)
+	).map(team => ({
+		...team,
+		_searchText: teamSearchText(team)
+	}));
+
+	const driversById = makeById(drivers, "driver");
+	const teamsById = makeById(teams, "team");
+	const racesById = makeById(races, "race");
+	const articlesById = makeById(articles, "article");
+
+	const languagesByCode = languages.reduce((acc, item) => {
+		if (!item || item.code === null || item.code === undefined || item.code === "") {
+			return acc;
+		}
+
+		const code = String(item.code);
+
+		if (!acc[code]) {
+			acc[code] = item;
+		} else {
+			console.warn(`Duplicate language code: ${code}`);
+		}
+
+		return acc;
+	}, Object.create(null));
+
+	const driverRacesIndex = Object.create(null);
+
 	races.forEach(race => {
 		const allDrivers = new Set();
-		(race.results || []).forEach(r => allDrivers.add(r.driver_id));
-		(race.qualifying || []).forEach(q => allDrivers.add(q.driver_id));
-		(race.starting_grid || []).forEach(g => allDrivers.add(g.driver_id));
-		allDrivers.forEach(did => {
-			if (!driverRacesIndex[did]) driverRacesIndex[did] = [];
-			driverRacesIndex[did].push(race);
+
+		asArray(race.results)
+			.filter(isObject)
+			.forEach(entry => addIdToSet(allDrivers, entry.driver_id));
+
+		asArray(race.qualifying)
+			.filter(isObject)
+			.forEach(entry => addIdToSet(allDrivers, entry.driver_id));
+
+		asArray(race.starting_grid)
+			.filter(isObject)
+			.forEach(entry => addIdToSet(allDrivers, entry.driver_id));
+
+		allDrivers.forEach(driverId => {
+			if (!driverRacesIndex[driverId]) {
+				driverRacesIndex[driverId] = [];
+			}
+
+			driverRacesIndex[driverId].push(race);
 		});
 	});
 
-	// Article -> entity indexes
-	const articlesByDriver = {};
-	const articlesByTeam = {};
-	const articlesByRace = {};
+	const articlesByDriver = Object.create(null);
+	const articlesByTeam = Object.create(null);
+	const articlesByRace = Object.create(null);
 	const allArticleLanguages = new Set();
 
 	articles.forEach(article => {
-		if (article.language) allArticleLanguages.add(article.language);
-		(article.driver_ids || []).forEach(did => {
-			if (!articlesByDriver[did]) articlesByDriver[did] = [];
-			articlesByDriver[did].push(article);
+		if (article.language) {
+			allArticleLanguages.add(article.language);
+		}
+
+		uniqueIds(article.driver_ids).forEach(driverId => {
+			if (!articlesByDriver[driverId]) {
+				articlesByDriver[driverId] = [];
+			}
+			articlesByDriver[driverId].push(article);
 		});
-		(article.team_ids || []).forEach(tid => {
-			if (!articlesByTeam[tid]) articlesByTeam[tid] = [];
-			articlesByTeam[tid].push(article);
+
+		uniqueIds(article.team_ids).forEach(teamId => {
+			if (!articlesByTeam[teamId]) {
+				articlesByTeam[teamId] = [];
+			}
+			articlesByTeam[teamId].push(article);
 		});
-		(article.race_ids || []).forEach(rid => {
-			if (!articlesByRace[rid]) articlesByRace[rid] = [];
-			articlesByRace[rid].push(article);
+
+		uniqueIds(article.race_ids).forEach(raceId => {
+			if (!articlesByRace[raceId]) {
+				articlesByRace[raceId] = [];
+			}
+			articlesByRace[raceId].push(article);
 		});
 	});
 
 	return {
 		languages,
-		drivers: sortDrivers(drivers),
+		drivers,
 		races,
 		articles,
-		teams: sortTeams(teams),
+		teams,
+
 		driversById,
-		racesById: makeById(races),
 		teamsById,
+		racesById,
+		articlesById,
+		languagesByCode,
+
 		teamsByName: makeTeamsByName(teams),
-		// New indexes
+
 		driverRacesIndex,
 		articlesByDriver,
 		articlesByTeam,
 		articlesByRace,
+
 		allArticleLanguages: Array.from(allArticleLanguages).sort()
 	};
-}
-
-function sortTeams(teams) {
-	return [...teams].sort((a, b) => {
-		return (a.name || "").localeCompare(b.name || "");
-	});
-}
-
-function normalizeTeamKey(value) {
-	let text = String(value ?? "");
-
-	text = text.replace(/\s*\(.*?\)\s*/g, " ");
-	text = normalizeString(text);
-	text = text.replace(/[^\w\s-]/g, "");
-	text = text.replace(/\s+/g, " ").trim();
-
-	return text;
-}
-
-function makeTeamsByName(teams) {
-	const map = {};
-
-	teams.forEach((team) => {
-		const key = normalizeTeamKey(team.name);
-
-		if (key) {
-			map[key] = team.id;
-		}
-	});
-
-	return map;
 }
 
 async function checkResponse(response) {
@@ -194,71 +324,215 @@ async function fetchOptionalJson(path) {
 	}
 }
 
-function makeById(items) {
-	return Object.fromEntries(items.map((item) => [item.id, item]));
+function isObject(value) {
+	return value !== null && typeof value === "object";
+}
+
+function asArray(value) {
+	if (value === null || value === undefined) {
+		return [];
+	}
+
+	return Array.isArray(value) ? value : [value];
+}
+
+function hasOwn(obj, key) {
+	return Object.prototype.hasOwnProperty.call(obj, key);
+}
+
+function hasValidId(item) {
+	return Boolean(
+		item &&
+		item.id !== null &&
+		item.id !== undefined &&
+		String(item.id).trim() !== ""
+	);
+}
+
+function addIdToSet(set, id) {
+	if (id === null || id === undefined || String(id).trim() === "") {
+		return;
+	}
+
+	set.add(String(id));
+}
+
+function uniqueIds(value) {
+	return [...new Set(
+		asArray(value)
+			.filter(id => id !== null && id !== undefined && String(id).trim() !== "")
+			.map(String)
+	)];
+}
+
+function makeById(items, label = "item") {
+	return (Array.isArray(items) ? items : []).reduce((acc, item) => {
+		if (!hasValidId(item)) {
+			console.warn(`Missing id for ${label}:`, item);
+			return acc;
+		}
+
+		const id = String(item.id);
+
+		if (acc[id]) {
+			console.warn(`Duplicate ${label} id: ${id}. Keeping first occurrence.`);
+			return acc;
+		}
+
+		acc[id] = item;
+		return acc;
+	}, Object.create(null));
 }
 
 function sortDrivers(drivers) {
 	return [...drivers].sort((a, b) => {
-		return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
+		return String(a.sort_name || a.name || "").localeCompare(
+			String(b.sort_name || b.name || "")
+		);
 	});
 }
 
-function closeStatModal() {
-	const container = document.getElementById('stat-modal-container');
-	if (container) container.remove();
-	document.body.style.overflow = '';
+function sortTeams(teams) {
+	return [...teams].sort((a, b) => {
+		return String(a.name || "").localeCompare(String(b.name || ""));
+	});
 }
 
-function route() {
-	closeStatModal();
-	const data = state.data;
-	const { path, params } = parseHash();
+function driverSearchText(driver) {
+	const parts = [
+		driver.name,
+		driver.sort_name,
+		driver.first_name,
+		driver.last_name,
+		driver.nationality,
+		...asArray(driver.aliases)
+			.filter(value => value !== null && value !== undefined)
+			.map(String)
+	].filter(Boolean);
 
-	let page;
+	return normalizeString(parts.join(" "));
+}
 
-	if (path === "") {
-		page = renderHome(data);
-	} else if (path === "drivers") {
-		page = renderDrivers(data);
-	} else if (path.startsWith("driver/")) {
-		const driverId = path.split("/")[1] || "";
-		page = renderDriverPage(data, driverId, params);
-	} else if (path === "races") {
-		page = renderRaces(data);
-	} else if (path.startsWith("race/")) {
-		const raceId = path.split("/")[1] || "";
-		page = renderRacePage(data, raceId, params);
-	} else if (path === "teams") {
-		page = renderTeams(data);
-	} else if (path.startsWith("team/")) {
-		const teamId = path.split("/")[1] || "";
-		page = renderTeamPage(data, teamId, params);
-	} else if (path === "articles") {
-		page = renderArticles(data, params);
-	} else if (path.startsWith("article/")) {
-		const articleId = path.split("/")[1] || "";
-		page = renderArticlePage(data, articleId);
-	} else {
-		page = {
-			html: `
-				<div class="empty">
-					Page not found.
-				</div>
-			`
-		};
+function teamSearchText(team) {
+	const parts = [
+		team.name,
+		team.nationality
+	].filter(Boolean);
+
+	return normalizeString(parts.join(" "));
+}
+
+function normalizeString(value) {
+	return String(value ?? "")
+		.toLowerCase()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "");
+}
+
+const ESC_MAP = {
+	"&": "&amp;",
+	"<": "&lt;",
+	">": "&gt;",
+	'"': "&quot;",
+	"'": "&#39;"
+};
+
+const ESC_REGEX = /[&<>"']/g;
+
+function esc(value) {
+	return String(value ?? "").replace(ESC_REGEX, char => ESC_MAP[char]);
+}
+
+function safeExternalUrl(value) {
+	try {
+		const url = new URL(String(value ?? ""), window.location.href);
+
+		if (url.protocol === "http:" || url.protocol === "https:") {
+			return url.href;
+		}
+
+		return "#";
+	} catch {
+		return "#";
+	}
+}
+
+function safeResourceUrl(value) {
+	try {
+		const url = new URL(String(value ?? ""), window.location.href);
+
+		if (url.protocol === "http:" || url.protocol === "https:") {
+			return url.href;
+		}
+
+		return "";
+	} catch {
+		return "";
+	}
+}
+
+function safeImageUrl(value) {
+	try {
+		const url = new URL(String(value ?? ""), window.location.href);
+
+		if (url.protocol === "http:" || url.protocol === "https:") {
+			return url.href;
+		}
+
+		if (url.protocol === "data:") {
+			return url.href.startsWith("data:image/") ? url.href : "";
+		}
+
+		return "";
+	} catch {
+		return "";
+	}
+}
+
+function languageLabel(data, code) {
+	if (code === null || code === undefined || code === "") {
+		return "—";
 	}
 
-	app.innerHTML = page.html;
+	const language = data.languagesByCode[String(code)];
 
-	if (page.afterRender) {
-		page.afterRender();
+	if (language && language.label) {
+		return language.label;
 	}
 
-	window.scrollTo({
-		top: 0,
-		behavior: "auto"
-	});
+	return String(code).toUpperCase();
+}
+
+function driverName(data, driverId) {
+	if (driverId === null || driverId === undefined || driverId === "") {
+		return "—";
+	}
+
+	const driver = data.driversById[String(driverId)];
+
+	return driver?.name || "—";
+}
+
+function raceLabel(data, raceId) {
+	if (raceId === null || raceId === undefined || raceId === "") {
+		return "—";
+	}
+
+	const race = data.racesById[String(raceId)];
+
+	if (!race) {
+		return String(raceId);
+	}
+
+	return `${race.name || ""} ${race.season || ""}`.trim();
+}
+
+function emptyHtml(message) {
+	return `
+		<div class="empty">
+			${esc(message)}
+		</div>
+	`;
 }
 
 function parseHash() {
@@ -275,10 +549,12 @@ function parseHash() {
 }
 
 function getSelectedLanguages(params) {
-	return (params.get("lang") || "")
+	const values = (params.get("lang") || "")
 		.split(",")
-		.map((value) => value.trim())
+		.map(value => value.trim())
 		.filter(Boolean);
+
+	return [...new Set(values)];
 }
 
 function getSort(params) {
@@ -311,50 +587,81 @@ function updateParams(params, changes) {
 	return next;
 }
 
-function normalizeString(value) {
-	return String(value ?? "")
-		.toLowerCase()
-		.normalize("NFD")
-		.replace(/[\u0300-\u036f]/g, "");
-}
+function route() {
+	if (!app) return;
 
-const ESC_MAP = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
-const ESC_REGEX = /[&<>"']/g;
+	try {
+		closeStatModal();
 
-function esc(value) {
-	return String(value ?? "").replace(ESC_REGEX, char => ESC_MAP[char]);
-}
+		const data = state.data;
+		if (!data) return;
 
-function languageLabel(data, code) {
-	const language = data.languages.find((item) => item.code === code);
+		const { path, params } = parseHash();
 
-	if (language) {
-		return language.label;
+		let page;
+
+		if (path === "") {
+			page = renderHome(data);
+		} else if (path === "drivers") {
+			page = renderDrivers(data);
+		} else if (path.startsWith("driver/")) {
+			const driverId = path.split("/")[1] || "";
+			page = renderDriverPage(data, driverId, params);
+		} else if (path === "races") {
+			page = renderRaces(data);
+		} else if (path.startsWith("race/")) {
+			const raceId = path.split("/")[1] || "";
+			page = renderRacePage(data, raceId, params);
+		} else if (path === "teams") {
+			page = renderTeams(data);
+		} else if (path.startsWith("team/")) {
+			const teamId = path.split("/")[1] || "";
+			page = renderTeamPage(data, teamId, params);
+		} else if (path === "articles") {
+			page = renderArticles(data, params);
+		} else if (path.startsWith("article/")) {
+			const articleId = path.split("/")[1] || "";
+			page = renderArticlePage(data, articleId);
+		} else {
+			page = {
+				html: `
+					<div class="empty">
+						<h1>Page not found</h1>
+						<p>The page you requested does not exist.</p>
+						<p>
+							<a href="#/">Go home</a> •
+							<a href="#/drivers">Drivers</a> •
+							<a href="#/teams">Teams</a> •
+							<a href="#/races">Races</a> •
+							<a href="#/articles">Articles</a>
+						</p>
+					</div>
+				`
+			};
+		}
+
+		app.innerHTML = page.html;
+
+		if (page.afterRender) {
+			Promise.resolve(page.afterRender()).catch(error => {
+				console.error(error);
+			});
+		}
+
+		window.scrollTo({
+			top: 0,
+			behavior: "auto"
+		});
+	} catch (error) {
+		console.error(error);
+
+		app.innerHTML = `
+			<div class="empty">
+				Something went wrong while rendering this page.
+				Check the browser console for details.
+			</div>
+		`;
 	}
-
-	return code ? String(code).toUpperCase() : "—";
-}
-
-function driverName(data, driverId) {
-	return data.driversById[driverId]?.name || "—";
-}
-
-function raceLabel(data, raceId) {
-	const race = data.racesById[raceId];
-
-	if (!race) {
-		return raceId;
-	}
-
-	return `${race.name} ${race.season || ""}`.trim();
-}
-
-function emptyHtml(message) {
-	return `
-		<div class="empty">
-			${esc(message)}
-		</div>
-	`;
 }
 
 function filterByLanguages(articles, selectedLanguages) {
@@ -362,13 +669,13 @@ function filterByLanguages(articles, selectedLanguages) {
 		return articles;
 	}
 
-	return articles.filter((article) => selectedLanguages.includes(article.language));
+	return articles.filter(article => selectedLanguages.includes(article.language));
 }
 
 function sortArticles(articles, sortDirection) {
 	return [...articles].sort((a, b) => {
-		const aDate = a.published_sort || "";
-		const bDate = b.published_sort || "";
+		const aDate = String(a.published_sort || a.added_at || "");
+		const bDate = String(b.published_sort || b.added_at || "");
 
 		if (sortDirection === "desc") {
 			return bDate.localeCompare(aDate);
@@ -378,97 +685,158 @@ function sortArticles(articles, sortDirection) {
 	});
 }
 
-function getEntityArticles(data, { driverId, raceId, teamId }) {
-	let result = data.articles;
+function getEntityArticles(data, { driverId, raceId, teamId } = {}) {
+	const lists = [];
 
 	if (driverId) {
-		result = data.articlesByDriver[driverId] || [];
+		lists.push(data.articlesByDriver[driverId] || []);
 	}
+
 	if (teamId) {
-		result = data.articlesByTeam[teamId] || [];
+		lists.push(data.articlesByTeam[teamId] || []);
 	}
+
 	if (raceId) {
-		result = data.articlesByRace[raceId] || [];
+		lists.push(data.articlesByRace[raceId] || []);
 	}
 
-	// If multiple filters, intersect
-	if (driverId && teamId) {
-		const teamSet = new Set((data.articlesByTeam[teamId] || []).map(a => a.id));
-		result = result.filter(a => teamSet.has(a.id));
+	if (!lists.length) {
+		return data.articles;
 	}
 
-	return result;
+	return lists.reduce((acc, list) => {
+		const ids = new Set(list.map(article => article.id));
+		return acc.filter(article => ids.has(article.id));
+	}, data.articles);
 }
 
-// Cache for team participations, built once per data load
-let teamParticipationCache = null;
-
 function buildTeamParticipationIndex(data) {
-	if (teamParticipationCache) return teamParticipationCache;
-	
-	const index = {};
-	
+	if (caches.teamParticipation) {
+		return caches.teamParticipation;
+	}
+
+	const index = Object.create(null);
+	const raceMaps = Object.create(null);
+
 	data.races.forEach(race => {
+		if (race.id === null || race.id === undefined || race.id === "") {
+			return;
+		}
+
 		const allEntries = [
-			...(race.results || []).map(r => ({ ...r, source: 'results' })),
-			...(race.qualifying || []).map(q => ({ ...q, source: 'qualifying' })),
-			...(race.starting_grid || []).map(g => ({ ...g, source: 'grid' }))
+			...asArray(race.results)
+				.filter(isObject)
+				.map(entry => ({ ...entry, source: "results" })),
+			...asArray(race.qualifying)
+				.filter(isObject)
+				.map(entry => ({ ...entry, source: "qualifying" })),
+			...asArray(race.starting_grid)
+				.filter(isObject)
+				.map(entry => ({ ...entry, source: "grid" }))
 		];
-		
+
 		allEntries.forEach(entry => {
-			const teamId = resolveTeamId(data, entry.team);
+			const teamName = entry.team || entry.constructor || "";
+			const teamId = resolveTeamId(data, teamName);
+
 			if (!teamId) return;
-			
-			if (!index[teamId]) index[teamId] = [];
-			
-			// Find or create the race entry in the index
-			let raceEntry = index[teamId].find(p => p.race.id === race.id);
+
+			if (!index[teamId]) {
+				index[teamId] = [];
+				raceMaps[teamId] = Object.create(null);
+			}
+
+			let raceEntry = raceMaps[teamId][race.id];
+
 			if (!raceEntry) {
-				raceEntry = { race, results: [], qualis: [], grids: [] };
+				raceEntry = {
+					race,
+					results: [],
+					qualis: [],
+					grids: []
+				};
+
+				raceMaps[teamId][race.id] = raceEntry;
 				index[teamId].push(raceEntry);
 			}
-			
-			if (entry.source === 'results') raceEntry.results.push(entry);
-			else if (entry.source === 'qualifying') raceEntry.qualis.push(entry);
-			else raceEntry.grids.push(entry);
+
+			if (entry.source === "results") {
+				raceEntry.results.push(entry);
+			} else if (entry.source === "qualifying") {
+				raceEntry.qualis.push(entry);
+			} else {
+				raceEntry.grids.push(entry);
+			}
 		});
 	});
-	
-	teamParticipationCache = index;
+
+	caches.teamParticipation = index;
 	return index;
 }
 
 function articleCardHtml(data, article) {
-	const driverNames = (article.driver_ids || [])
-		.map((id) => data.driversById[id]?.name)
+	const driverLinks = uniqueIds(article.driver_ids)
+		.map(id => {
+			const driver = data.driversById[id];
+
+			if (!driver) {
+				return esc(id);
+			}
+
+			return `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`;
+		})
 		.filter(Boolean);
 
-	const raceNames = (article.race_ids || [])
-		.map((id) => raceLabel(data, id))
+	const raceLinks = uniqueIds(article.race_ids)
+		.map(id => {
+			const race = data.racesById[id];
+
+			if (!race) {
+				return esc(id);
+			}
+
+			return `<a href="#/race/${esc(race.id)}">${esc(raceLabel(data, id))}</a>`;
+		})
 		.filter(Boolean);
 
-	const teamNames = (article.team_ids || [])
-		.map((id) => data.teamsById[id]?.name)
+	const teamLinks = uniqueIds(article.team_ids)
+		.map(id => {
+			const team = data.teamsById[id];
+
+			if (!team) {
+				return esc(id);
+			}
+
+			return `<a href="#/team/${esc(team.id)}">${esc(team.name)}</a>`;
+		})
 		.filter(Boolean);
 
 	const links = [];
 
-	if (getArticleContentFiles(article).length) {
+	if (article.id && getArticleContentFiles(article).length) {
 		links.push(`
 			<a href="#/article/${esc(article.id)}">Open article</a>
 		`);
 	}
 
 	if (article.url) {
-		links.push(`
-			<a href="${esc(article.url)}" target="_blank" rel="noopener">Read</a>
-		`);
+		const url = safeExternalUrl(article.url);
+
+		if (url !== "#") {
+			links.push(`
+				<a href="${esc(url)}" target="_blank" rel="noopener">Read</a>
+			`);
+		}
 	}
 
 	if (article.archive_url) {
-		links.push(`
-			<a href="${esc(article.archive_url)}" target="_blank" rel="noopener">Archive</a>
-		`);
+		const url = safeExternalUrl(article.archive_url);
+
+		if (url !== "#") {
+			links.push(`
+				<a href="${esc(url)}" target="_blank" rel="noopener">Archive</a>
+			`);
+		}
 	}
 
 	return `
@@ -477,17 +845,15 @@ function articleCardHtml(data, article) {
 				<span class="badge">
 					${esc(article.article_type || "article")}
 				</span>
-
 				<span class="badge badge-soft">
 					${esc(languageLabel(data, article.language))}
 				</span>
-
 				<span class="muted">
 					${esc(article.published_display || article.published_sort || "")}
 				</span>
 			</div>
 
-			<h3>${esc(article.title || article.id)}</h3>
+			<h3>${esc(article.title || article.id || "Untitled article")}</h3>
 
 			${
 				article.source_publication
@@ -501,34 +867,35 @@ function articleCardHtml(data, article) {
 			}
 
 			${
-				driverNames.length
+				driverLinks.length
 					? `
 						<p>
 							<strong>Drivers:</strong>
-							${esc(driverNames.join(", "))}
+							${driverLinks.join(", ")}
 						</p>
 					`
 					: ""
 			}
 
 			${
-				raceNames.length
+				raceLinks.length
 					? `
 						<p>
 							<strong>Races:</strong>
-							${esc(raceNames.join(", "))}
+							${raceLinks.join(", ")}
 						</p>
 					`
 					: ""
 			}
 
 			${
-				teamNames.length
+				teamLinks.length
 					? `
 						<p>
 							<strong>Teams:</strong>
-							${esc(teamNames.join(", "))}
-						</p>`
+							${teamLinks.join(", ")}
+						</p>
+					`
 					: ""
 			}
 
@@ -560,8 +927,12 @@ function languageFilterHtml(data, availableLanguages, selectedLanguages) {
 		return "";
 	}
 
-	const checkboxes = availableLanguages
-		.map((code) => {
+	const sortedLanguages = [...availableLanguages].sort((a, b) => {
+		return languageLabel(data, a).localeCompare(languageLabel(data, b));
+	});
+
+	const checkboxes = sortedLanguages
+		.map(code => {
 			const checked = selectedLanguages.includes(code) ? "checked" : "";
 
 			return `
@@ -581,7 +952,6 @@ function languageFilterHtml(data, availableLanguages, selectedLanguages) {
 	return `
 		<div class="filters">
 			<span class="filters-label">Language:</span>
-
 			<div class="check-group">
 				${checkboxes}
 			</div>
@@ -593,12 +963,10 @@ function sortFilterHtml(currentSort) {
 	return `
 		<div class="filters">
 			<span class="filters-label">Sort:</span>
-
-			<select class="sort-filter">
+			<select class="sort-filter" aria-label="Sort articles">
 				<option value="asc" ${currentSort === "asc" ? "selected" : ""}>
 					Oldest first
 				</option>
-
 				<option value="desc" ${currentSort === "desc" ? "selected" : ""}>
 					Newest first
 				</option>
@@ -616,11 +984,11 @@ function attachEntityFilters(pathKey, params) {
 		window.location.hash = buildHash(pathKey, nextParams);
 	}
 
-	languageBoxes.forEach((box) => {
+	languageBoxes.forEach(box => {
 		box.addEventListener("change", () => {
 			const checked = languageBoxes
-				.filter((item) => item.checked)
-				.map((item) => item.value);
+				.filter(item => item.checked)
+				.map(item => item.value);
 
 			applyChanges({
 				lang: checked
@@ -637,60 +1005,116 @@ function attachEntityFilters(pathKey, params) {
 	}
 }
 
-/* Wikipedia intro (lead text + infobox image) */
+function parseWikipediaUrl(url) {
+	try {
+		const parsed = new URL(url);
 
-const wikiSummaryCache = {};
+		if (!/(^|\.)wikipedia\.org$/i.test(parsed.hostname)) {
+			return null;
+		}
 
-function wikiTitleFromUrl(url) {
-	if (!url) return null;
+		const match = parsed.pathname.match(/\/wiki\/([^?#]+)/);
 
-	const match = String(url).trim().match(/\/wiki\/([^?#]+)/);
-	if (!match) return null;
+		if (!match) {
+			return null;
+		}
 
-	const title = match[1].trim();
-	return title || null;
+		let lang = parsed.hostname.split(".")[0] || "en";
+
+		if (
+			lang === "www" ||
+			lang === "wikipedia" ||
+			!/^[a-z]{2,}(-[a-z]+)*$/i.test(lang)
+		) {
+			lang = "en";
+		}
+
+		const title = decodeURIComponent(match[1]);
+
+		if (!title) {
+			return null;
+		}
+
+		return {
+			lang: lang.toLowerCase(),
+			title
+		};
+	} catch {
+		return null;
+	}
 }
 
-/*
- * Fallback image source.
- * The summary API often has no thumbnail for pages whose infobox
- * image is a logo/badge. The media-list API returns the page's images
- * in order — the first one is usually the infobox image.
- */
-async function fetchWikiMediaImage(title) {
+function resolveWikiUrl(src, lang) {
+	if (!src) {
+		return "";
+	}
+
+	let url = String(src);
+
+	if (url.startsWith("//")) {
+		url = `https:${url}`;
+	} else if (url.startsWith("/")) {
+		url = `https://${lang}.wikipedia.org${url}`;
+	}
+
+	return safeImageUrl(url);
+}
+
+async function fetchWikiMediaImage(lang, title) {
+	if (!title) {
+		return "";
+	}
+
 	try {
-		const res = await fetch(
-			"https://en.wikipedia.org/api/rest_v1/page/media-list/" + title
+		const response = await fetch(
+			`https://${lang}.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`
 		);
 
-		if (!res.ok) return "";
-
-		const data = await res.json();
-		const items = Array.isArray(data.items) ? data.items : [];
-
-		const firstImage =
-			items.find((item) => item.type === "image" && item.section_id === 0) ||
-			items.find((item) => item.type === "image");
-
-		if (!firstImage || !Array.isArray(firstImage.srcset) || !firstImage.srcset.length) {
+		if (!response.ok) {
 			return "";
 		}
 
-		const entry = firstImage.srcset[0];
-		if (!entry || !entry.src) return "";
+		const data = await response.json();
+		const items = Array.isArray(data.items)
+			? data.items.filter(isObject)
+			: [];
 
-		return entry.src.startsWith("//") ? "https:" + entry.src : entry.src;
-	} catch (error) {
+		const imageItems = items.filter(
+			item => item.type === "image" && Array.isArray(item.srcset)
+		);
+
+		const preferred = imageItems.filter(item => item.section_id === 0);
+
+		for (const list of [preferred, imageItems]) {
+			for (const item of list) {
+				const entry = [...item.srcset]
+					.reverse()
+					.find(candidate => candidate && candidate.src);
+
+				if (entry) {
+					return resolveWikiUrl(entry.src, lang);
+				}
+			}
+		}
+
+		return "";
+	} catch {
 		return "";
 	}
 }
 
-async function fetchWikiSummary(title) {
-	if (!title) return null;
-	if (wikiSummaryCache[title]) return wikiSummaryCache[title];
+async function fetchWikiSummary(lang, title) {
+	if (!title) {
+		return null;
+	}
 
-	// v2 key: ignores old caches that were saved without images
-	const storageKey = "wiki-summary:v2:" + title;
+	const cacheKey = `${lang}:${title}`;
+
+	if (caches.wikiSummary.has(cacheKey)) {
+		return caches.wikiSummary.get(cacheKey);
+	}
+
+	const storageKey = `wiki-summary:v3:${cacheKey}`;
 
 	try {
 		const stored = localStorage.getItem(storageKey);
@@ -698,90 +1122,134 @@ async function fetchWikiSummary(title) {
 		if (stored) {
 			const parsed = JSON.parse(stored);
 
-			if (parsed && parsed.timestamp && Date.now() - parsed.timestamp < 7 * 24 * 60 * 60 * 1000) {
-				wikiSummaryCache[title] = parsed.data;
+			if (
+				parsed &&
+				parsed.timestamp &&
+				Date.now() - parsed.timestamp < 7 * 24 * 60 * 60 * 1000
+			) {
+				caches.wikiSummary.set(cacheKey, parsed.data);
 				return parsed.data;
 			}
 		}
-	} catch (error) {
-		// localStorage unavailable – ignore
+	} catch {
+		// Ignore storage errors.
 	}
 
 	try {
-		const res = await fetch(
-			"https://en.wikipedia.org/api/rest_v1/page/summary/" + title
+		const response = await fetch(
+			`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`
 		);
 
-		if (!res.ok) return null;
+		if (!response.ok) {
+			return null;
+		}
 
-		const data = await res.json();
+		const data = await response.json();
 
-		if (!data || data.type === "disambiguation") return null;
+		if (!data || data.type === "disambiguation") {
+			return null;
+		}
 
 		const summary = {
 			extract: data.extract || "",
-			image: data.thumbnail ? data.thumbnail.source : ""
+			image: resolveWikiUrl(data.thumbnail ? data.thumbnail.source : "", lang)
 		};
 
-		// Fallback: grab the first real image on the page (infobox logo/photo)
 		if (!summary.image) {
-			summary.image = await fetchWikiMediaImage(title);
+			summary.image = await fetchWikiMediaImage(lang, title);
 		}
 
-		wikiSummaryCache[title] = summary;
+		caches.wikiSummary.set(cacheKey, summary);
 
 		try {
 			localStorage.setItem(
 				storageKey,
-				JSON.stringify({ timestamp: Date.now(), data: summary })
+				JSON.stringify({
+					timestamp: Date.now(),
+					data: summary
+				})
 			);
-		} catch (error) {
-			// ignore
+		} catch {
+			// Ignore storage errors.
 		}
 
 		return summary;
-	} catch (error) {
+	} catch {
 		return null;
 	}
 }
 
-let wikiIntroRequestId = 0;
-
 async function loadWikiIntro(wikipediaUrl, altText) {
 	const container = document.getElementById("wiki-intro");
-	if (!container || !wikipediaUrl) return;
+
+	if (!container) {
+		return;
+	}
 
 	const requestId = ++wikiIntroRequestId;
-	const title = wikiTitleFromUrl(wikipediaUrl);
-	if (!title) return;
 
-	container.innerHTML = `<p class="muted" style="padding:0.5rem 0">Loading intro…</p>`;
+	if (!wikipediaUrl) {
+		container.innerHTML = "";
+		return;
+	}
 
-	const summary = await fetchWikiSummary(title);
+	const parsed = parseWikipediaUrl(wikipediaUrl);
 
-	// Bail if a newer request has started
-	if (requestId !== wikiIntroRequestId) return;
-
-	if (!summary || (!summary.extract && !summary.image)) {
+	if (!parsed) {
 		container.innerHTML = "";
 		return;
 	}
 
 	container.innerHTML = `
+		<p class="muted" style="padding:0.5rem 0">Loading intro…</p>
+	`;
+
+	const summary = await fetchWikiSummary(parsed.lang, parsed.title);
+
+	if (requestId !== wikiIntroRequestId) {
+		return;
+	}
+
+	const imageUrl = summary ? safeImageUrl(summary.image) : "";
+
+	if (!summary || (!summary.extract && !imageUrl)) {
+		container.innerHTML = "";
+		return;
+	}
+
+	const safeWikipediaUrl = safeExternalUrl(wikipediaUrl);
+
+	const wikipediaLinkHtml = safeWikipediaUrl !== "#"
+		? `
+			<a href="${esc(safeWikipediaUrl)}" target="_blank" rel="noopener">
+				Wikipedia
+			</a>
+		`
+		: "Wikipedia";
+
+	container.innerHTML = `
 		<div class="wiki-intro card">
-			${summary.image
-				? `<img class="wiki-intro-image" src="${esc(summary.image)}" alt="${esc(altText || "")}" loading="lazy">`
-				: ""}
+			${
+				imageUrl
+					? `
+						<img
+							class="wiki-intro-image"
+							src="${esc(imageUrl)}"
+							alt="${esc(altText || "")}"
+							loading="lazy"
+						>
+					`
+					: ""
+			}
 			<div class="wiki-intro-text">
 				${summary.extract ? `<p>${esc(summary.extract)}</p>` : ""}
 				<p class="muted wiki-intro-source">
-					From <a href="${esc(wikipediaUrl)}" target="_blank" rel="noopener">Wikipedia</a> (CC BY-SA)
+					From ${wikipediaLinkHtml} (CC BY-SA)
 				</p>
 			</div>
 		</div>
 	`;
 }
-
 
 function randomSample(items, count) {
 	const arr = [...items];
@@ -805,18 +1273,16 @@ function renderHome(data) {
 
 	const today = new Date().toISOString().slice(0, 10);
 
-	// Prefer races that already happened.
-	// If there are no dated past races, fall back to all races.
-	const pastRaces = data.races.filter((race) => {
+	const pastRaces = data.races.filter(race => {
 		return race.date && race.date <= today;
 	});
 
-	const latestRaces = (pastRaces.length ? pastRaces : data.races)
+	const latestRaces = [...(pastRaces.length ? pastRaces : data.races)]
 		.sort((a, b) => {
 			return (
 				String(b.date || "").localeCompare(String(a.date || "")) ||
-				(b.season || 0) - (a.season || 0) ||
-				(b.round || 0) - (a.round || 0)
+				(Number(b.season) || 0) - (Number(a.season) || 0) ||
+				(Number(b.round) || 0) - (Number(a.round) || 0)
 			);
 		})
 		.slice(0, 4);
@@ -824,12 +1290,10 @@ function renderHome(data) {
 	const html = `
 		<section class="hero">
 			<h1>F1 interview & print archive</h1>
-
 			<p>
 				Browse interviews, race reports, profiles and other printed sources
 				by driver, race, team, language and date.
 			</p>
-
 			<div class="hero-actions">
 				<a class="button" href="#/drivers">Browse drivers</a>
 				<a class="button secondary" href="#/teams">Browse teams</a>
@@ -843,12 +1307,11 @@ function renderHome(data) {
 				<h2>Recently added articles</h2>
 				<a href="#/articles">View all articles</a>
 			</div>
-
 			<div class="stack">
 				${
 					recentArticles.length
 						? recentArticles
-								.map((article) => articleCardHtml(data, article))
+								.map(article => articleCardHtml(data, article))
 								.join("")
 						: emptyHtml("No articles yet.")
 				}
@@ -858,14 +1321,13 @@ function renderHome(data) {
 		<section class="two-columns home-panels">
 			<div class="card">
 				<h2>Featured drivers</h2>
-
 				<div class="list">
 					${
 						featuredDrivers.length
 							? featuredDrivers
-									.map((driver) => `
+									.map(driver => `
 										<a class="list-item" href="#/driver/${esc(driver.id)}">
-											<span>${esc(driver.name)}</span>
+											<span>${esc(driver.name || driver.id)}</span>
 											<span class="muted">${esc(driver.nationality || "")}</span>
 										</a>
 									`)
@@ -877,20 +1339,24 @@ function renderHome(data) {
 
 			<div class="card">
 				<h2>Latest races</h2>
-
 				<div class="list">
 					${
 						latestRaces.length
 							? latestRaces
-									.map((race) => `
-										<a class="list-item" href="#/race/${esc(race.id)}">
-											<span>${esc(race.name)} ${race.season || ""}</span>
-											<span class="muted">
-												${esc(race.country || "")}
-												${race.date ? ` • ${esc(race.date)}` : ""}
-											</span>
-										</a>
-									`)
+									.map(race => {
+										const metaParts = [race.country, race.date]
+											.filter(Boolean)
+											.map(esc);
+
+										return `
+											<a class="list-item" href="#/race/${esc(race.id)}">
+												<span>${esc(race.name || race.id)} ${esc(race.season || "")}</span>
+												<span class="muted">
+													${metaParts.join(" • ")}
+												</span>
+											</a>
+										`;
+									})
 									.join("")
 							: emptyHtml("No races yet.")
 					}
@@ -906,6 +1372,7 @@ function renderHome(data) {
 
 function debounce(fn, delay) {
 	let timer;
+
 	return (...args) => {
 		clearTimeout(timer);
 		timer = setTimeout(() => fn(...args), delay);
@@ -913,10 +1380,12 @@ function debounce(fn, delay) {
 }
 
 function renderDrivers(data) {
+	const query = uiState.driverSearch;
+	const filtered = filterDrivers(data.drivers, query);
+
 	const html = `
 		<section class="page-head">
 			<h1>Drivers</h1>
-
 			<p class="muted">
 				Search by name, nationality or alias.
 			</p>
@@ -927,24 +1396,38 @@ function renderDrivers(data) {
 			class="input"
 			type="search"
 			placeholder="Search drivers..."
+			aria-label="Search drivers"
 			autocomplete="off"
+			value="${esc(query)}"
 		>
 
-		<div id="driver-list" class="driver-grid">
-			${driverCardsHtml(data, data.drivers)}
+		<p id="driver-search-status" class="muted" role="status">
+			${filtered.length} driver${filtered.length === 1 ? "" : "s"}
+		</p>
+
+		<div id="driver-list" class="driver-grid" aria-live="polite">
+			${driverCardsHtml(data, filtered, query)}
 		</div>
 	`;
 
 	function afterRender() {
 		const input = document.getElementById("driver-search");
 		const list = document.getElementById("driver-list");
+		const status = document.getElementById("driver-search-status");
 
-		const handleSearch = debounce(() => {
-			const filtered = filterDrivers(data.drivers, input.value);
-			list.innerHTML = driverCardsHtml(data, filtered);
+		const update = debounce(() => {
+			uiState.driverSearch = input.value;
+
+			const nextFiltered = filterDrivers(data.drivers, input.value);
+
+			list.innerHTML = driverCardsHtml(data, nextFiltered, input.value);
+
+			if (status) {
+				status.textContent = `${nextFiltered.length} driver${nextFiltered.length === 1 ? "" : "s"}`;
+			}
 		}, 200);
 
-		input.addEventListener("input", handleSearch);
+		input.addEventListener("input", update);
 	}
 
 	return {
@@ -961,36 +1444,37 @@ function filterDrivers(drivers, query) {
 	}
 
 	return drivers
-		.filter((driver) => {
-			const parts = [
-				driver.name,
-				driver.sort_name,
-				driver.first_name,
-				driver.last_name,
-				driver.nationality,
-				...(driver.aliases || [])
-			].filter(Boolean);
-
-			return normalizeString(parts.join(" ")).includes(q);
+		.filter(driver => {
+			const searchText = driver._searchText ?? driverSearchText(driver);
+			return searchText.includes(q);
 		})
 		.sort((a, b) => {
-			return (a.sort_name || a.name).localeCompare(b.sort_name || b.name);
+			return String(a.sort_name || a.name || "").localeCompare(
+				String(b.sort_name || b.name || "")
+			);
 		});
 }
 
-function driverCardsHtml(data, drivers) {
+function driverCardsHtml(data, drivers, query = "") {
 	if (!drivers.length) {
-		return emptyHtml("No drivers found.");
+		return emptyHtml(
+			query
+				? `No drivers found for “${query}”.`
+				: "No drivers found."
+		);
 	}
 
 	return drivers
-		.map((driver) => `
+		.map(driver => `
 			<a class="card driver-card" href="#/driver/${esc(driver.id)}">
-				<h3>${esc(driver.name)}</h3>
-
+				<h3>${esc(driver.name || driver.id)}</h3>
 				<p class="muted">
 					${esc(driver.nationality || "")}
-					${driver.active_years ? ` • ${esc(formatActiveYears(driver.active_years))}` : ""}
+					${
+						driver.active_years
+							? ` • ${esc(formatActiveYears(driver.active_years))}`
+							: ""
+					}
 				</p>
 			</a>
 		`)
@@ -1009,49 +1493,135 @@ function renderRaces(data) {
 		};
 	}
 
-	// Group races by decade
-	const decades = {};
+	const decades = Object.create(null);
+
 	data.races.forEach(race => {
-		const decade = Math.floor(race.season / 10) * 10;
-		const decadeLabel = `${decade}s`;
-		if (!decades[decade]) decades[decade] = { label: decadeLabel, years: {} };
-		if (!decades[decade].years[race.season]) {
-			decades[decade].years[race.season] = [];
+		const season = Number(race.season);
+
+		if (Number.isFinite(season) && season > 0) {
+			const decade = Math.floor(season / 10) * 10;
+			const decadeKey = String(decade);
+			const decadeLabel = `${decade}s`;
+			const yearKey = String(season);
+
+			if (!decades[decadeKey]) {
+				decades[decadeKey] = {
+					label: decadeLabel,
+					sort: decade,
+					years: Object.create(null)
+				};
+			}
+
+			if (!decades[decadeKey].years[yearKey]) {
+				decades[decadeKey].years[yearKey] = [];
+			}
+
+			decades[decadeKey].years[yearKey].push(race);
+		} else {
+			if (!decades.unknown) {
+				decades.unknown = {
+					label: "Unknown season",
+					sort: -Infinity,
+					years: Object.create(null)
+				};
+			}
+
+			if (!decades.unknown.years.unknown) {
+				decades.unknown.years.unknown = [];
+			}
+
+			decades.unknown.years.unknown.push(race);
 		}
-		decades[decade].years[race.season].push(race);
 	});
 
-	// Sort decades descending (2020s, 2010s, etc.)
-	const sortedDecades = Object.keys(decades).sort((a, b) => b - a);
+	const sortedDecadeKeys = Object.keys(decades).sort((a, b) => {
+		const sortA = decades[a].sort;
+		const sortB = decades[b].sort;
+
+		if (sortA === sortB) return 0;
+		if (sortA === -Infinity) return 1;
+		if (sortB === -Infinity) return -1;
+
+		return sortB - sortA;
+	});
+
+	if (!sortedDecadeKeys.length) {
+		return {
+			html: `
+				<section class="page-head">
+					<h1>Races</h1>
+				</section>
+				${emptyHtml("No valid race seasons found.")}
+			`
+		};
+	}
+
 	let decadesHtml = "";
 
-	sortedDecades.forEach(decadeKey => {
+	sortedDecadeKeys.forEach(decadeKey => {
 		const decade = decades[decadeKey];
-		const sortedYears = Object.keys(decade.years).sort((a, b) => b - a);
-		
+
+		const sortedYearKeys = Object.keys(decade.years).sort((a, b) => {
+			if (a === "unknown") return 1;
+			if (b === "unknown") return -1;
+			return Number(b) - Number(a);
+		});
+
 		let yearsHtml = "";
-		sortedYears.forEach((year, yearIndex) => {
-			const races = decade.years[year].sort((a, b) => a.round - b.round);
-			const racesHtml = races.map(race => `
-				<li class="race-item">
-					<a href="#/race/${esc(race.id)}">
-						<span class="race-name">
-							<span class="race-round">R${esc(String(race.round).padStart(2, '0'))}</span>
-							${esc(race.name)}
-						</span>
-						<span class="muted race-meta">${esc(race.country || "")} • ${esc(race.date || "")}</span>
-					</a>
-				</li>
-			`).join("");
-			
-			// Open the most recent year of the most recent decade by default
-			const isOpen = (yearIndex === 0 && decadeKey === sortedDecades[0]);
-			
+
+		sortedYearKeys.forEach((yearKey, yearIndex) => {
+			const races = decade.years[yearKey].sort((a, b) => {
+				const aRound = Number(a.round);
+				const bRound = Number(b.round);
+
+				const aSort = Number.isFinite(aRound) && aRound > 0 ? aRound : 9999;
+				const bSort = Number.isFinite(bRound) && bRound > 0 ? bRound : 9999;
+
+				return aSort - bSort;
+			});
+
+			const racesHtml = races
+				.map(race => {
+					const round = Number(race.round);
+
+					const roundLabel = Number.isFinite(round) && round > 0
+						? `R${String(round).padStart(2, "0")}`
+						: "";
+
+					const metaParts = [race.country, race.date]
+						.filter(Boolean)
+						.map(esc);
+
+					return `
+						<li class="race-item">
+							<a href="#/race/${esc(race.id)}">
+								<span class="race-name">
+									${
+										roundLabel
+											? `<span class="race-round">${esc(roundLabel)}</span>`
+											: ""
+									}
+									${esc(race.name || race.id)}
+								</span>
+								<span class="muted race-meta">
+									${metaParts.join(" • ")}
+								</span>
+							</a>
+						</li>
+					`;
+				})
+				.join("");
+
+			const isOpen = yearIndex === 0 && decadeKey === sortedDecadeKeys[0];
+			const yearLabel = yearKey === "unknown" ? "Unknown" : yearKey;
+
 			yearsHtml += `
-				<details class="year-group" ${isOpen ? 'open' : ''}>
+				<details class="year-group" ${isOpen ? "open" : ""}>
 					<summary class="year-summary">
-						<span>${esc(year)} Season</span>
-						<span class="muted" style="font-size:0.85rem; margin-right:1rem;">${races.length} races</span>
+						<span>${esc(yearLabel)} Season</span>
+						<span class="muted" style="font-size:0.85rem; margin-right:1rem;">
+							${races.length} race${races.length === 1 ? "" : "s"}
+						</span>
 					</summary>
 					<ul class="races-list">
 						${racesHtml}
@@ -1060,13 +1630,15 @@ function renderRaces(data) {
 			`;
 		});
 
-		const isDecadeOpen = decadeKey === sortedDecades[0];
-		
+		const isDecadeOpen = decadeKey === sortedDecadeKeys[0];
+
 		decadesHtml += `
-			<details class="decade-group" ${isDecadeOpen ? 'open' : ''}>
+			<details class="decade-group" ${isDecadeOpen ? "open" : ""}>
 				<summary class="decade-summary">
 					<span>${esc(decade.label)}</span>
-					<span style="font-size:0.85rem; font-weight:normal; opacity:0.8;">${Object.keys(decade.years).length} seasons</span>
+					<span style="font-size:0.85rem; font-weight:normal; opacity:0.8;">
+						${Object.keys(decade.years).length} season${Object.keys(decade.years).length === 1 ? "" : "s"}
+					</span>
 				</summary>
 				<div class="years-container">
 					${yearsHtml}
@@ -1088,7 +1660,35 @@ function renderRaces(data) {
 		</div>
 	`;
 
-	return { html };
+	return {
+		html
+	};
+}
+
+function driverStatButton(driverId, stat, label) {
+	return `
+		<button
+			type="button"
+			class="stat-link"
+			data-stat="${esc(stat)}"
+			data-driver="${esc(driverId)}"
+		>
+			${esc(label)}
+		</button>
+	`;
+}
+
+function teamStatButton(teamId, stat, label) {
+	return `
+		<button
+			type="button"
+			class="stat-link team-stat-link"
+			data-stat="${esc(stat)}"
+			data-team="${esc(teamId)}"
+		>
+			${esc(label)}
+		</button>
+	`;
 }
 
 function renderDriverPage(data, driverId, params) {
@@ -1101,14 +1701,17 @@ function renderDriverPage(data, driverId, params) {
 	}
 
 	const entityArticles = getEntityArticles(data, { driverId });
-	const selectedLanguages = getSelectedLanguages(params);
-	const sort = getSort(params);
 
 	const availableLanguages = [...new Set(
 		entityArticles
-			.map((article) => article.language)
+			.map(article => article.language)
 			.filter(Boolean)
 	)].sort();
+
+	const selectedLanguages = getSelectedLanguages(params)
+		.filter(code => availableLanguages.includes(code));
+
+	const sort = getSort(params);
 
 	const filteredArticles = sortArticles(
 		filterByLanguages(entityArticles, selectedLanguages),
@@ -1116,88 +1719,119 @@ function renderDriverPage(data, driverId, params) {
 	);
 
 	const articlesHtml = filteredArticles.length
-		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
-		: emptyHtml("No articles match these filters.");
+		? filteredArticles
+				.map(article => articleCardHtml(data, article))
+				.join("")
+		: emptyHtml(
+				entityArticles.length
+					? "No articles match these filters."
+					: "No articles archived yet."
+			);
 
-	// Calculate Stats
-	const stats = computeDriverStats(data, driver.id);
-	data._lastDriverStats = { id: driver.id, stats };
+	const stats = getDriverStats(data, driver.id);
 	const statRows = [];
 
-	// Active Years (Clickable to show all races)
 	statRows.push(`
 		<dt>Active years</dt>
-		<dd><a href="javascript:void(0)" class="stat-link" data-stat="races" data-driver="${esc(driver.id)}">${esc(formatActiveYears(driver.active_years))}</a></dd>
+		<dd>
+			${driverStatButton(driver.id, "races", formatActiveYears(driver.active_years))}
+		</dd>
 	`);
 
-	// Wins
 	if (stats.wins > 0) {
 		statRows.push(`
 			<dt>Wins</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="wins" data-driver="${esc(driver.id)}">${stats.wins}</a></dd>
+			<dd>
+				${driverStatButton(driver.id, "wins", stats.wins)}
+			</dd>
 		`);
 	}
 
-	// Podiums vs Best Finish
 	if (stats.podiums > 0) {
 		statRows.push(`
 			<dt>Podiums</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="podiums" data-driver="${esc(driver.id)}">${stats.podiums}</a></dd>
+			<dd>
+				${driverStatButton(driver.id, "podiums", stats.podiums)}
+			</dd>
 		`);
 	} else if (stats.bestFinish !== null) {
 		statRows.push(`
 			<dt>Best finish</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="best-finish" data-driver="${esc(driver.id)}">${stats.bestFinish}${getOrdinal(stats.bestFinish)}</a></dd>
+			<dd>
+				${driverStatButton(
+					driver.id,
+					"best-finish",
+					`${stats.bestFinish}${getOrdinal(stats.bestFinish)}`
+				)}
+			</dd>
 		`);
 	}
 
-	// Poles vs Best Grid
 	if (stats.poles > 0) {
 		statRows.push(`
 			<dt>Pole positions</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="poles" data-driver="${esc(driver.id)}">${stats.poles}</a></dd>
+			<dd>
+				${driverStatButton(driver.id, "poles", stats.poles)}
+			</dd>
 		`);
 	} else if (stats.bestGrid !== null) {
 		statRows.push(`
 			<dt>Best grid</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="best-grid" data-driver="${esc(driver.id)}">${stats.bestGrid}${getOrdinal(stats.bestGrid)}</a></dd>
+			<dd>
+				${driverStatButton(
+					driver.id,
+					"best-grid",
+					`${stats.bestGrid}${getOrdinal(stats.bestGrid)}`
+				)}
+			</dd>
 		`);
 	}
 
-	// Fastest Laps
 	if (stats.fastestLaps > 0) {
 		statRows.push(`
 			<dt>Fastest laps</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="fastest-laps" data-driver="${esc(driver.id)}">${stats.fastestLaps}</a></dd>
+			<dd>
+				${driverStatButton(driver.id, "fastest-laps", stats.fastestLaps)}
+			</dd>
 		`);
 	}
 
-	// Best Championship Finish
-	const hasChampionshipData = (driver.championship_results || []).length > 0; // (use team for teams)
+	const hasChampionshipData =
+		asArray(driver.championship_results).filter(isObject).length > 0;
 
 	if (stats.bestChampFinish !== null) {
 		statRows.push(`
 			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="best-champ" data-driver="${esc(driver.id)}">${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}</a></dd>
+			<dd>
+				${driverStatButton(
+					driver.id,
+					"best-champ",
+					`${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}`
+				)}
+			</dd>
 		`);
 	} else if (hasChampionshipData) {
 		statRows.push(`
 			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link" data-stat="best-champ" data-driver="${esc(driver.id)}">Not classified</a></dd>
+			<dd>
+				${driverStatButton(driver.id, "best-champ", "Not classified")}
+			</dd>
 		`);
 	}
 
-	// Resolve and Deduplicate Teams
 	const driverTeams = [];
 	const seenDriverTeamKeys = new Set();
 
-	(driver.teams || [])
-		.filter(Boolean)
-		.forEach((teamName) => {
-			// Use resolveTeamId to handle canonical mapping (e.g. Lotus-Ford -> Team Lotus)
-			const teamId = typeof resolveTeamId === 'function' ? resolveTeamId(data, teamName) : findTeamIdByName(data, teamName);
+	asArray(driver.teams)
+		.filter(teamName => {
+			return teamName !== null &&
+				teamName !== undefined &&
+				(typeof teamName === "string" || typeof teamName === "number") &&
+				String(teamName).trim() !== "";
+		})
+		.forEach(teamName => {
+			const teamId = resolveTeamId(data, teamName);
 			const team = teamId ? data.teamsById[teamId] : null;
-
 			const key = team ? team.id : normalizeTeamKey(teamName);
 
 			if (!key || seenDriverTeamKeys.has(key)) {
@@ -1207,7 +1841,7 @@ function renderDriverPage(data, driverId, params) {
 			seenDriverTeamKeys.add(key);
 
 			driverTeams.push({
-				label: team ? team.name : teamName,
+				label: team ? team.name : String(teamName),
 				html: team
 					? `<a href="#/team/${esc(team.id)}">${esc(team.name)}</a>`
 					: esc(teamName)
@@ -1215,14 +1849,21 @@ function renderDriverPage(data, driverId, params) {
 		});
 
 	driverTeams.sort((a, b) => a.label.localeCompare(b.label));
-	const driverTeamLinks = driverTeams.map((team) => team.html);
 
-	// Build Sidebar
+	const driverTeamLinks = driverTeams.map(team => team.html);
+
+	const driverWikipediaUrl = driver.wikipedia_url
+		? safeExternalUrl(driver.wikipedia_url)
+		: "#";
+
+	const hasWikipedia =
+		driverWikipediaUrl !== "#" &&
+		Boolean(parseWikipediaUrl(driver.wikipedia_url));
+
 	const sidebar = `
 		<aside class="sidebar">
 			<div class="card">
 				<h2>Driver info</h2>
-
 				<dl>
 					<dt>Nationality</dt>
 					<dd>${esc(driver.nationality || "—")}</dd>
@@ -1230,22 +1871,28 @@ function renderDriverPage(data, driverId, params) {
 					<dt>Born</dt>
 					<dd>${esc(driver.date_of_birth || "—")}</dd>
 
-					${driver.date_of_death ? `
-						<dt>Died</dt>
-						<dd>${esc(driver.date_of_death)}</dd>
-					` : ""}
+					${
+						driver.date_of_death
+							? `
+								<dt>Died</dt>
+								<dd>${esc(driver.date_of_death)}</dd>
+							`
+							: ""
+					}
 
 					${statRows.join("")}
 
 					<dt>Teams</dt>
-					<dd>${driverTeamLinks.length ? driverTeamLinks.join(", ") : "—"}</dd>
+					<dd>
+						${driverTeamLinks.length ? driverTeamLinks.join(", ") : "—"}
+					</dd>
 				</dl>
 
 				${
-					driver.wikipedia_url
+					hasWikipedia
 						? `
 							<p>
-								<a href="${esc(driver.wikipedia_url)}" target="_blank" rel="noopener">
+								<a href="${esc(driverWikipediaUrl)}" target="_blank" rel="noopener">
 									Wikipedia
 								</a>
 							</p>
@@ -1256,7 +1903,6 @@ function renderDriverPage(data, driverId, params) {
 
 			<div class="card">
 				<h2>Articles</h2>
-
 				<p class="muted">
 					${filteredArticles.length} shown / ${entityArticles.length} total
 				</p>
@@ -1264,20 +1910,23 @@ function renderDriverPage(data, driverId, params) {
 		</aside>
 	`;
 
-	// Build Main HTML
 	const html = `
 		<section class="page-head">
-			<h1>${esc(driver.name)}</h1>
-
+			<h1>${esc(driver.name || driver.id)}</h1>
 			<p class="muted">
 				${esc(driver.nationality || "")}
-				${driver.active_years ? ` • ${esc(formatActiveYears(driver.active_years))}` : ""}
+				${
+					driver.active_years
+						? ` • ${esc(formatActiveYears(driver.active_years))}`
+						: ""
+				}
 			</p>
 		</section>
 
 		<div class="layout">
 			<div class="main-col">
 				<div id="wiki-intro"></div>
+
 				<div class="toolbar">
 					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
 					${sortFilterHtml(sort)}
@@ -1292,12 +1941,11 @@ function renderDriverPage(data, driverId, params) {
 		</div>
 	`;
 
-	// Return with Event Listeners attached
 	return {
 		html,
 		afterRender: () => {
 			attachEntityFilters(`driver/${driver.id}`, params);
-			loadWikiIntro(driver.wikipedia_url, driver.name);
+			loadWikiIntro(driver.wikipedia_url, driver.name || driver.id);
 		}
 	};
 }
@@ -1312,14 +1960,17 @@ function renderRacePage(data, raceId, params) {
 	}
 
 	const entityArticles = getEntityArticles(data, { raceId });
-	const selectedLanguages = getSelectedLanguages(params);
-	const sort = getSort(params);
 
 	const availableLanguages = [...new Set(
 		entityArticles
-			.map((article) => article.language)
+			.map(article => article.language)
 			.filter(Boolean)
 	)].sort();
+
+	const selectedLanguages = getSelectedLanguages(params)
+		.filter(code => availableLanguages.includes(code));
+
+	const sort = getSort(params);
 
 	const filteredArticles = sortArticles(
 		filterByLanguages(entityArticles, selectedLanguages),
@@ -1327,16 +1978,29 @@ function renderRacePage(data, raceId, params) {
 	);
 
 	const articlesHtml = filteredArticles.length
-		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
-		: emptyHtml("No articles match these filters.");
+		? filteredArticles
+				.map(article => articleCardHtml(data, article))
+				.join("")
+		: emptyHtml(
+				entityArticles.length
+					? "No articles match these filters."
+					: "No articles archived yet."
+			);
 
 	const resultsHtml = raceTabsHtml(data, race);
+
+	const raceWikipediaUrl = race.wikipedia_url
+		? safeExternalUrl(race.wikipedia_url)
+		: "#";
+
+	const hasWikipedia =
+		raceWikipediaUrl !== "#" &&
+		Boolean(parseWikipediaUrl(race.wikipedia_url));
 
 	const sidebar = `
 		<aside class="sidebar">
 			<div class="card">
 				<h2>Race info</h2>
-
 				<dl>
 					<dt>Date</dt>
 					<dd>${esc(race.date || "—")}</dd>
@@ -1351,7 +2015,7 @@ function renderRacePage(data, raceId, params) {
 					<dd>${esc(driverName(data, race.winner_driver_id))}</dd>
 
 					<dt>Winning team</dt>
-					<dd>${esc(race.winning_team || "—")}</dd>
+					<dd>${teamLinkHtml(data, race.winning_team)}</dd>
 
 					<dt>Pole position</dt>
 					<dd>${esc(driverName(data, race.pole_driver_id))}</dd>
@@ -1361,10 +2025,10 @@ function renderRacePage(data, raceId, params) {
 				</dl>
 
 				${
-					race.wikipedia_url
+					hasWikipedia
 						? `
 							<p>
-								<a href="${esc(race.wikipedia_url)}" target="_blank" rel="noopener">
+								<a href="${esc(raceWikipediaUrl)}" target="_blank" rel="noopener">
 									Wikipedia
 								</a>
 							</p>
@@ -1379,8 +2043,7 @@ function renderRacePage(data, raceId, params) {
 
 	const html = `
 		<section class="page-head">
-			<h1>${esc(race.season || "")} ${esc(race.name)}</h1>
-
+			<h1>${esc(`${race.season || ""} ${race.name || ""}`.trim() || race.id)}</h1>
 			<p class="muted">
 				${esc(race.circuit || "")}
 				${race.country ? ` • ${esc(race.country)}` : ""}
@@ -1414,14 +2077,17 @@ function renderRacePage(data, raceId, params) {
 
 function renderArticles(data, params) {
 	const allArticles = data.articles;
-	const selectedLanguages = getSelectedLanguages(params);
-	const sort = getSort(params);
 
 	const availableLanguages = [...new Set(
 		allArticles
-			.map((article) => article.language)
+			.map(article => article.language)
 			.filter(Boolean)
 	)].sort();
+
+	const selectedLanguages = getSelectedLanguages(params)
+		.filter(code => availableLanguages.includes(code));
+
+	const sort = getSort(params);
 
 	const filteredArticles = sortArticles(
 		filterByLanguages(allArticles, selectedLanguages),
@@ -1429,13 +2095,18 @@ function renderArticles(data, params) {
 	);
 
 	const articlesHtml = filteredArticles.length
-		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
-		: emptyHtml("No articles match these filters.");
+		? filteredArticles
+				.map(article => articleCardHtml(data, article))
+				.join("")
+		: emptyHtml(
+				allArticles.length
+					? "No articles match these filters."
+					: "No articles archived yet."
+			);
 
 	const html = `
 		<section class="page-head">
 			<h1>All articles</h1>
-
 			<p class="muted">
 				All stored interviews, reports and printed sources.
 			</p>
@@ -1457,13 +2128,88 @@ function renderArticles(data, params) {
 	};
 }
 
-function getArticleContentFiles(article) {
-	if (Array.isArray(article.content_files) && article.content_files.length) {
-		return article.content_files;
+function normalizeContentFile(file, index) {
+	if (!file) {
+		return null;
 	}
 
-	if (article.content) {
-		return [article.content];
+	if (typeof file === "string") {
+		return {
+			type: "inline_text",
+			label: `Content ${index + 1}`,
+			body: file
+		};
+	}
+
+	if (!isObject(file)) {
+		return null;
+	}
+
+	const normalized = { ...file };
+
+	const src = normalized.src || normalized.path || normalized.url;
+
+	if (src) {
+		normalized.src = src;
+	}
+
+	if (!normalized.type && normalized.body !== null && normalized.body !== undefined) {
+		normalized.type = "inline_text";
+	}
+
+	if (!normalized.type && normalized.src) {
+		const extension = String(normalized.src)
+			.split(".")
+			.pop()
+			.toLowerCase();
+
+		if (extension === "md" || extension === "markdown") {
+			normalized.type = "markdown";
+		} else if (extension === "html" || extension === "htm") {
+			normalized.type = "html";
+		} else if (extension === "pdf") {
+			normalized.type = "pdf";
+		} else if (extension === "txt") {
+			normalized.type = "text";
+		}
+	}
+
+	if (
+		normalized.pages !== null &&
+		normalized.pages !== undefined &&
+		!Array.isArray(normalized.pages)
+	) {
+		normalized.pages = [normalized.pages];
+	}
+
+	return normalized;
+}
+
+function getArticleContentFiles(article) {
+	if (Array.isArray(article.content_files) && article.content_files.length > 0) {
+		return article.content_files
+			.map((file, index) => normalizeContentFile(file, index))
+			.filter(Boolean);
+	}
+
+	if (isObject(article.content_files)) {
+		const normalized = normalizeContentFile(article.content_files, 0);
+		return normalized ? [normalized] : [];
+	}
+
+	if (article.content !== null && article.content !== undefined) {
+		if (typeof article.content === "string" && article.content.trim() === "") {
+			return [];
+		}
+
+		if (Array.isArray(article.content)) {
+			return article.content
+				.map((file, index) => normalizeContentFile(file, index))
+				.filter(Boolean);
+		}
+
+		const normalized = normalizeContentFile(article.content, 0);
+		return normalized ? [normalized] : [];
 	}
 
 	return [];
@@ -1478,18 +2224,37 @@ async function checkTextResponse(response) {
 }
 
 function renderMarkdown(markdown) {
-	if (window.marked) {
-		const html = marked.parse(markdown);
-
-		if (window.DOMPurify) {
-			return DOMPurify.sanitize(html);
+	try {
+		if (
+			window.marked &&
+			window.DOMPurify &&
+			typeof window.DOMPurify.sanitize === "function"
+		) {
+			return DOMPurify.sanitize(marked.parse(markdown));
 		}
-
-		return html;
+	} catch (error) {
+		console.error(error);
 	}
 
 	return `
 		<pre class="article-text">${esc(markdown)}</pre>
+	`;
+}
+
+function sanitizeHtml(html) {
+	try {
+		if (
+			window.DOMPurify &&
+			typeof window.DOMPurify.sanitize === "function"
+		) {
+			return DOMPurify.sanitize(html);
+		}
+	} catch (error) {
+		console.error(error);
+	}
+
+	return `
+		<pre class="article-text">${esc(html)}</pre>
 	`;
 }
 
@@ -1505,6 +2270,8 @@ async function loadArticleContentFile(article, file) {
 		return;
 	}
 
+	const requestId = ++articleContentRequestId;
+
 	container.innerHTML = `
 		<div class="empty">
 			Loading content…
@@ -1512,53 +2279,89 @@ async function loadArticleContentFile(article, file) {
 	`;
 
 	try {
-		if (file.type === "text") {
-			const text = await fetch(file.src).then(checkTextResponse);
+		const type = String(file.type || "").toLowerCase();
+
+		if (type === "inline_text") {
+			if (requestId !== articleContentRequestId) return;
+
+			container.innerHTML = `
+				<pre class="article-text">${esc(file.body || "")}</pre>
+			`;
+			return;
+		}
+
+		if (type === "inline_markdown") {
+			if (requestId !== articleContentRequestId) return;
+
+			container.innerHTML = renderMarkdown(file.body || "");
+			return;
+		}
+
+		const src = safeResourceUrl(file.src);
+
+		if (!src) {
+			throw new Error(`Unsafe or invalid content src: ${file.src}`);
+		}
+
+		if (type === "text" || type === "txt") {
+			const text = await fetch(src).then(checkTextResponse);
+
+			if (requestId !== articleContentRequestId) return;
 
 			container.innerHTML = `
 				<pre class="article-text">${esc(text)}</pre>
 			`;
-		} else if (file.type === "markdown") {
-			const markdown = await fetch(file.src).then(checkTextResponse);
-			container.innerHTML = renderMarkdown(markdown);
-		} else if (file.type === "html") {
-			const html = await fetch(file.src).then(checkTextResponse);
+		} else if (type === "markdown" || type === "md") {
+			const markdown = await fetch(src).then(checkTextResponse);
 
-			container.innerHTML = window.DOMPurify
-				? DOMPurify.sanitize(html)
-				: html;
-		} else if (file.type === "pdf") {
+			if (requestId !== articleContentRequestId) return;
+
+			container.innerHTML = renderMarkdown(markdown);
+		} else if (type === "html" || type === "htm") {
+			const html = await fetch(src).then(checkTextResponse);
+
+			if (requestId !== articleContentRequestId) return;
+
+			container.innerHTML = sanitizeHtml(html);
+		} else if (type === "pdf") {
+			if (requestId !== articleContentRequestId) return;
+
 			container.innerHTML = `
 				<div class="pdf-wrap">
 					<iframe
-						src="${esc(file.src)}"
-						title="${esc(article.title || article.id)}"
+						src="${esc(src)}"
+						title="${esc(article.title || article.id || "Article")}"
+						loading="lazy"
+						sandbox="allow-same-origin allow-popups"
 					></iframe>
-
 					<p>
-						<a href="${esc(file.src)}" target="_blank" rel="noopener">
+						<a href="${esc(src)}" target="_blank" rel="noopener">
 							Open PDF in new tab
 						</a>
 					</p>
 				</div>
 			`;
-		} else if (file.type === "scan") {
-			const pages = file.pages || [];
+		} else if (type === "scan") {
+			const pages = asArray(file.pages)
+				.map(pageSrc => safeImageUrl(pageSrc))
+				.filter(Boolean);
 
 			if (!pages.length) {
-				throw new Error("Scan content has no pages.");
+				throw new Error("Scan content has no valid pages.");
 			}
+
+			if (requestId !== articleContentRequestId) return;
 
 			container.innerHTML = `
 				<div class="scan-pages">
 					${
 						pages
-							.map((src, index) => `
+							.map((pageSrc, index) => `
 								<figure class="scan-page">
 									<img
 										loading="lazy"
-										src="${esc(src)}"
-										alt="Page ${index + 1} of ${esc(article.title || article.id)}"
+										src="${esc(pageSrc)}"
+										alt="Page ${index + 1} of ${esc(article.title || article.id || "Article")}"
 									>
 									<figcaption>Page ${index + 1}</figcaption>
 								</figure>
@@ -1567,17 +2370,17 @@ async function loadArticleContentFile(article, file) {
 					}
 				</div>
 			`;
-		} else if (file.type === "inline_text") {
-			container.innerHTML = `
-				<pre class="article-text">${esc(file.body || "")}</pre>
-			`;
-		} else if (file.type === "inline_markdown") {
-			container.innerHTML = renderMarkdown(file.body || "");
 		} else {
-			container.innerHTML = emptyHtml(`Unsupported content type: ${file.type}`);
+			if (requestId !== articleContentRequestId) return;
+
+			container.innerHTML = emptyHtml(
+				`Unsupported content type: ${file.type || "unknown"}`
+			);
 		}
 	} catch (error) {
 		console.error(error);
+
+		if (requestId !== articleContentRequestId) return;
 
 		container.innerHTML = emptyHtml(
 			"Could not load article content. Check the file path and JSON data."
@@ -1586,7 +2389,7 @@ async function loadArticleContentFile(article, file) {
 }
 
 function renderArticlePage(data, articleId) {
-	const article = data.articles.find((item) => item.id === articleId);
+	const article = data.articlesById[articleId];
 
 	if (!article) {
 		return {
@@ -1596,8 +2399,8 @@ function renderArticlePage(data, articleId) {
 
 	const files = getArticleContentFiles(article);
 
-	const driverLinks = (article.driver_ids || [])
-		.map((id) => {
+	const driverLinks = uniqueIds(article.driver_ids)
+		.map(id => {
 			const driver = data.driversById[id];
 
 			if (!driver) {
@@ -1609,10 +2412,11 @@ function renderArticlePage(data, articleId) {
 					${esc(driver.name)}
 				</a>
 			`;
-		});
-		
-	const teamLinks = (article.team_ids || [])
-		.map((id) => {
+		})
+		.filter(Boolean);
+
+	const teamLinks = uniqueIds(article.team_ids)
+		.map(id => {
 			const team = data.teamsById[id];
 
 			if (!team) {
@@ -1624,10 +2428,11 @@ function renderArticlePage(data, articleId) {
 					${esc(team.name)}
 				</a>
 			`;
-		});
+		})
+		.filter(Boolean);
 
-	const raceLinks = (article.race_ids || [])
-		.map((id) => {
+	const raceLinks = uniqueIds(article.race_ids)
+		.map(id => {
 			const race = data.racesById[id];
 
 			if (!race) {
@@ -1636,18 +2441,18 @@ function renderArticlePage(data, articleId) {
 
 			return `
 				<a href="#/race/${esc(race.id)}">
-					${esc(race.name)} ${race.season || ""}
+					${esc(race.name || "")} ${esc(race.season || "")}
 				</a>
 			`;
-		});
+		})
+		.filter(Boolean);
 
 	const fileSelectorHtml = files.length > 1
 		? `
 			<div class="toolbar">
 				<div class="filters">
 					<span class="filters-label">View:</span>
-
-					<select id="article-file-select" class="sort-filter">
+					<select id="article-file-select" class="sort-filter" aria-label="Select article file">
 						${
 							files
 								.map((file, index) => `
@@ -1663,17 +2468,27 @@ function renderArticlePage(data, articleId) {
 		`
 		: "";
 
+	const originalUrl = article.url
+		? safeExternalUrl(article.url)
+		: "#";
+
+	const archiveUrl = article.archive_url
+		? safeExternalUrl(article.archive_url)
+		: "#";
+
 	const html = `
 		<section class="page-head">
 			<p>
 				<a href="#/articles">← All articles</a>
 			</p>
-
-			<h1>${esc(article.title || article.id)}</h1>
-
+			<h1>${esc(article.title || article.id || "Article")}</h1>
 			<p class="muted">
 				${esc(article.article_type || "article")}
-				${article.language ? ` • ${esc(languageLabel(data, article.language))}` : ""}
+				${
+					article.language
+						? ` • ${esc(languageLabel(data, article.language))}`
+						: ""
+				}
 				${
 					article.published_display || article.published_sort
 						? ` • ${esc(article.published_display || article.published_sort)}`
@@ -1704,7 +2519,6 @@ function renderArticlePage(data, articleId) {
 			<aside class="sidebar">
 				<div class="card">
 					<h2>Article info</h2>
-
 					<dl>
 						<dt>Publication</dt>
 						<dd>${esc(article.source_publication || "—")}</dd>
@@ -1717,7 +2531,11 @@ function renderArticlePage(data, articleId) {
 
 						<dt>Language</dt>
 						<dd>
-							${article.language ? esc(languageLabel(data, article.language)) : "—"}
+							${
+								article.language
+									? esc(languageLabel(data, article.language))
+									: "—"
+							}
 						</dd>
 
 						<dt>Published</dt>
@@ -1731,7 +2549,7 @@ function renderArticlePage(data, articleId) {
 
 						<dt>Races</dt>
 						<dd>${raceLinks.length ? raceLinks.join(", ") : "—"}</dd>
-						
+
 						<dt>Teams</dt>
 						<dd>${teamLinks.length ? teamLinks.join(", ") : "—"}</dd>
 					</dl>
@@ -1747,10 +2565,10 @@ function renderArticlePage(data, articleId) {
 					}
 
 					${
-						article.url
+						originalUrl !== "#"
 							? `
 								<p>
-									<a href="${esc(article.url)}" target="_blank" rel="noopener">
+									<a href="${esc(originalUrl)}" target="_blank" rel="noopener">
 										Original URL
 									</a>
 								</p>
@@ -1759,10 +2577,10 @@ function renderArticlePage(data, articleId) {
 					}
 
 					${
-						article.archive_url
+						archiveUrl !== "#"
 							? `
 								<p>
-									<a href="${esc(article.archive_url)}" target="_blank" rel="noopener">
+									<a href="${esc(archiveUrl)}" target="_blank" rel="noopener">
 										Archive URL
 									</a>
 								</p>
@@ -1799,43 +2617,118 @@ function renderArticlePage(data, articleId) {
 	};
 }
 
+function parseGridValue(value) {
+	if (value === null || value === undefined || value === "") {
+		return NaN;
+	}
+
+	const text = String(value).trim().toUpperCase();
+
+	if (text === "PL") {
+		return 0;
+	}
+
+	const parsed = parseInt(value, 10);
+
+	if (!Number.isFinite(parsed) || parsed < 0) {
+		return NaN;
+	}
+
+	return parsed;
+}
+
+function gridSortValue(grid) {
+	if (!Number.isFinite(grid) || grid <= 0) {
+		return 9999;
+	}
+
+	return grid;
+}
+
+function parsePositionValue(value) {
+	const parsed = parseInt(value, 10);
+
+	if (!Number.isFinite(parsed) || parsed <= 0) {
+		return NaN;
+	}
+
+	return parsed;
+}
+
+function positionSortValue(value) {
+	const parsed = parsePositionValue(value);
+
+	return Number.isFinite(parsed) ? parsed : 9999;
+}
+
+function firstValidPosition(...values) {
+	for (const value of values) {
+		const parsed = parsePositionValue(value);
+
+		if (Number.isFinite(parsed)) {
+			return parsed;
+		}
+	}
+
+	return NaN;
+}
+
+function qualifyingPositionDisplay(value) {
+	const parsed = parsePositionValue(value);
+
+	if (Number.isFinite(parsed)) {
+		return esc(parsed);
+	}
+
+	if (
+		value === null ||
+		value === undefined ||
+		value === "" ||
+		String(value).trim() === "0"
+	) {
+		return "—";
+	}
+
+	return esc(value);
+}
+
 function getStartingGridRows(race) {
 	const rows = [];
 
-	if (Array.isArray(race.starting_grid) && race.starting_grid.length) {
-		rows.push(...race.starting_grid);
-	} else if (Array.isArray(race.results) && race.results.length) {
-		for (const result of race.results) {
-			const grid = parseInt(result.grid, 10);
+	const gridArray = asArray(race.starting_grid).filter(isObject);
 
-			if (!Number.isNaN(grid) && grid >= 0) {
+	if (gridArray.length) {
+		rows.push(...gridArray);
+	} else {
+		const results = asArray(race.results).filter(isObject);
+
+		for (const result of results) {
+			const grid = parseGridValue(result.grid);
+
+			if (Number.isFinite(grid) && grid >= 0) {
 				rows.push({
-					grid: grid,
+					grid,
 					driver_id: result.driver_id,
-					team: result.team || ""
+					driver_name: result.driver_name || "",
+					team: result.team || result.constructor || ""
 				});
 			}
 		}
 	}
 
 	return rows.sort((a, b) => {
-		const aGrid = Number(a.grid);
-		const bGrid = Number(b.grid);
+		const aGrid = parseGridValue(a.grid);
+		const bGrid = parseGridValue(b.grid);
 
-		const aSort = aGrid === 0 ? 9999 : aGrid;
-		const bSort = bGrid === 0 ? 9999 : bGrid;
-
-		return aSort - bSort;
+		return gridSortValue(aGrid) - gridSortValue(bGrid);
 	});
 }
 
 function positionDeltaHtml(result) {
-	const pos = parseInt(result.position, 10);
-	const grid = parseInt(result.grid, 10);
+	const pos = firstValidPosition(result.position, result.positionText);
+	const grid = parseGridValue(result.grid);
 
-	// Only compare if the driver has a real finishing position
-	// and a real starting grid position.
-	if (Number.isNaN(pos) || pos <= 0 || Number.isNaN(grid) || grid <= 0) {
+	if (!Number.isFinite(pos) || !Number.isFinite(grid) || grid <= 0) {
 		return `
 			<span class="delta delta-none">—</span>
 		`;
@@ -1867,22 +2760,21 @@ function positionDeltaHtml(result) {
 }
 
 function raceResultsTableHtml(data, race) {
-	if (!Array.isArray(race.results) || !race.results.length) {
+	const results = asArray(race.results).filter(isObject);
+
+	if (!results.length) {
 		return emptyHtml("No results stored yet.");
 	}
 
-	const rows = [...race.results]
+	const rows = [...results]
 		.sort((a, b) => {
-			const aPos = parseInt(a.position, 10);
-			const bPos = parseInt(b.position, 10);
-
-			const aSort = Number.isNaN(aPos) ? 9999 : aPos;
-			const bSort = Number.isNaN(bPos) ? 9999 : bPos;
-
-			return aSort - bSort;
+			return positionSortValue(a.position || a.positionText) -
+				positionSortValue(b.position || b.positionText);
 		})
-		.map((result) => {
-			const driver = data.driversById[result.driver_id];
+		.map(result => {
+			const driver = result.driver_id
+				? data.driversById[String(result.driver_id)]
+				: null;
 
 			const driverHtml = driver
 				? `
@@ -1892,9 +2784,9 @@ function raceResultsTableHtml(data, race) {
 				`
 				: esc(result.driver_name || result.driver_id || "—");
 
-			const posNumber = parseInt(result.position, 10);
+			const posNumber = firstValidPosition(result.position, result.positionText);
 
-			const posDisplay = !Number.isNaN(posNumber) && posNumber > 0
+			const posDisplay = Number.isFinite(posNumber)
 				? String(posNumber)
 				: (result.positionText || "—");
 
@@ -1903,7 +2795,7 @@ function raceResultsTableHtml(data, race) {
 					<td>${esc(posDisplay)}</td>
 					<td>${positionDeltaHtml(result)}</td>
 					<td>${driverHtml}</td>
-					<td>${teamLinkHtml(data, result.team)}</td>
+					<td>${teamLinkHtml(data, result.team || result.constructor)}</td>
 					<td>${esc(result.time_or_status || "")}</td>
 				</tr>
 			`;
@@ -1922,7 +2814,6 @@ function raceResultsTableHtml(data, race) {
 						<th>Time/Status</th>
 					</tr>
 				</thead>
-
 				<tbody>
 					${rows}
 				</tbody>
@@ -1932,19 +2823,32 @@ function raceResultsTableHtml(data, race) {
 }
 
 function raceQualifyingTableHtml(data, race) {
-	if (!Array.isArray(race.qualifying) || !race.qualifying.length) {
+	const qualifying = asArray(race.qualifying).filter(isObject);
+
+	if (!qualifying.length) {
 		return emptyHtml("No qualifying data stored yet.");
 	}
 
-	// Dynamically check which time columns actually have valid data for THIS race
-	const hasQ1 = race.qualifying.some(r => r.q1 && r.q1 !== "—" && r.q1 !== "-" && r.q1 !== "" && r.q1 !== "no time");
-	const hasQ2 = race.qualifying.some(r => r.q2 && r.q2 !== "—" && r.q2 !== "-" && r.q2 !== "" && r.q2 !== "no time");
-	const hasQ3 = race.qualifying.some(r => r.q3 && r.q3 !== "—" && r.q3 !== "-" && r.q3 !== "" && r.q3 !== "no time");
+	const hasQ1 = qualifying.some(
+		r => r.q1 && r.q1 !== "—" && r.q1 !== "-" && r.q1 !== "" && r.q1 !== "no time"
+	);
 
-	// If none of the knockout sessions exist, just show a single "Time" column
+	const hasQ2 = qualifying.some(
+		r => r.q2 && r.q2 !== "—" && r.q2 !== "-" && r.q2 !== "" && r.q2 !== "no time"
+	);
+
+	const hasQ3 = qualifying.some(
+		r => r.q3 && r.q3 !== "—" && r.q3 !== "-" && r.q3 !== "" && r.q3 !== "no time"
+	);
+
 	const showSingleTime = !hasQ1 && !hasQ2 && !hasQ3;
 
-	let headerCols = `<th>Pos</th><th>Driver</th><th>Constructor</th>`;
+	let headerCols = `
+		<th>Pos</th>
+		<th>Driver</th>
+		<th>Constructor</th>
+	`;
+
 	if (showSingleTime) {
 		headerCols += `<th>Time</th>`;
 	} else {
@@ -1953,35 +2857,50 @@ function raceQualifyingTableHtml(data, race) {
 		if (hasQ3) headerCols += `<th>Q3</th>`;
 	}
 
-	const rows = [...race.qualifying]
-		.sort((a, b) => {
-			const aPos = parseInt(a.position, 10);
-			const bPos = parseInt(b.position, 10);
-			const aSort = Number.isNaN(aPos) ? 9999 : aPos;
-			const bSort = Number.isNaN(bPos) ? 9999 : bPos;
-			return aSort - bSort;
-		})
-		.map((q) => {
-			const driver = data.driversById[q.driver_id];
+	const rows = [...qualifying]
+		.sort((a, b) => positionSortValue(a.position) - positionSortValue(b.position))
+		.map(q => {
+			const driver = q.driver_id
+				? data.driversById[String(q.driver_id)]
+				: null;
+
 			const driverHtml = driver
-				? `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`
-				: esc(q.driver_id || "—");
+				? `
+					<a href="#/driver/${esc(driver.id)}">
+						${esc(driver.name)}
+					</a>
+				`
+				: esc(q.driver_name || q.driver_id || "—");
 
 			let timeCols = "";
+
 			if (showSingleTime) {
-				const time = (q.q1 && q.q1 !== "no time" ? q.q1 : "") || (q.q2 && q.q2 !== "no time" ? q.q2 : "") || (q.q3 && q.q3 !== "no time" ? q.q3 : "") || "—";
+				const time =
+					(q.q1 && q.q1 !== "no time" ? q.q1 : "") ||
+					(q.q2 && q.q2 !== "no time" ? q.q2 : "") ||
+					(q.q3 && q.q3 !== "no time" ? q.q3 : "") ||
+					"—";
+
 				timeCols = `<td>${esc(time)}</td>`;
 			} else {
-				if (hasQ1) timeCols += `<td>${esc((q.q1 && q.q1 !== "no time") ? q.q1 : "—")}</td>`;
-				if (hasQ2) timeCols += `<td>${esc((q.q2 && q.q2 !== "no time") ? q.q2 : "—")}</td>`;
-				if (hasQ3) timeCols += `<td>${esc((q.q3 && q.q3 !== "no time") ? q.q3 : "—")}</td>`;
+				if (hasQ1) {
+					timeCols += `<td>${esc(q.q1 && q.q1 !== "no time" ? q.q1 : "—")}</td>`;
+				}
+
+				if (hasQ2) {
+					timeCols += `<td>${esc(q.q2 && q.q2 !== "no time" ? q.q2 : "—")}</td>`;
+				}
+
+				if (hasQ3) {
+					timeCols += `<td>${esc(q.q3 && q.q3 !== "no time" ? q.q3 : "—")}</td>`;
+				}
 			}
 
 			return `
 				<tr>
-					<td>${esc(q.position || "—")}</td>
+					<td>${qualifyingPositionDisplay(q.position)}</td>
 					<td>${driverHtml}</td>
-					<td>${teamLinkHtml(data, q.team)}</td>
+					<td>${teamLinkHtml(data, q.team || q.constructor)}</td>
 					${timeCols}
 				</tr>
 			`;
@@ -2008,8 +2927,10 @@ function raceStartingGridTableHtml(data, race) {
 	}
 
 	const rows = gridRows
-		.map((row) => {
-			const driver = data.driversById[row.driver_id];
+		.map(row => {
+			const driver = row.driver_id
+				? data.driversById[String(row.driver_id)]
+				: null;
 
 			const driverHtml = driver
 				? `
@@ -2017,11 +2938,11 @@ function raceStartingGridTableHtml(data, race) {
 						${esc(driver.name)}
 					</a>
 				`
-				: esc(row.driver_id || "—");
+				: esc(row.driver_name || row.driver_id || "—");
 
-			const gridValue = Number(row.grid);
+			const gridValue = parseGridValue(row.grid);
 
-			const gridDisplay = Number.isNaN(gridValue)
+			const gridDisplay = !Number.isFinite(gridValue)
 				? "—"
 				: gridValue === 0
 					? "PL"
@@ -2031,7 +2952,7 @@ function raceStartingGridTableHtml(data, race) {
 				<tr>
 					<td>${gridDisplay}</td>
 					<td>${driverHtml}</td>
-					<td>${teamLinkHtml(data, row.team)}</td>
+					<td>${teamLinkHtml(data, row.team || row.constructor)}</td>
 				</tr>
 			`;
 		})
@@ -2047,7 +2968,6 @@ function raceStartingGridTableHtml(data, race) {
 						<th>Team</th>
 					</tr>
 				</thead>
-
 				<tbody>
 					${rows}
 				</tbody>
@@ -2057,15 +2977,14 @@ function raceStartingGridTableHtml(data, race) {
 }
 
 function raceTabsHtml(data, race) {
-	const hasResults = Array.isArray(race.results) && race.results.length > 0;
-	const hasQualifying = Array.isArray(race.qualifying) && race.qualifying.length > 0;
+	const hasResults = asArray(race.results).filter(isObject).length > 0;
+	const hasQualifying = asArray(race.qualifying).filter(isObject).length > 0;
 	const hasGrid = getStartingGridRows(race).length > 0;
 
 	if (!hasResults && !hasQualifying && !hasGrid) {
 		return `
 			<div class="card">
 				<h2>Race data</h2>
-
 				<div class="empty">
 					No results stored yet.
 				</div>
@@ -2107,7 +3026,7 @@ function raceTabsHtml(data, race) {
 				${raceResultsTableHtml(data, race)}
 			</div>
 
-			<div class="tab-panel hidden" data-race-tab-panel="qualifying">
+			<div class="tab-panel hidden" data-race-tab-panel="qualifying" hidden>
 				${
 					hasQualifying
 						? raceQualifyingTableHtml(data, race)
@@ -2115,7 +3034,7 @@ function raceTabsHtml(data, race) {
 				}
 			</div>
 
-			<div class="tab-panel hidden" data-race-tab-panel="grid">
+			<div class="tab-panel hidden" data-race-tab-panel="grid" hidden>
 				${
 					hasGrid
 						? raceStartingGridTableHtml(data, race)
@@ -2129,7 +3048,7 @@ function raceTabsHtml(data, race) {
 function attachRaceTabs() {
 	const buttons = document.querySelectorAll(".race-tabs-card [data-race-tab]");
 
-	buttons.forEach((button) => {
+	buttons.forEach(button => {
 		button.addEventListener("click", () => {
 			const card = button.closest(".race-tabs-card");
 
@@ -2139,98 +3058,124 @@ function attachRaceTabs() {
 
 			const target = button.dataset.raceTab;
 
-			card.querySelectorAll("[data-race-tab]").forEach((tabButton) => {
+			card.querySelectorAll("[data-race-tab]").forEach(tabButton => {
 				tabButton.classList.toggle("active", tabButton === button);
 			});
 
-			card.querySelectorAll("[data-race-tab-panel]").forEach((panel) => {
-				panel.classList.toggle("hidden", panel.dataset.raceTabPanel !== target);
+			card.querySelectorAll("[data-race-tab-panel]").forEach(panel => {
+				const show = panel.dataset.raceTabPanel === target;
+
+				panel.hidden = !show;
+				panel.classList.toggle("hidden", !show);
 			});
 		});
 	});
 }
 
-const TEAM_CANONICAL_BY_NAME = {
-	"lotus": "team-lotus",
-	"lotus-ford": "team-lotus",
-	"lotus-climax": "team-lotus",
-	"lotus-borgward": "team-lotus",
-	"lotus-pratt whitney": "team-lotus",
-	"lotus-pratt-amp-whitney": "team-lotus",
-	"brabham-ford": "brabham",
-	"brabham-climax": "brabham",
-	"brabham-brm": "brabham",
-	"brabham-alfa romeo": "brabham",
-	"brabham-repco": "brabham",
-	"cooper-climax": "cooper",
-	"cooper-maserati": "cooper",
-	"cooper-brm": "cooper",
-	"cooper-alfa romeo": "cooper",
-	"cooper-ats": "cooper",
-	"cooper-borgward": "cooper",
-	"cooper-castellotti": "cooper",
-	"cooper-ferrari": "cooper",
-	"cooper-osca": "cooper",
-	"mclaren-ford": "mclaren",
-	"mclaren-serenissima": "mclaren",
-	"eagle-climax": "eagle",
-	"eagle-weslake": "eagle",
-	"de tomaso-alfa romeo": "de-tomaso",
-	"de tomaso-osca": "de-tomaso",
-	"brm-ford": "brm"
-};
+function normalizeTeamKey(value) {
+	let text = String(value ?? "");
 
-const teamIdCache = {};
+	text = text.replace(/\s*\(.*?\)\s*/g, " ");
+	text = normalizeString(text);
+	text = text.replace(/[^\w\s-]/g, "");
+	text = text.replace(/\s+/g, " ").trim();
+
+	return text;
+}
+
+function makeTeamsByName(teams) {
+	const map = Object.create(null);
+
+	teams.forEach(team => {
+		const key = normalizeTeamKey(team.name);
+
+		if (!key || team.id === null || team.id === undefined || team.id === "") {
+			return;
+		}
+
+		if (!map[key]) {
+			map[key] = String(team.id);
+		} else {
+			console.warn(`Duplicate normalized team name: ${team.name}`);
+		}
+	});
+
+	return map;
+}
 
 function findTeamIdByName(data, teamName) {
-	if (!teamName || !data.teamsByName) return null;
-	
-	const cacheKey = teamName;
-	if (teamIdCache[cacheKey] !== undefined) return teamIdCache[cacheKey];
-	
-	const norm = normalizeTeamKey(teamName);
-	if (!norm || norm === "—") {
-		teamIdCache[cacheKey] = null;
+	const raw = String(teamName ?? "").trim();
+
+	if (!raw || !data || !data.teamsByName) {
 		return null;
 	}
 
-	if (TEAM_CANONICAL_BY_NAME[norm]) {
-		teamIdCache[cacheKey] = TEAM_CANONICAL_BY_NAME[norm];
-		return teamIdCache[cacheKey];
+	if (hasOwn(data.teamsById, raw)) {
+		return raw;
 	}
 
-	if (data.teamsByName[norm]) {
-		teamIdCache[cacheKey] = data.teamsByName[norm];
-		return teamIdCache[cacheKey];
+	if (caches.teamId.has(raw)) {
+		return caches.teamId.get(raw);
 	}
 
-	const parts = norm.split(/[-–—/]/).map(p => p.trim()).filter(Boolean);
-	for (const part of parts) {
-		if (TEAM_CANONICAL_BY_NAME[part]) {
-			teamIdCache[cacheKey] = TEAM_CANONICAL_BY_NAME[part];
-			return teamIdCache[cacheKey];
+	const norm = normalizeTeamKey(raw);
+
+	if (!norm || norm === "—") {
+		caches.teamId.set(raw, null);
+		return null;
+	}
+
+	if (hasOwn(TEAM_CANONICAL_BY_NAME, norm)) {
+		const canonicalId = TEAM_CANONICAL_BY_NAME[norm];
+
+		if (hasOwn(data.teamsById, canonicalId)) {
+			caches.teamId.set(raw, canonicalId);
+			return canonicalId;
 		}
-		if (data.teamsByName[part]) {
-			teamIdCache[cacheKey] = data.teamsByName[part];
-			return teamIdCache[cacheKey];
+	}
+
+	if (hasOwn(data.teamsByName, norm)) {
+		caches.teamId.set(raw, data.teamsByName[norm]);
+		return data.teamsByName[norm];
+	}
+
+	const parts = norm
+		.split(/[-–—/]/)
+		.map(part => part.trim())
+		.filter(Boolean);
+
+	for (const part of parts) {
+		if (hasOwn(TEAM_CANONICAL_BY_NAME, part)) {
+			const canonicalId = TEAM_CANONICAL_BY_NAME[part];
+
+			if (hasOwn(data.teamsById, canonicalId)) {
+				caches.teamId.set(raw, canonicalId);
+				return canonicalId;
+			}
+		}
+
+		if (hasOwn(data.teamsByName, part)) {
+			caches.teamId.set(raw, data.teamsByName[part]);
+			return data.teamsByName[part];
 		}
 	}
 
 	let bestId = null;
 	let bestLength = 0;
+
 	for (const [name, id] of Object.entries(data.teamsByName)) {
 		if (name.length >= 3 && norm.includes(name) && name.length > bestLength) {
 			bestLength = name.length;
 			bestId = id;
 		}
 	}
-	
-	teamIdCache[cacheKey] = bestId;
+
+	caches.teamId.set(raw, bestId);
 	return bestId;
 }
 
 function resolveTeamId(data, teamName) {
-  return findTeamIdByName(data, teamName);
+	return findTeamIdByName(data, teamName);
 }
 
 function teamLinkHtml(data, teamName) {
@@ -2244,9 +3189,15 @@ function teamLinkHtml(data, teamName) {
 		return esc(teamName);
 	}
 
+	const team = data.teamsById[teamId];
+
+	if (!team) {
+		return esc(teamName);
+	}
+
 	return `
 		<a href="#/team/${esc(teamId)}">
-			${esc(teamName)}
+			${esc(team.name)}
 		</a>
 	`;
 }
@@ -2259,34 +3210,36 @@ function filterTeams(teams, query) {
 	}
 
 	return teams
-		.filter((team) => {
-			const parts = [
-				team.name,
-				team.nationality
-			].filter(Boolean);
-
-			return normalizeString(parts.join(" ")).includes(q);
+		.filter(team => {
+			const searchText = team._searchText ?? teamSearchText(team);
+			return searchText.includes(q);
 		})
 		.sort((a, b) => {
-			return (a.name || "").localeCompare(b.name || "");
+			return String(a.name || "").localeCompare(String(b.name || ""));
 		});
 }
 
-function teamCardsHtml(data, teams) {
+function teamCardsHtml(data, teams, query = "") {
 	if (!teams.length) {
-		return emptyHtml("No teams found.");
+		return emptyHtml(
+			query
+				? `No teams found for “${query}”.`
+				: "No teams found."
+		);
 	}
 
 	return teams
-		.map((team) => `
+		.map(team => `
 			<a class="card driver-card" href="#/team/${esc(team.id)}">
-				<h3>${esc(team.name)}</h3>
-
+				<h3>${esc(team.name || team.id)}</h3>
 				<p class="muted">
 					${esc(team.nationality || "")}
-					${team.active_years ? ` • ${esc(formatActiveYears(team.active_years))}` : ""}
+					${
+						team.active_years
+							? ` • ${esc(formatActiveYears(team.active_years))}`
+							: ""
+					}
 				</p>
-
 				<p class="muted">
 					${team.wins ?? 0} wins • ${team.pole_positions ?? 0} poles
 				</p>
@@ -2296,10 +3249,15 @@ function teamCardsHtml(data, teams) {
 }
 
 function renderTeams(data) {
+	const query = uiState.teamSearch;
+	const filtered = filterTeams(data.teams, query);
+
 	const html = `
 		<section class="page-head">
 			<h1>Teams</h1>
-			<p class="muted">Search by name or nationality.</p>
+			<p class="muted">
+				Search by name or nationality.
+			</p>
 		</section>
 
 		<input
@@ -2307,65 +3265,67 @@ function renderTeams(data) {
 			class="input"
 			type="search"
 			placeholder="Search teams..."
+			aria-label="Search teams"
 			autocomplete="off"
+			value="${esc(query)}"
 		>
 
-		<div id="team-list" class="driver-grid">
-			${teamCardsHtml(data, data.teams)}
+		<p id="team-search-status" class="muted" role="status">
+			${filtered.length} team${filtered.length === 1 ? "" : "s"}
+		</p>
+
+		<div id="team-list" class="driver-grid" aria-live="polite">
+			${teamCardsHtml(data, filtered, query)}
 		</div>
 	`;
 
 	function afterRender() {
 		const input = document.getElementById("team-search");
 		const list = document.getElementById("team-list");
+		const status = document.getElementById("team-search-status");
 
-		const handleSearch = debounce(() => {
-			const filtered = filterTeams(data.teams, input.value);
-			list.innerHTML = teamCardsHtml(data, filtered);
+		const update = debounce(() => {
+			uiState.teamSearch = input.value;
+
+			const nextFiltered = filterTeams(data.teams, input.value);
+
+			list.innerHTML = teamCardsHtml(data, nextFiltered, input.value);
+
+			if (status) {
+				status.textContent = `${nextFiltered.length} team${nextFiltered.length === 1 ? "" : "s"}`;
+			}
 		}, 200);
 
-		input.addEventListener("input", handleSearch);
+		input.addEventListener("input", update);
 	}
 
-	return { html, afterRender };
-}
-
-function filterTeams(teams, query) {
-	const q = normalizeString(query);
-	if (!q) return teams;
-	return teams.filter(team => {
-		const parts = [team.name, team.nationality].filter(Boolean);
-		return normalizeString(parts.join(" ")).includes(q);
-	}).sort((a, b) => (a.name || "").localeCompare(b.name || ""));
-}
-
-function teamCardsHtml(data, teams) {
-	if (!teams.length) return emptyHtml("No teams found.");
-	return teams.map((team) => `
-		<a class="card driver-card" href="#/team/${esc(team.id)}">
-			<h3>${esc(team.name)}</h3>
-			<p class="muted">
-				${esc(team.nationality || "")}
-				${team.active_years ? ` • ${formatActiveYears(team.active_years)}` : ""}
-			</p>
-		</a>
-	`).join("");
+	return {
+		html,
+		afterRender
+	};
 }
 
 function renderTeamPage(data, teamId, params) {
 	const team = data.teamsById[teamId];
 
 	if (!team) {
-		return { html: emptyHtml("Team not found.") };
+		return {
+			html: emptyHtml("Team not found.")
+		};
 	}
 
 	const entityArticles = getEntityArticles(data, { teamId });
-	const selectedLanguages = getSelectedLanguages(params);
-	const sort = getSort(params);
 
 	const availableLanguages = [...new Set(
-		entityArticles.map((article) => article.language).filter(Boolean)
+		entityArticles
+			.map(article => article.language)
+			.filter(Boolean)
 	)].sort();
+
+	const selectedLanguages = getSelectedLanguages(params)
+		.filter(code => availableLanguages.includes(code));
+
+	const sort = getSort(params);
 
 	const filteredArticles = sortArticles(
 		filterByLanguages(entityArticles, selectedLanguages),
@@ -2373,99 +3333,208 @@ function renderTeamPage(data, teamId, params) {
 	);
 
 	const articlesHtml = filteredArticles.length
-		? filteredArticles.map((article) => articleCardHtml(data, article)).join("")
-		: emptyHtml("No articles match these filters.");
+		? filteredArticles
+				.map(article => articleCardHtml(data, article))
+				.join("")
+		: emptyHtml(
+				entityArticles.length
+					? "No articles match these filters."
+					: "No articles archived yet."
+			);
 
-	// Compute Stats
-	const stats = computeTeamStats(data, team.id);
-	data._lastTeamStats = { id: team.id, stats };
+	const stats = getTeamStats(data, team.id);
 	const statRows = [];
 
 	statRows.push(`
 		<dt>Active years</dt>
-		<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="races" data-team="${esc(team.id)}">${esc(formatActiveYears(team.active_years))}</a></dd>
+		<dd>
+			${teamStatButton(team.id, "races", formatActiveYears(team.active_years))}
+		</dd>
 	`);
 
 	if (stats.wins > 0) {
-		statRows.push(`<dt>Wins</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="wins" data-team="${esc(team.id)}">${stats.wins}</a></dd>`);
+		statRows.push(`
+			<dt>Wins</dt>
+			<dd>
+				${teamStatButton(team.id, "wins", stats.wins)}
+			</dd>
+		`);
 	}
 
 	if (stats.podiums > 0) {
-		statRows.push(`<dt>Podiums</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="podiums" data-team="${esc(team.id)}">${stats.podiums}</a></dd>`);
+		statRows.push(`
+			<dt>Podiums</dt>
+			<dd>
+				${teamStatButton(team.id, "podiums", stats.podiums)}
+			</dd>
+		`);
 	} else if (stats.bestFinish !== null) {
-		statRows.push(`<dt>Best finish</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-finish" data-team="${esc(team.id)}">${stats.bestFinish}${getOrdinal(stats.bestFinish)}</a></dd>`);
+		statRows.push(`
+			<dt>Best finish</dt>
+			<dd>
+				${teamStatButton(
+					team.id,
+					"best-finish",
+					`${stats.bestFinish}${getOrdinal(stats.bestFinish)}`
+				)}
+			</dd>
+		`);
 	}
 
 	if (stats.poles > 0) {
-		statRows.push(`<dt>Pole positions</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="poles" data-team="${esc(team.id)}">${stats.poles}</a></dd>`);
+		statRows.push(`
+			<dt>Pole positions</dt>
+			<dd>
+				${teamStatButton(team.id, "poles", stats.poles)}
+			</dd>
+		`);
 	} else if (stats.bestGrid !== null) {
-		statRows.push(`<dt>Best grid</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-grid" data-team="${esc(team.id)}">${stats.bestGrid}${getOrdinal(stats.bestGrid)}</a></dd>`);
+		statRows.push(`
+			<dt>Best grid</dt>
+			<dd>
+				${teamStatButton(
+					team.id,
+					"best-grid",
+					`${stats.bestGrid}${getOrdinal(stats.bestGrid)}`
+				)}
+			</dd>
+		`);
 	}
 
 	if (stats.fastestLaps > 0) {
-		statRows.push(`<dt>Fastest laps</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="fastest-laps" data-team="${esc(team.id)}">${stats.fastestLaps}</a></dd>`);
+		statRows.push(`
+			<dt>Fastest laps</dt>
+			<dd>
+				${teamStatButton(team.id, "fastest-laps", stats.fastestLaps)}
+			</dd>
+		`);
 	}
 
-	// Best Championship (Handles "Not classified" for 999 positions)
-	const hasChampionshipData = (team.championship_results || []).length > 0;
+	const hasChampionshipData =
+		asArray(team.championship_results).filter(isObject).length > 0;
 
 	if (stats.bestChampFinish !== null) {
 		statRows.push(`
 			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-champ" data-team="${esc(team.id)}">${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}</a></dd>
+			<dd>
+				${teamStatButton(
+					team.id,
+					"best-champ",
+					`${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)}`
+				)}
+			</dd>
 		`);
 	} else if (hasChampionshipData) {
 		statRows.push(`
 			<dt>Best championship</dt>
-			<dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="best-champ" data-team="${esc(team.id)}">Not classified</a></dd>
+			<dd>
+				${teamStatButton(team.id, "best-champ", "Not classified")}
+			</dd>
 		`);
 	}
 
-	// Constructor Titles (Clickable)
-	const constructorTitles = (team.constructor_championships || []).length;
+	const constructorTitleYears = asArray(team.constructor_championships)
+		.map(item => {
+			return isObject(item) ? item.year : item;
+		})
+		.filter(year => year !== null && year !== undefined && year !== "")
+		.map(Number)
+		.filter(year => Number.isFinite(year) && year > 0)
+		.sort((a, b) => a - b);
+
+	const constructorTitles = constructorTitleYears.length;
+
 	if (constructorTitles > 0) {
-		statRows.push(`<dt>Constructor titles</dt><dd><a href="javascript:void(0)" class="stat-link team-stat-link" data-stat="constructor-titles" data-team="${esc(team.id)}">${constructorTitles}</a></dd>`);
+		statRows.push(`
+			<dt>Constructor titles</dt>
+			<dd>
+				${teamStatButton(team.id, "constructor-titles", constructorTitles)}
+			</dd>
+		`);
 	} else {
-		statRows.push(`<dt>Constructor titles</dt><dd>0</dd>`);
+		statRows.push(`
+			<dt>Constructor titles</dt>
+			<dd>0</dd>
+		`);
 	}
 
-	// Build Sidebar Sub-components safely
-	const seasons = team.seasons || [];
+	const seasons = asArray(team.seasons)
+		.filter(year => year !== null && year !== undefined && String(year).trim() !== "");
+
 	const seasonsHtml = seasons.length
-		? `<div class="scroll-list">${seasons.map((year) => `<span>${esc(year)}</span>`).join("")}</div>`
+		? `
+			<div class="scroll-list">
+				${seasons.map(year => `<span>${esc(year)}</span>`).join("")}
+			</div>
+		`
 		: "—";
 
-	const driverChamps = team.driver_championships || [];
+	const driverChamps = asArray(team.driver_championships)
+		.filter(item => item !== null && item !== undefined);
+
 	const driverChampsHtml = driverChamps.length
-		? `<div class="scroll-list">${
-			driverChamps.map((item) => {
-				if (item && typeof item === "object") {
-					const driverObj = data.driversById[item.driver_id];
-					const driverText = driverObj ? ` — ${esc(driverObj.name)}` : "";
-					return `<span>${esc(item.year)}${driverText}</span>`;
+		? `
+			<div class="scroll-list">
+				${
+					driverChamps
+						.map(item => {
+							if (isObject(item)) {
+								const driver = item.driver_id
+									? data.driversById[String(item.driver_id)]
+									: null;
+
+								const driverText = driver
+									? ` — ${esc(driver.name)}`
+									: "";
+
+								return `<span>${esc(item.year ?? "")}${driverText}</span>`;
+							}
+
+							return `<span>${esc(item)}</span>`;
+						})
+						.join("")
 				}
-				return `<span>${esc(item)}</span>`;
-			}).join("")
-		  }</div>`
+			</div>
+		`
 		: "—";
 
-	const teamDrivers = (team.driver_ids || [])
-		.map((id) => data.driversById[id])
+	const teamDrivers = uniqueIds(team.driver_ids)
+		.map(id => data.driversById[id])
 		.filter(Boolean)
-		.sort((a, b) => (a.sort_name || a.name).localeCompare(b.sort_name || b.name));
+		.sort((a, b) => {
+			return String(a.sort_name || a.name || "").localeCompare(
+				String(b.sort_name || b.name || "")
+			);
+		});
 
 	const driversHtml = teamDrivers.length
-		? `<div class="scroll-list">${
-			teamDrivers.map((d) => `<a href="#/driver/${esc(d.id)}">${esc(d.name)}</a>`).join("")
-		  }</div>`
+		? `
+			<div class="scroll-list">
+				${
+					teamDrivers
+						.map(driver => `
+							<a href="#/driver/${esc(driver.id)}">
+								${esc(driver.name)}
+							</a>
+						`)
+						.join("")
+				}
+			</div>
+		`
 		: "—";
 
-	// Build Sidebar
+	const teamWikipediaUrl = team.wikipedia_url
+		? safeExternalUrl(team.wikipedia_url)
+		: "#";
+
+	const hasWikipedia =
+		teamWikipediaUrl !== "#" &&
+		Boolean(parseWikipediaUrl(team.wikipedia_url));
+
 	const sidebar = `
 		<aside class="sidebar">
 			<div class="card">
 				<h2>Team info</h2>
-
 				<dl>
 					<dt>Nationality</dt>
 					<dd>${esc(team.nationality || "—")}</dd>
@@ -2483,632 +3552,1177 @@ function renderTeamPage(data, teamId, params) {
 				</dl>
 
 				${
-					team.wikipedia_url
-						? `<p><a href="${esc(team.wikipedia_url)}" target="_blank" rel="noopener">Wikipedia</a></p>`
+					hasWikipedia
+						? `
+							<p>
+								<a href="${esc(teamWikipediaUrl)}" target="_blank" rel="noopener">
+									Wikipedia
+								</a>
+							</p>
+						`
 						: ""
 				}
 			</div>
 
 			<div class="card">
 				<h2>Articles</h2>
-				<p class="muted">${filteredArticles.length} shown / ${entityArticles.length} total</p>
+				<p class="muted">
+					${filteredArticles.length} shown / ${entityArticles.length} total
+				</p>
 			</div>
 		</aside>
 	`;
 
-	// Main HTML
 	const html = `
 		<section class="page-head">
-			<h1>${esc(team.name)}</h1>
+			<h1>${esc(team.name || team.id)}</h1>
 			<p class="muted">
 				${esc(team.nationality || "")}
-				${team.active_years ? ` • ${esc(formatActiveYears(team.active_years))}` : ""}
+				${
+					team.active_years
+						? ` • ${esc(formatActiveYears(team.active_years))}`
+						: ""
+				}
 			</p>
 		</section>
 
 		<div class="layout">
 			<div class="main-col">
 				<div id="wiki-intro"></div>
+
 				<div class="toolbar">
 					${languageFilterHtml(data, availableLanguages, selectedLanguages)}
 					${sortFilterHtml(sort)}
 				</div>
+
 				<div class="stack">
 					${articlesHtml}
 				</div>
 			</div>
+
 			${sidebar}
 		</div>
 	`;
 
-	// Return with Event Listeners
 	return {
 		html,
 		afterRender: () => {
 			attachEntityFilters(`team/${team.id}`, params);
-			loadWikiIntro(team.wikipedia_url, team.name);
+			loadWikiIntro(team.wikipedia_url, team.name || team.id);
 		}
 	};
 }
 
-/* Driver Career Stats */
-
 function getOrdinal(n) {
-	if (n === null || n === undefined || isNaN(n)) return "th";
-	const abs = Math.abs(n);
+	const value = Number(n);
+
+	if (!Number.isFinite(value)) {
+		return "th";
+	}
+
+	const abs = Math.abs(value);
 	const mod10 = abs % 10;
 	const mod100 = abs % 100;
-	if (mod10 === 1 && mod100 !== 11) return "st";
-	if (mod10 === 2 && mod100 !== 12) return "nd";
-	if (mod10 === 3 && mod100 !== 13) return "rd";
+
+	if (mod10 === 1 && mod100 !== 11) {
+		return "st";
+	}
+
+	if (mod10 === 2 && mod100 !== 12) {
+		return "nd";
+	}
+
+	if (mod10 === 3 && mod100 !== 13) {
+		return "rd";
+	}
+
 	return "th";
 }
 
-function getDriverGridPos(p) {
-	// Official API starting grid (highest priority, most reliable)
-	if (p.result && p.result.grid) {
-		const g = parseInt(p.result.grid, 10);
-		if (!isNaN(g) && g > 0) return g;
+function firstValidGridValue(...values) {
+	for (const value of values) {
+		const grid = parseGridValue(value);
+
+		if (Number.isFinite(grid) && grid > 0) {
+			return grid;
+		}
 	}
-	// Scraped starting_grid array
-	if (p.grid && p.grid.position) {
-		const g = parseInt(p.grid.position, 10);
-		if (!isNaN(g) && g > 0) return g;
-	}
-	// Scraped qualifying array
-	if (p.quali && p.quali.position) {
-		const g = parseInt(p.quali.position, 10);
-		if (!isNaN(g) && g > 0) return g;
-	}
+
 	return null;
 }
 
+function getDriverGridPos(p) {
+	if (!p) {
+		return null;
+	}
+
+	return firstValidGridValue(
+		p.result ? p.result.grid : undefined,
+		p.grid ? p.grid.position : undefined,
+		p.quali ? p.quali.position : undefined
+	);
+}
+
+function isValidChampionshipPosition(value) {
+	const pos = parseInt(value, 10);
+
+	return Number.isFinite(pos) && pos > 0 && pos <= 50;
+}
+
+function getDriverStats(data, driverId) {
+	const key = String(driverId);
+
+	if (caches.driverStats.has(key)) {
+		return caches.driverStats.get(key);
+	}
+
+	const stats = computeDriverStats(data, driverId);
+
+	caches.driverStats.set(key, stats);
+
+	return stats;
+}
+
+function getTeamStats(data, teamId) {
+	const key = String(teamId);
+
+	if (caches.teamStats.has(key)) {
+		return caches.teamStats.get(key);
+	}
+
+	const stats = computeTeamStats(data, teamId);
+
+	caches.teamStats.set(key, stats);
+
+	return stats;
+}
+
 function computeDriverStats(data, driverId) {
-	const driverRaces = data.driverRacesIndex[driverId] || [];
+	const driverRaces = asArray(data.driverRacesIndex[driverId]).filter(isObject);
 	const participations = [];
 
 	driverRaces.forEach(race => {
-		const qualiEntry = (race.qualifying || []).find(q => q.driver_id === driverId);
-		const resultEntry = (race.results || []).find(r => r.driver_id === driverId);
-		const gridEntry = (race.starting_grid || []).find(g => g.driver_id === driverId);
+		const qualifying = asArray(race.qualifying).filter(isObject);
+		const results = asArray(race.results).filter(isObject);
+		const grid = asArray(race.starting_grid).filter(isObject);
+
+		const qualiEntry = qualifying.find(q => q.driver_id === driverId);
+		const resultEntry = results.find(r => r.driver_id === driverId);
+		const gridEntry = grid.find(g => g.driver_id === driverId);
 
 		if (qualiEntry || resultEntry || gridEntry) {
-			participations.push({ race, quali: qualiEntry, result: resultEntry, grid: gridEntry });
+			participations.push({
+				race,
+				quali: qualiEntry,
+				result: resultEntry,
+				grid: gridEntry
+			});
 		}
 	});
 
-	const wins = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1").length;
-	const podiums = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText))).length;
+	const wins = participations.filter(
+		p => p.result && String(p.result.position || p.result.positionText) === "1"
+	).length;
+
+	const podiums = participations.filter(
+		p =>
+			p.result &&
+			["1", "2", "3"].includes(String(p.result.position || p.result.positionText))
+	).length;
+
 	const poles = participations.filter(p => getDriverGridPos(p) === 1).length;
-	const fastestLaps = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1").length;
 
-	const finishes = participations.map(p => p.result ? parseInt(p.result.position || p.result.positionText, 10) : NaN).filter(n => !isNaN(n));
-	const bestFinish = finishes.length ? Math.min(...finishes) : null;
+	const fastestLaps = participations.filter(
+		p => p.result && String(p.result.fastest_lap_rank) === "1"
+	).length;
 
-	const grids = participations.map(p => getDriverGridPos(p)).filter(n => n !== null);
-	const bestGrid = grids.length ? Math.min(...grids) : null;
+	const finishes = participations
+		.map(p => {
+			return p.result
+				? firstValidPosition(p.result.position, p.result.positionText)
+				: NaN;
+		})
+		.filter(n => Number.isFinite(n) && n > 0);
 
-	const driver = data.driversById[driverId];
-	const champResults = driver.championship_results || [];
-	
-	// Filter out 999 / Not Classified positions
-	const validPositions = champResults.map(r => parseInt(r.position, 10)).filter(p => p > 0 && p < 50);
-	const bestChampFinish = validPositions.length
-		? validPositions.reduce((min, p) => p < min ? p : min, validPositions[0])
+	const bestFinish = finishes.length
+		? Math.min(...finishes)
 		: null;
 
-	return {
-		participations,
-		racesEntered: participations.length,
-		wins, podiums, poles, fastestLaps,
-		bestFinish, bestGrid,
-		champResults, bestChampFinish
-	};
-}
+	const grids = participations
+		.map(p => getDriverGridPos(p))
+		.filter(n => n !== null);
 
-function closeStatModal() {
-	const container = document.getElementById('stat-modal-container');
-	if (container) container.remove();
-	document.body.style.overflow = '';
-}
+	const bestGrid = grids.length
+		? Math.min(...grids)
+		: null;
 
-function computeDriverStats(data, driverId) {
-	const participations = [];
-	
-	data.races.forEach(race => {
-		const qualiEntry = (race.qualifying || []).find(q => q.driver_id === driverId);
-		const resultEntry = (race.results || []).find(r => r.driver_id === driverId);
-		const gridEntry = (race.starting_grid || []).find(g => g.driver_id === driverId);
+	const driver = data.driversById[driverId] || {};
 
-		if (qualiEntry || resultEntry || gridEntry) {
-			participations.push({ race, quali: qualiEntry, result: resultEntry, grid: gridEntry });
-		}
-	});
+	const champResults = asArray(driver.championship_results).filter(isObject);
 
-	const wins = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1").length;
-	const podiums = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText))).length;
-	const poles = participations.filter(p => getDriverGridPos(p) === 1).length;
-	const fastestLaps = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1").length;
+	const validPositions = champResults
+		.map(r => parseInt(r.position, 10))
+		.filter(isValidChampionshipPosition);
 
-	const finishes = participations.map(p => p.result ? parseInt(p.result.position || p.result.positionText, 10) : NaN).filter(n => !isNaN(n));
-	const bestFinish = finishes.length ? Math.min(...finishes) : null;
+	const bestChampFinish = validPositions.length
+		? Math.min(...validPositions)
+		: null;
 
-	const grids = participations.map(p => getDriverGridPos(p)).filter(n => n !== null);
-	const bestGrid = grids.length ? Math.min(...grids) : null;
-
-	// Championship Stats
-	const driver = data.driversById[driverId];
-	const champResults = driver.championship_results || [];
-	const validPositions = champResults.map(r => parseInt(r.position, 10)).filter(p => p > 0 && p < 50);
-	const bestChampFinish = validPositions.length ? Math.min(...validPositions) : null;
-	const bestChampYears = champResults.filter(r => r.position === bestChampFinish).map(r => r.year);
+	const bestChampYears = champResults
+		.filter(r => parseInt(r.position, 10) === bestChampFinish)
+		.map(r => r.year);
 
 	return {
 		participations,
 		racesEntered: participations.length,
-		wins, podiums, poles, fastestLaps,
-		bestFinish, bestGrid,
-		champResults, bestChampFinish, bestChampYears
+		wins,
+		podiums,
+		poles,
+		fastestLaps,
+		bestFinish,
+		bestGrid,
+		champResults,
+		bestChampFinish,
+		bestChampYears
 	};
 }
 
 function computeTeamStats(data, teamId) {
 	const index = buildTeamParticipationIndex(data);
-	const participations = index[teamId] || [];
+	const participations = asArray(index[teamId]).filter(isObject);
 
-	let wins = 0, podiums = 0, poles = 0, fastestLaps = 0;
+	let wins = 0;
+	let podiums = 0;
+	let poles = 0;
+	let fastestLaps = 0;
 	let bestFinish = null;
 	let bestGrid = null;
 
 	participations.forEach(p => {
-		p.results.forEach(r => {
-			const pos = parseInt(r.position || r.positionText, 10);
-			if (!isNaN(pos)) {
-				if (pos === 1) wins++;
-				if (pos <= 3) podiums++;
-				if (bestFinish === null || pos < bestFinish) bestFinish = pos;
+		const poleDrivers = new Set();
+
+		const addPole = (entry, source, index) => {
+			if (
+				entry.driver_id !== null &&
+				entry.driver_id !== undefined &&
+				String(entry.driver_id).trim() !== ""
+			) {
+				poleDrivers.add(String(entry.driver_id));
+			} else {
+				poleDrivers.add(`${source}:${index}`);
 			}
-			if (String(r.fastest_lap_rank) === "1") fastestLaps++;
-			
-			const gridPos = parseInt(r.grid, 10);
-			if (!isNaN(gridPos) && gridPos > 0) {
-				if (gridPos === 1) poles++;
-				if (bestGrid === null || gridPos < bestGrid) bestGrid = gridPos;
+		};
+
+		asArray(p.results)
+			.filter(isObject)
+			.forEach((r, resultIndex) => {
+				const pos = firstValidPosition(r.position, r.positionText);
+
+				if (Number.isFinite(pos)) {
+					if (pos === 1) {
+						wins++;
+					}
+
+					if (pos <= 3) {
+						podiums++;
+					}
+
+					if (bestFinish === null || pos < bestFinish) {
+						bestFinish = pos;
+					}
+				}
+
+				if (String(r.fastest_lap_rank) === "1") {
+					fastestLaps++;
+				}
+
+				const gridPos = parseGridValue(r.grid);
+
+				if (Number.isFinite(gridPos) && gridPos > 0) {
+					if (gridPos === 1) {
+						addPole(r, "result", resultIndex);
+					}
+
+					if (bestGrid === null || gridPos < bestGrid) {
+						bestGrid = gridPos;
+					}
+				}
+			});
+
+		const qualiAndGrid = [
+			...asArray(p.qualis).filter(isObject),
+			...asArray(p.grids).filter(isObject)
+		];
+
+		qualiAndGrid.forEach((q, index) => {
+			const gPos = parseGridValue(q.position);
+
+			if (Number.isFinite(gPos) && gPos > 0) {
+				if (gPos === 1) {
+					addPole(q, "quali/grid", index);
+				}
+
+				if (bestGrid === null || gPos < bestGrid) {
+					bestGrid = gPos;
+				}
 			}
 		});
-		
-		[...p.qualis, ...p.grids].forEach(q => {
-			const gPos = parseInt(q.position, 10);
-			if (!isNaN(gPos) && gPos > 0) {
-				if (gPos === 1) poles++;
-				if (bestGrid === null || gPos < bestGrid) bestGrid = gPos;
-			}
-		});
+
+		poles += poleDrivers.size;
 	});
 
-	const team = data.teamsById[teamId];
-	const champResults = team.championship_results || [];
-	const validPositions = champResults.map(r => parseInt(r.position, 10)).filter(p => p > 0 && p < 50);
-	const bestChampFinish = validPositions.length ? Math.min(...validPositions) : null;
+	const team = data.teamsById[teamId] || {};
+
+	const champResults = asArray(team.championship_results).filter(isObject);
+
+	const validPositions = champResults
+		.map(r => parseInt(r.position, 10))
+		.filter(isValidChampionshipPosition);
+
+	const bestChampFinish = validPositions.length
+		? Math.min(...validPositions)
+		: null;
 
 	return {
 		participations,
 		racesEntered: participations.length,
-		wins, podiums, poles, fastestLaps,
-		bestFinish, bestGrid,
-		champResults, bestChampFinish
+		wins,
+		podiums,
+		poles,
+		fastestLaps,
+		bestFinish,
+		bestGrid,
+		champResults,
+		bestChampFinish
 	};
 }
 
-/* Helpers for Stats Modals */
-
 function renderModal(title, count, countNoun, listHtml) {
+	const trigger = document.activeElement;
+
+	closeStatModal();
+
+	lastFocusedElement = trigger;
+
+	const safeTitle = esc(title || "Details");
+	const safeCount = esc(count ?? 0);
+	const noun = String(countNoun || "").trim();
+
 	const modalHtml = `
-		<div class="stat-modal-overlay" id="stat-modal" role="dialog" aria-modal="true" aria-label="${esc(title)}">
+		<div
+			class="stat-modal-overlay"
+			id="stat-modal"
+			role="dialog"
+			aria-modal="true"
+			aria-label="${safeTitle}"
+		>
 			<div class="stat-modal">
-				<button class="stat-modal-close" aria-label="Close">&times;</button>
-				<h2>${esc(title)}</h2>
-				<p class="muted">${count} ${countNoun}${count === 1 ? '' : 's'}</p>
-				<div class="stat-modal-content">${listHtml}</div>
+				<button type="button" class="stat-modal-close" aria-label="Close">×</button>
+				<h2>${safeTitle}</h2>
+				<p class="muted">
+					${safeCount} ${esc(noun)}${Number(count) === 1 ? "" : "s"}
+				</p>
+				<div class="stat-modal-content">
+					${listHtml}
+				</div>
 			</div>
 		</div>
 	`;
 
-	const modalContainer = document.createElement('div');
-	modalContainer.id = 'stat-modal-container';
+	const modalContainer = document.createElement("div");
+	modalContainer.id = "stat-modal-container";
 	modalContainer.innerHTML = modalHtml;
+
 	document.body.appendChild(modalContainer);
 
-	const closeBtn = document.querySelector('.stat-modal-close');
-	closeBtn.focus(); // Move focus into modal
+	const closeBtn = modalContainer.querySelector(".stat-modal-close");
 
-	closeBtn.addEventListener('click', closeStatModal);
-	
-	const overlay = document.querySelector('.stat-modal-overlay');
-	overlay.addEventListener('click', (e) => {
-		if (e.target.id === 'stat-modal') closeStatModal();
-	});
+	if (closeBtn) {
+		closeBtn.focus();
+		closeBtn.addEventListener("click", closeStatModal);
+	}
 
-	// Escape key closes modal
-	document.addEventListener('keydown', handleModalKeydown);
+	const overlay = modalContainer.querySelector(".stat-modal-overlay");
 
-	document.body.style.overflow = 'hidden';
+	if (overlay) {
+		overlay.addEventListener("click", e => {
+			if (e.target.id === "stat-modal") {
+				closeStatModal();
+			}
+		});
+	}
+
+	document.addEventListener("keydown", handleModalKeydown);
+	document.body.style.overflow = "hidden";
 }
 
 function handleModalKeydown(e) {
-	if (e.key === 'Escape') {
+	if (e.key === "Escape") {
 		closeStatModal();
+		return;
+	}
+
+	if (e.key !== "Tab") {
+		return;
+	}
+
+	const container = document.getElementById("stat-modal-container");
+
+	if (!container) {
+		document.removeEventListener("keydown", handleModalKeydown);
+		return;
+	}
+
+	const focusables = Array.from(container.querySelectorAll(`
+		button:not(:disabled),
+		[href],
+		input:not(:disabled),
+		select:not(:disabled),
+		textarea:not(:disabled),
+		[tabindex]:not([tabindex="-1"])
+	`)).filter(element => {
+		return !element.hidden && element.getClientRects().length > 0;
+	});
+
+	if (!focusables.length) {
+		return;
+	}
+
+	const first = focusables[0];
+	const last = focusables[focusables.length - 1];
+
+	if (e.shiftKey && document.activeElement === first) {
+		e.preventDefault();
+		last.focus();
+	} else if (!e.shiftKey && document.activeElement === last) {
+		e.preventDefault();
+		first.focus();
+	} else if (!container.contains(document.activeElement)) {
+		e.preventDefault();
+		first.focus();
 	}
 }
 
 function closeStatModal() {
-	const container = document.getElementById('stat-modal-container');
-	if (container) container.remove();
-	document.removeEventListener('keydown', handleModalKeydown);
-	document.body.style.overflow = '';
+	const container = document.getElementById("stat-modal-container");
+
+	if (container) {
+		container.remove();
+	}
+
+	document.removeEventListener("keydown", handleModalKeydown);
+	document.body.style.overflow = "";
+
+	if (
+		lastFocusedElement &&
+		document.contains(lastFocusedElement) &&
+		!lastFocusedElement.disabled
+	) {
+		try {
+			lastFocusedElement.focus();
+		} catch {
+			// Ignore focus errors.
+		}
+	}
+
+	lastFocusedElement = null;
 }
 
-let racesByYearCache = null;
-
 function getRacesByYear(data) {
-	if (racesByYearCache) return racesByYearCache;
-	racesByYearCache = {};
+	if (caches.racesByYear) {
+		return caches.racesByYear;
+	}
+
+	caches.racesByYear = Object.create(null);
+
 	data.races.forEach(race => {
-		const year = race.season;
-		if (!racesByYearCache[year]) racesByYearCache[year] = [];
-		racesByYearCache[year].push(race);
+		const season = Number(race.season);
+
+		const year = Number.isFinite(season) && season > 0
+			? String(season)
+			: "unknown";
+
+		if (!caches.racesByYear[year]) {
+			caches.racesByYear[year] = [];
+		}
+
+		caches.racesByYear[year].push(race);
 	});
-	return racesByYearCache;
+
+	return caches.racesByYear;
 }
 
 function getDriverTeamInYear(data, driverId, year) {
-	const races = getRacesByYear(data)[year] || [];
+	const races = asArray(getRacesByYear(data)[year]).filter(isObject);
+
 	for (const race of races) {
-		const res = (race.results || []).find(r => r.driver_id === driverId);
-		if (res && res.team) return res.team;
-		const grid = (race.starting_grid || []).find(g => g.driver_id === driverId);
-		if (grid && grid.team) return grid.team;
-		const quali = (race.qualifying || []).find(q => q.driver_id === driverId);
-		if (quali && quali.team) return quali.team;
+		const result = asArray(race.results)
+			.filter(isObject)
+			.find(r => r.driver_id === driverId);
+
+		if (result && result.team) {
+			return result.team;
+		}
+
+		const grid = asArray(race.starting_grid)
+			.filter(isObject)
+			.find(g => g.driver_id === driverId);
+
+		if (grid && grid.team) {
+			return grid.team;
+		}
+
+		const quali = asArray(race.qualifying)
+			.filter(isObject)
+			.find(q => q.driver_id === driverId);
+
+		if (quali && quali.team) {
+			return quali.team;
+		}
 	}
+
 	return "";
 }
 
 function getTeamDriversInYear(data, teamId, year) {
-	const races = getRacesByYear(data)[year] || [];
+	const races = asArray(getRacesByYear(data)[year]).filter(isObject);
 	const drivers = new Set();
+
 	for (const race of races) {
-		(race.results || []).forEach(r => {
-			if (resolveTeamId(data, r.team) === teamId) drivers.add(r.driver_id);
-		});
-		(race.starting_grid || []).forEach(g => {
-			if (resolveTeamId(data, g.team) === teamId) drivers.add(g.driver_id);
-		});
+		asArray(race.results)
+			.filter(isObject)
+			.forEach(r => {
+				if (r.driver_id && resolveTeamId(data, r.team) === teamId) {
+					drivers.add(String(r.driver_id));
+				}
+			});
+
+		asArray(race.starting_grid)
+			.filter(isObject)
+			.forEach(g => {
+				if (g.driver_id && resolveTeamId(data, g.team) === teamId) {
+					drivers.add(String(g.driver_id));
+				}
+			});
 	}
+
 	return Array.from(drivers);
 }
 
-/* Race Entry Formatters */
-
 function formatRaceEntry(data, p) {
-	const raceName = `${p.race.name} ${p.race.season || ''}`;
-	const raceLink = `#/race/${p.race.id}`;
-	let details = [];
-	
-	// Add Team Link
-	const teamName = p.result ? p.result.team : (p.grid ? p.grid.team : (p.quali ? p.quali.team : ""));
+	if (!p || !p.race) {
+		return "";
+	}
+
+	const raceName = `${p.race.name || ""} ${p.race.season || ""}`.trim();
+	const raceLink = `#/race/${encodeURIComponent(p.race.id ?? "")}`;
+
+	const details = [];
+
+	const teamName = p.result
+		? (p.result.team || p.result.constructor)
+		: (p.grid
+			? (p.grid.team || p.grid.constructor)
+			: (p.quali ? (p.quali.team || p.quali.constructor) : ""));
+
 	if (teamName) {
 		details.push(teamLinkHtml(data, teamName));
 	}
 
-	// Add Grid Position
 	const gridPos = getDriverGridPos(p);
-	const isPole = gridPos === 1;
 
 	if (gridPos !== null) {
-		details.push(`Grid ${gridPos}${isPole ? ' (Pole)' : ''}`);
-	} else if (p.quali && p.quali.position && !/^\d+$/.test(String(p.quali.position))) {
-		details.push(String(p.quali.position)); 
+		details.push(`Grid ${gridPos}${gridPos === 1 ? " (Pole)" : ""}`);
+	} else if (
+		p.quali &&
+		p.quali.position !== null &&
+		p.quali.position !== undefined &&
+		!/^\d+$/.test(String(p.quali.position))
+	) {
+		details.push(esc(String(p.quali.position)));
 	}
 
-	// Add Race Result
 	if (p.result) {
 		const status = p.result.status || p.result.statusText || "";
-		const pos = String(p.result.position || p.result.positionText || "");
-		
-		if (/^\d+$/.test(pos)) {
-			details.push(`Finished ${pos}${getOrdinal(parseInt(pos, 10))}`);
-		} else if (pos === "DSQ" || status === "Disqualified") {
-			details.push(`DSQ`);
+		const pos = String(p.result.position ?? p.result.positionText ?? "");
+		const posNumber = parsePositionValue(pos);
+		const normalizedStatus = normalizeString(status);
+
+		if (normalizedStatus.includes("disqual") || pos === "DSQ") {
+			details.push("DSQ");
+		} else if (Number.isFinite(posNumber)) {
+			details.push(`Finished ${posNumber}${getOrdinal(posNumber)}`);
 		} else if (status && status !== "Finished") {
-			details.push(`Retired (${status})`);
-		} else if (!status) {
-			details.push(`Retired`); 
+			details.push(`Retired (${esc(status)})`);
+		} else if (status === "Finished") {
+			details.push("Finished");
+		} else if (pos && String(pos).trim() !== "0") {
+			details.push(esc(pos));
+		} else {
+			details.push("Retired");
 		}
 	} else {
 		if (gridPos !== null) {
-			details.push('No race result');
+			details.push("No race result");
 		} else {
-			details.push('Did not qualify / Did not start');
+			details.push("Did not qualify / Did not start");
 		}
 	}
 
-	return `<li><a href="${raceLink}">${esc(raceName)}</a> <span class="muted">${details.join(' • ')}</span></li>`;
+	return `
+		<li>
+			<a href="${esc(raceLink)}">${esc(raceName)}</a>
+			<span class="muted">${details.join(" • ")}</span>
+		</li>
+	`;
 }
 
 function formatTeamRaceEntry(data, p, statType) {
-	const raceName = `${p.race.name} ${p.race.season || ''}`;
-	const raceLink = `#/race/${p.race.id}`;
-	let details = [];
+	if (!p || !p.race) {
+		return "";
+	}
 
-	const makeDriverLink = (did) => {
-		const d = data.driversById[did];
-		return d ? `<a href="#/driver/${esc(d.id)}">${esc(d.name)}</a>` : esc(did);
+	const raceName = `${p.race.name || ""} ${p.race.season || ""}`.trim();
+	const raceLink = `#/race/${encodeURIComponent(p.race.id ?? "")}`;
+
+	const details = [];
+
+	const makeDriverLink = entry => {
+		const driverId = entry?.driver_id;
+
+		const driver = driverId === null || driverId === undefined
+			? null
+			: data.driversById[String(driverId)];
+
+		if (driver) {
+			return `
+				<a href="#/driver/${esc(driver.id)}">
+					${esc(driver.name)}
+				</a>
+			`;
+		}
+
+		return esc(entry?.driver_name || driverId || "Unknown driver");
 	};
 
+	const results = asArray(p.results).filter(isObject);
+
+	const displayPos = r => r.position || r.positionText || "—";
+
 	if (statType === "races") {
-		p.results.forEach(r => {
-			const pos = r.position || r.positionText;
-			details.push(`${makeDriverLink(r.driver_id)}: P${pos}`);
+		results.forEach(r => {
+			details.push(`${makeDriverLink(r)}: P${esc(displayPos(r))}`);
 		});
 	} else if (statType === "wins") {
-		p.results.filter(r => String(r.position || r.positionText) === "1").forEach(r => {
-			details.push(`${makeDriverLink(r.driver_id)} won`);
-		});
+		results
+			.filter(r => String(r.position || r.positionText || "") === "1")
+			.forEach(r => {
+				details.push(`${makeDriverLink(r)} won`);
+			});
 	} else if (statType === "podiums") {
-		p.results.filter(r => ["1", "2", "3"].includes(String(r.position || r.positionText))).forEach(r => {
-			const pos = r.position || r.positionText;
-			details.push(`${makeDriverLink(r.driver_id)} finished ${pos}${getOrdinal(parseInt(pos, 10))}`);
-		});
+		results
+			.filter(r => ["1", "2", "3"].includes(String(r.position || r.positionText || "")))
+			.forEach(r => {
+				const posRaw = displayPos(r);
+				const posNumber = firstValidPosition(posRaw);
+
+				const posLabel = Number.isFinite(posNumber)
+					? `${posNumber}${getOrdinal(posNumber)}`
+					: esc(posRaw);
+
+				details.push(`${makeDriverLink(r)} finished ${posLabel}`);
+			});
 	} else if (statType === "poles") {
-		const poleDrivers = new Set();
-		p.results.filter(r => parseInt(r.grid, 10) === 1).forEach(r => poleDrivers.add(r.driver_id));
-		p.qualis.filter(q => parseInt(q.position, 10) === 1).forEach(q => poleDrivers.add(q.driver_id));
-		p.grids.filter(g => parseInt(g.position, 10) === 1).forEach(g => poleDrivers.add(g.driver_id));
-		
-		poleDrivers.forEach(did => {
-			details.push(`${makeDriverLink(did)} on pole`);
+		const poleEntries = [];
+		const seen = new Set();
+
+		const addPoleEntry = (entry, source, index) => {
+			const key =
+				entry.driver_id ||
+				entry.driver_name ||
+				`${source}:${index}`;
+
+			if (seen.has(key)) {
+				return;
+			}
+
+			seen.add(key);
+			poleEntries.push(entry);
+		};
+
+		results
+			.filter(r => parseGridValue(r.grid) === 1)
+			.forEach((r, index) => addPoleEntry(r, "result", index));
+
+		asArray(p.qualis)
+			.filter(isObject)
+			.filter(q => parseGridValue(q.position) === 1)
+			.forEach((q, index) => addPoleEntry(q, "quali", index));
+
+		asArray(p.grids)
+			.filter(isObject)
+			.filter(g => parseGridValue(g.position) === 1)
+			.forEach((g, index) => addPoleEntry(g, "grid", index));
+
+		poleEntries.forEach(entry => {
+			details.push(`${makeDriverLink(entry)} on pole`);
 		});
 	} else if (statType === "fastest-laps") {
-		p.results.filter(r => String(r.fastest_lap_rank) === "1").forEach(r => {
-			details.push(`${makeDriverLink(r.driver_id)} fastest lap`);
-		});
+		results
+			.filter(r => String(r.fastest_lap_rank) === "1")
+			.forEach(r => {
+				details.push(`${makeDriverLink(r)} fastest lap`);
+			});
 	} else {
-		p.results.forEach(r => {
-			const pos = r.position || r.positionText;
-			details.push(`${makeDriverLink(r.driver_id)}: P${pos}`);
+		results.forEach(r => {
+			details.push(`${makeDriverLink(r)}: P${esc(displayPos(r))}`);
 		});
 	}
 
-	return `<li><a href="${raceLink}">${esc(raceName)}</a> <span class="muted">${details.join(' • ')}</span></li>`;
+	return `
+		<li>
+			<a href="${esc(raceLink)}">${esc(raceName)}</a>
+			<span class="muted">${details.join(" • ")}</span>
+		</li>
+	`;
 }
 
-/* Modal Controllers */
-
 function buildChampionshipModalContent(data, entityName, entity, stats, isTeam) {
-    const isChampion = stats.bestChampFinish === 1;
-    const hasValidFinish = stats.bestChampFinish !== null;
-    
-    // Build title
-    const champLabel = isTeam ? "Constructor Championships" : "World Championships";
-    const title = isChampion 
-        ? `${entityName} - ${champLabel}` 
-        : (hasValidFinish 
-            ? `${entityName} - Best Championship Finishes (${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)})` 
-            : `${entityName} - Championship Standings`);
-    
-    // Filter and sort
-    const champResults = (entity.championship_results || [])
-        .filter(r => hasValidFinish ? parseInt(r.position, 10) === stats.bestChampFinish : true)
-        .sort((a, b) => a.year - b.year);
-    
-    // Build list
-    let listHtml = `<ul class="stat-list">`;
-    
-    champResults.forEach(r => {
-        const pos = parseInt(r.position, 10);
-        const isNC = pos > 50 || pos <= 0;
-        const posText = isNC ? "Not classified" : `${pos}${getOrdinal(pos)}`;
-        const label = isChampion 
-            ? (isTeam ? "Constructor Champion" : "World Champion") 
-            : posText;
-        
-        let extraHtml = "";
-        if (isTeam) {
-            const driverIds = getTeamDriversInYear(data, entity.id, r.year);
-            extraHtml = driverIds.map(did => {
-                const d = data.driversById[did];
-                return d ? `<a href="#/driver/${esc(d.id)}">${esc(d.name)}</a>` : esc(did);
-            }).join(", ") || "Unknown drivers";
-        } else {
-            const teamName = getDriverTeamInYear(data, entity.id, r.year);
-            extraHtml = teamName ? teamLinkHtml(data, teamName) : "";
-        }
-        
-        const pointsHtml = r.points ? ` • ${r.points} pts` : "";
-        const extra = extraHtml ? ` • ${extraHtml}` : "";
-        
-        listHtml += `<li><span>${r.year}</span> <span class="muted">${label}${extra}${pointsHtml}</span></li>`;
-    });
-    
-    listHtml += `</ul>`;
-    
-    if (!champResults.length) {
-        listHtml = `<p class="muted">No championship finishes recorded.</p>`;
-    }
-    
-    return { title, listHtml, count: champResults.length };
+	const isChampion = stats.bestChampFinish === 1;
+	const hasValidFinish = stats.bestChampFinish !== null;
+
+	const champLabel = isTeam
+		? "Constructor Championships"
+		: "World Championships";
+
+	const safeEntityName = entityName || "Unknown";
+
+	const title = isChampion
+		? `${safeEntityName} - ${champLabel}`
+		: hasValidFinish
+			? `${safeEntityName} - Best Championship Finishes (${stats.bestChampFinish}${getOrdinal(stats.bestChampFinish)})`
+			: `${safeEntityName} - Championship Standings`;
+
+	const champResults = asArray(entity.championship_results)
+		.filter(isObject)
+		.filter(r => {
+			return hasValidFinish
+				? parseInt(r.position, 10) === stats.bestChampFinish
+				: true;
+		})
+		.sort((a, b) => (Number(a.year) || 0) - (Number(b.year) || 0));
+
+	let listHtml = `<ul class="stat-list">`;
+
+	champResults.forEach(r => {
+		const pos = parseInt(r.position, 10);
+		const isNC = !isValidChampionshipPosition(pos);
+
+		const posText = isNC
+			? "Not classified"
+			: `${pos}${getOrdinal(pos)}`;
+
+		const label = isChampion
+			? (isTeam ? "Constructor Champion" : "World Champion")
+			: posText;
+
+		let extraHtml = "";
+
+		if (isTeam) {
+			const driverIds = getTeamDriversInYear(data, entity.id, r.year)
+				.filter(Boolean);
+
+			extraHtml = driverIds
+				.map(driverId => {
+					const driver = data.driversById[driverId];
+
+					return driver
+						? `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`
+						: esc(driverId);
+				})
+				.join(", ") || "Unknown drivers";
+		} else {
+			const teamName = getDriverTeamInYear(data, entity.id, r.year);
+			extraHtml = teamName ? teamLinkHtml(data, teamName) : "";
+		}
+
+		const pointsHtml =
+			r.points !== null && r.points !== undefined && r.points !== ""
+				? ` • ${esc(r.points)} pts`
+				: "";
+
+		const extra = extraHtml ? ` • ${extraHtml}` : "";
+
+		listHtml += `
+			<li>
+				<span>${esc(r.year ?? "")}</span>
+				<span class="muted">
+					${esc(label)}${extra}${pointsHtml}
+				</span>
+			</li>
+		`;
+	});
+
+	listHtml += `</ul>`;
+
+	if (!champResults.length) {
+		listHtml = `<p class="muted">No championship finishes recorded.</p>`;
+	}
+
+	return {
+		title,
+		listHtml,
+		count: champResults.length
+	};
 }
 
 function showStatModal(data, driverId, statType) {
-	const driver = data.driversById[driverId];
-	if (!driver) return;
-	
-	const stats = (data._lastDriverStats && data._lastDriverStats.id === driverId)
-		? data._lastDriverStats.stats
-		: computeDriverStats(data, driverId);
-	const participations = stats.participations;
-	let title = "";
-	let filtered = [];
-	
-	if (statType === "races") {
-		title = `${driver.name} - All Races`;
-		filtered = participations;
-	} else if (statType === "wins") {
-		title = `${driver.name} - Wins`;
-		filtered = participations.filter(p => p.result && String(p.result.position || p.result.positionText) === "1");
-	} else if (statType === "podiums") {
-		title = `${driver.name} - Podiums`;
-		filtered = participations.filter(p => p.result && ["1", "2", "3"].includes(String(p.result.position || p.result.positionText)));
-	} else if (statType === "poles") {
-		title = `${driver.name} - Pole Positions`;
-		filtered = participations.filter(p => getDriverGridPos(p) === 1);
-	} else if (statType === "fastest-laps") {
-		title = `${driver.name} - Fastest Laps`;
-		filtered = participations.filter(p => p.result && String(p.result.fastest_lap_rank) === "1");
-	} else if (statType === "best-finish") {
-		title = `${driver.name} - Best Finishes (${stats.bestFinish}${getOrdinal(stats.bestFinish)})`;
-		filtered = participations.filter(p => p.result && parseInt(p.result.position || p.result.positionText, 10) === stats.bestFinish);
-	} else if (statType === "best-grid") {
-		title = `${driver.name} - Best Grid Positions (${stats.bestGrid}${getOrdinal(stats.bestGrid)})`;
-		filtered = participations.filter(p => getDriverGridPos(p) === stats.bestGrid);
-	} else if (statType === "best-champ") {
-		const { title, listHtml, count } = buildChampionshipModalContent(
-			data, driver.name, driver, stats, false
-		);
-		renderModal(title, count, "season", listHtml);
+	if (!KNOWN_DRIVER_STATS.has(statType)) {
 		return;
 	}
 
-	filtered.sort((a, b) => String(b.race.date || b.race.season).localeCompare(String(a.race.date || a.race.season)));
+	const driver = data.driversById[driverId];
+
+	if (!driver) {
+		return;
+	}
+
+	const stats = getDriverStats(data, driverId);
+	const participations = stats.participations;
+	const driverLabel = driver.name || driverId;
+
+	let title = "";
+	let filtered = [];
+
+	if (statType === "races") {
+		title = `${driverLabel} - All Races`;
+		filtered = participations;
+	} else if (statType === "wins") {
+		title = `${driverLabel} - Wins`;
+		filtered = participations.filter(
+			p => p.result && String(p.result.position || p.result.positionText) === "1"
+		);
+	} else if (statType === "podiums") {
+		title = `${driverLabel} - Podiums`;
+		filtered = participations.filter(
+			p =>
+				p.result &&
+				["1", "2", "3"].includes(String(p.result.position || p.result.positionText))
+		);
+	} else if (statType === "poles") {
+		title = `${driverLabel} - Pole Positions`;
+		filtered = participations.filter(p => getDriverGridPos(p) === 1);
+	} else if (statType === "fastest-laps") {
+		title = `${driverLabel} - Fastest Laps`;
+		filtered = participations.filter(
+			p => p.result && String(p.result.fastest_lap_rank) === "1"
+		);
+	} else if (statType === "best-finish" && stats.bestFinish !== null) {
+		title = `${driverLabel} - Best Finishes (${stats.bestFinish}${getOrdinal(stats.bestFinish)})`;
+		filtered = participations.filter(
+			p =>
+				p.result &&
+				firstValidPosition(p.result.position, p.result.positionText) === stats.bestFinish
+		);
+	} else if (statType === "best-grid" && stats.bestGrid !== null) {
+		title = `${driverLabel} - Best Grid Positions (${stats.bestGrid}${getOrdinal(stats.bestGrid)})`;
+		filtered = participations.filter(p => getDriverGridPos(p) === stats.bestGrid);
+	} else if (statType === "best-champ") {
+		const modal = buildChampionshipModalContent(
+			data,
+			driverLabel,
+			driver,
+			stats,
+			false
+		);
+
+		renderModal(modal.title, modal.count, "season", modal.listHtml);
+		return;
+	}
+
+	if (!title) {
+		return;
+	}
+
+	filtered.sort((a, b) => {
+		return String(b.race.date || b.race.season || "").localeCompare(
+			String(a.race.date || a.race.season || "")
+		);
+	});
 
 	let listHtml = "";
+
 	if (statType === "races") {
-		const grouped = {};
+		const grouped = Object.create(null);
+
 		filtered.forEach(p => {
 			const year = p.race.season || "Unknown";
-			if (!grouped[year]) grouped[year] = [];
+
+			if (!grouped[year]) {
+				grouped[year] = [];
+			}
+
 			grouped[year].push(p);
 		});
-		const years = Object.keys(grouped).sort((a,b) => b - a);
+
+		const years = Object.keys(grouped).sort((a, b) => {
+			if (a === "Unknown") return 1;
+			if (b === "Unknown") return -1;
+			return Number(b) - Number(a);
+		});
+
 		years.forEach(year => {
 			listHtml += `<h3 class="modal-year">${esc(year)}</h3><ul class="stat-list">`;
-			grouped[year].forEach(p => listHtml += formatRaceEntry(data, p));
+
+			grouped[year].forEach(p => {
+				listHtml += formatRaceEntry(data, p);
+			});
+
 			listHtml += `</ul>`;
 		});
 	} else {
 		listHtml = `<ul class="stat-list">`;
-		filtered.forEach(p => listHtml += formatRaceEntry(data, p));
+
+		filtered.forEach(p => {
+			listHtml += formatRaceEntry(data, p);
+		});
+
 		listHtml += `</ul>`;
 	}
 
-	if (!filtered.length) listHtml = `<p class="muted">No races found.</p>`;
+	if (!filtered.length) {
+		listHtml = `<p class="muted">No races found.</p>`;
+	}
 
 	renderModal(title, filtered.length, "race", listHtml);
 }
 
 function showTeamStatModal(data, teamId, statType) {
-	const team = data.teamsById[teamId];
-	if (!team) return;
-	
-	const stats = (data._lastTeamStats && data._lastTeamStats.id === teamId)
-		? data._lastTeamStats.stats
-		: computeTeamStats(data, teamId);
-	const participations = stats.participations;
-	let title = "";
-	let filtered = [];
-	
-	if (statType === "races") {
-		title = `${team.name} - All Races`;
-		filtered = participations;
-	} else if (statType === "wins") {
-		title = `${team.name} - Wins`;
-		filtered = participations.filter(p => p.results.some(r => String(r.position || r.positionText) === "1"));
-	} else if (statType === "podiums") {
-		title = `${team.name} - Podiums`;
-		filtered = participations.filter(p => p.results.some(r => ["1", "2", "3"].includes(String(r.position || r.positionText))));
-	} else if (statType === "poles") {
-		title = `${team.name} - Pole Positions`;
-		filtered = participations.filter(p => {
-			return p.results.some(r => parseInt(r.grid, 10) === 1) || 
-						 p.qualis.some(q => parseInt(q.position, 10) === 1) ||
-						 p.grids.some(g => parseInt(g.position, 10) === 1);
-		});
-	} else if (statType === "fastest-laps") {
-		title = `${team.name} - Fastest Laps`;
-		filtered = participations.filter(p => p.results.some(r => String(r.fastest_lap_rank) === "1"));
-	} else if (statType === "best-finish") {
-		title = `${team.name} - Best Finishes (${stats.bestFinish}${getOrdinal(stats.bestFinish)})`;
-		filtered = participations.filter(p => p.results.some(r => parseInt(r.position || r.positionText, 10) === stats.bestFinish));
-	} else if (statType === "best-grid") {
-		title = `${team.name} - Best Grid Positions (${stats.bestGrid}${getOrdinal(stats.bestGrid)})`;
-		filtered = participations.filter(p => {
-			return p.results.some(r => parseInt(r.grid, 10) === stats.bestGrid) || 
-						 p.qualis.some(q => parseInt(q.position, 10) === stats.bestGrid) ||
-						 p.grids.some(g => parseInt(g.position, 10) === stats.bestGrid);
-		});
-	} else if (statType === "constructor-titles") {
-		title = `${team.name} - Constructor Championships`;
-		const titles = (team.constructor_championships || []).sort((a, b) => a - b);
-		
-		let listHtml = `<ul class="stat-list">`;
-		titles.forEach(year => {
-			const driverIds = getTeamDriversInYear(data, teamId, year);
-			const driversHtml = driverIds.map(did => {
-				const d = data.driversById[did];
-				return d ? `<a href="#/driver/${esc(d.id)}">${esc(d.name)}</a>` : esc(did);
-			}).join(", ") || "Unknown drivers";
-			
-			listHtml += `<li><span>${year}</span> <span class="muted">Constructor Champion • ${driversHtml}</span></li>`;
-		});
-		listHtml += `</ul>`;
-		
-		if (!titles.length) listHtml = `<p class="muted">No constructor championships recorded.</p>`;
-		
-		renderModal(title, titles.length, "title", listHtml);
-		return;
-	} else if (statType === "best-champ") {
-		const { title, listHtml, count } = buildChampionshipModalContent(
-			data, team.name, team, stats, true
-		);
-		renderModal(title, count, "season", listHtml);
+	if (!KNOWN_TEAM_STATS.has(statType)) {
 		return;
 	}
 
-	filtered.sort((a, b) => String(b.race.date || b.race.season).localeCompare(String(a.race.date || a.race.season)));
+	const team = data.teamsById[teamId];
+
+	if (!team) {
+		return;
+	}
+
+	const stats = getTeamStats(data, teamId);
+	const participations = stats.participations;
+	const teamLabel = team.name || teamId;
+
+	let title = "";
+	let filtered = [];
+
+	if (statType === "races") {
+		title = `${teamLabel} - All Races`;
+		filtered = participations;
+	} else if (statType === "wins") {
+		title = `${teamLabel} - Wins`;
+		filtered = participations.filter(
+			p =>
+				asArray(p.results)
+					.filter(isObject)
+					.some(r => String(r.position || r.positionText) === "1")
+		);
+	} else if (statType === "podiums") {
+		title = `${teamLabel} - Podiums`;
+		filtered = participations.filter(
+			p =>
+				asArray(p.results)
+					.filter(isObject)
+					.some(r => ["1", "2", "3"].includes(String(r.position || r.positionText)))
+		);
+	} else if (statType === "poles") {
+		title = `${teamLabel} - Pole Positions`;
+		filtered = participations.filter(p => {
+			return (
+				asArray(p.results)
+					.filter(isObject)
+					.some(r => parseGridValue(r.grid) === 1) ||
+				asArray(p.qualis)
+					.filter(isObject)
+					.some(q => parseGridValue(q.position) === 1) ||
+				asArray(p.grids)
+					.filter(isObject)
+					.some(g => parseGridValue(g.position) === 1)
+			);
+		});
+	} else if (statType === "fastest-laps") {
+		title = `${teamLabel} - Fastest Laps`;
+		filtered = participations.filter(
+			p =>
+				asArray(p.results)
+					.filter(isObject)
+					.some(r => String(r.fastest_lap_rank) === "1")
+		);
+	} else if (statType === "best-finish" && stats.bestFinish !== null) {
+		title = `${teamLabel} - Best Finishes (${stats.bestFinish}${getOrdinal(stats.bestFinish)})`;
+		filtered = participations.filter(
+			p =>
+				asArray(p.results)
+					.filter(isObject)
+					.some(r => firstValidPosition(r.position, r.positionText) === stats.bestFinish)
+		);
+	} else if (statType === "best-grid" && stats.bestGrid !== null) {
+		title = `${teamLabel} - Best Grid Positions (${stats.bestGrid}${getOrdinal(stats.bestGrid)})`;
+		filtered = participations.filter(p => {
+			return (
+				asArray(p.results)
+					.filter(isObject)
+					.some(r => parseGridValue(r.grid) === stats.bestGrid) ||
+				asArray(p.qualis)
+					.filter(isObject)
+					.some(q => parseGridValue(q.position) === stats.bestGrid) ||
+				asArray(p.grids)
+					.filter(isObject)
+					.some(g => parseGridValue(g.position) === stats.bestGrid)
+			);
+		});
+	} else if (statType === "constructor-titles") {
+		title = `${teamLabel} - Constructor Championships`;
+
+		const years = asArray(team.constructor_championships)
+			.map(item => {
+				return isObject(item) ? item.year : item;
+			})
+			.filter(year => year !== null && year !== undefined && year !== "")
+			.map(Number)
+			.filter(year => Number.isFinite(year) && year > 0)
+			.sort((a, b) => a - b);
+
+		let listHtml = `<ul class="stat-list">`;
+
+		years.forEach(year => {
+			const driverIds = getTeamDriversInYear(data, teamId, year)
+				.filter(Boolean);
+
+			const driversHtml = driverIds
+				.map(driverId => {
+					const driver = data.driversById[driverId];
+
+					return driver
+						? `<a href="#/driver/${esc(driver.id)}">${esc(driver.name)}</a>`
+						: esc(driverId);
+				})
+				.join(", ") || "Unknown drivers";
+
+			listHtml += `
+				<li>
+					<span>${esc(year)}</span>
+					<span class="muted">
+						Constructor Champion • ${driversHtml}
+					</span>
+				</li>
+			`;
+		});
+
+		listHtml += `</ul>`;
+
+		if (!years.length) {
+			listHtml = `<p class="muted">No constructor championships recorded.</p>`;
+		}
+
+		renderModal(title, years.length, "title", listHtml);
+		return;
+	} else if (statType === "best-champ") {
+		const modal = buildChampionshipModalContent(
+			data,
+			teamLabel,
+			team,
+			stats,
+			true
+		);
+
+		renderModal(modal.title, modal.count, "season", modal.listHtml);
+		return;
+	}
+
+	if (!title) {
+		return;
+	}
+
+	filtered.sort((a, b) => {
+		return String(b.race.date || b.race.season || "").localeCompare(
+			String(a.race.date || a.race.season || "")
+		);
+	});
 
 	let listHtml = "";
+
 	if (statType === "races") {
-		const grouped = {};
+		const grouped = Object.create(null);
+
 		filtered.forEach(p => {
 			const year = p.race.season || "Unknown";
-			if (!grouped[year]) grouped[year] = [];
+
+			if (!grouped[year]) {
+				grouped[year] = [];
+			}
+
 			grouped[year].push(p);
 		});
-		const years = Object.keys(grouped).sort((a,b) => b - a);
+
+		const years = Object.keys(grouped).sort((a, b) => {
+			if (a === "Unknown") return 1;
+			if (b === "Unknown") return -1;
+			return Number(b) - Number(a);
+		});
+
 		years.forEach(year => {
 			listHtml += `<h3 class="modal-year">${esc(year)}</h3><ul class="stat-list">`;
-			grouped[year].forEach(p => listHtml += formatTeamRaceEntry(data, p, statType));
+
+			grouped[year].forEach(p => {
+				listHtml += formatTeamRaceEntry(data, p, statType);
+			});
+
 			listHtml += `</ul>`;
 		});
 	} else {
 		listHtml = `<ul class="stat-list">`;
-		filtered.forEach(p => listHtml += formatTeamRaceEntry(data, p, statType));
+
+		filtered.forEach(p => {
+			listHtml += formatTeamRaceEntry(data, p, statType);
+		});
+
 		listHtml += `</ul>`;
 	}
 
-	if (!filtered.length) listHtml = `<p class="muted">No races found.</p>`;
+	if (!filtered.length) {
+		listHtml = `<p class="muted">No races found.</p>`;
+	}
 
 	renderModal(title, filtered.length, "race", listHtml);
 }
 
 function formatActiveYears(years) {
-	if (!years) return "—";
-	const parts = String(years).split(/[–-]/);
-	
-	if (parts.length === 2 && parts[0].trim() === parts[1].trim()) {
-		return parts[0].trim();
+	if (!years) {
+		return "—";
 	}
-	
-	return years;
+
+	let value = Array.isArray(years)
+		? years
+				.filter(item => item !== null && item !== undefined && item !== "")
+				.join("-")
+		: years;
+
+	value = String(value).trim();
+
+	if (!value) {
+		return "—";
+	}
+
+	const parts = value
+		.split(/[–-]/)
+		.map(part => part.trim())
+		.filter(Boolean);
+
+	if (parts.length === 2 && parts[0] === parts[1]) {
+		return parts[0];
+	}
+
+	return value;
 }
+
+init();
