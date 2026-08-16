@@ -774,6 +774,29 @@
     "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
   {
+    "id": "automobili-turismo-e-sport",
+    "name": "Automobili Turismo e Sport",
+    "nationality": "Italian",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Automobili_Turismo_e_Sport",
+    "active_years": "1963–1964",
+    "seasons": [
+      1963,
+      1964
+    ],
+    "driver_ids": [
+      "baghetti",
+      "cabral",
+      "phil_hill"
+    ],
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "constructor_championships": [],
+    "driver_championships": [],
+    "championship_results": []
+  },
+  {
     "id": "bar",
     "name": "BAR",
     "nationality": "British",
