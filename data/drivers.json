@@ -1561,9 +1561,9 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "ATS",
-      "Brabham",
+      "Automobili Turismo e Sport",
       "BRM",
+      "Brabham",
       "Ferrari",
       "Team Lotus"
     ],
@@ -2728,7 +2728,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "ATS",
       "Deidt",
       "Epperly",
       "Kurtis Kraft",
@@ -4845,7 +4844,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
+      "Automobili Turismo e Sport",
       "Cooper",
       "Derrington"
     ],
@@ -5881,6 +5880,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Merzario"
     ],
     "championships": 0,
@@ -8073,7 +8073,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Stevens",
       "Watson"
@@ -8992,7 +8991,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Kuzma",
       "Watson"
@@ -9373,7 +9371,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Phillips"
     ],
@@ -12202,6 +12199,7 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
+      "ATS",
       "Penske"
     ],
     "championships": 0,
@@ -12399,7 +12397,7 @@
     "fastest_laps": 0,
     "podiums": 16,
     "teams": [
-      "ATS",
+      "Automobili Turismo e Sport",
       "Cooper",
       "Ferrari",
       "Maserati",
@@ -13433,7 +13431,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft"
     ],
     "championships": 0,
@@ -14989,7 +14986,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Watson"
     ],
@@ -21019,7 +21015,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Watson"
     ],
@@ -21046,7 +21041,6 @@
     "fastest_laps": 0,
     "podiums": 4,
     "teams": [
-      "ATS",
       "Epperly",
       "Kurtis Kraft",
       "Watson",
@@ -21208,7 +21202,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Lesovsky",
       "Pankratz",
@@ -21677,7 +21670,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Maserati",
       "Watson"
     ],
@@ -22262,7 +22254,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Team Lotus",
       "Watson"
     ],
@@ -22427,7 +22418,6 @@
     "fastest_laps": 0,
     "podiums": 1,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Kuzma",
       "Lesovsky",
@@ -24659,7 +24649,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Kuzma",
       "Marchese",
@@ -25304,7 +25293,6 @@
     "fastest_laps": 0,
     "podiums": 0,
     "teams": [
-      "ATS",
       "Kurtis Kraft",
       "Lesovsky",
       "Watson"
@@ -27531,7 +27519,6 @@
     "fastest_laps": 0,
     "podiums": 2,
     "teams": [
-      "ATS",
       "Bromme",
       "Kurtis Kraft",
       "Kuzma",

@@ -733,17 +733,10 @@
   {
     "id": "ats",
     "name": "ATS",
-    "nationality": "Italian",
+    "nationality": "German",
     "wikipedia_url": "https://en.wikipedia.org/wiki/ATS_Wheels",
-    "active_years": "1952–1984",
+    "active_years": "1977–1984",
     "seasons": [
-      1952,
-      1956,
-      1958,
-      1959,
-      1960,
-      1963,
-      1964,
       1977,
       1978,
       1979,
@@ -754,86 +747,29 @@
       1984
     ],
     "driver_ids": [
-      "baghetti",
       "berger",
-      "bettenhausen",
       "binder",
       "bleekemolen",
       "borgudd",
-      "cabral",
-      "elisian",
+      "colombo",
       "ertl",
-      "flaherty",
-      "freeland",
-      "phil_hill",
-      "james",
+      "heyer",
       "jarier",
-      "lammers",
-      "larson",
-      "mass",
-      "dick_rathmann",
-      "rathmann",
-      "reece",
-      "rigsby",
       "keke_rosberg",
-      "ruby",
-      "ruttman",
+      "lammers",
+      "manfred_winkelhock",
+      "mass",
       "salazar",
-      "stevenson",
       "stuck",
-      "surer",
-      "sutton",
-      "ward",
-      "manfred_winkelhock"
+      "surer"
     ],
-    "wins": 3,
-    "podiums": 5,
-    "pole_positions": 2,
+    "wins": 0,
+    "podiums": 0,
+    "pole_positions": 0,
     "fastest_laps": 0,
     "constructor_championships": [],
     "driver_championships": [],
-    "championship_results": [
-      {
-        "year": 1963,
-        "position": 999,
-        "points": "0"
-      },
-      {
-        "year": 1978,
-        "position": 999,
-        "points": "0"
-      },
-      {
-        "year": 1979,
-        "position": 11,
-        "points": "2"
-      },
-      {
-        "year": 1980,
-        "position": 999,
-        "points": "0"
-      },
-      {
-        "year": 1981,
-        "position": 13,
-        "points": "1"
-      },
-      {
-        "year": 1982,
-        "position": 11,
-        "points": "4"
-      },
-      {
-        "year": 1983,
-        "position": 999,
-        "points": "0"
-      },
-      {
-        "year": 1984,
-        "position": 999,
-        "points": "0"
-      }
-    ],
+    "championship_results": [],
     "driver_ids_source": "ergast",
     "driver_ids_note": "Cleaned from Ergast/Jolpica constructor results."
   },
