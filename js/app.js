@@ -2840,6 +2840,10 @@ function raceQualifyingTableHtml(data, race) {
 	const hasQ3 = qualifying.some(
 		r => r.q3 && r.q3 !== "—" && r.q3 !== "-" && r.q3 !== "" && r.q3 !== "no time"
 	);
+	
+	const hasQ4 = qualifying.some(
+		r => r.q4 && r.q4 !== "—" && r.q4 !== "-" && r.q4 !== "" && r.q4 !== "no time"
+	);
 
 	const showSingleTime = !hasQ1 && !hasQ2 && !hasQ3;
 
@@ -2855,6 +2859,7 @@ function raceQualifyingTableHtml(data, race) {
 		if (hasQ1) headerCols += `<th>Q1</th>`;
 		if (hasQ2) headerCols += `<th>Q2</th>`;
 		if (hasQ3) headerCols += `<th>Q3</th>`;
+		if (hasQ4) headerCols += `<th>Q4</th>`;
 	}
 
 	const rows = [...qualifying]
@@ -2879,6 +2884,7 @@ function raceQualifyingTableHtml(data, race) {
 					(q.q1 && q.q1 !== "no time" ? q.q1 : "") ||
 					(q.q2 && q.q2 !== "no time" ? q.q2 : "") ||
 					(q.q3 && q.q3 !== "no time" ? q.q3 : "") ||
+					(q.q4 && q.q4 !== "no time" ? q.q4 : "") ||
 					"—";
 
 				timeCols = `<td>${esc(time)}</td>`;
@@ -2893,6 +2899,9 @@ function raceQualifyingTableHtml(data, race) {
 
 				if (hasQ3) {
 					timeCols += `<td>${esc(q.q3 && q.q3 !== "no time" ? q.q3 : "—")}</td>`;
+				}
+				if (hasQ4) {
+					timeCols += `<td>${esc(q.q4 && q.q4 !== "no time" ? q.q4 : "—")}</td>`;
 				}
 			}
 
